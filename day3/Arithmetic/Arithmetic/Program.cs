@@ -42,28 +42,31 @@ class Program
    
     public static void Main(string[] args)
     {
-        //int a = Convert.ToInt32(Console.ReadLine());
-        //int b = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter a and b");
 
-        //BasicArithMetic arithmetic = new(a, b);
-        //arithmetic.PerformTask();
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
 
 
-        //Console.WriteLine("============= 2 ===========");
+        BasicArithMetic arithmetic = new(a, b);
+        arithmetic.PerformTask();
 
-        //_ = new MaxUntilNegate();
 
-        //Console.WriteLine("============= 3 ===========");
+        Console.WriteLine("============= 2 ===========");
 
-        //_ = new AverageUntillXBy7();
+        _ = new MaxUntilNegate();
 
-        //Console.WriteLine("============= 4 ===========");
-        
-        //_ = new UserNameLength();
+        Console.WriteLine("============= 3 ===========");
 
-        //Console.WriteLine("============ 5 ===========");
+        _ = new AverageUntillXBy7();
 
-        //_ = new UserNamePasswordChecker();
+        Console.WriteLine("============= 4 ===========");
+
+        _ = new UserNameLength();
+
+        Console.WriteLine("============ 5 ===========");
+
+        _ = new UserNamePasswordChecker();
 
         Console.WriteLine("============ 6 ===========");
 
