@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\day3\\Arithmetic\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFE7CE2-EF74-4FA4-BAD6-546F70DD2367}|Arithmetic\\Arithmetic.csproj|c:\\users\\vc\\documents\\projects\\day3\\arithmetic\\arithmetic\\leastvowels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFE7CE2-EF74-4FA4-BAD6-546F70DD2367}|Arithmetic\\Arithmetic.csproj|solutionrelative:arithmetic\\leastvowels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFE7CE2-EF74-4FA4-BAD6-546F70DD2367}|Arithmetic\\Arithmetic.csproj|c:\\users\\vc\\documents\\projects\\day3\\arithmetic\\arithmetic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFE7CE2-EF74-4FA4-BAD6-546F70DD2367}|Arithmetic\\Arithmetic.csproj|solutionrelative:arithmetic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeastVowels.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\day3\\Arithmetic\\Arithmetic\\LeastVowels.cs",
+              "RelativeDocumentMoniker": "Arithmetic\\LeastVowels.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\day3\\Arithmetic\\Arithmetic\\LeastVowels.cs",
+              "RelativeToolTip": "Arithmetic\\LeastVowels.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAhwDEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T13:47:46.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\day3\\Arithmetic\\Arithmetic\\Program.cs",
+              "RelativeDocumentMoniker": "Arithmetic\\Program.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\day3\\Arithmetic\\Arithmetic\\Program.cs",
+              "RelativeToolTip": "Arithmetic\\Program.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAArwEUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T05:54:57.926Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

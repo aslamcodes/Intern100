@@ -1,0 +1,14 @@
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\bin\Debug\net8.0\CardVerifier.exe
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\bin\Debug\net8.0\CardVerifier.deps.json
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\bin\Debug\net8.0\CardVerifier.runtimeconfig.json
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\bin\Debug\net8.0\CardVerifier.dll
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\bin\Debug\net8.0\CardVerifier.pdb
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\CardVerifier.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\CardVerifier.AssemblyInfoInputs.cache
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\CardVerifier.AssemblyInfo.cs
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\CardVerifier.csproj.CoreCompileInputs.cache
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\CardVerifier.dll
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\refint\CardVerifier.dll
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\CardVerifier.pdb
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\CardVerifier.genruntimeconfig.cache
+C:\Users\VC\Documents\Projects\day4\CardVerifierSLN\CardVerifier\obj\Debug\net8.0\ref\CardVerifier.dll

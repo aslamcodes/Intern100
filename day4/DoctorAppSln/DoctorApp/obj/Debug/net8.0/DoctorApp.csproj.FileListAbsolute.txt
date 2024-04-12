@@ -1,0 +1,14 @@
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\bin\Debug\net8.0\DoctorApp.exe
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\bin\Debug\net8.0\DoctorApp.deps.json
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\bin\Debug\net8.0\DoctorApp.runtimeconfig.json
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\bin\Debug\net8.0\DoctorApp.dll
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\bin\Debug\net8.0\DoctorApp.pdb
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\DoctorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\DoctorApp.AssemblyInfoInputs.cache
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\DoctorApp.AssemblyInfo.cs
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\DoctorApp.csproj.CoreCompileInputs.cache
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\DoctorApp.dll
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\refint\DoctorApp.dll
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\DoctorApp.pdb
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\DoctorApp.genruntimeconfig.cache
+C:\Users\VC\Documents\Projects\day4\DoctorAppSln\DoctorApp\obj\Debug\net8.0\ref\DoctorApp.dll
