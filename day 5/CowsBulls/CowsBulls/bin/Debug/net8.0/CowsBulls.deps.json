@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CowsBulls/1.0.0": {
+        "dependencies": {
+          "CowsBullsModelLib": "1.0.0"
+        },
+        "runtime": {
+          "CowsBulls.dll": {}
+        }
+      },
+      "CowsBullsModelLib/1.0.0": {
+        "runtime": {
+          "CowsBullsModelLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CowsBulls/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CowsBullsModelLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

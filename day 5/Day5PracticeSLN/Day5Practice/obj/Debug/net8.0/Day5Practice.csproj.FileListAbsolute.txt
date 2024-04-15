@@ -1,0 +1,15 @@
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\bin\Debug\net8.0\Day5Practice.exe
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\bin\Debug\net8.0\Day5Practice.deps.json
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\bin\Debug\net8.0\Day5Practice.runtimeconfig.json
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\bin\Debug\net8.0\Day5Practice.dll
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\bin\Debug\net8.0\Day5Practice.pdb
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.AssemblyInfoInputs.cache
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.AssemblyInfo.cs
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.csproj.CoreCompileInputs.cache
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.sourcelink.json
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.dll
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\refint\Day5Practice.dll
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.pdb
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\Day5Practice.genruntimeconfig.cache
+C:\Users\VC\Documents\Projects\Intern100\day 5\Day5PracticeSLN\Day5Practice\obj\Debug\net8.0\ref\Day5Practice.dll

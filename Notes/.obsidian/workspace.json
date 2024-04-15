@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "24672f973a70f0b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2bf16c020206d93",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6b7aee0d693c635",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Angular 14th Apr 2024.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d3cb5e52516675f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1196a89c6535e8b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "74fc1c27d1d0ed9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76b86c241b6dbb37",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "69bc7c6d8b5030fc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3380ea9bbf12cc8d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "438766c04ab12454",
+    "type": "split",
+    "children": [
+      {
+        "id": "cfdb7bfa67580477",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53c7130d47124415",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Day 5.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "175d9bab328df853",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Day 5.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ad1cfa0e83c8ef40",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d128de3bdf2729ad",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Day 5.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d3cb5e52516675f8",
+  "lastOpenFiles": [
+    "Resources/Pasted image 20240415151849.png",
+    "Resources/Pasted image 20240415130022.png",
+    "Resources/Pasted image 20240415114141.png",
+    "Why.md",
+    "Resources/Pasted image 20240412101812.png",
+    "Untitled 1.md",
+    "Welcome.md",
+    "Day 5.md",
+    "Resources/Pasted image 20240415095422.png",
+    "Resources",
+    "Angular 14th Apr 2024.md",
+    "Untitled",
+    "Knowledge Collector",
+    "Day 1.md",
+    "Day 2 - github, git and.md",
+    "Git merge, rebase, squash.md",
+    "Day 4.md",
+    "Day 4 Arrays.md",
+    "Resources/Pasted image 20240412122233.png",
+    "Resources/Pasted image 20240412120823.png",
+    "Resources/Pasted image 20240412115745.png",
+    "Resources/Pasted image 20240412114542.png",
+    "Resources/Pasted image 20240412110129.png",
+    "Resources/Pasted image 20240412103803.png"
+  ]
+}
