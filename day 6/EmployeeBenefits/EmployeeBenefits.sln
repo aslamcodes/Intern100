@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeBenefits", "EmployeeBenefits\EmployeeBenefits.csproj", "{936E3A11-FD01-4AD2-AA2D-8F4BC31CEDBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeBenefitsModelLibrary", "EmployeeBenefitsModelLibrary\EmployeeBenefitsModelLibrary.csproj", "{EFD65A37-A629-4FA2-9054-F9ADAEFA97D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{936E3A11-FD01-4AD2-AA2D-8F4BC31CEDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936E3A11-FD01-4AD2-AA2D-8F4BC31CEDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936E3A11-FD01-4AD2-AA2D-8F4BC31CEDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936E3A11-FD01-4AD2-AA2D-8F4BC31CEDBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD65A37-A629-4FA2-9054-F9ADAEFA97D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD65A37-A629-4FA2-9054-F9ADAEFA97D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD65A37-A629-4FA2-9054-F9ADAEFA97D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD65A37-A629-4FA2-9054-F9ADAEFA97D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBC9886A-F492-4421-AA31-AD1C09357AD5}
+	EndGlobalSection
+EndGlobal
