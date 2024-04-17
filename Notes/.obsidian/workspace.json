@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "f2bf16c020206d93",
+        "id": "66fb2af8561ad7b0",
         "type": "tabs",
         "children": [
           {
-            "id": "d6b7aee0d693c635",
+            "id": "25e5f2cb6af9c43c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular 14th Apr 2024.md",
-                "mode": "source",
+                "file": "Day 6.md",
+                "mode": "preview",
                 "source": false
               }
             }
           },
           {
-            "id": "d3cb5e52516675f8",
+            "id": "7267857af63494f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 5.md",
+                "file": "Day 7.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "438766c04ab12454",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 5.md",
+                "file": "Day 7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 5.md",
+                "file": "Day 7.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 5.md"
+                "file": "Day 7.md"
               }
             }
           }
@@ -159,17 +160,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d3cb5e52516675f8",
+  "active": "7267857af63494f3",
   "lastOpenFiles": [
+    "Resources/Pasted image 20240417120713.png",
+    "Resources/Pasted image 20240417115329.png",
+    "Resources/Pasted image 20240417114904.png",
+    "Resources/Pasted image 20240417105331.png",
+    "Resources/Pasted image 20240417103611.png",
+    "Resources/Pasted image 20240417102333.png",
+    "Resources/Pasted image 20240417102259.png",
+    "Resources/Pasted image 20240417101124.png",
+    "Resources/Pasted image 20240417100906.png",
+    "Resources/Pasted image 20240417094927.png",
+    "Day 6.md",
+    "Day 7.md",
+    "Day 5.md",
     "Resources/Pasted image 20240415151849.png",
-    "Resources/Pasted image 20240415130022.png",
-    "Resources/Pasted image 20240415114141.png",
     "Why.md",
-    "Resources/Pasted image 20240412101812.png",
     "Untitled 1.md",
     "Welcome.md",
-    "Day 5.md",
-    "Resources/Pasted image 20240415095422.png",
     "Resources",
     "Angular 14th Apr 2024.md",
     "Untitled",
@@ -178,12 +187,6 @@
     "Day 2 - github, git and.md",
     "Git merge, rebase, squash.md",
     "Day 4.md",
-    "Day 4 Arrays.md",
-    "Resources/Pasted image 20240412122233.png",
-    "Resources/Pasted image 20240412120823.png",
-    "Resources/Pasted image 20240412115745.png",
-    "Resources/Pasted image 20240412114542.png",
-    "Resources/Pasted image 20240412110129.png",
-    "Resources/Pasted image 20240412103803.png"
+    "Day 4 Arrays.md"
   ]
 }

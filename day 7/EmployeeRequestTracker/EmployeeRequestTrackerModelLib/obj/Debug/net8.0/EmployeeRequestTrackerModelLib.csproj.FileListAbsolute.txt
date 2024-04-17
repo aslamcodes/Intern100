@@ -1,0 +1,12 @@
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\bin\Debug\net8.0\EmployeeRequestTrackerModelLib.deps.json
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\bin\Debug\net8.0\EmployeeRequestTrackerModelLib.dll
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\bin\Debug\net8.0\EmployeeRequestTrackerModelLib.pdb
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\EmployeeRequestTrackerModelLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\EmployeeRequestTrackerModelLib.AssemblyInfoInputs.cache
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\EmployeeRequestTrackerModelLib.AssemblyInfo.cs
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\EmployeeRequestTrackerModelLib.csproj.CoreCompileInputs.cache
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\EmployeeRequestTrackerModelLib.sourcelink.json
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\EmployeeRequestTrackerModelLib.dll
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\refint\EmployeeRequestTrackerModelLib.dll
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\EmployeeRequestTrackerModelLib.pdb
+C:\Users\VC\Documents\Projects\Intern100\day 7\EmployeeRequestTracker\EmployeeRequestTrackerModelLib\obj\Debug\net8.0\ref\EmployeeRequestTrackerModelLib.dll

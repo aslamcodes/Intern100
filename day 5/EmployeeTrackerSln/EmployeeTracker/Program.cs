@@ -85,7 +85,19 @@ namespace EmployeeTracker
         }
         Employee CreateEmployee(int id)
         {
-            Employee employee = new Employee();
+            
+            Console.WriteLine("Select an Employee Type \n1. Permanent (defaults) \n2. Contract");
+            int choice  = Int32.Parse(Console.ReadLine());
+            Employee employee;
+            if (choice == 2)
+            {
+                employee = new ContractEmployee();
+            }
+            else
+            {
+                employee = new PermanentEmployee();
+            }
+            
             employee.Id = 101 + id;
             employee.BuildEmployeeFromConsole();
             return employee;
@@ -169,6 +181,7 @@ namespace EmployeeTracker
         {
             Program program = new Program();
             program.EmployeeInteraction();
+          
         }
     }
 }

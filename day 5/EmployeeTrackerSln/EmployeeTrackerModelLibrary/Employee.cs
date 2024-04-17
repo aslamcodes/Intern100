@@ -1,9 +1,13 @@
 ﻿namespace EmployeeTrackerModelLibrary
 {
-    public class Employee
+    public class Employee : IClientInteraction, IInternalCompanyWorking
     {
         int age;
         DateTime dob;
+        public EmployeeType Type { get; set; }
+
+        public Department? EmployeeDepartment { get; set; }
+
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public int Age
@@ -22,40 +26,60 @@
                 age = ((DateTime.Today - dob).Days) / 365;
             }
         }
-        public double Salary { get; set; }
 
         public Employee()
         {
             Id = 0;
             Name = string.Empty;
-            Salary = 0.0;
             DateOfBirth = new DateTime();
         }
-        public Employee(int id, string name, DateTime dateOfBirth, double salary)
+        public Employee(int id, string name, DateTime dateOfBirth)
         {
             Id = id;
             Name = name;
             DateOfBirth = dateOfBirth;
-            Salary = salary;
         }
 
-        public void BuildEmployeeFromConsole()
+        public virtual void BuildEmployeeFromConsole()
         {
             Console.WriteLine("Please enter the Name");
             Name = Console.ReadLine() ?? String.Empty;
             Console.WriteLine("Please enter the Date of birth");
             DateOfBirth = Convert.ToDateTime(Console.ReadLine());
-            Console.WriteLine("Please enter the Basic Salary");
-            Salary = Convert.ToDouble(Console.ReadLine());
         }
 
-        public void PrintEmployeeDetails()
+        public virtual void PrintEmployeeDetails()
         {
             Console.WriteLine("Employee Id : " + Id);
             Console.WriteLine("Employee Name " + Name);
             Console.WriteLine("Date of birth : " + DateOfBirth);
             Console.WriteLine("Employee Age : " + Age);
-            Console.WriteLine("Employee Salary : Rs." + Salary);
+            
+        }
+
+        public void GetOrder()
+        {
+            Console.WriteLine("Order fetched by " + Name);
+        }
+
+        public void GetPayment()
+        {
+            Console.WriteLine("Get the payment as per terms");
+        }
+
+        public void RaiseRequest()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CloseRequest()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return $"Type: {Type}, Id: {Id}, Name: {Name}, Date of Birth: {DateOfBirth}, Age: {Age}";
         }
     }   
 }
