@@ -4,7 +4,12 @@
 - Operator Overloading
 - C# Collections
 - Introduced to Data access layer
-- Repository Design Patterns 
+- Repository Design Patterns
+## Evening Session
+- Created a simple Doctor Patient Appointment management system with the Repository Design pattern.
+## Self Learning
+- Will update before tonight, after learning something
+- Planning to solidify Dependency injection with .NET, Continue Learning Angular, 
 # Notes
 ### Architecture
 ![[Pasted image 20240417094927.png]]

@@ -30,7 +30,8 @@ namespace DoctorClinicDALLibrary
             {
                 return null;
             }
-            _appointments.Add(GenerateId(), appointment);
+            appointment.Id = GenerateId();
+            _appointments.Add(appointment.Id, appointment);
             return appointment;
         }
 

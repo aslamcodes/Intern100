@@ -23,6 +23,7 @@ namespace DoctorClinicBLLibrary
 
         public Appointment CreateAppointment(Doctor doctor, Patient patient)
         {
+            // Create a appoint class and add it
             throw new NotImplementedException();
         }
 
