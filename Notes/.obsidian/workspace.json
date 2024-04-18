@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "66fb2af8561ad7b0",
+        "id": "3392a8b17d75141d",
         "type": "tabs",
         "children": [
           {
-            "id": "25e5f2cb6af9c43c",
+            "id": "ca7aa1d5c599fd9d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 6.md",
+                "file": "Day 8.md",
                 "mode": "preview",
                 "source": false
               }
             }
-          },
-          {
-            "id": "7267857af63494f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 7.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 7.md",
+                "file": "Day 8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 7.md",
+                "file": "Day 8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,11 +126,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 7.md"
+                "file": "Day 8.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -160,8 +148,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7267857af63494f3",
+  "active": "ca7aa1d5c599fd9d",
   "lastOpenFiles": [
+    "Day 8.md - Shortcut.lnk",
+    "Day 8.md",
+    "Day 6.md",
+    "Day 7.md",
+    "Resources/Pasted image 20240418110651.png",
     "Resources/Pasted image 20240417120713.png",
     "Resources/Pasted image 20240417115329.png",
     "Resources/Pasted image 20240417114904.png",
@@ -171,11 +164,7 @@
     "Resources/Pasted image 20240417102259.png",
     "Resources/Pasted image 20240417101124.png",
     "Resources/Pasted image 20240417100906.png",
-    "Resources/Pasted image 20240417094927.png",
-    "Day 6.md",
-    "Day 7.md",
     "Day 5.md",
-    "Resources/Pasted image 20240415151849.png",
     "Why.md",
     "Untitled 1.md",
     "Welcome.md",

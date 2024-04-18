@@ -1,4 +1,4 @@
-# Summary
+# Day 7: April 17 Update
 ## Morning Session
 - Architecture of an Application
 - Operator Overloading
@@ -9,7 +9,7 @@
 - Created a simple Doctor Patient Appointment management system with the Repository Design pattern.
 ## Self Learning
 - Will update before tonight, after learning something
-- Planning to solidify Dependency injection with .NET, Continue Learning Angular, 
+- Planning to solidify Dependency injection with .NET, Continue Learning Angular and kickstart docker
 # Notes
 ### Architecture
 ![[Pasted image 20240417094927.png]]
