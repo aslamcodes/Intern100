@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Runtime.CompilerServices;
-
-namespace Learn
+﻿namespace Learn
 {
     public enum AgeGroup
     {
@@ -53,7 +50,7 @@ namespace Learn
 
     }
 
-   
+
 
     public class Program
     {
@@ -114,7 +111,7 @@ namespace Learn
             //Console.WriteLine("Bye bye");
 
             new Program().Divide(112, 12);
-            
+
         }
     }
 }

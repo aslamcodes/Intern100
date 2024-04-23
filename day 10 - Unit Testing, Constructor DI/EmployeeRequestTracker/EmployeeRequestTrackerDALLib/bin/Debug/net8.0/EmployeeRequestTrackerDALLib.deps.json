@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EmployeeRequestTrackerDALLib/1.0.0": {
+        "dependencies": {
+          "EmployeeRequestTrackerModelLib": "1.0.0"
+        },
+        "runtime": {
+          "EmployeeRequestTrackerDALLib.dll": {}
+        }
+      },
+      "EmployeeRequestTrackerModelLib/1.0.0": {
+        "runtime": {
+          "EmployeeRequestTrackerModelLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmployeeRequestTrackerDALLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmployeeRequestTrackerModelLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

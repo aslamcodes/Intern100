@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 10 - unit testing, constructor di\\doctorclinicsln\\doctorclinicbllibrary\\doctorbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|solutionrelative:doctorclinicbllibrary\\doctorbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65BCF142-703F-49D1-A406-FC3005633DCD}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65BCF142-703F-49D1-A406-FC3005633DCD}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DoctorBL.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\DoctorBL.cs",
+              "RelativeDocumentMoniker": "DoctorClinicBLLibrary\\DoctorBL.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\DoctorBL.cs",
+              "RelativeToolTip": "DoctorClinicBLLibrary\\DoctorBL.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAywAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T08:38:41.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinic\\Program.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Program.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinic\\Program.cs",
+              "RelativeToolTip": "DoctorClinic\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T08:37:28.797Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
