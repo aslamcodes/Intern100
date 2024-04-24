@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj",
+      "projectUniqueName": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj",
       "projectName": "EmployeeRequestTrackerModelLib",
-      "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj",
+      "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj",
       "packagesPath": "C:\\Users\\VC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\obj\\",
+      "outputPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 10.md",
-                "mode": "source",
+                "file": "Day 10 - April 23rd.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 10.md",
+                "file": "Day 10 - April 23rd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 10.md",
+                "file": "Day 10 - April 23rd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 10.md"
+                "file": "Day 10 - April 23rd.md"
               }
             }
           }
@@ -151,7 +151,7 @@
   "active": "ce641930a9293bc6",
   "lastOpenFiles": [
     "Day 1.md",
-    "Day 10.md",
+    "Day 10 - April 23rd.md",
     "Task.md",
     "Resources/Pasted image 20240422151424.png",
     "Resources/Pasted image 20240422140403.png",

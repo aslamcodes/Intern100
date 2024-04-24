@@ -1023,11 +1023,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerTest\\EmployeeRequestTrackerTest.csproj",
+      "projectUniqueName": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerTest\\EmployeeRequestTrackerTest.csproj",
       "projectName": "EmployeeRequestTrackerTest",
-      "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerTest\\EmployeeRequestTrackerTest.csproj",
+      "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerTest\\EmployeeRequestTrackerTest.csproj",
       "packagesPath": "C:\\Users\\VC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerTest\\obj\\",
+      "outputPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1048,11 +1048,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerDALLib\\EmployeeRequestTrackerDALLib.csproj": {
-              "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerDALLib\\EmployeeRequestTrackerDALLib.csproj"
+            "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerDALLib\\EmployeeRequestTrackerDALLib.csproj": {
+              "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerDALLib\\EmployeeRequestTrackerDALLib.csproj"
             },
-            "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj": {
-              "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj"
+            "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj": {
+              "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\EmployeeRequestTracker\\EmployeeRequestTrackerModelLib\\EmployeeRequestTrackerModelLib.csproj"
             }
           }
         }
