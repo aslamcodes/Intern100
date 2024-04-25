@@ -34,11 +34,12 @@ public class CartRepo : AbstractRepository<int, Cart>
 
     public override Cart GetByKey(int key)
     {
-        for (int i = 0; i < items.Count; i++)
+        foreach (var t in items)
         {
-            if (items[i].Id == key)
-                return items[i];
+            if (t.Id == key)
+                return t;
         }
+
         throw new EntityNotFoundException(Entity.Cart);
     }
 

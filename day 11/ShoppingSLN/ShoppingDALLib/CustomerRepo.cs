@@ -8,16 +8,10 @@ public class CustomerRepository : AbstractRepository<int, Customer>
 {
     public override Customer Delete(int key)
     {
-        Customer customer = GetByKey(key);
+        var customer = GetByKey(key);
 
-        if (customer != null)
-        {
-            items.Remove(customer);
-            return customer;
-
-        }
-
-        throw new EntityNotFoundException(Entity.Customer);
+        items.Remove(customer);
+        return customer;
     }
 
     public override Customer GetByKey(int key)
@@ -27,12 +21,13 @@ public class CustomerRepository : AbstractRepository<int, Customer>
             if (items[i].Id == key)
                 return items[i];
         }
+
         throw new EntityNotFoundException(Entity.Customer);
     }
 
     public override Customer Update(Customer item)
     {
-        Customer customer = GetByKey(item.Id);
+        var customer = GetByKey(item.Id);
         if (customer != null)
         {
             customer.Age = item.Age;
@@ -40,6 +35,7 @@ public class CustomerRepository : AbstractRepository<int, Customer>
 
             return customer;
         }
+
         throw new EntityNotFoundException(Entity.Customer);
     }
 }

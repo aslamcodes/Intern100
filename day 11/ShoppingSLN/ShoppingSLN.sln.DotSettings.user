@@ -2,6 +2,7 @@
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\VC\AppData\Local\JetBrains\Rider2024.1\resharper-host\temp\Rider\vAny\CoverageData\_ShoppingSLN.1336639327\Snapshot\snapshot.utdcvr</s:String>
 	
 	
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c3ca5290_002D99df_002D4a3b_002Dbc02_002D95a7e9da0e94/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;Project Location="C:\Users\VC\Documents\Projects\Intern100\day 11\ShoppingSLN\CartBLTests" Presentation="&amp;lt;CartBLTests&amp;gt;" /&gt;&#xD;

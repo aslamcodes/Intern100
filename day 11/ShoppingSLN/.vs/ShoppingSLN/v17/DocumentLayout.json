@@ -1,0 +1,114 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 11\\shoppingsln\\productbltests\\productupdationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|solutionrelative:productbltests\\productupdationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 11\\shoppingsln\\productbltests\\productretrivaltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|solutionrelative:productbltests\\productretrivaltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 11\\shoppingsln\\productbltests\\productdeletetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|solutionrelative:productbltests\\productdeletetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 11\\shoppingsln\\productbltests\\productcreationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E991E1F-D3A4-4197-BCFD-1DB7EC3D8A48}|ProductBLTests\\ProductBLTests.csproj|solutionrelative:productbltests\\productcreationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B61FFDC-2474-44E5-8A6E-494A5A303E17}|ShoppingBLLib\\ShoppingBLLib.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 11\\shoppingsln\\shoppingbllib\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B61FFDC-2474-44E5-8A6E-494A5A303E17}|ShoppingBLLib\\ShoppingBLLib.csproj|solutionrelative:shoppingbllib\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 243,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ShoppingBLLib\\ProductService.cs",
+              "RelativeDocumentMoniker": "ShoppingBLLib\\ProductService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ShoppingBLLib\\ProductService.cs",
+              "RelativeToolTip": "ShoppingBLLib\\ProductService.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAIA6wDgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T07:18:31.47Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductUpdationTests.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductUpdationTests.cs",
+              "RelativeDocumentMoniker": "ProductBLTests\\ProductUpdationTests.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductUpdationTests.cs",
+              "RelativeToolTip": "ProductBLTests\\ProductUpdationTests.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAuwCoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T07:29:34.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductCreationTests.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductCreationTests.cs",
+              "RelativeDocumentMoniker": "ProductBLTests\\ProductCreationTests.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductCreationTests.cs",
+              "RelativeToolTip": "ProductBLTests\\ProductCreationTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T07:26:09.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDeleteTests.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductDeleteTests.cs",
+              "RelativeDocumentMoniker": "ProductBLTests\\ProductDeleteTests.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductDeleteTests.cs",
+              "RelativeToolTip": "ProductBLTests\\ProductDeleteTests.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T07:24:15.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductRetrivalTests.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductRetrivalTests.cs",
+              "RelativeDocumentMoniker": "ProductBLTests\\ProductRetrivalTests.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 11\\ShoppingSLN\\ProductBLTests\\ProductRetrivalTests.cs",
+              "RelativeToolTip": "ProductBLTests\\ProductRetrivalTests.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAgwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T07:18:07.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
