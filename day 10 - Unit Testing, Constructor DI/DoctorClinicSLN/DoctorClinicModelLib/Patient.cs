@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DoctorClinicModelLib
+﻿namespace DoctorClinicModelLib
 {
     public class Patient(string name, string bloodGroup, int age, string sex, int weight, int height)
     {
         public int Id { get; set; }
 
-        public string Name { get; set} = name;
+        public string Name { get; set; } = name;
 
         public string BloodGroup { get; set; } = bloodGroup;
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj": {}
+    "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj": {
+    "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj",
+        "projectUniqueName": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj",
         "projectName": "DoctorClinicModelLib",
-        "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj",
+        "projectPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicModelLib\\DoctorClinicModelLib.csproj",
         "packagesPath": "C:\\Users\\VC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\DoctorClinicSLN\\DoctorClinicModelLib\\obj\\",
+        "outputPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicModelLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

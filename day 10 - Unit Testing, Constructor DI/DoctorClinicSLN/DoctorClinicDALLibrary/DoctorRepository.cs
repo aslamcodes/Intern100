@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using DoctorClinicModelLib;
+﻿using DoctorClinicModelLib;
 
 namespace DoctorClinicDALLibrary
 {
@@ -42,7 +36,7 @@ namespace DoctorClinicDALLibrary
         {
             if (_doctors.ContainsKey(id))
             {
-                var doctor = _doctors[key];
+                var doctor = _doctors[id];
                 _doctors.Remove(id);
                 return doctor;
             }

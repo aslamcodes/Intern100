@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3392a8b17d75141d",
+        "id": "2746c5f3e3eb136e",
         "type": "tabs",
         "children": [
           {
-            "id": "ce641930a9293bc6",
+            "id": "5159dc4f6834f352",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 10 - April 23rd.md",
+                "file": "Day 11 - Shopping Application.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "438766c04ab12454",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 10 - April 23rd.md",
+                "file": "Day 11 - Shopping Application.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 10 - April 23rd.md",
+                "file": "Day 11 - Shopping Application.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 10 - April 23rd.md"
+                "file": "Day 11 - Shopping Application.md"
               }
             }
           }
@@ -148,10 +147,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ce641930a9293bc6",
+  "active": "5159dc4f6834f352",
   "lastOpenFiles": [
-    "Day 1.md",
+    "Day 8 - Classes, Structs, Records and Abstract Classes.md",
     "Day 10 - April 23rd.md",
+    "Day 11 - Shopping Application.md",
+    "Day 1.md",
     "Task.md",
     "Resources/Pasted image 20240422151424.png",
     "Resources/Pasted image 20240422140403.png",
@@ -162,7 +163,6 @@
     "Day 5.md",
     "Day 6.md",
     "Day 7.md",
-    "Day 8.md",
     "Weekend 2 - Classes, Structs, Records, Abstract Classes and More.md",
     "Weekend 1 - Learning anything, Docker.md",
     "Resources/Pasted image 20240419105436.png",

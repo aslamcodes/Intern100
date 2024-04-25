@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UFvowMqDGSCzTd7j8Cf3JDi0O0BpeseJUN7gU9EPF4/oCfuKXBiFm1TqVqwsyuIBl6Rpl8fX/+XBN2so/z7olQ==",
+  "dgSpecHash": "PKidPqsfG7uz+G8IELs8uNljxOe6gRcFocV6qkatgcMeH3Jfm2RL5cx20rEANi1+67wbj/uqaYzB5brluraPeA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10\\DoctorClinicSLN\\DoctorClinicDALLibrary\\DoctorClinicDALLibrary.csproj",
+  "projectFilePath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicDALLibrary\\DoctorClinicDALLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
