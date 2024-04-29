@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6cc2c4047dd58179",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 14 Databases.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 12.md",
+                "file": "Day 14 Databases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 12.md",
+                "file": "Day 14 Databases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 12.md"
+                "file": "Day 14 Databases.md"
               }
             }
           }
@@ -160,12 +172,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "628fb110ab04634d",
+  "active": "6cc2c4047dd58179",
   "lastOpenFiles": [
-    "Day 11 - Shopping Application.md",
+    "Case Studies/ACID Properties.md",
+    "Case Studies/Can we do, SQL with Horizontal Scaling & No SQL with Vertical Scaling.md",
+    "Day 14 Databases.md",
     "Day 12.md",
-    "Day 8 - Classes, Structs, Records and Abstract Classes.md",
+    "Day 11 - Shopping Application.md",
     "Day 10 - April 23rd.md",
+    "Day 8 - Classes, Structs, Records and Abstract Classes.md",
     "Day 1.md",
     "Task.md",
     "Resources/Pasted image 20240422151424.png",
@@ -192,7 +207,7 @@
     "Welcome.md",
     "Resources",
     "Angular 14th Apr 2024.md",
-    "Untitled",
+    "Case Studies",
     "Knowledge Collector",
     "Git merge, rebase, squash.md"
   ]
