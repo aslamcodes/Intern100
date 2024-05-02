@@ -11,8 +11,12 @@
             "id": "9e9875fb82ff5fab",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Day 16.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -82,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Day 16.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Day 16.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Day 16.md"
+              }
             }
           }
         ],
@@ -142,6 +150,11 @@
   },
   "active": "9e9875fb82ff5fab",
   "lastOpenFiles": [
+    "Resources/Pasted image 20240502120000.png",
+    "Resources/Pasted image 20240502115249.png",
+    "Resources/Pasted image 20240502104356.png",
+    "Resources/Pasted image 20240502095537.png",
+    "Day 16.md",
     "Day 11 - Shopping Application.md",
     "Day 12.md",
     "Day 14 Databases.md",
@@ -169,10 +182,7 @@
     "Weekend 2 - Classes, Structs, Records, Abstract Classes and More.md",
     "Weekend 1 - Learning anything, Docker.md",
     "Resources/Pasted image 20240419105436.png",
-    "Resources/Pasted image 20240419104149.png",
-    "Resources/Pasted image 20240419104031.png",
     "Day 8.md - Shortcut.lnk",
-    "Resources/Pasted image 20240418110651.png",
     "Why.md",
     "Welcome.md",
     "Resources",
