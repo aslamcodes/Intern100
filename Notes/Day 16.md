@@ -1,5 +1,12 @@
-# Morning Session
-- Update Query
+### Morning Session
+Learnt a variety queries and their usages, including UPDATE, DELETE and Selection Queries. 
+Learnt aggregation concepts in SQL such as AVG, COUNT, SUM using them with Group by and having clauses
+### Afternoon Session
+Worked on 10 to 15 SQL problems on a SQL Database and practiced some problems on Postgre too.
+### Evening Plan
+Reinforce my understanding some complex SQL concepts and to learn some LLM concepts 
+
+
 # Update Query
 - Implicitly uses cursor behind the scenes
 - Without setting filters with Where clause everything will get updated

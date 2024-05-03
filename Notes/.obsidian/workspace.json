@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9e9875fb82ff5fab",
+            "id": "02c933d5a640502e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 16.md",
+                "file": "Day 17 - Sub Queries & Joins.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 16.md",
+                "file": "Day 17 - Sub Queries & Joins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 16.md",
+                "file": "Day 17 - Sub Queries & Joins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 16.md"
+                "file": "Day 17 - Sub Queries & Joins.md"
               }
             }
           }
@@ -148,13 +148,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9e9875fb82ff5fab",
+  "active": "02c933d5a640502e",
   "lastOpenFiles": [
+    "Resources/Pasted image 20240503113907.png",
+    "Day 16.md",
+    "Day 17 - Sub Queries & Joins.md",
     "Resources/Pasted image 20240502120000.png",
     "Resources/Pasted image 20240502115249.png",
     "Resources/Pasted image 20240502104356.png",
     "Resources/Pasted image 20240502095537.png",
-    "Day 16.md",
     "Day 11 - Shopping Application.md",
     "Day 12.md",
     "Day 14 Databases.md",
@@ -181,14 +183,12 @@
     "Day 7.md",
     "Weekend 2 - Classes, Structs, Records, Abstract Classes and More.md",
     "Weekend 1 - Learning anything, Docker.md",
-    "Resources/Pasted image 20240419105436.png",
     "Day 8.md - Shortcut.lnk",
     "Why.md",
     "Welcome.md",
     "Resources",
     "Angular 14th Apr 2024.md",
     "Case Studies",
-    "Knowledge Collector",
-    "Git merge, rebase, squash.md"
+    "Knowledge Collector"
   ]
 }
