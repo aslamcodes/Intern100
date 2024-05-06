@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 17 - Sub Queries & Joins.md",
+                "file": "Day 18 - Database Design & ERD.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "75ba4b73ff72dff1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 18 - Database Design & ERD.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "438766c04ab12454",
@@ -86,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 17 - Sub Queries & Joins.md",
+                "file": "Day 18 - Database Design & ERD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 17 - Sub Queries & Joins.md",
+                "file": "Day 18 - Database Design & ERD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 17 - Sub Queries & Joins.md"
+                "file": "Day 18 - Database Design & ERD.md"
               }
             }
           }
@@ -150,44 +161,44 @@
   },
   "active": "02c933d5a640502e",
   "lastOpenFiles": [
-    "Resources/Pasted image 20240503113907.png",
-    "Day 16.md",
-    "Day 17 - Sub Queries & Joins.md",
-    "Resources/Pasted image 20240502120000.png",
-    "Resources/Pasted image 20240502115249.png",
-    "Resources/Pasted image 20240502104356.png",
-    "Resources/Pasted image 20240502095537.png",
-    "Day 11 - Shopping Application.md",
-    "Day 12.md",
-    "Day 14 Databases.md",
-    "Day 15 - April 30.md",
-    "ERD.md",
-    "Resources/Pasted image 20240501152119.png",
-    "Resources/Pasted image 20240501151947.png",
-    "Resources/Pasted image 20240430100913.png",
-    "Resources/Pasted image 20240430100826.png",
-    "Case Studies/ACID Properties.md",
-    "Case Studies/Can we do, SQL with Horizontal Scaling & No SQL with Vertical Scaling.md",
-    "Day 10 - April 23rd.md",
     "Day 8 - Classes, Structs, Records and Abstract Classes.md",
-    "Day 1.md",
-    "Task.md",
-    "Resources/Pasted image 20240422151424.png",
-    "Resources/Pasted image 20240422140403.png",
-    "Untitled.md",
+    "Day 11 - Shopping Application.md",
+    "Day 10 - April 23rd.md",
+    "Day 6.md",
     "Day 2 - github, git and.md",
     "Day 4.md",
     "Day 4 Arrays.md",
     "Day 5.md",
-    "Day 6.md",
     "Day 7.md",
-    "Weekend 2 - Classes, Structs, Records, Abstract Classes and More.md",
-    "Weekend 1 - Learning anything, Docker.md",
-    "Day 8.md - Shortcut.lnk",
-    "Why.md",
-    "Welcome.md",
-    "Resources",
     "Angular 14th Apr 2024.md",
+    "Why.md",
+    "Weekend 1 - Learning anything, Docker.md",
+    "Weekend 2 - Classes, Structs, Records, Abstract Classes and More.md",
+    "Git merge, rebase, squash.md",
+    "Task.md",
+    "ERD.md",
+    "Day 18 - Database Design & ERD.md",
+    "Day 17 - Sub Queries & Joins.md",
+    "Untitled.md",
+    "Day 12.md",
+    "Day 14 Databases.md",
+    "Day 16.md",
+    "Resources/Shop ERD 1.png",
+    "Resources/Shop ERD.png",
+    "Resources/Pasted image 20240506105359.png",
+    "Resources/Pasted image 20240503113907.png",
+    "Resources/Pasted image 20240502120000.png",
+    "Resources/Pasted image 20240502115249.png",
+    "Resources/Pasted image 20240502104356.png",
+    "Resources/Pasted image 20240502095537.png",
+    "Day 15 - April 30.md",
+    "Resources/Pasted image 20240501152119.png",
+    "Resources/Pasted image 20240501151947.png",
+    "Case Studies/ACID Properties.md",
+    "Case Studies/Can we do, SQL with Horizontal Scaling & No SQL with Vertical Scaling.md",
+    "Day 1.md",
+    "Day 8.md - Shortcut.lnk",
+    "Resources",
     "Case Studies",
     "Knowledge Collector"
   ]

@@ -13,7 +13,7 @@ Points for consideration
  
 Note:- you do not have to store the shop details.
  
-## Question2
+# Question2
 ### Case 1: A Simple Case on ER Modelling
 > [!NOTE] Goal – to demonstrate how to build an E-R model from a simple Statement of Objectives of a movie store. (Given very clearly in statement forms) 
 ### Scenario

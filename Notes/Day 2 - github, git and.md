@@ -26,8 +26,7 @@ We can do this with PR right
 
 Gaya pushes the branch from g3 to master and raises a PR
 PR - pulls the changes from raised branch to the pr branch
-
-
+[[Git merge, rebase, squash]]
 ## Rebase
 Merge is seperate commit
 ## Squash and Merge

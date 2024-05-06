@@ -1,4 +1,3 @@
-
 # Classes
 - Classes can contain field, constructor and methods or behaviour
 - When objects are instantiated for a class, we only hold the reference to the objects

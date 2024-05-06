@@ -1,5 +1,4 @@
 - So far, Angular does what react does in a different way (might be wrong)
-
 # where html is?
 - In react, a functional component holds its html in its return part and css in other files and can be imported
 - In Angular, HTML resides in something called "Template", which will be passed as a parameter to the @component derivative
