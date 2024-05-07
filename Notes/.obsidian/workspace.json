@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "08fb68736c4e160d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 19.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "75ba4b73ff72dff1",
             "type": "leaf",
             "state": {
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 18 - Database Design & ERD.md",
+                "file": "Day 19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 18 - Database Design & ERD.md",
+                "file": "Day 19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 18 - Database Design & ERD.md"
+                "file": "Day 19.md"
               }
             }
           }
@@ -159,8 +172,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "02c933d5a640502e",
+  "active": "08fb68736c4e160d",
   "lastOpenFiles": [
+    "Day 17 - Sub Queries & Joins.md",
+    "Day 18 - Database Design & ERD.md",
+    "Day 19.md",
     "Day 8 - Classes, Structs, Records and Abstract Classes.md",
     "Day 11 - Shopping Application.md",
     "Day 10 - April 23rd.md",
@@ -177,9 +193,6 @@
     "Git merge, rebase, squash.md",
     "Task.md",
     "ERD.md",
-    "Day 18 - Database Design & ERD.md",
-    "Day 17 - Sub Queries & Joins.md",
-    "Untitled.md",
     "Day 12.md",
     "Day 14 Databases.md",
     "Day 16.md",

@@ -5,6 +5,20 @@ namespace D14
     internal class Program
     {
         /// <summary>
+        /// Print the list of nodes in the LinkedList
+        /// </summary>
+        /// <param name="head"></param>
+        public static void PrintList(ListNode head)
+        {
+            var current = head;
+            while (current != null)
+            {
+                Console.WriteLine(current.val);
+                current = current.next;
+            }
+        }
+
+        /// <summary>
         /// Generates a List with/without cycle
         /// </summary>
         /// <param name="withCycle">Boolean value that decides whether the list is going to contain a cycle or not</param>
@@ -23,6 +37,8 @@ namespace D14
 
             return head;
         }
+
+
 
         /// <summary>
         /// Generate a Tree
