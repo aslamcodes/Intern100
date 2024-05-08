@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "42089ec778ad6055",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 20 - ADO.Net as DAL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "75ba4b73ff72dff1",
             "type": "leaf",
             "state": {
@@ -44,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 301.5,
+    "collapsed": true
   },
   "right": {
     "id": "438766c04ab12454",
@@ -110,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 19.md",
+                "file": "Day 20 - ADO.Net as DAL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 19.md",
+                "file": "Day 20 - ADO.Net as DAL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 19.md"
+                "file": "Day 20 - ADO.Net as DAL.md"
               }
             }
           }
@@ -172,11 +185,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08fb68736c4e160d",
+  "active": "42089ec778ad6055",
   "lastOpenFiles": [
+    "Resources/Pasted image 20240508110126.png",
+    "Resources/Pasted image 20240508110054.png",
+    "Resources/Pasted image 20240508095213.png",
+    "Day 19.md",
+    "Day 20 - ADO.Net as DAL.md",
     "Day 17 - Sub Queries & Joins.md",
     "Day 18 - Database Design & ERD.md",
-    "Day 19.md",
     "Day 8 - Classes, Structs, Records and Abstract Classes.md",
     "Day 11 - Shopping Application.md",
     "Day 10 - April 23rd.md",
@@ -205,11 +222,7 @@
     "Resources/Pasted image 20240502104356.png",
     "Resources/Pasted image 20240502095537.png",
     "Day 15 - April 30.md",
-    "Resources/Pasted image 20240501152119.png",
-    "Resources/Pasted image 20240501151947.png",
     "Case Studies/ACID Properties.md",
-    "Case Studies/Can we do, SQL with Horizontal Scaling & No SQL with Vertical Scaling.md",
-    "Day 1.md",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",

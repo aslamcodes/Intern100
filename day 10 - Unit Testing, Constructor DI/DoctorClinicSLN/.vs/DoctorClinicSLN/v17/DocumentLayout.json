@@ -3,60 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicbllibrary\\appointmentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|solutionrelative:doctorclinicbllibrary\\appointmentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E9B9481-07BE-45A2-A5EF-908EDF9D6C91}|DoctorBLTest\\DoctorBLTest.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 10 - unit testing, constructor di\\doctorclinicsln\\doctorbltest\\createdoctortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E9B9481-07BE-45A2-A5EF-908EDF9D6C91}|DoctorBLTest\\DoctorBLTest.csproj|solutionrelative:doctorbltest\\createdoctortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E9B9481-07BE-45A2-A5EF-908EDF9D6C91}|DoctorBLTest\\DoctorBLTest.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorbltest\\deletedoctortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E9B9481-07BE-45A2-A5EF-908EDF9D6C91}|DoctorBLTest\\DoctorBLTest.csproj|solutionrelative:doctorbltest\\deletedoctortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E9B9481-07BE-45A2-A5EF-908EDF9D6C91}|DoctorBLTest\\DoctorBLTest.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 10 - unit testing, constructor di\\doctorclinicsln\\doctorbltest\\getdoctorappointmentstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E9B9481-07BE-45A2-A5EF-908EDF9D6C91}|DoctorBLTest\\DoctorBLTest.csproj|solutionrelative:doctorbltest\\getdoctorappointmentstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B71D6C2D-3180-4C22-9920-94CE5BC38981}|AppointmentBLTests\\AppointmentBLTests.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 10 - unit testing, constructor di\\doctorclinicsln\\appointmentbltests\\appointmentdatechangetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B71D6C2D-3180-4C22-9920-94CE5BC38981}|AppointmentBLTests\\AppointmentBLTests.csproj|solutionrelative:appointmentbltests\\appointmentdatechangetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A35EDA-F915-43CE-AA45-2DBF6A7321BF}|DoctorClinicDALLibrary\\DoctorClinicDALLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicdallibrary\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A35EDA-F915-43CE-AA45-2DBF6A7321BF}|DoctorClinicDALLibrary\\DoctorClinicDALLibrary.csproj|solutionrelative:doctorclinicdallibrary\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{199591EF-5723-4092-B482-7A5FFE316F2C}|PatientBLTest\\PatientBLTest.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\patientbltest\\patientdeletiontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{199591EF-5723-4092-B482-7A5FFE316F2C}|PatientBLTest\\PatientBLTest.csproj|solutionrelative:patientbltest\\patientdeletiontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2F6DD4D-AE99-40AB-B596-B57087B7060D}|DoctorClinicModelLib\\DoctorClinicModelLib.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicmodellib\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2F6DD4D-AE99-40AB-B596-B57087B7060D}|DoctorClinicModelLib\\DoctorClinicModelLib.csproj|solutionrelative:doctorclinicmodellib\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicbllibrary\\patientbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|solutionrelative:doctorclinicbllibrary\\patientbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A35EDA-F915-43CE-AA45-2DBF6A7321BF}|DoctorClinicDALLibrary\\DoctorClinicDALLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicdallibrary\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A35EDA-F915-43CE-AA45-2DBF6A7321BF}|DoctorClinicDALLibrary\\DoctorClinicDALLibrary.csproj|solutionrelative:doctorclinicdallibrary\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicbllibrary\\duplicateappointmentexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|solutionrelative:doctorclinicbllibrary\\duplicateappointmentexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicbllibrary\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|solutionrelative:doctorclinicbllibrary\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicbllibrary\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|solutionrelative:doctorclinicbllibrary\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\doctorclinicbllibrary\\doctorbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72286C0D-87B9-44C9-BE96-3FC172AFED7A}|DoctorClinicBLLibrary\\DoctorClinicBLLibrary.csproj|solutionrelative:doctorclinicbllibrary\\doctorbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65BCF142-703F-49D1-A406-FC3005633DCD}|DoctorClinic\\DoctorClinic.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 10 - unit testing, constructor di\\doctorclinicsln\\doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65BCF142-703F-49D1-A406-FC3005633DCD}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,47 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 243,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PatientBL.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\PatientBL.cs",
-              "RelativeDocumentMoniker": "DoctorClinicBLLibrary\\PatientBL.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\PatientBL.cs",
-              "RelativeToolTip": "DoctorClinicBLLibrary\\PatientBL.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAkwDwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:23:48.637Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetDoctorAppointmentsTests.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorBLTest\\GetDoctorAppointmentsTests.cs",
-              "RelativeDocumentMoniker": "DoctorBLTest\\GetDoctorAppointmentsTests.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorBLTest\\GetDoctorAppointmentsTests.cs",
-              "RelativeToolTip": "DoctorBLTest\\GetDoctorAppointmentsTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T11:37:11.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateDoctorTests.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorBLTest\\CreateDoctorTests.cs",
-              "RelativeDocumentMoniker": "DoctorBLTest\\CreateDoctorTests.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorBLTest\\CreateDoctorTests.cs",
-              "RelativeToolTip": "DoctorBLTest\\CreateDoctorTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T11:37:10.628Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -117,138 +26,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppointmentDateChangeTests.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\AppointmentBLTests\\AppointmentDateChangeTests.cs",
-              "RelativeDocumentMoniker": "AppointmentBLTests\\AppointmentDateChangeTests.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\AppointmentBLTests\\AppointmentDateChangeTests.cs",
-              "RelativeToolTip": "AppointmentBLTests\\AppointmentDateChangeTests.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAADwvyUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T04:20:45.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppointmentBL.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\AppointmentBL.cs",
-              "RelativeDocumentMoniker": "DoctorClinicBLLibrary\\AppointmentBL.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\AppointmentBL.cs",
-              "RelativeToolTip": "DoctorClinicBLLibrary\\AppointmentBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA0AAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinic\\Program.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Program.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinic\\Program.cs",
+              "RelativeToolTip": "DoctorClinic\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T04:20:28.121Z",
+              "WhenOpened": "2024-05-08T04:43:27.683Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicModelLib\\Patient.cs",
-              "RelativeDocumentMoniker": "DoctorClinicModelLib\\Patient.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicModelLib\\Patient.cs",
-              "RelativeToolTip": "DoctorClinicModelLib\\Patient.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAIAwwAYAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T04:14:47.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PatientDeletionTests.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\PatientBLTest\\PatientDeletionTests.cs",
-              "RelativeDocumentMoniker": "PatientBLTest\\PatientDeletionTests.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\PatientBLTest\\PatientDeletionTests.cs",
-              "RelativeToolTip": "PatientBLTest\\PatientDeletionTests.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAqwB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T04:14:23.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteDoctorTests.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorBLTest\\DeleteDoctorTests.cs",
-              "RelativeDocumentMoniker": "DoctorBLTest\\DeleteDoctorTests.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorBLTest\\DeleteDoctorTests.cs",
-              "RelativeToolTip": "DoctorBLTest\\DeleteDoctorTests.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAywCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T04:17:45.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DoctorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicDALLibrary\\DoctorRepository.cs",
-              "RelativeDocumentMoniker": "DoctorClinicDALLibrary\\DoctorRepository.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicDALLibrary\\DoctorRepository.cs",
-              "RelativeToolTip": "DoctorClinicDALLibrary\\DoctorRepository.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAewDcAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T04:14:14.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DuplicateAppointmentException.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\DuplicateAppointmentException.cs",
-              "RelativeDocumentMoniker": "DoctorClinicBLLibrary\\DuplicateAppointmentException.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\DuplicateAppointmentException.cs",
-              "RelativeToolTip": "DoctorClinicBLLibrary\\DuplicateAppointmentException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T15:26:19.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DoctorBL.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\DoctorBL.cs",
-              "RelativeDocumentMoniker": "DoctorClinicBLLibrary\\DoctorBL.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\DoctorBL.cs",
-              "RelativeToolTip": "DoctorClinicBLLibrary\\DoctorBL.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowC0AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:38:02.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\NotFoundException.cs",
-              "RelativeDocumentMoniker": "DoctorClinicBLLibrary\\NotFoundException.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\NotFoundException.cs",
-              "RelativeToolTip": "DoctorClinicBLLibrary\\NotFoundException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:36:55.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IPatientService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\IPatientService.cs",
-              "RelativeDocumentMoniker": "DoctorClinicBLLibrary\\IPatientService.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicBLLibrary\\IPatientService.cs",
-              "RelativeToolTip": "DoctorClinicBLLibrary\\IPatientService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAA2wAoAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:35:21.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PatientRepository.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicDALLibrary\\PatientRepository.cs",
-              "RelativeDocumentMoniker": "DoctorClinicDALLibrary\\PatientRepository.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinicDALLibrary\\PatientRepository.cs",
-              "RelativeToolTip": "DoctorClinicDALLibrary\\PatientRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:33:53.968Z"
             }
           ]
         }
