@@ -1,3 +1,4 @@
+use pubs;
 -- 1. Create a stored procedure that will take the author firstname and 
 -- print all the books polished by him with the publisher's name
 CREATE PROCEDURE GetBooksByAuthor(@AuthorFirstName varchar(50))
@@ -7,6 +8,7 @@ BEGIN
 	JOIN publishers P on T.pub_id = P.pub_id
 	JOIN titleauthor TA on TA.title_id = T.title_id 
 	JOIN authors A on A.au_fname like '%'+@AuthorFirstName+'%'
+	
 END	
 
 EXEC GetBooksByAuthor 'Sheryl'
@@ -17,15 +19,16 @@ EXEC GetBooksByAuthor 'Sheryl'
 ALTER PROCEDURE GetEmployeeSalesByName(@EmployeeFirstName varchar(50))
 AS
 BEGIN
-	Select E.fname + ' ' + E.lname 'Employee', title 'Title', T.price 'Price', S.qty 'Quantity', T.price * S.qty 'Total Cost'
+	Select E.fname + ' ' + E.lname 'Employee', title 'Title', SUM(T.price) 'Price', SUM(S.qty) 'Quantity', SUM(T.price) * SUM(S.qty) 'Total Cost'
 	From sales S
 	Join titles T on S.title_id = T.title_id
 	Join publishers P on P.pub_id = T.pub_id
 	Join employee E on E.pub_id = P.pub_id
 	where E.fname like '%' + @EmployeeFirstName + '%'
+	group by E.fname + ' ' + E.lname, title
 END
 
-EXEC GetEmployeeSalesByName 'Paolo';
+EXEC GetEmployeeSalesByName '';
 
 
 -- 3. Create a query that will print all names from authors and employees

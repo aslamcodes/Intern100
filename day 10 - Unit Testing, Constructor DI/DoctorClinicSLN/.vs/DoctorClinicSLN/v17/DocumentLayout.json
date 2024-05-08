@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 243,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -25,6 +25,10 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "DoctorClinic\\Program.cs",
               "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 10 - Unit Testing, Constructor DI\\DoctorClinicSLN\\DoctorClinic\\Program.cs",
               "RelativeToolTip": "DoctorClinic\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T04:43:27.683Z",
               "EditorCaption": ""

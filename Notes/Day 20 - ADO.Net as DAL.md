@@ -1,12 +1,16 @@
 # Summary
 ## Morning
-- Data Storage connection with C# ![[Pasted image 20240508095213.png]]
+- Data Storage connection with C# 
 - ADO .NET
 	- Connection
 	- Command
 	- Parameters
 	- Queries / NonQueries
 - EF Core
+## Afternoon
+- Worked on assignment after code showcase
+## Evening Plan
+- Explore Hugging Face 
 # Notes
 ![[Pasted image 20240508110126.png]]
 - EF core has two approach towards the ORM
@@ -33,3 +37,5 @@ CREATE THE CONTEXT
 GO TO PACKAGE MANAGER CONSOLE
 `Add Migration`
 `update-database`
+
+![[Pasted image 20240508095213.png]]
