@@ -7,14 +7,17 @@ namespace RequestTrackerCFRelations
     {
         private Employee? _authUser { get; set; }
         private readonly EmployeeAuthBL employeeAuthBL;
+
+        Program()
+        {
+            employeeAuthBL = new EmployeeAuthBL();
+        }
         public async void Login()
         {
             Console.Write("Enter your ID ");
             var name = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter your Password: ");
             var password = Console.ReadLine();
-
-
 
             var emp = await employeeAuthBL.Login(new Employee()
             {
@@ -24,10 +27,28 @@ namespace RequestTrackerCFRelations
 
             _authUser = emp;
         }
-
         public void Logout()
         {
             _authUser = null;
+        }
+
+        public async void Register()
+        {
+            Console.WriteLine("Enter your Name ");
+            var name = Console.ReadLine() ?? string.Empty;
+            Console.WriteLine("Enter your Password: ");
+            var password = Console.ReadLine() ?? string.Empty;
+            Console.WriteLine("");
+
+            var employee = new Employee()   {
+                Password = password,
+                Role = "employee",
+                Name = name,
+            };
+
+            var registeredEmployee = await employeeAuthBL.Register(employee);
+
+            _authUser = registeredEmployee;   
         }
 
         void UserMenu(ref int choice)
@@ -152,6 +173,7 @@ namespace RequestTrackerCFRelations
                     break;
                 case 2:
                     //TODO: Register Functionality
+                    Register();
                     break;
                 case -1:
                     Console.WriteLine("Exiting...");
