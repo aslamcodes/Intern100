@@ -30,9 +30,11 @@ namespace EmployeeTrackerBL
 
         }
 
-        public Task<Employee> Register(Employee employee)
+        public async Task<Employee> Register(Employee employee)
         {
-            throw new NotImplementedException();
+            var RepoEmployee = await _repo.Add(employee);
+
+            return RepoEmployee;
         }
     }
 }
