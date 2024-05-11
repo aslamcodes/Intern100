@@ -56,14 +56,24 @@
             }
           },
           {
-            "id": "86926058c843320b",
+            "id": "c93ee56cf963b81f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 22.md",
+                "file": "Drawing.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "fa353b090ae8bf0c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md"
               }
             }
           },
@@ -80,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -147,7 +157,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 22.md",
+                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +174,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 22.md",
+                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +197,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 22.md"
+                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md"
               }
             }
           }
@@ -206,14 +216,21 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "86926058c843320b",
+  "active": "fa353b090ae8bf0c",
   "lastOpenFiles": [
+    "Resources/Pasted Image 20240511174802_500.png",
+    "Drawing.md",
+    "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
+    "LQueue.md",
+    "Resources/Day 22 2024-05-10 14.13.12.excalidraw.md",
+    "Day 22.md",
+    "Resources/Pasted image 20240510114437.png",
     "Day 21 - Code First.md",
     "Day 20 - ADO.Net as DAL.md",
-    "Day 22.md",
     "Day 80.md",
     "Day 79.md",
     "Day 78.md",
@@ -232,11 +249,6 @@
     "Day 65.md",
     "Day 64.md",
     "Day 63.md",
-    "Day 62.md",
-    "Day 61.md",
-    "Day 60.md",
-    "Day 59.md",
-    "Day 58.md",
     "Resources/Pasted image 20240509143342.png",
     "Resources/Pasted image 20240509122514.png",
     "Resources/Pasted image 20240508110126.png",
@@ -246,7 +258,6 @@
     "Resources/Shop ERD.png",
     "Resources/Pasted image 20240506105359.png",
     "Resources/Pasted image 20240503113907.png",
-    "Resources/Pasted image 20240502120000.png",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",
