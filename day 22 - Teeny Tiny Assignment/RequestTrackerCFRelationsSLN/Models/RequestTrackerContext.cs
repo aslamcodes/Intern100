@@ -6,7 +6,7 @@ namespace Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=C0RBBX3\SQLSERVERG3;Integrated Security=true;Initial Catalog=dbEmployeeTrackerCF;TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer(@"Server=C0RBBX3\SQLSERVERG3;Integrated Security=true;Initial Catalog=dbEmployeeTrackerCF;TrustServerCertificate=true");
         }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Request> Requests { get; set; }
