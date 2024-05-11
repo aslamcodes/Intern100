@@ -15,6 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\EmployeeTrackerBL\EmployeeTrackerBL.csproj" />
 		<ProjectReference Include="..\Models\Models.csproj" />
 	</ItemGroup>
 

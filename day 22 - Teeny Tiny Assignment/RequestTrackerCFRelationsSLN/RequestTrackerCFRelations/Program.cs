@@ -1,27 +1,33 @@
-﻿using Models;
+﻿using EmployeeTrackerBL;
+using Models;
 
 namespace RequestTrackerCFRelations
 {
     internal class Program
     {
         private Employee? _authUser { get; set; }
-        public void Login()
+        private readonly EmployeeAuthBL employeeAuthBL;
+        public async void Login()
         {
-            var emp = new Employee
+            Console.Write("Enter your ID ");
+            var name = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter your Password: ");
+            var password = Console.ReadLine();
+
+
+
+            var emp = await employeeAuthBL.Login(new Employee()
             {
-                Role = "admin"
-            };
+                Id = name,
+                Password = password
+            });
 
             _authUser = emp;
         }
 
-
-
         public void Logout()
         {
-
             _authUser = null;
-
         }
 
         void UserMenu(ref int choice)
