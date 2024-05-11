@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RequestTrackerDALLibrary
+﻿namespace EmployeeTrackerDAL
 {
-    public interface IRepository<K,T> where T :class
+    public interface IRepository<K, T> where T : class
     {
         public Task<T> Add(T entity);
         public Task<T> Update(T entity);

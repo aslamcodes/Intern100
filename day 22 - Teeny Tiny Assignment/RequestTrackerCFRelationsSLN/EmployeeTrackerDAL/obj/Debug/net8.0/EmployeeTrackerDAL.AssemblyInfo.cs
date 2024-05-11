@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmployeeTrackerDAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+360bab72b92571b8a26e8cabc9f744758b7f0b28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2f0265419733320ddc0f8bb9f9cf5fbed89a3c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmployeeTrackerDAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmployeeTrackerDAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

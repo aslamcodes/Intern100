@@ -4,11 +4,11 @@ using RequestTrackerDALLibrary;
 
 namespace EmployeeTrackerDAL
 {
-    internal class EmployeeRepositry : IRepository<int, Employee>
+    public class EmployeeRepository : IRepository<int, Employee>
     {
         readonly private RequestTrackerContext _context;
 
-        public EmployeeRepositry(RequestTrackerContext context)
+        public EmployeeRepository(RequestTrackerContext context)
         {
             _context = context;
         }
