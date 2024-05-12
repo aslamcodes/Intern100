@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Models;
 
 namespace EmployeeTrackerDAL;
@@ -36,8 +37,8 @@ public class FeedbackRepository: IRepository<int, Feedback>
 
     public async Task<IList<Feedback>> GetAll()
     {
-        var feetbacks = await _context.Feedbacks.ToListAsync();
+        var feedbacks = await _context.Feedbacks.ToListAsync();
         
-        return feetbacks;
+        return feedbacks;
     }
 }
