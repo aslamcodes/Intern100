@@ -4,13 +4,9 @@ using Models.Enums;
 
 namespace EmployeeTrackerBL
 {
-    public class EmployeeAuthBL : IEmployeeAuthBL
+    public class EmployeeAuthBl
     {
-        private readonly IRepository<int, Employee> _repo;
-        public EmployeeAuthBL()
-        {
-            _repo = new EmployeeRepository(new RequestTrackerContext());
-        }
+        private readonly IRepository<int, Employee> _repo = new EmployeeRepository(new RequestTrackerContext());
 
         public async Task<Employee> Login(Employee employee)
         {
@@ -35,7 +31,7 @@ namespace EmployeeTrackerBL
 
             if (existingEmployee == null)
             {
-                throw new EntityNotCreated(EntityEnum.Employee);
+                throw new EntityNotCreatedException(EntityEnum.Employee);
             }
 
             return existingEmployee;
