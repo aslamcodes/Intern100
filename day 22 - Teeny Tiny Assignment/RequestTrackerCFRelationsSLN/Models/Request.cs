@@ -15,7 +15,7 @@ namespace Models
 
         public Employee RaisedByEmployee { get; set; }
 
-        public int RequestClosedBy { get; set; }
+        public int? RequestClosedBy { get; set; }
 
 
         public Employee RequestClosedByEmployee { get; set; }

@@ -34,7 +34,8 @@ namespace Models
                .HasOne(r => r.RequestClosedByEmployee)
                .WithMany(e => e.RequestsClosed)
                .HasForeignKey(r => r.RequestClosedBy)
-               .OnDelete(DeleteBehavior.Restrict);
+               .OnDelete(DeleteBehavior.Restrict)
+               .IsRequired(false);
 
             modelBuilder.Entity<RequestSolution>().HasKey(s => s.SolutionNumber);
 
@@ -52,7 +53,8 @@ namespace Models
                 .OnDelete(DeleteBehavior.Restrict)
                 .IsRequired();
 
-            modelBuilder.Entity<Feedback>().HasOne(feedback => feedback.Solution)
+            modelBuilder.Entity<Feedback>()
+                .HasOne(feedback => feedback.Solution)
                 .WithMany(Solution => Solution.FeedbacksForSolution)
                 .HasForeignKey(feedback => feedback.SolutionId)
                 .OnDelete(DeleteBehavior.Restrict)
