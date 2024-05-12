@@ -32,13 +32,15 @@ namespace EmployeeTrackerBL
         public async Task<Employee> Register(Employee employee)
         {
             var existingEmployee = await _repo.Add(employee);
-            // TODO: Define Employee not created Exception
+
             if (existingEmployee == null)
             {
-                throw new EntityNotFoundException(EntityEnum.Employee);
+                throw new EntityNotCreated(EntityEnum.Employee);
             }
 
             return existingEmployee;
         }
     }
+
+    
 }
