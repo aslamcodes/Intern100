@@ -22,5 +22,9 @@ namespace Models
 
         public ICollection<RequestSolution> RequestSolutions { get; set; }//No effect on the table
 
+        public override string ToString()
+        {
+            return $"Request Number: {RequestNumber}, Request Message: {RequestMessage}, Request Date: {RequestDate}, Request Status: {RequestStatus}, Request Raised By: {RequestRaisedBy}, Request Closed By: {RequestClosedBy}";
+        }
     }
 }
