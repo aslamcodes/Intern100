@@ -14,27 +14,31 @@ namespace EmployeeTrackerBL
 
         public async Task<Employee> Login(Employee employee)
         {
-            var repoEmployee = await _repo.Get(employee.Id);
+            var existingEmployee = await _repo.Get(employee.Id);
 
-            if (repoEmployee == null)
+            if (existingEmployee == null)
             {
                 throw new EntityNotFoundException(EntityEnum.Employee);
             }
 
-            if (employee.Password != repoEmployee.Password)
+            if (!existingEmployee.PasswordCheck(employee.Password))
             {
                 throw new InvalidPasswordException();
             }
 
-            return repoEmployee;
-
+            return existingEmployee;
         }
 
         public async Task<Employee> Register(Employee employee)
         {
-            var RepoEmployee = await _repo.Add(employee);
+            var existingEmployee = await _repo.Add(employee);
+            // TODO: Define Employee not created Exception
+            if (existingEmployee == null)
+            {
+                throw new EntityNotFoundException(EntityEnum.Employee);
+            }
 
-            return RepoEmployee;
+            return existingEmployee;
         }
     }
 }

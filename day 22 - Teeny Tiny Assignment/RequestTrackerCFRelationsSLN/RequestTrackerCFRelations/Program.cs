@@ -15,17 +15,17 @@ namespace RequestTrackerCFRelations
         public async void Login()
         {
             Console.Write("Enter your ID ");
-            var name = Convert.ToInt32(Console.ReadLine());
+            var id = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter your Password: ");
             var password = Console.ReadLine();
 
-            var emp = await employeeAuthBL.Login(new Employee()
+            var em = await employeeAuthBL.Login(new Employee()
             {
-                Id = name,
+                Id = id,
                 Password = password
             });
 
-            _authUser = emp;
+            _authUser = em;
         }
         public void Logout()
         {
@@ -42,7 +42,7 @@ namespace RequestTrackerCFRelations
 
             var employee = new Employee()   {
                 Password = password,
-                Role = "employee",
+                Role = "Employee",
                 Name = name,
             };
 
@@ -153,7 +153,6 @@ namespace RequestTrackerCFRelations
 
         void DefaultMenu(ref int choice)
         {
-            //TODO: Implement Default Menu Functionality
             Console.WriteLine("1. Login");
             Console.WriteLine("2. Register");
             Console.WriteLine("-1. Exit");
@@ -172,7 +171,6 @@ namespace RequestTrackerCFRelations
                     Login();
                     break;
                 case 2:
-                    //TODO: Register Functionality
                     Register();
                     break;
                 case -1:
@@ -197,11 +195,11 @@ namespace RequestTrackerCFRelations
 
                 if (_authUser != null)
                 {
-                    if (_authUser.Role == "employee")
+                    if (_authUser.Role == "Employee")
                     {
                         UserMenu(ref choice);
                     }
-                    else if (_authUser.Role == "admin")
+                    else if (_authUser.Role == "Admin")
                     {
                         AdminMenu(ref choice);
                     }
