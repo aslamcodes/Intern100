@@ -6,11 +6,11 @@ namespace RequestTrackerCFRelations
     internal class Program
     {
         private Employee? _authUser { get; set; }
-        private readonly EmployeeAuthBL employeeAuthBL;
+        private readonly EmployeeAuthBl employeeAuthBL;
 
         Program()
         {
-            employeeAuthBL = new EmployeeAuthBL();
+            employeeAuthBL = new EmployeeAuthBl();
         }
         public async void Login()
         {
