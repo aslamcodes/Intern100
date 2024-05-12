@@ -13,10 +13,15 @@ namespace RequestTrackerCFRelations
             _userRequestBL = new UserRequestBl();
         }
 
-        public void ViewUserRequests()
+        public async void ViewUserRequests()
         {
-            Console.WriteLine("Viewing User Requests");
+          var requests = await _userRequestBL.GetAllRequestForUser(_authUser);
 
+          foreach (var request in requests)
+          {
+              Console.WriteLine(request);
+          }
+          
         }
 
         public void ViewUserSolutions()
@@ -43,10 +48,47 @@ namespace RequestTrackerCFRelations
                 RequestStatus = "Open",
                 RequestRaisedBy = _authUser.Id,
                 RequestClosedBy = null
-                
             };
+            
             await _userRequestBL.RaiseRequest(request);
         }
 
+        public async void ViewRequestStatus()
+        {
+          
+
+            Console.WriteLine("Enter Request ID");
+            
+            var requestId = Convert.ToInt32(Console.ReadLine());
+
+            Request? request = await _userRequestBL.GetRequestById(requestId);
+            
+            if(request == null)
+            {
+                Console.Write("Could not find request");
+                return;
+            }
+            
+            Console.WriteLine($"Request Status: {request.RequestStatus}");
+        }
+
+        public async void MarkRequestClosed()
+        {
+            if (_authUser.Role != "Admin") return;
+            
+            Console.WriteLine("Enter Request ID");
+            
+            var requestId = Convert.ToInt32(Console.ReadLine());
+
+            Request? request = await _userRequestBL.GetRequestById(requestId);
+            
+            if(request == null)
+            {
+                Console.Write("Could not find request");
+                return; 
+            }
+            
+            await _userRequestBL.MarkRequestClosed(request);
+        }
     }
 }

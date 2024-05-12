@@ -57,8 +57,17 @@ namespace RequestTrackerCFRelations
             Console.WriteLine("2. View My Requests");
             Console.WriteLine("3. View My Solutions");
             Console.WriteLine("4. Give Feedback");
-            Console.WriteLine("5. Logout");
 
+            if (_authUser.Role == "Admin")
+            {
+                Console.WriteLine("5. View Request Status(All Requests)");
+                Console.WriteLine("6. View Solutions(All Solutions)");
+                Console.WriteLine("7. Provide Solution");
+                Console.WriteLine("8. Mark Request as Closed");
+            }
+            
+            Console.WriteLine("-1. Logout");
+            
             Console.Write("Enter your choice: ");
             choice = Convert.ToInt32(Console.ReadLine());
 
@@ -71,8 +80,7 @@ namespace RequestTrackerCFRelations
             {
                 return;
             }
-
-            //TODO: Implement User actions
+            
             var userActions = new UserActions(_authUser);
 
             switch (choice)
@@ -90,65 +98,16 @@ namespace RequestTrackerCFRelations
                     userActions.ViewUserFeedbacks();
                     break;
                 case 5:
+                    userActions.ViewRequestStatus();
+                    break;
+                case 8:
+                    userActions.MarkRequestClosed();
+                    break;
+                case -1:
                     Logout();
                     break;
             }
 
-        }
-
-        void AdminMenu(ref int choice)
-        {
-
-            Console.WriteLine("1. Raise Request");
-
-            Console.WriteLine("2. View Request Status(All Requests)");
-            Console.WriteLine("3. View Solutions(All Solutions)");
-
-            Console.WriteLine("4. Give Feedback for Solutions for your Request");
-            Console.WriteLine("5. Provide Solution");
-            Console.WriteLine("6. Mark Request as Closed");
-
-            Console.WriteLine("7. Logout");
-
-            Console.Write("Enter your choice: ");
-            choice = Convert.ToInt32(Console.ReadLine());
-
-            AdminActions(ref choice);
-        }
-
-        void AdminActions(ref int choice)
-        {
-            if (_authUser == null)
-            {
-                return;
-            }
-
-            //TODO: Implement Admin Actions
-            var adminActions = new AdminActions(_authUser);
-            switch (choice)
-            {
-                case 1:
-                    adminActions.RaiseRequest();
-                    break;
-                case 2:
-                    adminActions.ViewAllRequests();
-                    break;
-                case 3:
-                    adminActions.ViewAllSolutions();
-                    break;
-                case 4:
-                    adminActions.GiveFeedback();
-                    break;
-                case 5:
-                    adminActions.ProvideSolution();
-                    break;
-                case 6:
-                    adminActions.CloseRequest();
-                    break;
-                case 7:
-                    Logout();
-                    break;
-            }
         }
 
         void DefaultMenu(ref int choice)
@@ -193,20 +152,8 @@ namespace RequestTrackerCFRelations
             while (choice != -1)
             {
 
-                if (_authUser != null)
-                {
-                    if (_authUser.Role == "Employee")
-                    {
-                        UserMenu(ref choice);
-                    }
-                    else if (_authUser.Role == "Admin")
-                    {
-                        AdminMenu(ref choice);
-                    }
-                }
-
-                else
-                {
+                if (_authUser != null) UserMenu(ref choice); 
+                else  {
                     Console.WriteLine("Welcome to Presidio's Employee Request Tracker");
                     DefaultMenu(ref choice);
                 }

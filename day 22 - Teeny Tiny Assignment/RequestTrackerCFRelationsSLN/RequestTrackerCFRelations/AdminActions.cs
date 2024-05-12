@@ -1,20 +1,17 @@
-﻿using Models;
+﻿using EmployeeTrackerBL;
+using Models;
 
 namespace RequestTrackerCFRelations
 {
     internal class AdminActions
     {
         private readonly Employee _authUser;
+        private readonly IUserRequestBl _userRequestBL;
 
         public AdminActions(Employee authUser)
         {
             _authUser = authUser;
-        }
-
-        public void RaiseRequest()
-        {
-            Console.WriteLine("Raising Request");
-
+            _userRequestBL = new UserRequestBl();
         }
 
         public void AcceptSolutionForYourRequest()
@@ -62,6 +59,15 @@ namespace RequestTrackerCFRelations
         }
 
 
+        public async void RaiseRequest()
+        { 
+            var requests = await _userRequestBL.GetAllRequestForUser(_authUser);
 
+            foreach (var request in requests)
+            {
+                Console.WriteLine(request);
+            }
+
+        }
     }
 }
