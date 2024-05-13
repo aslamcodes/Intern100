@@ -17,6 +17,10 @@ namespace Models
 
         public RequestSolution Solution { get; set; }
 
+        public override string ToString()
+        {
+            return $"Feedback Id: {FeedbackId}, Feedback Message: {FeedbackMessage}, Rating: {Rating}, Posted Date: {PostedDate}, Solution Id: {SolutionId}";
+        }
 
     }
 }
