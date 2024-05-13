@@ -41,7 +41,7 @@ public class RequestRepository(RequestTrackerContext context) : IRepository<int,
        return request;
     }
 
-    public async Task<IList<Request>> GetAll()
+    public async Task<List<Request>> GetAll()
     {
         return await context.Requests.ToListAsync();
     }

@@ -1,139 +1,101 @@
-﻿using EmployeeTrackerBL;
-using Models;
+﻿using Models;
 
 namespace RequestTrackerCFRelations
 {
     internal class Program
     {
         private Employee? _authUser { get; set; }
-        private readonly EmployeeAuthBl employeeAuthBL;
 
-        Program()
-        {
-            employeeAuthBL = new EmployeeAuthBl();
-        }
-        public async void Login()
-        {
-            Console.Write("Enter your ID ");
-            var id = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter your Password: ");
-            var password = Console.ReadLine();
+        private bool _isProgramRunning = true;
 
-            var em = await employeeAuthBL.Login(new Employee()
-            {
-                Id = id,
-                Password = password
-            });
-
-            _authUser = em;
-        }
-        public void Logout()
+        void ExitProgram()
         {
-            _authUser = null;
+            Console.WriteLine("Exiting...");
+            _isProgramRunning = false;
         }
 
-        public async void Register()
-        {
-            Console.WriteLine("Enter your Name ");
-            var name = Console.ReadLine() ?? string.Empty;
-            Console.WriteLine("Enter your Password: ");
-            var password = Console.ReadLine() ?? string.Empty;
-            Console.WriteLine("");
-
-            var employee = new Employee()   {
-                Password = password,
-                Role = "Employee",
-                Name = name,
-            };
-
-            var registeredEmployee = await employeeAuthBL.Register(employee);
-
-            _authUser = registeredEmployee;   
-        }
-
-        void UserMenu(ref int choice)
+        async Task UserMenu()
         {
             Console.WriteLine("1. Raise Request");
             Console.WriteLine("2. View My Requests");
             Console.WriteLine("3. View My Solutions");
-            Console.WriteLine("4. Give Feedback");
+            Console.WriteLine("4. Give Feedback for Solutions given to your Requests");
 
             if (_authUser.Role == "Admin")
             {
-                Console.WriteLine("5. View Request Status(All Requests)");
-                Console.WriteLine("6. View Solutions(All Solutions)");
+                Console.WriteLine("5. View all Requests");
+                Console.WriteLine("6. View all Solution");
                 Console.WriteLine("7. Provide Solution");
                 Console.WriteLine("8. Mark Request as Closed");
             }
-            
-            Console.WriteLine("-1. Logout");
-            
+
+            Console.WriteLine("0. Logout");
+            Console.WriteLine("-1. Exit");
+
             Console.Write("Enter your choice: ");
-            choice = Convert.ToInt32(Console.ReadLine());
 
-            UserActions(ref choice);
-        }
+            int choice = Convert.ToInt32(Console.ReadLine());
 
-        void UserActions(ref int choice)
-        {
-            if (_authUser == null)
-            {
-                return;
-            }
-            
             var userActions = new UserActions(_authUser);
 
             switch (choice)
             {
                 case 1:
-                    userActions.RaiseRequest();
+                    await userActions.RaiseRequest();
                     break;
                 case 2:
-                    userActions.ViewUserRequests();
+                    await userActions.ViewUserRequests();
                     break;
                 case 3:
-                    userActions.ViewUserSolutions();
+                    await userActions.ViewUserSolutions();
                     break;
                 case 4:
-                    userActions.ViewUserFeedbacks();
+                    await userActions.GiveFeedback();
                     break;
                 case 5:
-                    userActions.ViewRequestStatus();
+                    await userActions.ViewAllRequests();
+                    break;
+                case 6:
+                    await userActions.ViewAllSolutions();
+                    break;
+                case 7:
+                    await userActions.ProvideSolution();
                     break;
                 case 8:
-                    userActions.MarkRequestClosed();
+                    await userActions.MarkRequestClosed();
                     break;
                 case -1:
-                    Logout();
+                    ExitProgram();
+                    break;
+                case 0:
+                    _authUser = null;
                     break;
             }
-
         }
 
-        void DefaultMenu(ref int choice)
+        async Task WelcomeMenu()
         {
+            AuthActions authActions = new();
+
+            Console.WriteLine("Welcome to Presidio's Employee Request Tracker");
+
             Console.WriteLine("1. Login");
             Console.WriteLine("2. Register");
             Console.WriteLine("-1. Exit");
 
             Console.Write("Enter your choice: ");
-            choice = Convert.ToInt32(Console.ReadLine());
+            int choice = Convert.ToInt32(Console.ReadLine());
 
-            DefaultActions(ref choice);
-        }
-
-        void DefaultActions(ref int choice)
-        {
             switch (choice)
             {
                 case 1:
-                    Login();
+                    _authUser = await authActions.Login();
                     break;
                 case 2:
-                    Register();
+                    _authUser = await authActions.Register();
                     break;
                 case -1:
-                    Console.WriteLine("Exiting...");
+                    ExitProgram();
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Please try again.");
@@ -144,29 +106,23 @@ namespace RequestTrackerCFRelations
         /// <summary>
         /// Home Menu of the Application
         /// </summary>
-        void HomeMenu()
+        async Task HomeMenu()
         {
 
-            int choice = 0;
-
-            while (choice != -1)
+            while (_isProgramRunning)
             {
+                if (_authUser == null) await WelcomeMenu();
+                else await UserMenu();
 
-                if (_authUser != null) UserMenu(ref choice); 
-                else  {
-                    Console.WriteLine("Welcome to Presidio's Employee Request Tracker");
-                    DefaultMenu(ref choice);
-                }
-
-                Console.WriteLine("Press any key to continue...");
+                Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
                 Console.Clear();
             }
 
         }
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            new Program().HomeMenu();
+            await new Program().HomeMenu();
         }
     }
 }

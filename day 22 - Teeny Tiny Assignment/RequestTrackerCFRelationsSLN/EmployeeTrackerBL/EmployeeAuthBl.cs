@@ -4,7 +4,7 @@ using Models.Enums;
 
 namespace EmployeeTrackerBL
 {
-    public class EmployeeAuthBl
+    public class EmployeeAuthBl : IEmployeeAuthBl
     {
         private readonly IRepository<int, Employee> _repo = new EmployeeRepository(new RequestTrackerContext());
 
@@ -38,5 +38,5 @@ namespace EmployeeTrackerBL
         }
     }
 
-    
+
 }

@@ -1,4 +1,5 @@
-﻿namespace Models
+﻿
+namespace Models
 {
     public class Employee
     {
@@ -20,5 +21,6 @@
         public ICollection<Request> RequestsClosed { get; set; }//No effect on the table
 
         public ICollection<RequestSolution> RequestSolutions { get; set; }//No effect on the table
+
     }
 }

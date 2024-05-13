@@ -44,7 +44,7 @@ namespace EmployeeTrackerDAL
             return e;
         }
 
-        public async Task<IList<Employee>> GetAll()
+        public async Task<List<Employee>> GetAll()
         {
             var e = await _context.Employees.ToListAsync();
 

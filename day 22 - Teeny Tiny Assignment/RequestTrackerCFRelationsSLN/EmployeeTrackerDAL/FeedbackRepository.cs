@@ -3,10 +3,10 @@ using Models;
 
 namespace EmployeeTrackerDAL;
 
-public class FeedbackRepository: IRepository<int, Feedback>
+public class FeedbackRepository(RequestTrackerContext dbContext): IRepository<int, Feedback>
 {
     
-    private readonly RequestTrackerContext _context = new RequestTrackerContext();
+    private readonly RequestTrackerContext _context = dbContext;
     public async Task<Feedback> Add(Feedback entity)
     {
         _context.Feedbacks.Add(entity);
@@ -35,7 +35,7 @@ public class FeedbackRepository: IRepository<int, Feedback>
         return feedback;
     }
 
-    public async Task<IList<Feedback>> GetAll()
+    public async Task<List<Feedback>> GetAll()
     {
         var feedbacks = await _context.Feedbacks.ToListAsync();
         

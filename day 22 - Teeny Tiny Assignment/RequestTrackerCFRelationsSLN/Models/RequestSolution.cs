@@ -27,6 +27,12 @@ namespace Models
         // Navigation Property to Feedbaack
         public ICollection<Feedback> FeedbacksForSolution { get; set; }
 
-
+        public override string ToString()
+        {
+            return $"Solution Number: {SolutionNumber}\n" +
+                   $"Solution Message: {SolutionMessage}\n" +
+                   $"Posted Date: {PostedDate}\n" +
+                   $"Request Number: {RequestNumber}\n";
+        }
     }
 }
