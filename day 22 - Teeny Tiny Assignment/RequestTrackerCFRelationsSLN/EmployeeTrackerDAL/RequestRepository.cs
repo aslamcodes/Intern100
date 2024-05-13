@@ -8,41 +8,58 @@ public class RequestRepository(RequestTrackerContext context) : IRepository<int,
     public async Task<Request> Add(Request entity)
     {
         context.Requests.Add(entity);
+
         await context.SaveChangesAsync();
+
         return entity;
     }
 
     public async Task<Request> Update(Request entity)
     {
         context.Requests.Update(entity);
+
         await context.SaveChangesAsync();
+
         return entity;
     }
 
-    public async Task<Request> Delete(int key)
+    public async Task<Request?> Delete(int key)
     {
-        Request request = await Get(key);
-        
+        var request = await Get(key);
+
+        if (request == null)
+        {
+            return null;
+        }
+
         context.Requests.Remove(request);
+
         await context.SaveChangesAsync();
 
         return request;
     }
 
-    public async Task<Request> Get(int key)
+    public async Task<Request?> Get(int key)
     {
-       var request = await context.Requests.FindAsync(key);
+        var request = await context.Requests.FindAsync(key);
 
-       if (request == null)
-       {
-           return null;
-       }
-       
-       return request;
+        if (request == null)
+        {
+            return null;
+        }
+
+        return request;
     }
 
-    public async Task<List<Request>> GetAll()
+    public async Task<List<Request>?> GetAll()
     {
-        return await context.Requests.ToListAsync();
+        var requests = await context.Requests.ToListAsync();
+
+        if (requests.Count == 0)
+        {
+            return null;
+        }
+
+        return requests;
     }
 }
