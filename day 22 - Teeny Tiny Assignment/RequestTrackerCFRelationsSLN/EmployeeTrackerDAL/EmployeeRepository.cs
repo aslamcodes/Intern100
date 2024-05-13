@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Models;
-using EmployeeTrackerDAL;
 
 namespace EmployeeTrackerDAL
 {
@@ -20,9 +19,11 @@ namespace EmployeeTrackerDAL
             return entity;
         }
 
-        public async Task<Employee> Delete(int key)
+        public async Task<Employee?> Delete(int key)
         {
             var e = await Get(key);
+
+
             if (e != null) return null;
 
             _context.Employees.Remove(e);
@@ -32,7 +33,7 @@ namespace EmployeeTrackerDAL
 
         }
 
-        public async Task<Employee> Get(int key)
+        public async Task<Employee?> Get(int key)
         {
             Employee? e = await _context.Employees.FindAsync(key);
 
@@ -44,16 +45,16 @@ namespace EmployeeTrackerDAL
             return e;
         }
 
-        public async Task<List<Employee>> GetAll()
+        public async Task<List<Employee>?> GetAll()
         {
-            var e = await _context.Employees.ToListAsync();
+            var employees = await _context.Employees.ToListAsync();
 
-            if (e == null)
+            if (employees.Count == 0)
             {
                 return null;
             }
 
-            return e;
+            return employees;
         }
 
         public async Task<Employee> Update(Employee entity)
