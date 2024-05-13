@@ -1,4 +1,5 @@
 ﻿using EmployeeTrackerBL;
+using EmployeeTrackerBL.Exceptions;
 using Models;
 
 namespace RequestTrackerCFRelations
@@ -20,142 +21,274 @@ namespace RequestTrackerCFRelations
 
         public async Task ViewUserRequests()
         {
-            var requests = await _userRequestBL.GetAllRequestForUser(_authUser);
-
-            foreach (var request in requests)
+            try
             {
-                Console.WriteLine(request);
-            }
+                var requests = await _userRequestBL.GetAllRequestForUser(_authUser);
 
+                foreach (var request in requests)
+                {
+                    Console.WriteLine(request);
+                }
+            }
+            catch (EntityNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         public async Task ViewUserSolutions()
         {
-            foreach (var solution in await _requestSolutionBl.GetAllSolutionsForUser(_authUser))
+            try
             {
-                Console.WriteLine(solution);
+                foreach (var solution in await _requestSolutionBl.GetAllSolutionsForUser(_authUser))
+                {
+                    Console.WriteLine(solution);
+
+                }
 
             }
+            catch (EntityNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
         }
 
-        public void ViewUserFeedbacks(Employee employee)
+        public async void ViewUserFeedbacks(Employee employee)
         {
-            _feedbackBL.GetAllFeedbacksForUser(employee);
+            try
+            {
+                await _feedbackBL.GetAllFeedbacksForUser(employee);
 
+            }
+            catch (EntityNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         public async Task RaiseRequest()
         {
-            Console.WriteLine("Enter your request");
-
-            var requestText = Console.ReadLine() ?? string.Empty;
-
-            var request = new Request()
+            try
             {
-                RequestMessage = requestText,
-                RequestDate = new DateTime(),
-                RequestStatus = "Open",
-                RequestRaisedBy = _authUser.Id,
-                RequestClosedBy = null
-            };
+                Console.WriteLine("Enter your request");
 
-            await _userRequestBL.RaiseRequest(request);
+                var requestText = Console.ReadLine() ?? string.Empty;
+
+                var request = new Request()
+                {
+                    RequestMessage = requestText,
+                    RequestDate = new DateTime(),
+                    RequestStatus = "Open",
+                    RequestRaisedBy = _authUser.Id,
+                    RequestClosedBy = null
+                };
+
+                await _userRequestBL.RaiseRequest(request);
+            }
+            catch (CouldNotCreateEntityException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
         }
 
         public async Task ViewAllRequests()
         {
-            var requests = await _requestSolutionBl.GetAllSolutions();
-
-            if (requests.Count == 0)
+            try
             {
-                Console.WriteLine("No requests found");
-            }
+                var requests = await _userRequestBL.GetAllRequests();
+                requests.ForEach(Console.WriteLine);
 
-            requests.ForEach(Console.WriteLine);
+            }
+            catch (EntityNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         public async Task MarkRequestClosed()
         {
-            if (_authUser.Role != "Admin") return;
-
-            Console.WriteLine("Enter Request ID");
-
-            var requestId = Convert.ToInt32(Console.ReadLine());
-
-            Request? request = await _userRequestBL.GetRequestById(requestId);
-
-            if (request == null)
+            try
             {
-                Console.Write("Could not find request");
-                return;
+                if (_authUser.Role != "Admin") return;
+
+                Console.WriteLine("Enter Request ID");
+
+                var requestId = Convert.ToInt32(Console.ReadLine());
+
+                Request? request = await _userRequestBL.GetRequestById(requestId);
+
+                if (request == null)
+                {
+                    Console.Write("Could not find request");
+                    return;
+                }
+
+                await _userRequestBL.MarkRequestClosed(request);
+            }
+            catch (EntityNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
 
-            await _userRequestBL.MarkRequestClosed(request);
         }
 
         public async Task ViewAllSolutions()
         {
-            var solutions = await _requestSolutionBl.GetAllSolutions();
-
-            foreach (RequestSolution solution in solutions)
+            try
             {
-                Console.WriteLine(solution);
+                var solutions = await _requestSolutionBl.GetAllSolutions();
+
+                foreach (RequestSolution solution in solutions)
+                {
+                    Console.WriteLine(solution);
+                }
+            }
+            catch (EntityNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
 
         }
 
         public async Task ProvideSolution()
         {
-            Console.WriteLine("Enter Request Id");
-            var requestId = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Solution");
-            var solutionText = Console.ReadLine() ?? string.Empty;
-
-            var solution = new RequestSolution()
+            try
             {
-                SolutionMessage = solutionText,
-                PostedDate = new DateTime(),
-                RequestNumber = requestId,
-                SolutionPostedBy = _authUser.Id,
-                isAccepted = false,
-            };
+                Console.WriteLine("Enter Request Id");
+                var requestId = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Solution");
+                var solutionText = Console.ReadLine() ?? string.Empty;
 
-            await _requestSolutionBl.ProvideSolution(solution);
+                var solution = new RequestSolution()
+                {
+                    SolutionMessage = solutionText,
+                    PostedDate = new DateTime(),
+                    RequestNumber = requestId,
+                    SolutionPostedBy = _authUser.Id,
+                    isAccepted = false,
+                };
+
+                await _requestSolutionBl.ProvideSolution(solution);
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+
         }
 
         public async Task GiveFeedback()
         {
-            var requests = await _userRequestBL.GetAllRequestForUser(_authUser);
-
-            foreach (var request in requests)
+            try
             {
-                Console.WriteLine(request);
+                var requests = await _userRequestBL.GetAllRequestForUser(_authUser);
+
+                foreach (var request in requests)
+                {
+                    Console.WriteLine(request);
+                }
+
+
+                Console.WriteLine("Enter Request ID");
+                var requestId = Convert.ToInt32(Console.ReadLine());
+
+                (await _requestSolutionBl.GetAllSolutions()).Where(s => s.RequestNumber == requestId).ToList().ForEach(Console.WriteLine);
+
+                Console.WriteLine("Enter Solution Number");
+                var solutionNumber = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter your feedback");
+                var feedbackText = Console.ReadLine() ?? string.Empty;
+
+                Console.WriteLine("Enter your rating");
+                var rating = Convert.ToInt32(Console.ReadLine());
+
+                var feedback = new Feedback()
+                {
+                    FeedbackMessage = feedbackText,
+                    SolutionId = solutionNumber,
+                    PostedDate = new DateTime(),
+                    Rating = rating,
+                };
+
+                await _feedbackBL.AddFeedback(feedback);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
 
+        }
 
-            Console.WriteLine("Enter Request ID");
-            var requestId = Convert.ToInt32(Console.ReadLine());
-
-            (await _requestSolutionBl.GetAllSolutions()).Where(s => s.RequestNumber == requestId).ToList().ForEach(Console.WriteLine);
-
-            Console.WriteLine("Enter Solution Number");
-            var solutionNumber = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Enter your feedback");
-            var feedbackText = Console.ReadLine() ?? string.Empty;
-
-            Console.WriteLine("Enter your rating");
-            var rating = Convert.ToInt32(Console.ReadLine());
-
-            var feedback = new Feedback()
+        public async Task RespondToSolution()
+        {
+            try
             {
-                FeedbackMessage = feedbackText,
-                SolutionId = solutionNumber,
-                PostedDate = new DateTime(),
-                Rating = rating,
-            };
+                (await _requestSolutionBl.GetAllSolutionsForUser(_authUser)).ForEach(Console.WriteLine);
 
-            await _feedbackBL.AddFeedback(feedback);
+                Console.WriteLine("Enter Solution Number");
+                var solutionNumber = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Accept the solution? (Y/N)");
+                var isAccepted = Console.ReadLine() ?? string.Empty;
+
+                if (isAccepted.Equals("y", StringComparison.CurrentCultureIgnoreCase)) { await _requestSolutionBl.AcceptSolution(solutionNumber); return; }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
+
+        public async Task ViewYourFeedbacks()
+        {
+            try
+            {
+                var feedbacks = await _feedbackBL.GetAllFeedbacksForUser(_authUser);
+
+                foreach (var feedback in feedbacks)
+                {
+                    Console.WriteLine(feedback);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
         }
     }
 }
