@@ -8,28 +8,52 @@ public class SolutionRepository(RequestTrackerContext dbContext) : IRepository<i
     public async Task<RequestSolution> Add(RequestSolution entity)
     {
         dbContext.RequestSolutions.Add(entity);
+
         await dbContext.SaveChangesAsync();
+
         return entity;
     }
 
-    public Task<RequestSolution> Update(RequestSolution entity)
+    public async Task<RequestSolution> Update(RequestSolution entity)
     {
-        throw new NotImplementedException();
+        dbContext.RequestSolutions.Update(entity);
+
+        await dbContext.SaveChangesAsync();
+
+        return entity;
     }
 
-    public Task<RequestSolution> Delete(int key)
+    public async Task<RequestSolution?> Delete(int key)
     {
-        throw new NotImplementedException();
+        var solution = await Get(key);
+
+        if (solution == null)
+        {
+            return null;
+        }
+
+        dbContext.RequestSolutions.Remove(solution);
+
+        await dbContext.SaveChangesAsync();
+
+        return solution;
     }
 
-    public Task<RequestSolution> Get(int key)
+    public async Task<RequestSolution?> Get(int key)
     {
-        throw new NotImplementedException();
+        var solution = await dbContext.RequestSolutions.FindAsync(key);
+
+        return solution;
     }
 
-    public async Task<List<RequestSolution>> GetAll()
+    public async Task<List<RequestSolution>?> GetAll()
     {
         var solutions = await dbContext.RequestSolutions.ToListAsync();
+
+        if (solutions.Count == 0)
+        {
+            return null;
+        }
 
         return solutions;
     }
