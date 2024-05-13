@@ -71,9 +71,11 @@
             "id": "fa353b090ae8bf0c",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md"
+                "file": "Day 23.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -157,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
+                "file": "Day 23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
+                "file": "Day 23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -197,7 +199,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md"
+                "file": "Day 23.md"
               }
             }
           }
@@ -222,12 +224,17 @@
   },
   "active": "fa353b090ae8bf0c",
   "lastOpenFiles": [
+    "Resources/Pasted image 20240513123101.png",
+    "Resources/Pasted image 20240513123027.png",
+    "Resources/Pasted image 20240513122650.png",
+    "Resources/Pasted image 20240513120533.png",
+    "Resources/Pasted image 20240513120503.png",
+    "Day 22.md",
+    "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
     "Resources/Pasted Image 20240511174802_500.png",
     "Drawing.md",
-    "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
     "LQueue.md",
     "Resources/Day 22 2024-05-10 14.13.12.excalidraw.md",
-    "Day 22.md",
     "Resources/Pasted image 20240510114437.png",
     "Day 21 - Code First.md",
     "Day 20 - ADO.Net as DAL.md",
@@ -253,11 +260,6 @@
     "Resources/Pasted image 20240509122514.png",
     "Resources/Pasted image 20240508110126.png",
     "Resources/Pasted image 20240508110054.png",
-    "Resources/Pasted image 20240508095213.png",
-    "Resources/Shop ERD 1.png",
-    "Resources/Shop ERD.png",
-    "Resources/Pasted image 20240506105359.png",
-    "Resources/Pasted image 20240503113907.png",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",
