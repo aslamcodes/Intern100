@@ -35,7 +35,10 @@ namespace EmployeeTrackerDAL
 
         public async Task<Employee?> Get(int key)
         {
-            Employee? e = await _context.Employees.FindAsync(key);
+            Employee? e = await _context.Employees.Include(e => e.RequestSolutions)
+                .Include(e => e.RequestsRaised)
+                .Include(e => e.RequestsClosed)
+                .SingleOrDefaultAsync(e => e.Id == key);
 
             if (e == null)
             {

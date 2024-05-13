@@ -212,7 +212,7 @@ namespace RequestTrackerCFRelations
         {
             try
             {
-                var requests = await _userRequestBL.GetAllRequestForUser(_authUser);
+                var requests = _authUser.RequestsRaised.ToList();
 
                 foreach (var request in requests)
                 {
@@ -255,7 +255,7 @@ namespace RequestTrackerCFRelations
         {
             try
             {
-                (await _requestSolutionBl.GetAllSolutionsForUser(_authUser)).ForEach(Console.WriteLine);
+                _authUser.RequestSolutions.ToList().ForEach(Console.WriteLine);
 
                 Console.WriteLine("Enter Solution Number");
                 var solutionNumber = Convert.ToInt32(Console.ReadLine());
