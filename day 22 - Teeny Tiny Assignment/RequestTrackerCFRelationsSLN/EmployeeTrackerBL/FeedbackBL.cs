@@ -1,12 +1,13 @@
 using EmployeeTrackerDAL;
 using Models;
+using Models.Enums;
 
 namespace EmployeeTrackerBL;
 
-public class FeedbackBL: IFeedbackBl
+public class FeedbackBL : IFeedbackBl
 {
     private readonly IRepository<int, Feedback> _feedbackRepository = new FeedbackRepository(new RequestTrackerContext());
-    
+    private readonly IRepository<int, RequestSolution> _solutionRepository = new SolutionRepository(new RequestTrackerContext());
     public async Task<Feedback> AddFeedback(Feedback feedback)
     {
         await _feedbackRepository.Add(feedback);
@@ -30,8 +31,24 @@ public class FeedbackBL: IFeedbackBl
         return await _feedbackRepository.Get(feedbackId);
     }
 
-    public Task<Feedback> GetAllFeedbacksForUser(Employee employee)
+    public async Task<List<Feedback>> GetAllFeedbacksForUser(Employee employee)
     {
-        throw new System.NotImplementedException();
+        // get the user solutions and then get the feedbacks for those solutions
+        var solutions = await _solutionRepository.GetAll() ?? throw new EntityNotFoundException(EntityEnum.RequestSolution);
+
+        var userSolutions = solutions.Where(solution => solution.SolutionPostedBy == employee.Id).ToList();
+
+        var allFeedbacks = await _feedbackRepository.GetAll() ?? throw new EntityNotFoundException(EntityEnum.Feedback);
+
+        var feedbacksForSolutions = new List<Feedback>();
+
+        foreach (var solution in userSolutions)
+        {
+            feedbacksForSolutions.AddRange(allFeedbacks.Where(feedback => feedback.SolutionId == solution.SolutionNumber)
+                           .ToList());
+        }
+
+        return feedbacksForSolutions;
+
     }
 }
