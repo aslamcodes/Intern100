@@ -18,81 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "08fb68736c4e160d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 19.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "42089ec778ad6055",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 20 - ADO.Net as DAL.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c43283df8b40039c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LQueue.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c93ee56cf963b81f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Drawing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fa353b090ae8bf0c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 23.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "75ba4b73ff72dff1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 18 - Database Design & ERD.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 23.md",
+                "file": "Day 18 - Database Design & ERD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 23.md",
+                "file": "Day 18 - Database Design & ERD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 23.md"
+                "file": "Day 18 - Database Design & ERD.md"
               }
             }
           }
@@ -222,22 +149,29 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fa353b090ae8bf0c",
+  "active": "02c933d5a640502e",
   "lastOpenFiles": [
-    "Resources/Pasted image 20240513123101.png",
-    "Resources/Pasted image 20240513123027.png",
-    "Resources/Pasted image 20240513122650.png",
-    "Resources/Pasted image 20240513120533.png",
-    "Resources/Pasted image 20240513120503.png",
+    "Day 19.md",
+    "Day 20 - ADO.Net as DAL.md",
+    "Day 18 - Database Design & ERD.md",
+    "Day 24.md",
+    "Resources/Pasted image 20240514115247.png",
+    "Resources/Pasted image 20240514115133.png",
+    "Resources/Pasted image 20240514115045.png",
+    "Resources/Pasted image 20240514104853.png",
+    "Resources/Pasted image 20240514104814.png",
+    "Resources/Pasted image 20240514104704.png",
+    "Resources/Pasted image 20240514102035.png",
+    "Resources/Pasted image 20240514100735.png",
+    "Resources/Pasted image 20240514100418.png",
+    "Resources/Pasted image 20240514095857.png",
+    "Day 23.md",
     "Day 22.md",
     "Resources/Drawing 2024-05-11 17.47.47.excalidraw.md",
-    "Resources/Pasted Image 20240511174802_500.png",
     "Drawing.md",
     "LQueue.md",
     "Resources/Day 22 2024-05-10 14.13.12.excalidraw.md",
-    "Resources/Pasted image 20240510114437.png",
     "Day 21 - Code First.md",
-    "Day 20 - ADO.Net as DAL.md",
     "Day 80.md",
     "Day 79.md",
     "Day 78.md",
@@ -253,13 +187,6 @@
     "Day 68.md",
     "Day 67.md",
     "Day 66.md",
-    "Day 65.md",
-    "Day 64.md",
-    "Day 63.md",
-    "Resources/Pasted image 20240509143342.png",
-    "Resources/Pasted image 20240509122514.png",
-    "Resources/Pasted image 20240508110126.png",
-    "Resources/Pasted image 20240508110054.png",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",

@@ -1,0 +1,91 @@
+﻿
+Request Tracker app
+Login
+|
+|___User
+    Raise Request
+    View Request Status
+    View Solutions
+    Give Feedback
+    Respond to Solution
+
+|___Admin
+    Raise Request
+    View Request Status(All Requests)
+    View Solutions(All Solutions)
+    Give Feedback(Only for request raised by them)
+    Respond to Solution(Only for request raised by them)
+    Provide Solution
+    Mark Request as Closed
+    View Feedbacks(Only feedbacks given to them)
+
+Console Frontend
+--------------------
+1. Login and Register
+2. if logged in as User 
+    ==== User Menu ====
+    1. Raise Request
+    2. View Request Status
+    3. View Solutions
+    4. Give Feedback
+    5. Respond to Solution
+
+3. if logged in as Admin
+    ==== Admin Menu ====
+    1. Raise Request
+    2. View Request Status(All Requests)
+    3. View Solutions(All Solutions)
+    4. Give Feedback(Only for request raised by them)
+    5. Respond to Solution(Only for request raised by them)
+    6. Provide Solution
+    7. Mark Request as Closed
+    8. View Feedbacks(Only feedbacks given to them)
+
+Business Things
+--------------------
+1. User can raise request, view status, view solutions, give feedback and respond to solution
+2. Admin can do everything that user can do and also 
+    - provide solution, 
+    - mark request as closed and view feedbacks
+
+Entities
+--------------------
+1. User
+    - id
+    - name
+    - email
+    - password
+    - role
+2. Request
+    - id
+    - user_id
+    - title
+    - description
+    - status
+    - solution
+    - feedback
+3. Feedback
+    - id
+    - request_id
+    - admin_id
+    - feedback
+4. Solution
+    - id
+    - request_id
+    - admin_id
+    - solution
+
+Relationships
+--------------------
+1. User - > Request (1 to many)
+2. Request -> Feedback (1 to many)
+3. Request -> Solution (1 to many)
+4. Feedback -> Admin (many to 1)
+5. Solution -> Admin (many to 1)
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "eZAqz84o1EUVms5SeRYgYSRr+iR846YikVXUiSGdR3w=",
+  "Source": "RequestTracker",
+  "BasePath": "_content/RequestTracker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
