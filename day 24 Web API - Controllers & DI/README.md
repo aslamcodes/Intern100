@@ -1,6 +1,6 @@
 ## Task - Doctor Clinic WEB Api
 
-[Task folder](https://github.com/aslamcodes/repo/tree/main/day%2024).
+[Task folder](https://github.com/aslamcodes/Intern100/tree/main/day%2024%20Web%20API%20-%20Controllers%20%26%20DI/DoctorClinicSLN)
 
 ## Description
 
