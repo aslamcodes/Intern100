@@ -1,6 +1,6 @@
 # Task 1 - Doctor Clinic WEB Api
 
-[Task folder](https://github.com/aslamcodes/repo/tree/main/day%2024).
+[Task folder](https://github.com/aslamcodes/Intern100/tree/main/day%2024%20Web%20API%20-%20Controllers%20%26%20DI/DoctorClinicSLN)
 
 ## Description
 
@@ -26,6 +26,7 @@ The expected output of completing this task is a fully functional ClinicAPI with
 
 - Make sure to handle any necessary validations and error handling.
 - Use appropriate HTTP methods and status codes for each API endpoint.
+
 
 # Task 2 - Daily SQL
 1) [More than 75 marks](https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true) 
