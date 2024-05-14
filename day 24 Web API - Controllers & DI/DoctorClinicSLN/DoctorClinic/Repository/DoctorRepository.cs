@@ -36,9 +36,13 @@ namespace DoctorClinic.Repository
             throw new NotImplementedException();
         }
 
-        public Task<Doctor> Update(Doctor entity)
+        public async Task<Doctor> Update(Doctor entity)
         {
-            throw new NotImplementedException();
+            context.Doctors.Update(entity);
+
+            await context.SaveChangesAsync();
+
+            return entity;
         }
     }
 }

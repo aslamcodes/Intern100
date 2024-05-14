@@ -1,4 +1,5 @@
-﻿using DoctorClinic.Models;
+﻿using DoctorClinic.Exceptions;
+using DoctorClinic.Models;
 using DoctorClinic.Repository;
 using DoctorClinic.Services.Interfaces;
 

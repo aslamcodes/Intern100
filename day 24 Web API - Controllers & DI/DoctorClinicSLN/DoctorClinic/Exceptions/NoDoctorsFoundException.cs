@@ -1,4 +1,4 @@
-﻿namespace DoctorClinic.Services
+﻿namespace DoctorClinic.Exceptions
 {
     [Serializable]
     public class NoDoctorsFoundException : Exception

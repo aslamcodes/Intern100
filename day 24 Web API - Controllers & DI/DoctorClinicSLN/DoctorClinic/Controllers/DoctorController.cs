@@ -1,5 +1,5 @@
-﻿using DoctorClinic.Models;
-using DoctorClinic.Services;
+﻿using DoctorClinic.Exceptions;
+using DoctorClinic.Models;
 using DoctorClinic.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
