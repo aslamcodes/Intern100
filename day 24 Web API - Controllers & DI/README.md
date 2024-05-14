@@ -30,5 +30,14 @@ The expected output of completing this task is a fully functional ClinicAPI with
 
 # Task 2 - Daily SQL
 1) [More than 75 marks](https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true) 
-
+```sql
+SELECT NAME FROM STUDENTS WHERE MARKS > 75 ORDER BY RIGHT(NAME,3), ID ASC
+```
 2) [Contest Leaderboard](https://www.hackerrank.com/challenges/contest-leaderboard/problem?isFullScreen=true)
+```sql
+SELECT M.hacker_id, H.name, SUM(M.score) from (select hacker_id ,max(score) 'score' from Submissions group by hacker_id, challenge_id) as M 
+join hackers H on H.hacker_id = M.hacker_id
+group by M.hacker_id, H.name
+having SUM(M.score) > 0
+order by SUM(M.score) desc, hacker_id;
+1. ```
