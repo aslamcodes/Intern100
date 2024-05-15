@@ -1,0 +1,95 @@
+<mxfile host="Electron" modified="2024-05-15T11:20:37.379Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="vfwveztHHUvn1HyVYRXp" version="24.4.0" type="device">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1985" dy="1398" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-2" target="pJ4g70pgkjtg4E21kzEo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-18" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-2" target="pJ4g70pgkjtg4E21kzEo-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-2" value="User" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="25" y="330" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-3" value="&lt;ol start=&quot;2&quot; dir=&quot;auto&quot; style=&quot;box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 0px !important; color: rgb(251, 252, 253); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(10, 12, 16); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;li style=&quot;box-sizing: border-box; margin-top: 0.25em;&quot;&gt;&lt;p dir=&quot;auto&quot; style=&quot;box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;&quot;&gt;Create an API that will allow&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;box-sizing: border-box; font-weight: var(--base-text-weight-semibold, 600);&quot;&gt;users&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;to&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;em style=&quot;box-sizing: border-box;&quot;&gt;&lt;em style=&quot;box-sizing: border-box;&quot;&gt;log in&lt;/em&gt;&lt;/em&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;to an application where&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;box-sizing: border-box; font-weight: var(--base-text-weight-semibold, 600);&quot;&gt;&lt;em style=&quot;box-sizing: border-box;&quot;&gt;they can order pizzas&lt;/em&gt;&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;from sample&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;box-sizing: border-box; font-weight: var(--base-text-weight-semibold, 600);&quot;&gt;pizza chains&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;like Dominos or Pizza Hut.&lt;/p&gt;&lt;p dir=&quot;auto&quot; style=&quot;box-sizing: border-box; margin-top: 16px; margin-bottom: 16px;&quot;&gt;Add an endpoint that&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;box-sizing: border-box; font-weight: var(--base-text-weight-semibold, 600);&quot;&gt;lists the available pizzas in stock&lt;/strong&gt;. Design the necessary&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;box-sizing: border-box; font-weight: var(--base-text-weight-semibold, 600);&quot;&gt;models&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;and&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;box-sizing: border-box; font-weight: var(--base-text-weight-semibold, 600);&quot;&gt;DTOs&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;as well.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="80" width="560" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-10" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-4" target="pJ4g70pgkjtg4E21kzEo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-11" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-4" target="pJ4g70pgkjtg4E21kzEo-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-16" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-4" target="pJ4g70pgkjtg4E21kzEo-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-4" value="Pizza" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="395" y="330" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-5" value="PizzaChain" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="725" y="330" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-6" value="Orders" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="195" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-13" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-12" target="pJ4g70pgkjtg4E21kzEo-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-12" value="From" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="545" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-15" value="Price" style="ellipse;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="415" y="250" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-17" value="Type" style="ellipse;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="25" y="250" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-24" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-19" target="pJ4g70pgkjtg4E21kzEo-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-19" target="pJ4g70pgkjtg4E21kzEo-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-19" value="Stock" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="905" y="260" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-22" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-21" target="pJ4g70pgkjtg4E21kzEo-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-21" value="PizzaID" style="ellipse;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="790" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-23" value="chainid" style="ellipse;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="920" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-25" value="Stock" style="ellipse;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="130" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.628;entryY=1.077;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-5" target="pJ4g70pgkjtg4E21kzEo-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-28" value="Name" style="ellipse;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="305" y="250" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-29" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-4" target="pJ4g70pgkjtg4E21kzEo-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-30" value="PizzaID" style="ellipse;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="515" y="250" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pJ4g70pgkjtg4E21kzEo-31" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.378;entryY=1.035;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="pJ4g70pgkjtg4E21kzEo-4" target="pJ4g70pgkjtg4E21kzEo-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
