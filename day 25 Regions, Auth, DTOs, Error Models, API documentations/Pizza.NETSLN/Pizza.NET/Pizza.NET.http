@@ -1,0 +1,6 @@
+@Pizza.NET_HostAddress = http://localhost:5142
+
+GET {{Pizza.NET_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

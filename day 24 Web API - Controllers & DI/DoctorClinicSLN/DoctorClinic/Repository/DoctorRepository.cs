@@ -1,7 +1,7 @@
 ﻿
 using DoctorClinic.Context;
+using DoctorClinic.Exceptions;
 using DoctorClinic.Models;
-using DoctorClinic.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace DoctorClinic.Repository
@@ -40,7 +40,12 @@ namespace DoctorClinic.Repository
         {
             context.Doctors.Update(entity);
 
-            await context.SaveChangesAsync();
+            int rows = await context.SaveChangesAsync();
+
+            if (rows == 0)
+            {
+                throw new DoctorNotFoundException();
+            }
 
             return entity;
         }

@@ -1,7 +1,36 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24\\DoctorClinicSLN\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\exceptions\\doctornotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\exceptions\\doctornotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 24 web api - controllers \u0026 di\\doctorclinicsln\\doctorclinic\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\services\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\services\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 24 web api - controllers \u0026 di\\doctorclinicsln\\doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 304,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +51,97 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Exceptions\\DoctorNotFoundException.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Exceptions\\DoctorNotFoundException.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Exceptions\\DoctorNotFoundException.cs",
+              "RelativeToolTip": "DoctorClinic\\Exceptions\\DoctorNotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T11:53:31.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoctorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Repository\\DoctorRepository.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Repository\\DoctorRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Repository\\DoctorRepository.cs",
+              "RelativeToolTip": "DoctorClinic\\Repository\\DoctorRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAIA+wBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:47:39.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "DoctorClinic\\Controllers\\DoctorController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAuwBoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T10:33:30.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Services\\DoctorService.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Services\\DoctorService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Services\\DoctorService.cs",
+              "RelativeToolTip": "DoctorClinic\\Services\\DoctorService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T10:35:02.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Services\\Interfaces\\IDoctorService.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Services\\Interfaces\\IDoctorService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Services\\Interfaces\\IDoctorService.cs",
+              "RelativeToolTip": "DoctorClinic\\Services\\Interfaces\\IDoctorService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T10:33:59.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Repository\\IRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Repository\\IRepository.cs",
+              "RelativeToolTip": "DoctorClinic\\Repository\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T10:36:48.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Program.cs",
+              "RelativeDocumentMoniker": "DoctorClinic\\Program.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Program.cs",
+              "RelativeToolTip": "DoctorClinic\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:44:35.1Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -43,7 +43,7 @@ namespace DoctorClinic.Controllers
 
                 return Ok(updatedDoctor);
             }
-            catch (Exception)
+            catch (DoctorNotFoundException)
             {
                 return NotFound();
             }

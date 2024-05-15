@@ -65,7 +65,7 @@ namespace DoctorClinic.Services
 
                 return doctor;
             }
-            catch (Exception)
+            catch (DoctorNotFoundException)
             {
 
                 throw;
