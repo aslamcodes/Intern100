@@ -40,4 +40,4 @@ join hackers H on H.hacker_id = M.hacker_id
 group by M.hacker_id, H.name
 having SUM(M.score) > 0
 order by SUM(M.score) desc, hacker_id;
-1. ```
+```
