@@ -15,9 +15,9 @@ namespace RequestTracker.Controllers
             _userService = userService;
         }
         [HttpPost("Login")]
-        [ProducesResponseType(typeof(Employee), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(LoginReturnDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<Employee>> Login(UserLoginDTO userLoginDTO)
+        public async Task<ActionResult<LoginReturnDTO>> Login(UserLoginDTO userLoginDTO)
         {
             try
             {
@@ -26,7 +26,7 @@ namespace RequestTracker.Controllers
             }
             catch (Exception ex)
             {
-                return Unauthorized(new ErrorModel(ex.Message, 402));
+                return Unauthorized(new ErrorModel(ex.Message, 401));
             }
         }
         [HttpPost("Register")]

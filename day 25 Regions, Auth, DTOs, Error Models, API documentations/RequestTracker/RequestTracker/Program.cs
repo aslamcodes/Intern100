@@ -35,6 +35,7 @@ namespace RequestTracker
             #region services
             builder.Services.AddScoped<IEmployeeService, EmployeeBasicService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ITokenService, TokenService>();
             #endregion
 
             var app = builder.Build();
