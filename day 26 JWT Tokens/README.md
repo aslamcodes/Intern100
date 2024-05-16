@@ -14,6 +14,6 @@
     }
 ```
 
-2) Complete the Day 24's assignment with Authentication on  [PizzaOrdering Project](https://github.com/aslamcodes/Intern100/tree/main/day%2025%20Regions%2C%20Auth%2C%20DTOs%2C%20Error%20Models%2C%20API%20documentations/Pizza.NETSLN)
+2) Complete the Day 24's assignment with Authentication on  [Pizza Ordering Project](https://github.com/aslamcodes/Intern100/tree/main/day%2025%20Regions%2C%20Auth%2C%20DTOs%2C%20Error%20Models%2C%20API%20documentations/Pizza.NETSLN)
 
 
