@@ -15,7 +15,7 @@ where tmp.RFGPA = 1 order by power desc, age desc;
 
 ```
 
-4) Create an API that will allow **users** to *_log in_* to an application where **_they can order pizzas_** from sample **pizza chains** like Dominos or Pizza Hut.
+3) Create an API that will allow **users** to *_log in_* to an application where **_they can order pizzas_** from sample **pizza chains** like Dominos or Pizza Hut.
 
     Add an endpoint that **lists the available pizzas in stock**. 
     Design the necessary **models** and **DTOs** as well.
