@@ -6,6 +6,18 @@ tags:
   - REST
 ---
 # Notes
+
+## Day 25 - Summary
+### Morning
+- Learnt how to improve documentation in Swagger
+- Learn about Regions and its usage
+- Learned DTOs and Password's encryption
+- Created the Request Tracker Application with new things learned
+### Afternoon
+- Code showcase, Hackerrank SQL, Worked on the Assignment
+### Evening
+- Finish the assigment
+
 ## Documenting the ReqRes
 - We are in need of producing more documentation![[Pasted image 20240515094421.png]]![[Pasted image 20240515094455.png]]![[Pasted image 20240515094502.png]]
 ## Error Model
