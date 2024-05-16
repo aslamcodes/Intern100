@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Migrations\\20240516065225_employeerold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RequestTracker\\Migrations\\20240516065225_employeerold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\models\\dto\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\models\\dto\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\requesttracker\\requesttracker\\migrations\\20240516065225_employeerold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\migrations\\20240516065225_employeerold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,23 +35,11 @@
       "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\requesttracker\\requesttracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\requesttracker\\requesttracker\\models\\dto\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\models\\dto\\loginreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\requesttracker\\requesttracker\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -47,12 +51,8 @@
       "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\requesttracker\\requesttracker\\models\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\models\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\models\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\requesttracker\\requesttracker\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|solutionrelative:requesttracker\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{984EBC53-C789-4448-A3DE-BB2B820BDDE9}|RequestTracker\\RequestTracker.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\requesttracker\\migrations\\20240515070928_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 304,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,33 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240516065225_employeerold.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Migrations\\20240516065225_employeerold.cs",
-              "RelativeDocumentMoniker": "RequestTracker\\Migrations\\20240516065225_employeerold.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Migrations\\20240516065225_employeerold.cs",
-              "RelativeToolTip": "RequestTracker\\Migrations\\20240516065225_employeerold.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T06:52:25.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\ITokenService.cs",
-              "RelativeDocumentMoniker": "RequestTracker\\Services\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\ITokenService.cs",
-              "RelativeToolTip": "RequestTracker\\Services\\ITokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T06:41:23.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "LoginReturnDTO.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Models\\DTO\\LoginReturnDTO.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Models\\DTO\\LoginReturnDTO.cs",
@@ -161,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\IUserService.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Services\\IUserService.cs",
@@ -174,7 +148,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "RequestTracker\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\TokenService.cs",
+              "RelativeToolTip": "RequestTracker\\Services\\TokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T06:41:56.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20240516065225_employeerold.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Migrations\\20240516065225_employeerold.cs",
+              "RelativeDocumentMoniker": "RequestTracker\\Migrations\\20240516065225_employeerold.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Migrations\\20240516065225_employeerold.cs",
+              "RelativeToolTip": "RequestTracker\\Migrations\\20240516065225_employeerold.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T06:52:25.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Services\\UserService.cs",
@@ -182,12 +182,11 @@
               "RelativeToolTip": "RequestTracker\\Services\\UserService.cs",
               "ViewState": "AQIAAE0AAAAAAAAAAAA1wFQAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T07:05:23.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T07:05:23.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Models\\Employee.cs",
@@ -195,12 +194,11 @@
               "RelativeToolTip": "RequestTracker\\Models\\Employee.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T05:29:02.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T05:29:02.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Controllers\\EmployeeController.cs",
@@ -208,25 +206,36 @@
               "RelativeToolTip": "RequestTracker\\Controllers\\EmployeeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T06:02:26.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T06:02:26.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Program.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Program.cs",
               "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Program.cs",
               "RelativeToolTip": "RequestTracker\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACgAAAAMAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAywCUAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T05:25:09.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\ITokenService.cs",
+              "RelativeDocumentMoniker": "RequestTracker\\Services\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\ITokenService.cs",
+              "RelativeToolTip": "RequestTracker\\Services\\ITokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T06:41:23.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\appsettings.json",
               "RelativeDocumentMoniker": "RequestTracker\\appsettings.json",
@@ -234,12 +243,11 @@
               "RelativeToolTip": "RequestTracker\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-14T06:15:44.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T06:15:44.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Repositories\\UserRepository.cs",
@@ -247,12 +255,11 @@
               "RelativeToolTip": "RequestTracker\\Repositories\\UserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T07:01:43.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T07:01:43.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Controllers\\UserController.cs",
@@ -260,12 +267,11 @@
               "RelativeToolTip": "RequestTracker\\Controllers\\UserController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T07:07:15.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T07:07:15.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UserLoginDto.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Models\\DTO\\UserLoginDto.cs",
               "RelativeDocumentMoniker": "RequestTracker\\Models\\DTO\\UserLoginDto.cs",
@@ -273,21 +279,7 @@
               "RelativeToolTip": "RequestTracker\\Models\\DTO\\UserLoginDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T07:04:22.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "RequestTracker\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\RequestTracker\\RequestTracker\\Services\\TokenService.cs",
-              "RelativeToolTip": "RequestTracker\\Services\\TokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T06:41:56.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T07:04:22.57Z"
             },
             {
               "$type": "Document",

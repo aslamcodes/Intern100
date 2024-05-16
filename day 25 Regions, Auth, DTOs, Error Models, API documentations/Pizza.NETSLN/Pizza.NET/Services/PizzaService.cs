@@ -30,10 +30,7 @@ namespace Pizza.NET.Services
 
                 return pizza;
             }
-            catch (NoPizzaFoundException)
-            {
-                throw;
-            }
+
             catch (Exception)
             {
 

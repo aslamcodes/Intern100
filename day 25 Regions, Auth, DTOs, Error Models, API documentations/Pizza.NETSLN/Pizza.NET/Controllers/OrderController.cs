@@ -1,18 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Pizza.NET.Exceptions;
 using Pizza.NET.Models;
 using Pizza.NET.Services.Interfaces;
 
+
 namespace Pizza.NET.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderController(IOrderService orderService) : ControllerBase
     {
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Models.Order>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<Models.DTO.OrderDTO>), StatusCodes.Status200OK)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<IEnumerable<Models.Order>>> GetAllOrders()
+        public async Task<ActionResult<IEnumerable<Models.DTO.OrderDTO>>> GetAllOrders()
         {
             try
             {
@@ -27,9 +30,9 @@ namespace Pizza.NET.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(Models.Order), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Models.DTO.OrderDTO), StatusCodes.Status200OK)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<Models.Order>> GetOrderById(int id)
+        public async Task<ActionResult<Models.DTO.OrderDTO>> GetOrderById(int id)
         {
             try
             {
@@ -37,7 +40,7 @@ namespace Pizza.NET.Controllers
 
                 return Ok(order);
             }
-            catch (NoOrderFoundException e)
+            catch (OrderNotFoundException e)
             {
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
@@ -48,9 +51,9 @@ namespace Pizza.NET.Controllers
         }
 
         [HttpPost("{userId}/{pizzaId}")]
-        [ProducesResponseType(typeof(Models.Order), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(Models.DTO.OrderDTO), StatusCodes.Status201Created)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<Models.Order>> MakeOrder(int userId, int pizzaId)
+        public async Task<ActionResult<Models.DTO.OrderDTO>> MakeOrder(int userId, int pizzaId)
         {
             try
             {
@@ -58,9 +61,17 @@ namespace Pizza.NET.Controllers
 
                 return CreatedAtAction(nameof(GetOrderById), new { id = order.Id }, order);
             }
-            catch (NoPizzaFoundException e)
+            catch (NoPizzaStockFoundException e)
             {
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
+            }
+            catch (NoPizzaStockException e)
+            {
+                return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
+            }
+            catch (CannotCreateOrderException e)
+            {
+                return Conflict(new ErrorModel(e.Message, StatusCodes.Status409Conflict));
             }
             catch (Exception)
             {
@@ -69,19 +80,23 @@ namespace Pizza.NET.Controllers
         }
 
         [HttpPut("{id}")]
-        [ProducesResponseType(typeof(Models.Order), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Models.DTO.OrderDTO), StatusCodes.Status200OK)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<Models.Order>> CancelOrder(int id)
+        public async Task<ActionResult<Models.DTO.OrderDTO>> CancelOrder(int id)
         {
             try
             {
-                await orderService.CencelOrder(id);
+                await orderService.CancelOrder(id);
 
                 return Ok();
             }
-            catch (NoOrderFoundException e)
+            catch (OrderNotFoundException e)
             {
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
+            }
+            catch (CannotUpdateOrderException cuoe)
+            {
+                return Conflict(new ErrorModel(cuoe.Message, StatusCodes.Status409Conflict));
             }
             catch (Exception)
             {

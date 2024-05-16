@@ -4,8 +4,8 @@ namespace Pizza.NET.Services.Interfaces
 {
     public interface IUserAuthService
     {
-        Task<Models.User> Register(UserRegisterDTO userRegisterDTO);
+        Task<AuthReturnDto> Register(UserRegisterDTO userRegisterDTO);
 
-        Task<Models.User> Login(UserLoginDTO userLoginDTO);
+        Task<AuthReturnDto> Login(UserLoginDTO userLoginDTO);
     }
 }

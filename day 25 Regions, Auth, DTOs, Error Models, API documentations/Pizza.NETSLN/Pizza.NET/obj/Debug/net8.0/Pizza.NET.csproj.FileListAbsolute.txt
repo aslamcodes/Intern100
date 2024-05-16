@@ -137,3 +137,4 @@ C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Model
 C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\Pizza.NETSLN\Pizza.NET\obj\Debug\net8.0\Pizza.NET.pdb
 C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\Pizza.NETSLN\Pizza.NET\obj\Debug\net8.0\Pizza.NET.genruntimeconfig.cache
 C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\Pizza.NETSLN\Pizza.NET\obj\Debug\net8.0\ref\Pizza.NET.dll
+C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\Pizza.NETSLN\Pizza.NET\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

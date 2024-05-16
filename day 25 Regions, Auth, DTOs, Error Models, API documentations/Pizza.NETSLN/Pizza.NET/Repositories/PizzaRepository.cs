@@ -58,14 +58,6 @@ namespace Pizza.NET.Repositories
 
                 return pizza;
             }
-            catch (FailedToDeletePizzaException)
-            {
-                throw;
-            }
-            catch (NoPizzaFoundException)
-            {
-                throw;
-            }
             catch (Exception)
             {
 

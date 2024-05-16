@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\pizza.net\\contexts\\pizzachaincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\contexts\\pizzachaincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\pizza.net\\controllers\\invalidcredentialsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\controllers\\invalidcredentialsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\pizza.net\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\pizza.net\\controllers\\pizzacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\controllers\\pizzacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\controllers\\pizzacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\pizza.net\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Migrations\\20240515170415_nullable-deliveryaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:Pizza.NET\\Migrations\\20240515170415_nullable-deliveryaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\services\\pizzaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\services\\pizzaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\pizza.net\\migrations\\20240515170554_datanow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\migrations\\20240515170554_datanow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\services\\interfaces\\ipizzaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\services\\interfaces\\ipizzaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\pizza.net\\repositories\\pizzastockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\repositories\\pizzastockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\models\\dto\\pizzastockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\models\\dto\\pizzastockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 25 regions, auth, dtos, error models, api documentations\\pizza.netsln\\pizza.net\\models\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B509A01-B687-4357-ABBA-1735B89121EB}|Pizza.NET\\Pizza.NET.csproj|solutionrelative:pizza.net\\models\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 304,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,116 +62,142 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InvalidCredentialsException.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\InvalidCredentialsException.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Controllers\\InvalidCredentialsException.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\InvalidCredentialsException.cs",
-              "RelativeToolTip": "Pizza.NET\\Controllers\\InvalidCredentialsException.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAywAwAAAAJAAAA",
+              "DocumentIndex": 9,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Models\\DTO\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Models\\DTO\\OrderDTO.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Models\\DTO\\OrderDTO.cs",
+              "RelativeToolTip": "Pizza.NET\\Models\\DTO\\OrderDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T04:11:11.939Z"
+              "WhenOpened": "2024-05-16T16:57:51.162Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PizzaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Repositories\\PizzaRepository.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Repositories\\PizzaRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Repositories\\PizzaRepository.cs",
+              "RelativeToolTip": "Pizza.NET\\Repositories\\PizzaRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAiwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:14:42.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PizzaService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\PizzaService.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Services\\PizzaService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\PizzaService.cs",
+              "RelativeToolTip": "Pizza.NET\\Services\\PizzaService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:14:32.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Pizza.NET\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAywAAAAAAAAAAA",
+              "Title": "IPizzaService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\Interfaces\\IPizzaService.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Services\\Interfaces\\IPizzaService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\Interfaces\\IPizzaService.cs",
+              "RelativeToolTip": "Pizza.NET\\Services\\Interfaces\\IPizzaService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T04:11:03.723Z"
+              "WhenOpened": "2024-05-16T17:14:31.048Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Pizza.NET\\Controllers\\UserController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAAiAAAA",
+              "DocumentIndex": 7,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "Pizza.NET\\Repositories\\OrderRepository.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAA1wFwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T04:10:08.371Z",
+              "WhenOpened": "2024-05-16T17:06:53.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Services\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "Pizza.NET\\Services\\Interfaces\\IOrderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:04:38.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Services\\OrderService.cs",
+              "RelativeToolTip": "Pizza.NET\\Services\\OrderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAACQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T17:01:24.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PizzaController.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\PizzaController.cs",
               "RelativeDocumentMoniker": "Pizza.NET\\Controllers\\PizzaController.cs",
               "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\PizzaController.cs",
               "RelativeToolTip": "Pizza.NET\\Controllers\\PizzaController.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAIwBQAAAAiAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAIwD0AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T04:10:00.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240515170415_nullable-deliveryaddress.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Migrations\\20240515170415_nullable-deliveryaddress.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Migrations\\20240515170415_nullable-deliveryaddress.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Migrations\\20240515170415_nullable-deliveryaddress.cs",
-              "RelativeToolTip": "Pizza.NET\\Migrations\\20240515170415_nullable-deliveryaddress.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T17:04:15.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Models\\Order.cs",
-              "RelativeToolTip": "Pizza.NET\\Models\\Order.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAABCwBIAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T17:03:00.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PizzaChainContext.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Contexts\\PizzaChainContext.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Contexts\\PizzaChainContext.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Contexts\\PizzaChainContext.cs",
-              "RelativeToolTip": "Pizza.NET\\Contexts\\PizzaChainContext.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAYwCQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T17:02:56.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20240515170554_datanow.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Migrations\\20240515170554_datanow.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Migrations\\20240515170554_datanow.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Migrations\\20240515170554_datanow.cs",
-              "RelativeToolTip": "Pizza.NET\\Migrations\\20240515170554_datanow.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T17:05:54.988Z"
+              "WhenOpened": "2024-05-16T16:54:15.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "PizzaStockRepository.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Repositories\\PizzaStockRepository.cs",
-              "RelativeDocumentMoniker": "Pizza.NET\\Repositories\\PizzaStockRepository.cs",
-              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Repositories\\PizzaStockRepository.cs",
-              "RelativeToolTip": "Pizza.NET\\Repositories\\PizzaStockRepository.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAwwE0AAABJAAAA",
+              "Title": "PizzaStockDto.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Models\\DTO\\PizzaStockDto.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Models\\DTO\\PizzaStockDto.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Models\\DTO\\PizzaStockDto.cs",
+              "RelativeToolTip": "Pizza.NET\\Models\\DTO\\PizzaStockDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T17:00:43.951Z"
+              "WhenOpened": "2024-05-16T17:12:30.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Pizza.NET\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 25 Regions, Auth, DTOs, Error Models, API documentations\\Pizza.NETSLN\\Pizza.NET\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Pizza.NET\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA1wCIAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T16:54:33.181Z",
+              "EditorCaption": ""
             }
           ]
         }

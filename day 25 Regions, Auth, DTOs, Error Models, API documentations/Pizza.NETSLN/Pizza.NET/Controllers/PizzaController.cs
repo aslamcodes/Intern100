@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Pizza.NET.Exceptions;
 using Pizza.NET.Models;
+using Pizza.NET.Models.DTO;
 using Pizza.NET.Services.Interfaces;
 
 namespace Pizza.NET.Controllers
@@ -16,7 +18,7 @@ namespace Pizza.NET.Controllers
         {
             try
             {
-                var pizzas = await pizzaService.GetAllPizzas();
+                var pizzas = (await pizzaService.GetAllPizzas()).Select(pizza => pizza.ToPizzaDTO());
 
                 return Ok(pizzas);
             }
@@ -35,7 +37,7 @@ namespace Pizza.NET.Controllers
             {
                 var pizza = await pizzaService.GetPizzaById(id);
 
-                return Ok(pizza);
+                return Ok(pizza.ToPizzaDTO());
             }
             catch (NoPizzaFoundException e)
             {
@@ -47,16 +49,21 @@ namespace Pizza.NET.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("{id}/stock")]
-        [ProducesResponseType(typeof(PizzaStock), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(PizzaStockDto), StatusCodes.Status200OK)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<PizzaStock>> GetPizzaStock(int id)
+        public async Task<ActionResult<PizzaStockDto>> GetPizzaStock(int id)
         {
             try
             {
                 var stock = await pizzaService.GetPizzaStock(id);
 
-                return Ok(stock);
+                return Ok(stock.ToPizzaStockDTO());
+            }
+            catch (NoPizzaStockFoundException e)
+            {
+                return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
             catch (NoPizzaFoundException e)
             {

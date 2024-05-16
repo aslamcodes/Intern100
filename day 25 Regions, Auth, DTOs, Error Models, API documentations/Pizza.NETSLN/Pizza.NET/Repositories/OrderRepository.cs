@@ -59,7 +59,7 @@ namespace Pizza.NET.Repositories
         {
             try
             {
-                return await context.Orders.ToListAsync();
+                return await context.Orders.Include(o => o.User).Include(o => o.Pizza).ToListAsync();
             }
             catch (Exception)
             {
@@ -72,14 +72,12 @@ namespace Pizza.NET.Repositories
         {
             try
             {
-                var order = await context.Orders.FindAsync(key);
+                var order = await context.Orders
+                    .Include(o => o.User)
+                    .Include(o => o.Pizza)
+                    .FirstOrDefaultAsync(o => o.Id == key);
 
-                if (order == null)
-                {
-                    throw new OrderNotFoundException();
-                }
-
-                return order;
+                return order ?? throw new OrderNotFoundException();
             }
             catch (Exception)
             {

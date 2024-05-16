@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 24 web api - controllers \u0026 di\\doctorclinicsln\\doctorclinic\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\exceptions\\doctornotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\exceptions\\doctornotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 24 web api - controllers \u0026 di\\doctorclinicsln\\doctorclinic\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\repository\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\services\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|c:\\users\\vc\\documents\\projects\\intern100\\day 24 web api - controllers \u0026 di\\doctorclinicsln\\doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0010DF12-566A-4DD3-8151-85ABE1E7E6EF}|DoctorClinic\\DoctorClinic.csproj|solutionrelative:doctorclinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 304,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,6 +47,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Bookmark",
@@ -67,13 +71,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DoctorRepository.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Repository\\DoctorRepository.cs",
               "RelativeDocumentMoniker": "DoctorClinic\\Repository\\DoctorRepository.cs",
               "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Repository\\DoctorRepository.cs",
               "RelativeToolTip": "DoctorClinic\\Repository\\DoctorRepository.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAIA+wBkAAAAMAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAjwC8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T09:47:39.309Z",
               "EditorCaption": ""
@@ -86,14 +90,14 @@
               "RelativeDocumentMoniker": "DoctorClinic\\Controllers\\DoctorController.cs",
               "ToolTip": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Controllers\\DoctorController.cs",
               "RelativeToolTip": "DoctorClinic\\Controllers\\DoctorController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAuwBoAAAARAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwBMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T10:33:30.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DoctorService.cs",
               "DocumentMoniker": "C:\\Users\\VC\\Documents\\Projects\\Intern100\\day 24 Web API - Controllers \u0026 DI\\DoctorClinicSLN\\DoctorClinic\\Services\\DoctorService.cs",
               "RelativeDocumentMoniker": "DoctorClinic\\Services\\DoctorService.cs",
@@ -101,8 +105,7 @@
               "RelativeToolTip": "DoctorClinic\\Services\\DoctorService.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T10:35:02.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T10:35:02.607Z"
             },
             {
               "$type": "Document",
@@ -114,8 +117,7 @@
               "RelativeToolTip": "DoctorClinic\\Services\\Interfaces\\IDoctorService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T10:33:59.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T10:33:59.915Z"
             },
             {
               "$type": "Document",
@@ -127,8 +129,7 @@
               "RelativeToolTip": "DoctorClinic\\Repository\\IRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T10:36:48.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T10:36:48.653Z"
             },
             {
               "$type": "Document",
@@ -140,8 +141,7 @@
               "RelativeToolTip": "DoctorClinic\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T09:44:35.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T09:44:35.1Z"
             }
           ]
         }

@@ -1,4 +1,5 @@
-﻿using Pizza.NET.Models;
+﻿using Pizza.NET.Exceptions;
+using Pizza.NET.Models;
 using Pizza.NET.Models.DTO;
 using Pizza.NET.Repositories;
 using Pizza.NET.Services.Interfaces;
@@ -7,24 +8,39 @@ using System.Text;
 
 namespace Pizza.NET.Services
 {
-    public class UserAuthService(IRepository<int, Models.User> userRepository) : IUserAuthService
+    public class UserAuthService(IRepository<int, Models.User> userRepository, ITokenService tokenService) : IUserAuthService
     {
-        public async Task<User> Login(UserLoginDTO userLoginDTO)
+        public async Task<Models.DTO.AuthReturnDto> Login(UserLoginDTO userLoginDTO)
         {
-            var userDB = await userRepository.GetByKey(userLoginDTO.Id) ?? throw new UnauthorizedUserException("Invalid username or password");
-
-            HMACSHA512 hMACSHA = new(userDB.PasswordHashKey);
-
-            var encrypterPass = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(userLoginDTO.Password));
-
-            bool isPasswordSame = ComparePassword(encrypterPass, userDB.Password);
-
-            if (!isPasswordSame)
+            try
             {
-                throw new UnauthorizedUserException("Invalid username or password");
+                var userDB = await userRepository.GetByKey(userLoginDTO.Id) ?? throw new UnauthorizedUserException();
+
+                HMACSHA512 hMACSHA = new(userDB.PasswordHashKey);
+
+                var encrypterPass = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(userLoginDTO.Password));
+
+                bool isPasswordSame = ComparePassword(encrypterPass, userDB.Password);
+
+                if (!isPasswordSame)
+                {
+                    throw new UnauthorizedUserException();
+                }
+
+                var token = tokenService.GenerateToken(userDB);
+
+                return userDB.ToLoginReturnDto(token);
+            }
+            catch (NoUserFoundException)
+            {
+
+                throw new UnauthorizedUserException();
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
-            return userDB;
         }
 
         private bool ComparePassword(byte[] encrypterPass, byte[] password)
@@ -39,7 +55,7 @@ namespace Pizza.NET.Services
             return true;
         }
 
-        public async Task<User> Register(UserRegisterDTO userRegisterDTO)
+        public async Task<AuthReturnDto> Register(UserRegisterDTO userRegisterDTO)
         {
 
             try
@@ -57,7 +73,9 @@ namespace Pizza.NET.Services
 
                 user = await userRepository.Add(user);
 
-                return user;
+                var token = tokenService.GenerateToken(user);
+
+                return user.ToLoginReturnDto(token);
             }
             catch (Exception)
             {

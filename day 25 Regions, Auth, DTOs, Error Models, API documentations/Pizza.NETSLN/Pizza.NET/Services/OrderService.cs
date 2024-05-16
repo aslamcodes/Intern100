@@ -1,4 +1,6 @@
-﻿using Pizza.NET.Models;
+﻿using Pizza.NET.Exceptions;
+using Pizza.NET.Models;
+using Pizza.NET.Models.DTO;
 using Pizza.NET.Repositories;
 using Pizza.NET.Services.Interfaces;
 
@@ -6,7 +8,7 @@ namespace Pizza.NET.Services
 {
     public class OrderService(IRepository<int, Models.Order> orderRepository, IRepository<int, PizzaStock> pizzaStockRepository) : IOrderService
     {
-        public async Task CencelOrder(int orderId)
+        public async Task CancelOrder(int orderId)
         {
 
             try
@@ -25,11 +27,11 @@ namespace Pizza.NET.Services
 
         }
 
-        public async Task<IEnumerable<Order>> GetAllOrders()
+        public async Task<IEnumerable<OrderDTO>> GetAllOrders()
         {
             try
             {
-                var orders = await orderRepository.GetAll();
+                var orders = (await orderRepository.GetAll()).Select(order => order.ToOrderDTO());
 
                 return orders;
             }
@@ -40,13 +42,13 @@ namespace Pizza.NET.Services
             }
         }
 
-        public async Task<Order> GetOrderById(int id)
+        public async Task<OrderDTO> GetOrderById(int id)
         {
             try
             {
                 var order = await orderRepository.GetByKey(id);
 
-                return order;
+                return order.ToOrderDTO();
             }
             catch (Exception)
             {
@@ -55,7 +57,7 @@ namespace Pizza.NET.Services
             }
         }
 
-        public async Task<Order> MakeOrder(int userId, int pizzaId)
+        public async Task<OrderDTO> MakeOrder(int userId, int pizzaId)
         {
             try
             {
@@ -75,7 +77,7 @@ namespace Pizza.NET.Services
 
                 await pizzaStockRepository.Update(pizzaStock);
 
-                return order;
+                return order.ToOrderDTO();
             }
             catch (Exception)
             {

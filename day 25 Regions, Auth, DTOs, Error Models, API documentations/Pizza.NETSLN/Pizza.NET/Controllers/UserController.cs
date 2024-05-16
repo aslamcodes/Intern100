@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Pizza.NET.Exceptions;
 using Pizza.NET.Models;
 using Pizza.NET.Models.DTO;
 using Pizza.NET.Services.Interfaces;
@@ -10,17 +11,18 @@ namespace Pizza.NET.Controllers
     public class UserController(IUserAuthService userAuthService) : ControllerBase
     {
         [HttpPost("login")]
-        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(AuthReturnDto), StatusCodes.Status200OK)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<string>> Login([FromBody] UserLoginDTO userLogin)
+        public async Task<ActionResult<AuthReturnDto>> Login([FromBody] UserLoginDTO userLogin)
         {
             try
             {
-                var token = await userAuthService.Login(userLogin);
+                var user = await userAuthService.Login(userLogin);
 
-                return Ok(token);
+                return Ok(user);
             }
-            catch (InvalidCredentialsException e)
+
+            catch (UnauthorizedUserException e)
             {
                 return Unauthorized(new ErrorModel(e.Message, StatusCodes.Status401Unauthorized));
             }
@@ -32,16 +34,17 @@ namespace Pizza.NET.Controllers
 
 
         [HttpPost("register")]
-        [ProducesResponseType(typeof(string), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(AuthReturnDto), StatusCodes.Status201Created)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<string>> Register([FromBody] UserRegisterDTO userRegister)
+        public async Task<ActionResult<AuthReturnDto>> Register([FromBody] UserRegisterDTO userRegister)
         {
             try
             {
-                var token = await userAuthService.Register(userRegister);
+                var user = await userAuthService.Register(userRegister);
 
-                return CreatedAtAction(nameof(Login), token);
+                return Ok(user);
             }
+
             catch (Exception)
             {
                 return StatusCode(500);

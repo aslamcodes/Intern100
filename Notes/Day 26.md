@@ -42,3 +42,15 @@ app.useAuthentication();
 ```
 ## How to use all of this in controller
 ![[Pasted image 20240516124750.png]]
+
+
+# Summary
+## Learning
+- Learnt authentication in ASP.NET with JWT tokens
+- Learnt how to set AUTH filters 
+## Lab
+- Watched Codeshowcase
+- Solved a Hackerrank problem
+- And worked on the yesterday's assingment
+## Self-Learning
+- I've saved some articles to read regarding SQL, C#. So going to revisit them after finishing the assigments

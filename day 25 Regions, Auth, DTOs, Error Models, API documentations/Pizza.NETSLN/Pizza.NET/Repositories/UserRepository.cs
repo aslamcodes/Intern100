@@ -31,10 +31,7 @@ namespace Pizza.NET.Repositories
                 return entity;
 
             }
-            catch (FailedToAddUser)
-            {
-                throw;
-            }
+
             catch (Exception)
             {
                 throw;
@@ -58,14 +55,7 @@ namespace Pizza.NET.Repositories
 
                 return user;
             }
-            catch (FailedToDeleteUserException)
-            {
-                throw;
-            }
-            catch (NoUserFoundException)
-            {
-                throw;
-            }
+
             catch (Exception)
             {
 
@@ -94,12 +84,9 @@ namespace Pizza.NET.Repositories
             {
                 var pizza = await context.Users.FindAsync(key);
 
-                return pizza ?? throw new NoPizzaFoundException(key);
+                return pizza ?? throw new NoUserFoundException();
             }
-            catch (NoUserFoundException)
-            {
-                throw;
-            }
+
             catch (Exception)
             {
                 throw;
@@ -139,10 +126,6 @@ namespace Pizza.NET.Repositories
                 var user = await context.Users.FirstOrDefaultAsync(u => u.Email == email);
 
                 return user ?? throw new NoUserFoundException();
-            }
-            catch (NoUserFoundException)
-            {
-                throw;
             }
             catch (Exception)
             {
