@@ -22,3 +22,23 @@ Date: 2024-05-16
 - Provides the token service injection
 ## User Controller 
 - Returns the loginDTO back 
+## JWT Authentication
+- To add the authentication filter`builder.services.AddAuthentication`
+- We can customize it, for that Ig we need JWTBearer
+```csharp 
+builder.services.AddAuthenticaiton(JwtBearerDefaults.AuthenticationScheme)
+
+.AddJwtBearer(options => options.TokenValidationParameters = new Microsoft.IdentityModels.Tokens.TokenValidationParameters() {
+	ValidateIssuer = false;
+	ValidateAudience = false;
+	ValidateIssuerSigningKey = true;
+	IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey:JWT"]))
+}) 
+```
+
+And then you have to say
+```csharp
+app.useAuthentication();
+```
+## How to use all of this in controller
+![[Pasted image 20240516124750.png]]
