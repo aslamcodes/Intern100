@@ -87,6 +87,11 @@ namespace Pizza.NET
 
             #endregion
 
+            #region Roles
+            builder.Services.AddAuthorizationBuilder()
+            .AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+            #endregion
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

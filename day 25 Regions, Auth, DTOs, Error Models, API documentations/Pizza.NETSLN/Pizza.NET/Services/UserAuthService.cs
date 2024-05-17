@@ -68,7 +68,8 @@ namespace Pizza.NET.Services
                     Email = userRegisterDTO.Email,
                     Name = userRegisterDTO.Name,
                     PasswordHashKey = hMACSHA.Key,
-                    Password = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(userRegisterDTO.Password))
+                    Password = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(userRegisterDTO.Password)),
+                    Role = UserRoleEnum.User.ToString()
                 };
 
                 user = await userRepository.Add(user);

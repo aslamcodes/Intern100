@@ -24,7 +24,7 @@ namespace Pizza.NET.Services
 
             var claims = new List<Claim>(){
                 new("uid",user.Id.ToString()),
-
+                new(ClaimTypes.Role, user.Role.ToString())
             };
             var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256);
             var myToken = new JwtSecurityToken(null, null, claims, expires: DateTime.Now.AddDays(2), signingCredentials: credentials);

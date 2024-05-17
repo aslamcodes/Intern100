@@ -12,6 +12,7 @@ namespace Pizza.NET.Controllers
     [ApiController]
     public class OrderController(IOrderService orderService) : ControllerBase
     {
+        [Authorize(Policy = "Admin")]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Models.DTO.OrderDTO>), StatusCodes.Status200OK)]
         [ProducesErrorResponseType(typeof(ErrorModel))]

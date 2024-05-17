@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 26.md",
-                "mode": "preview",
+                "file": "Day 27.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 26.md",
+                "file": "Day 27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 26.md",
+                "file": "Day 27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 26.md"
+                "file": "Day 27.md"
               }
             }
           }
@@ -151,6 +151,8 @@
   },
   "active": "02c933d5a640502e",
   "lastOpenFiles": [
+    "Day 27.md",
+    "Day 26.md",
     "Resources/Pasted image 20240516124750.png",
     "Resources/Pasted image 20240516110106.png",
     "Resources/Pasted image 20240516105934.png",
@@ -161,7 +163,6 @@
     "Resources/Pasted image 20240516104720.png",
     "Resources/Pasted image 20240516104358.png",
     "Resources/Pasted image 20240516104142.png",
-    "Resources/Pasted image 20240516104022.png",
     "Day 25.md",
     "Day 24.md",
     "Day 18 - Database Design & ERD.md",
@@ -186,7 +187,6 @@
     "Day 71.md",
     "Day 70.md",
     "Day 69.md",
-    "Day 68.md",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",
