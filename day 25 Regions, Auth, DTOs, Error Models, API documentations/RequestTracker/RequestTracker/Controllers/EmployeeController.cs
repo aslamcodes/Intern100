@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RequestTracker.Exceptions;
 using RequestTracker.Models;
+using RequestTracker.Models.DTO;
 using RequestTracker.Services.Interfaces;
 
 namespace RequestTracker.Controllers
@@ -16,28 +18,31 @@ namespace RequestTracker.Controllers
             _employeeService = employeeService;
         }
         [HttpGet]
-        [ProducesResponseType(typeof(IList<Employee>), statusCode: 200)]
+        [Authorize(Policy = "RequireAdminRole")]
+        [ProducesResponseType(typeof(IList<EmployeeReturnDto>), statusCode: 200)]
         [ProducesErrorResponseType(typeof(ErrorModel))]
-        public async Task<ActionResult<IList<Employee>>> Get()
+        public async Task<ActionResult<IList<EmployeeReturnDto>>> Get()
         {
             try
             {
                 var employees = await _employeeService.GetEmployees();
 
-                return Ok(employees.ToList());
+                return Ok(employees.Select(e => e.ToEmployeeReturnDto()).ToList());
             }
             catch (NoEmployeesFoundException nefe)
             {
                 return NotFound(new ErrorModel(nefe.Message, 404));
             }
         }
+
+        [Authorize(Policy = "RequireAdminRole")]
         [HttpPut]
-        public async Task<ActionResult<Employee>> Put(int id, string phone)
+        public async Task<ActionResult<EmployeeReturnDto>> Put(int id, string phone)
         {
             try
             {
                 var employee = await _employeeService.UpdateEmployeePhone(id, phone);
-                return Ok(employee);
+                return Ok(employee.ToEmployeeReturnDto());
             }
             catch (NoSuchEmployeeException nsee)
             {
@@ -45,21 +50,21 @@ namespace RequestTracker.Controllers
             }
         }
 
+        [Authorize]
         [Route("GetEmployeeByPhone")]
         [HttpPost]
-        public async Task<ActionResult<Employee>> Get([FromBody] string phone)
+        public async Task<ActionResult<EmployeeReturnDto>> GetEmployeeByPhone([FromBody] GetEmployeeByPhoneInDto employeeDetails)
         {
             try
             {
-                var employee = await _employeeService.GetEmployeeByPhone(phone);
-                return Ok(employee);
+                var employee = await _employeeService.GetEmployeeByPhone(employeeDetails.PhoneNumber);
+                return Ok(employee.ToEmployeeReturnDto());
             }
             catch (NoSuchEmployeeException nefe)
             {
                 return NotFound(nefe.Message);
             }
         }
-
 
     }
 }

@@ -38,8 +38,8 @@ namespace RequestTracker.Controllers
         {
             try
             {
-                Employee result = await _userService.Register(userDTO);
-                return Ok(result.ToEmployeeReturnDto());
+                var result = await _userService.Register(userDTO);
+                return Ok(result);
             }
             catch (Exception ex)
             {
