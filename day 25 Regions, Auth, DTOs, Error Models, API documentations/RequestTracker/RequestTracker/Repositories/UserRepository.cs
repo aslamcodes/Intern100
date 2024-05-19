@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RequestTracker.Contexts;
+using RequestTracker.Exceptions;
 using RequestTracker.Models;
 
 namespace RequestTracker.Repositories
@@ -34,7 +35,7 @@ namespace RequestTracker.Repositories
 
         public async Task<User> Get(int key)
         {
-            return (await _context.Users.SingleOrDefaultAsync(u => u.EmployeeID == key)) ?? throw new Exception("No user with the given ID");
+            return (await _context.Users.SingleOrDefaultAsync(u => u.EmployeeID == key)) ?? throw new NoSuchUserException(key);
         }
 
         public async Task<IEnumerable<User>> Get()

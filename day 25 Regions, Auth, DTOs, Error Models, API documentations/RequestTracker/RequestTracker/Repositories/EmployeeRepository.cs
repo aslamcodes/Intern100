@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RequestTracker.Contexts;
+using RequestTracker.Exceptions;
 using RequestTracker.Models;
 
 namespace RequestTracker.Repositories

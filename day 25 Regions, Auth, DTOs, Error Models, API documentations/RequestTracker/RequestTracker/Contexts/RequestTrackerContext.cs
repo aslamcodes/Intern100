@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Models;
 using RequestTracker.Models;
 
 namespace RequestTracker.Contexts
@@ -12,6 +13,7 @@ namespace RequestTracker.Contexts
         }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Request> Requests { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Employee>().HasData(
@@ -20,6 +22,18 @@ namespace RequestTracker.Contexts
                 );
 
 
+            modelBuilder.Entity<Request>()
+                .HasOne(r => r.RaisedByEmployee)
+                .WithMany(e => e.RequestsRaised)
+                .HasForeignKey(r => r.RequestRaisedBy)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+
+            modelBuilder.Entity<Request>()
+                   .HasOne(r => r.RequestClosedByEmployee)
+                   .WithMany(e => e.RequestsClosed)
+                   .HasForeignKey(r => r.RequestClosedBy)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RequestTracker.Exceptions;
 using RequestTracker.Models;
-using RequestTracker.Repositories;
-using RequestTracker.Services;
+using RequestTracker.Services.Interfaces;
 
 namespace RequestTracker.Controllers
 {
@@ -59,6 +59,7 @@ namespace RequestTracker.Controllers
                 return NotFound(nefe.Message);
             }
         }
+
 
     }
 }

@@ -1,6 +1,9 @@
-﻿using RequestTracker.Models;
+﻿using RequestTracker.Controllers;
+using RequestTracker.Exceptions;
+using RequestTracker.Models;
 using RequestTracker.Models.DTO;
 using RequestTracker.Repositories;
+using RequestTracker.Services.Interfaces;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -55,20 +58,28 @@ namespace RequestTracker.Services
             return true;
         }
 
-        public async Task<Employee> Register(EmployeeUserDTO employeeDTO)
+        public async Task<EmployeeReturnDto> Register(EmployeeRegisterDto employeeDTO)
         {
             Employee employee = null;
             User user = null;
             try
             {
-                employee = employeeDTO;
-                user = MapEmployeeUserDTOToUser(employeeDTO);
+                employee = new Employee
+                {
+                    DateOfBirth = employeeDTO.DateOfBirth,
+                    Name = employeeDTO.Name,
+                    Phone = employeeDTO.Phone,
+                    Role = "User",
+                    Image = employeeDTO.Image,
+                };
+
                 employee = await _employeeRepo.Add(employee);
+                user = MapEmployeeUserDTOToUser(employeeDTO, employee.Id);
                 user.EmployeeID = employee.Id;
                 user = await _userRepo.Add(user);
-                ((EmployeeUserDTO)employee).Password = string.Empty;
+                //((EmployeeUserDTO)employee).Password = string.Empty;
 
-                return employee;
+                return employee.ToEmployeeReturnDto();
             }
             catch (Exception) { }
             if (employee != null)
@@ -98,15 +109,47 @@ namespace RequestTracker.Services
             await _employeeRepo.Delete(employee.Id);
         }
 
-        private User MapEmployeeUserDTOToUser(EmployeeUserDTO employeeDTO)
+        private User MapEmployeeUserDTOToUser(EmployeeRegisterDto employeeDTO, int employeeId)
         {
             User user = new User();
-            user.EmployeeID = employeeDTO.Id;
+            user.EmployeeID = employeeId;
             user.Status = "Disabled";
             HMACSHA512 hMACSHA = new HMACSHA512();
             user.PasswordHashKey = hMACSHA.Key;
             user.Password = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(employeeDTO.Password));
             return user;
+        }
+
+        public async Task<bool> IsEnabled(int userId)
+        {
+            var user = await _userRepo.Get(userId);
+
+            if (user.Status == "Active")
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public async Task<ActivateEmployeeReturnDto> ActivateUser(ActivateUserDto employeeDetails)
+        {
+            var user = await _userRepo.Get(employeeDetails.Id);
+
+            if (user == null)
+            {
+                throw new NoSuchEmployeeException();
+            }
+
+            user.Status = "Active";
+
+            user = await _userRepo.Update(user);
+
+            return new ActivateEmployeeReturnDto
+            {
+                Id = user.EmployeeID,
+                Status = user.Status
+            };
         }
     }
 

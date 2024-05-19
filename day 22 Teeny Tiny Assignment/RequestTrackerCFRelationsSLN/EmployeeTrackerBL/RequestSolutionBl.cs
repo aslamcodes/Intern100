@@ -28,6 +28,7 @@ public class RequestSolutionBl : IRequestSolutionBl
     public async Task<List<RequestSolution>> GetAllSolutionsForUser(Employee authUser)
     {
         var solutions = await _solutionRepository.GetAll();
+
         var userRequests = await _requestRepository.GetAll();
 
         if (userRequests == null) throw new EntityNotFoundException(EntityEnum.Request);

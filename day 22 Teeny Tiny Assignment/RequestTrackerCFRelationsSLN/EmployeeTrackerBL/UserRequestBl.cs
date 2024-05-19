@@ -36,6 +36,7 @@ public class UserRequestBl : IUserRequestBl
     public async Task<Request> MarkRequestClosed(Request request, int closedBy)
     {
         request.RequestStatus = "Closed";
+
         request.RequestClosedBy = closedBy;
 
         await _requestRepository.Update(request);

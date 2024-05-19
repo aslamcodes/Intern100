@@ -1,4 +1,6 @@
-﻿namespace RequestTracker.Models
+﻿using Models;
+
+namespace RequestTracker.Models
 {
     public class Employee
     {
@@ -9,5 +11,9 @@
         public string Image { get; set; }
 
         public string Role { get; set; } = "User";
+
+
+        public ICollection<Request> RequestsRaised { get; set; }//No effect on the table
+        public ICollection<Request> RequestsClosed { get; set; }//No effect on the table
     }
 }

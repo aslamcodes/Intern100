@@ -409,3 +409,4 @@ C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Model
 C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\obj\Debug\net8.0\RequestTracker.pdb
 C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\obj\Debug\net8.0\RequestTracker.genruntimeconfig.cache
 C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\obj\Debug\net8.0\ref\RequestTracker.dll
+C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
