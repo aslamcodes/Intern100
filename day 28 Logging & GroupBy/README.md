@@ -38,3 +38,4 @@
 
 ## Afternoon Session
 - Hackerrank C# basic skill test [Cert](https://www.hackerrank.com/certificates/9cf6e94745a2)
+- Implemented logging with [PizzaChain Applicaiton](https://github.com/aslamcodes/Intern100/tree/main/day%2025%20Regions%2C%20Auth%2C%20DTOs%2C%20Error%20Models%2C%20API%20documentations/Pizza.NETSLN)
