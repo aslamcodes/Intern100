@@ -52,6 +52,7 @@ namespace Pizza.NET
                 });
             });
 
+            builder.Services.AddLogging(l => l.AddLog4Net());
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {

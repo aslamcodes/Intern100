@@ -6,7 +6,7 @@ using Pizza.NET.Services.Interfaces;
 
 namespace Pizza.NET.Services
 {
-    public class OrderService(IRepository<int, Models.Order> orderRepository, IRepository<int, PizzaStock> pizzaStockRepository) : IOrderService
+    public class OrderService(IRepository<int, Models.Order> orderRepository, IRepository<int, PizzaStock> pizzaStockRepository, ILogger<OrderService> logger) : IOrderService
     {
         public async Task CancelOrder(int orderId)
         {
@@ -16,6 +16,8 @@ namespace Pizza.NET.Services
                 var order = await orderRepository.GetByKey(orderId);
 
                 order.Status = OrderStatusEnum.Cancelled;
+
+                logger.LogInformation($"Order {orderId} has been cancelled.");
 
                 await orderRepository.Update(order);
             }
@@ -33,6 +35,8 @@ namespace Pizza.NET.Services
             {
                 var orders = (await orderRepository.GetAll()).Select(order => order.ToOrderDTO());
 
+
+                logger.LogInformation("All orders have been retrieved.");
                 return orders;
             }
             catch (Exception)
@@ -48,6 +52,7 @@ namespace Pizza.NET.Services
             {
                 var order = await orderRepository.GetByKey(id);
 
+                logger.LogInformation($"Order {id} has been retrieved.");
                 return order.ToOrderDTO();
             }
             catch (Exception)
@@ -77,6 +82,7 @@ namespace Pizza.NET.Services
 
                 await pizzaStockRepository.Update(pizzaStock);
 
+                logger.LogInformation($"Order {order.Id} has been created.");
                 return order.ToOrderDTO();
             }
             catch (Exception)

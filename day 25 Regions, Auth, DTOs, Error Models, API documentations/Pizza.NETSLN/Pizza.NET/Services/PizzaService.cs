@@ -5,7 +5,7 @@ using Pizza.NET.Services.Interfaces;
 
 namespace Pizza.NET.Services
 {
-    public class PizzaService(IRepository<int, Models.Pizza> pizzaRepository, IRepository<int, Models.PizzaStock> pizzaStockRepository) : IPizzaService
+    public class PizzaService(IRepository<int, Models.Pizza> pizzaRepository, IRepository<int, Models.PizzaStock> pizzaStockRepository, ILogger<PizzaService> logger) : IPizzaService
     {
         public async Task<IEnumerable<Models.Pizza>> GetAllPizzas()
         {
@@ -13,6 +13,7 @@ namespace Pizza.NET.Services
             {
                 var pizzas = await pizzaRepository.GetAll();
 
+                logger.LogInformation("All pizzas have been retrieved.");
                 return pizzas;
             }
             catch (Exception)
@@ -28,6 +29,7 @@ namespace Pizza.NET.Services
             {
                 var pizza = await pizzaRepository.GetByKey(id);
 
+                logger.LogInformation($"Pizza {id} has been retrieved.");
                 return pizza;
             }
 
@@ -50,6 +52,7 @@ namespace Pizza.NET.Services
                     throw new NoPizzaStockFoundException();
                 }
 
+                logger.LogInformation($"Stock for pizza {pizzaId} has been retrieved.");
                 return pizzaStock.First();
             }
             catch (Exception)

@@ -10,7 +10,7 @@ namespace Pizza.NET.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderController(IOrderService orderService) : ControllerBase
+    public class OrderController(IOrderService orderService, ILogger<OrderController> logger) : ControllerBase
     {
         [Authorize(Policy = "Admin")]
         [HttpGet]
@@ -24,8 +24,9 @@ namespace Pizza.NET.Controllers
 
                 return Ok(orders);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while trying to get all orders: " + e.Message);
                 return StatusCode(500);
             }
         }
@@ -43,10 +44,12 @@ namespace Pizza.NET.Controllers
             }
             catch (OrderNotFoundException e)
             {
+                logger.LogError("Error while trying to get order by id: " + e.Message);
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while trying to get order by id: " + e.Message);
                 return StatusCode(500);
             }
         }
@@ -64,18 +67,22 @@ namespace Pizza.NET.Controllers
             }
             catch (NoPizzaStockFoundException e)
             {
+                logger.LogError("Error while trying to make an order: " + e.Message);
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
             catch (NoPizzaStockException e)
             {
+                logger.LogError("Error while trying to make an order: " + e.Message);
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
             catch (CannotCreateOrderException e)
             {
+                logger.LogError("Error while trying to make an order: " + e.Message);
                 return Conflict(new ErrorModel(e.Message, StatusCodes.Status409Conflict));
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while trying to make an order." + e.Message);
                 return StatusCode(500);
             }
         }
@@ -93,14 +100,17 @@ namespace Pizza.NET.Controllers
             }
             catch (OrderNotFoundException e)
             {
+                logger.LogError("Error while trying to cancel an order: " + e.Message);
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
             catch (CannotUpdateOrderException cuoe)
             {
+                logger.LogError("Error while trying to cancel an order: " + cuoe.Message);
                 return Conflict(new ErrorModel(cuoe.Message, StatusCodes.Status409Conflict));
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while trying to cancel an order." + e.Message);
                 return StatusCode(500);
             }
         }

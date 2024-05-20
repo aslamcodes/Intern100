@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Pizza.NET.Services
 {
-    public class UserAuthService(IRepository<int, Models.User> userRepository, ITokenService tokenService) : IUserAuthService
+    public class UserAuthService(IRepository<int, Models.User> userRepository, ITokenService tokenService, ILogger<UserAuthService> logger) : IUserAuthService
     {
         public async Task<Models.DTO.AuthReturnDto> Login(UserLoginDTO userLoginDTO)
         {
@@ -29,11 +29,12 @@ namespace Pizza.NET.Services
 
                 var token = tokenService.GenerateToken(userDB);
 
+                logger.LogInformation($"User {userDB.Id} has logged in.");
                 return userDB.ToLoginReturnDto(token);
             }
             catch (NoUserFoundException)
             {
-
+                logger.LogError("User not found.");
                 throw new UnauthorizedUserException();
             }
             catch (Exception)
@@ -76,6 +77,7 @@ namespace Pizza.NET.Services
 
                 var token = tokenService.GenerateToken(user);
 
+                logger.LogInformation($"User {user.Id} has been registered.");
                 return user.ToLoginReturnDto(token);
             }
             catch (Exception)

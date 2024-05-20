@@ -15,5 +15,4 @@ Please plan the DTOs accordingly, If required add the mapper methods
 P.S - Enable one admin to be in active state in the database.
 
 Raise Request once logged in
-Get Request _ user
-Get Request _ Admin
+a

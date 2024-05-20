@@ -8,7 +8,7 @@ namespace Pizza.NET.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController(IUserAuthService userAuthService) : ControllerBase
+    public class UserController(IUserAuthService userAuthService, ILogger<UserController> logger) : ControllerBase
     {
         [HttpPost("login")]
         [ProducesResponseType(typeof(AuthReturnDto), StatusCodes.Status200OK)]
@@ -24,10 +24,12 @@ namespace Pizza.NET.Controllers
 
             catch (UnauthorizedUserException e)
             {
+                logger.LogError(e.Message);
                 return Unauthorized(new ErrorModel(e.Message, StatusCodes.Status401Unauthorized));
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while an user trying to log in -" + e.Message);
                 return StatusCode(500);
             }
         }
@@ -42,11 +44,13 @@ namespace Pizza.NET.Controllers
             {
                 var user = await userAuthService.Register(userRegister);
 
+                logger.LogInformation($"User {user.Id} has been registered.");
                 return Ok(user);
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while an user trying to register." + e.Message);
                 return StatusCode(500);
             }
         }

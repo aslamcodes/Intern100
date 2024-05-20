@@ -9,7 +9,7 @@ namespace Pizza.NET.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PizzaController(IPizzaService pizzaService) : ControllerBase
+    public class PizzaController(IPizzaService pizzaService, ILogger<PizzaController> logger) : ControllerBase
     {
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Models.DTO.PizzaDto>), StatusCodes.Status200OK)]
@@ -22,8 +22,9 @@ namespace Pizza.NET.Controllers
 
                 return Ok(pizzas);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while trying to get all pizzas: " + e.Message);
                 return StatusCode(500);
             }
         }
@@ -41,10 +42,12 @@ namespace Pizza.NET.Controllers
             }
             catch (NoPizzaFoundException e)
             {
+                logger.LogError("Error while trying to get pizza by id: " + e.Message);
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while trying to get pizza by id: " + e.Message);
                 return StatusCode(500);
             }
         }
@@ -63,14 +66,17 @@ namespace Pizza.NET.Controllers
             }
             catch (NoPizzaStockFoundException e)
             {
+                logger.LogError("Error while trying to get pizza stock: " + e.Message);
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
             catch (NoPizzaFoundException e)
             {
+                logger.LogError("Error while trying to get pizza stock: " + e.Message);
                 return NotFound(new ErrorModel(e.Message, StatusCodes.Status404NotFound));
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                logger.LogError("Error while trying to get pizza stock." + e.Message);
                 return StatusCode(500);
             }
         }
