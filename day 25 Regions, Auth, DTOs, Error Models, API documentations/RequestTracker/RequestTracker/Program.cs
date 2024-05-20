@@ -24,7 +24,6 @@ namespace RequestTracker
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
 
             builder.Services.AddSwaggerGen(option =>
             {
@@ -37,6 +36,7 @@ namespace RequestTracker
                     In = ParameterLocation.Header,
                     Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
                 });
+
                 option.AddSecurityRequirement(new OpenApiSecurityRequirement
             {
                 {
@@ -73,6 +73,8 @@ namespace RequestTracker
                 options.AddPolicy("RequireAdminRole",
                      policy => policy.RequireRole("Admin"));
             });
+
+            builder.Services.AddLogging(log => log.AddLog4Net());
 
             #region contexts
             builder.Services.AddDbContext<RequestTrackerContext>(

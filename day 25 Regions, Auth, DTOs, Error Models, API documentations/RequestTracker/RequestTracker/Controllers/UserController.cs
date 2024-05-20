@@ -12,8 +12,10 @@ namespace RequestTracker.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        public UserController(IUserService userService)
+        private readonly ILogger<UserController> _logger;
+        public UserController(IUserService userService, ILogger<UserController> logger)
         {
+            _logger = logger;
             _userService = userService;
         }
         [HttpPost("Login")]
@@ -28,6 +30,9 @@ namespace RequestTracker.Controllers
             }
             catch (Exception ex)
             {
+                _logger.BeginScope("AUTH");
+                _logger.LogError("Login Failed");
+
                 return Unauthorized(new ErrorModel(ex.Message, 401));
             }
         }

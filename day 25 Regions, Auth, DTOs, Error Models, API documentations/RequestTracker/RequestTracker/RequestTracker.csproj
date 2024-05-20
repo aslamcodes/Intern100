@@ -7,18 +7,34 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="log4net" Version="2.0.17" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.5" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Interfaces\" />
 		<Folder Include="Migrations\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EditorConfigFiles Remove="C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\.editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\.editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="log4net.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 </Project>
