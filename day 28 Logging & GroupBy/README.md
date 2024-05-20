@@ -38,6 +38,3 @@
 
 ## Afternoon Session
 - Hackerrank C# basic skill test [Cert](https://www.hackerrank.com/certificates/9cf6e94745a2)
-<iframe src="https://www.hackerrank.com/certificates/iframe/9cf6e94745a2"></iframe>
-
-- Adding logging service to PizzaChain App, [commit details]()
