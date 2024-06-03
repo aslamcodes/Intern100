@@ -24,14 +24,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<EditorConfigFiles Remove="C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\.editorconfig" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="C:\Users\VC\Documents\Projects\Intern100\day 25 Regions, Auth, DTOs, Error Models, API documentations\RequestTracker\RequestTracker\.editorconfig" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Content Update="log4net.config">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>

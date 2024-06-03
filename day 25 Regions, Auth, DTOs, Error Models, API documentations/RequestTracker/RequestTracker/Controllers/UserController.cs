@@ -23,6 +23,10 @@ namespace RequestTracker.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<LoginReturnDTO>> Login(UserLoginDTO userLoginDTO)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new ErrorModel("Invalid Model", 400));
+            }
             try
             {
                 var result = await _userService.Login(userLoginDTO);
