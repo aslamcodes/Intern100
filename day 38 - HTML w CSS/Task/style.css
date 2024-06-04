@@ -9,7 +9,19 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    
+  
 }
+
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+}
+
+*::-webkit-scrollbar {
+    display: none;
+  }
 
 a {
     text-decoration: none;
@@ -24,21 +36,19 @@ main {
     display: flex;
     justify-content: space-between;
     min-height: 100svh;
-    min-width: 100svw;
 }
-
 main aside {
 background-color: cadetblue;
     color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 20px;
     width: 300px;
     min-width: 300px;
     min-height: 100vh;
     text-align: left;
   max-height: 100vh;
-  overflow: scroll;
+    background-color: cadetblue;
+       
 
   ::-webkit-scrollbar {
     display: none;
@@ -59,6 +69,7 @@ main article {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
   }
 
   .hero .grid {
@@ -187,6 +198,10 @@ aside article.active {
     display: block;
     opacity: 1; 
     animation: fadeIn 1s ease-in-out;
+}
+
+aside article.right {
+    text-align: right;
 }
 
 @keyframes fadeIn {
