@@ -96,7 +96,7 @@ main article {
         transform: perspective(1000px) rotateY(30deg);
     }
 
-    .hero .grid .card:hover:nth-child(4), .hero .grid .card:nth-child(2).active {
+    .hero .grid .card:hover:nth-child(4), .hero .grid .card:nth-child(4).active {
         transform: perspective(1000px) rotateY(30deg);
     }
 
