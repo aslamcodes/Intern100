@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <aside>
+        <article id="interests">
+          <h1>MY INTERESTS</h1>
+          <h3>Islam</h3>
+          <p>
+            I love to read and learn about the theology of Islam. I have a
+            passion for learning about the history of Islam and the teachings of
+            the Prophet Muhammad (PBUH).
+          </p>
+          <h3>Theologies</h3>
+          <p>
+            I have a passion for learning about the different theologies of the
+            world, since we got lot of influence in our day to day life.
+            <strong>For Example</strong>, Why weekends are saturday and sunday?
+            The sabbath, a day of rest and worship on the seventh day of the
+            week. The Jewish sabbath is Saturday, but most Christian
+            denominations have a Sunday sabbath. In the middle easts friday is
+            the day of rest.
+          </p>
+          <h3>Gaining Knowledge</h3>
+          <p>
+            Constantly on the look out for Knowledge, I love to learn new things
+            and gain knowledge. I believe that knowledge is power and that it is
+            important to always be learning and growing, in multiple domains,
+            Including tech, life, family and so on.
+          </p>
+        </article>
+        <article id="technology">
+          <h1>Life</h1>
+          <!-- About Technology -->
+        </article>
+      </aside>
+      <header class="hero">
+        <div class="intro">
+          <h1>I'm</h1>
+          <h4 class="wordCarousel">
+            <div>
+              <ul class="flip4">
+                <li>Mohamed Aslam</li>
+                <li>محمد اسلم</li>
+                <li>a Software Developer</li>
+                <li>Afraid of Frogs</li>
+              </ul>
+            </div>
+          </h4>
+        </div>
+        <div class="grid">
+          <div class="card" data-target="interests">
+            <h3 class="around">Interests</h3>
+          </div>
+          <div class="card" data-target="schooling">
+            <h3 class="around">Milstones</h3>
+          </div>
+          <div class="card" data-target="technology">
+            <h3 class="around">Life</h3>
+          </div>
+          <div class="card" data-target="passion">
+            <h3 class="around">Passion</h3>
+          </div>
+        </div>
+      </header>
+      <aside>
+        <article id="schooling">
+          <!-- about schooling -->
+          <h1>Milstones</h1>
+        </article>
+        <article id="passion">
+          <h1>Passion</h1>
+          <!-- about Passion -->
+        </article>
+      </aside>
+    </main>
+    <script>
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach((card) => {
+        card.addEventListener("mousedown", (e) => {
+          const targetId = card.dataset.target;
+          const targetArticle = document.getElementById(targetId);
+
+          if (card.classList.contains("active")) {
+            return;
+          }
+       
+          document.querySelectorAll("article.active").forEach((element) => {
+            element.classList.remove("active");
+          });
+
+          cards.forEach((card) => {
+            card.classList.remove("active");
+          });
+
+          scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+
+          card.classList.add("active"); 
+
+          targetArticle.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
