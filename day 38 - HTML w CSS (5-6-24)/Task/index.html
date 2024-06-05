@@ -67,19 +67,19 @@
           <div class="card" data-target="interests">
             <h3 class="around">Interests</h3>
           </div>
-          <div class="card" data-target="schooling">
+          <div class="card" data-target="milestones">
             <h3 class="around">Milestones</h3>
           </div>
           <div class="card" data-target="technology">
             <h3 class="around">Life</h3>
           </div>
-          <div class="card" data-target="passion">
+          <div class="card" data-target="skills">
             <h3 class="around">Skills</h3>
           </div>
         </div>
       </header>
       <aside>
-        <article id="schooling">
+        <article id="milestones">
           <h1>Milestones</h1>
             <h3>Education</h3>
             <p>
@@ -99,7 +99,7 @@
             </p>
 
         </article>
-        <article id="passion">
+        <article id="skills">
           <h1>Skills</h1>
           <!-- about Passion -->
           <h3>Full Stack Development</h3>
@@ -119,7 +119,16 @@
       </aside>
     </main>
     <script>
+      
       const cards = document.querySelectorAll(".card");
+      const head = document.querySelector(".hero");
+
+      window.scrollTo(
+        {
+          top: head.offsetTop,
+          behavior: "smooth",
+        }
+      )
 
       cards.forEach((card) => {
         card.addEventListener("mousedown", (e) => {
@@ -138,11 +147,13 @@
             card.classList.remove("active");
           });
 
-          scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
 
+          window.scrollTo(
+          {
+            top: targetArticle.parentElement.offsetTop,
+            behavior: "smooth",
+          }
+         )
           card.classList.add("active"); 
 
           targetArticle.classList.add("active");

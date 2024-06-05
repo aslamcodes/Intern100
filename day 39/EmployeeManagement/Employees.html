@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        padding: 0.5em;
+        margin: 0;
+      }
+
+      p {
+        margin: 0 0;
+      }
+
+      .employee-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .employee-details-card {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .header {
+          display: flex;
+          gap: 1rem;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          img {
+            align-self: center;
+            border-radius: 1000px;
+            object-fit: cover;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="employee-details">
+      <div class="employee-details-card">
+        <div class="header">
+          <img
+            src="./media/images/employee1.jpg"
+            alt="Employee 1 Picture"
+            width="150"
+          />
+          <p>John Doe</p>
+        </div>
+
+        <p><strong>Date of Birth:</strong> January 1, 1990</p>
+        <p><strong>Phone:</strong> 123-456-7890</p>
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <p><strong>Blood Group:</strong> O+</p>
+      </div>
+
+      <div class="employee-details-card">
+        <div class="header">
+            <img
+                src="./media/images/employee3.jpg"
+                alt="Employee 3 Picture"
+                width="150"
+            />
+            <p>John Smith</p>
+        </div>
+    
+        <p><strong>Date of Birth:</strong> January 15, 1985</p>
+        <p><strong>Phone:</strong> 321-654-0987</p>
+        <p><strong>Email:</strong> john.smith@example.com</p>
+    </div>
+    
+    <div class="employee-details-card">
+        <div class="header">
+            <img
+                src="./media/images/employee4.jpg"
+                alt="Employee 4 Picture"
+                width="150"
+            />
+            <p>Emily Johnson</p>
+        </div>
+    
+        <p><strong>Date of Birth:</strong> March 22, 1990</p>
+        <p><strong>Phone:</strong> 123-456-7890</p>
+        <p><strong>Email:</strong> emily.johnson@example.com</p>
+    </div>
+    
+    <div class="employee-details-card">
+        <div class="header">
+            <img
+                src="./media/images/employee5.jpg"
+                alt="Employee 5 Picture"
+                width="150"
+            />
+            <p>Michael Brown</p>
+        </div>
+    
+        <p><strong>Date of Birth:</strong> July 30, 1988</p>
+        <p><strong>Phone:</strong> 456-789-0123</p>
+        <p><strong>Email:</strong> michael.brown@example.com</p>
+    </div>
+    
+  </body>
+</html>

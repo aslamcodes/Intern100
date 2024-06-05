@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        padding-top: 5.5rem;
+        margin: 0;
+      }
+
+      nav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        padding: 0.5em 1em;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+
+        .nav-items {
+          display: flex;
+          align-items: center;
+          list-style: none;
+          gap: 1rem;
+          li {
+            a {
+              text-decoration: none;
+              color: cadetblue;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .nav-toggle {
+          display: none;
+          align-items: center;
+          gap: 1rem;
+          button {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            border: none;
+            background-color: cadetblue;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+
+      iframe {
+        border: none;
+      }
+
+      .sidemenu {
+        position: fixed;
+        top: 5.5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1000;
+
+        &.active {
+          display: block;
+        }
+
+        .menu-items {
+          list-style: none;
+          padding: 0;
+          li {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            a {
+              text-decoration: none;
+              color: cadetblue;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        nav .nav-items {
+          display: none;
+        }
+
+        nav .nav-toggle {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body style="min-height: 100vh">
+    <nav>
+      <h1>Corpdio Company</h1>
+      <ul class="nav-items">
+        <li><a href="home.html" target="main">Home</a></li>
+        <li><a href="Employees.html" target="main">Employees</a></li>
+        <li><a href="AddEmployee.html" target="main">Add Employee</a></li>
+      </ul>
+      <div class="nav-toggle">
+        <button onclick="toggleMenu()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="sidemenu">
+      <ul class="menu-items">
+        <li><a href="home.html" target="main">Home</a></li>
+        <li><a href="Employees.html" target="main">Employees</a></li>
+        <li><a href="AddEmployee.html" target="main">Add Employee</a></li>
+      </ul>
+    </div>
+    <iframe
+      name="main"
+      src="AddEmployee.html"
+      style="min-height: 70vh"
+      width="100%"
+    >
+    </iframe>
+    <script>
+      function toggleMenu() {
+        const sideMenu = document.getElementsByClassName("sidemenu")[0];
+        sideMenu.classList.toggle("active");
+
+        sideMenu.childNodes.forEach((child) => {
+          if (child.nodeName === "UL") {
+            child.childNodes.forEach((li) => {
+              li.addEventListener("click", () => {
+                sideMenu.classList.remove("active");
+              });
+            });
+          }
+        }); 
+       
+      }
+    </script>
+  </body>
+</html>
