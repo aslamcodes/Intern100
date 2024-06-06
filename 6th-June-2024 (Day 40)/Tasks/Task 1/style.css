@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  background-color: #2148c0;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .art {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-15deg);
+    top:-15%;
+    left: 100%;
+    translate: -70% 0;
+    background-image: url("/images/stripe.svg");
+    background-repeat: no-repeat;
+    z-index: 0;
+    filter: blur(1px);
+    scale: 1.5;
+}
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-width: 350px;
+  z-index: 100;
+}
+
+.loginform .logo {
+  width: 50px;
+  height: 50px;
+    color: white;
+    align-self: center;
+    transform: rotate(-10deg);
+    margin: 1rem;
+}
+
+.loginform h1 {
+  text-align: center;
+  color: white;
+}
+
+.form-control {
+  background-color: #2148c0;
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 0.5rem;
+  border-radius: 0.2rem;
+  border: white 0.1rem solid;
+  input {
+    flex: 1;
+    background-color: #2148c0;
+    color: white;
+
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+
+.form-action {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.form-action .form-action-cta {
+  background-color: white;
+  color: #2148c0;
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+}
+
+.form-action a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  align-self: flex-end;
+}
