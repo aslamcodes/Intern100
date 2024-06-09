@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ggray: "#F7F8FC",
+              gdgray: "#65676C",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div
+      class="p-3 mx-auto max-w-md min-h-screen relative flex flex-col gap-2 px-3"
+    >
+      <div
+        data-component="search-bar"
+        class="flex justify-between items-center bg-ggray px-4 py-2 rounded-full"
+      >
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-bars"></i>
+          <input placeholder="Search in Gmail" class="bg-ggray outline-none" />
+        </div>
+        <div>
+          <img
+            class="rounded-full w-8 h-8"
+            src="https://s3-alpha-sig.figma.com/img/3cfe/693d/d9f0819a7b89cc5f506b04bfeea1b8bd?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Azu2K1p1ekia1Im~zzhuF1lAgPMDIaPu57No8eEnpEAubLVVIE0Oh1xFw15F-PJQkPXZHKfSoOPKlwW54hbyq553KWsxcq88s8VIyWuZkygK0Cpr17n0ybDYAcssGLIUQmcypkReQf-6Jo1vCsWCJSY7ZZqk091u4WpS94WOAGFTqNEJBI-jOS2IC3eDZ-JcHF6Fnes-cd0HwS3XafBkjhp9NcDDellT~wcIf~r5gPbwmMgWPlIM0G6Y50deZ1JZ7RyJYUtpJzSVM1Zw0drOkGV9p95J50Md7tCb~VJtreFLKv-QnQARB1-NhzacnXMBvLQIVX2d0LhcoF9W8U-79g__"
+          />
+        </div>
+      </div>
+      <div data-component="group-header" class="flex">
+        <p class="text-gdgray text-sm">Primary</p>
+      </div>
+      <div data-component="groups">
+        <div
+          data-component="group"
+          class="flex justify-between items-center gap-2 py-2"
+        >
+          <div class="flex gap-3 items-center">
+            <i class="fa-solid fa-inbox"></i>
+            <div class="flex flex-col">
+              <p class="font-bold">Promotions</p>
+              <p class="font-bold text-sm text-gdgray">
+                Netflix New Arrivals, Bank
+              </p>
+            </div>
+          </div>
+          <div
+            data-component="chips"
+            data-props-color="green"
+            class="bg-emerald-500 rounded-full px-2 flex items-center py-px text-white"
+          >
+            <p>2 new</p>
+          </div>
+        </div>
+        <div
+          data-component="group"
+          class="flex justify-between items-center gap-2 py-2"
+        >
+          <div class="flex gap-3 items-center">
+            <i class="fa-solid fa-inbox"></i>
+            <div class="flex flex-col">
+              <p class="font-bold">Promotions</p>
+              <p class="font-bold text-sm text-gdgray">
+                Netflix New Arrivals, Bank
+              </p>
+            </div>
+          </div>
+          <div
+            data-component="chips"
+            data-props-color="green"
+            class="bg-blue-700 rounded-full px-2 flex items-center py-px text-white"
+          >
+            <p>2 new</p>
+          </div>
+        </div>
+      </div>
+      <div data-component="mail-group" class="flex flex-col gap-4 py-2">
+        <div class="flex flex-col gap-2">
+          <a href="./mail.html">
+            <div
+              data-component="mail-card"
+              data-prop-unread="true"
+              data-prop-starred="true"
+              class="flex gap-2 justify-between"
+            >
+              <div class="flex gap-4 items-center">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://s3-alpha-sig.figma.com/img/4119/0d9e/f2f5369ecdb96d5ef872c5dd0ce556ae?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cQ4jMqdSA8uZMF6XoUV1Jnt3~d8vdEKGvsW9j2jFfDc5FRM21~iQFzSwxIwXBbG3kWJX2EZzNKV-GX2lwAIr1r1zga5OwVzvX8G1IeS8AcDt-JA~NbKlB43Yo8obcnLU2ftrt-AmUuOEoNjPkILf5rvmx5Ngv1mYVU0RZdAv3nA506WKTPyZTFrof9Z4bjFaKdYKIKYctz6IlHz-V0BijJZWx2nEpaEYyAFZSpLitpYkv6a8XTJSg7BZbQs~7U-lzs5-OzveeOXdoS0AE5ihJEx~VWrlOZYO-gOqpwxE0D~JX7t6fCTFEubOAHPwcFMN-i5mLamcuL0ApfGYptRIcQ__"
+                  alt="img"
+                />
+                <div class="flex flex-col">
+                  <div>
+                    <h3 class="text-lg font-bold">Random Bank Online</h3>
+                    <h4 class="text-md font-medium">
+                      Random Bank Account Balance Update
+                    </h4>
+                  </div>
+                  <div>
+                    <p class="ggray text-sm captialise">
+                      Time to check your bank information an...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between items-end">
+                <p class="text-sm text-gdgray">2:45 PM</p>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              data-component="mail-card"
+              data-prop-unread="false"
+              data-prop-starred="true"
+              class="flex gap-2 justify-between"
+            >
+              <div class="flex gap-4 items-center">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://s3-alpha-sig.figma.com/img/4119/0d9e/f2f5369ecdb96d5ef872c5dd0ce556ae?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cQ4jMqdSA8uZMF6XoUV1Jnt3~d8vdEKGvsW9j2jFfDc5FRM21~iQFzSwxIwXBbG3kWJX2EZzNKV-GX2lwAIr1r1zga5OwVzvX8G1IeS8AcDt-JA~NbKlB43Yo8obcnLU2ftrt-AmUuOEoNjPkILf5rvmx5Ngv1mYVU0RZdAv3nA506WKTPyZTFrof9Z4bjFaKdYKIKYctz6IlHz-V0BijJZWx2nEpaEYyAFZSpLitpYkv6a8XTJSg7BZbQs~7U-lzs5-OzveeOXdoS0AE5ihJEx~VWrlOZYO-gOqpwxE0D~JX7t6fCTFEubOAHPwcFMN-i5mLamcuL0ApfGYptRIcQ__"
+                  alt="img"
+                />
+                <div class="flex flex-col">
+                  <div>
+                    <h3 class="text-lg">Random Bank Online</h3>
+                    <h4 class="text-md">Random Bank Account Balance Update</h4>
+                  </div>
+                  <div>
+                    <p class="ggray text-sm captialise">
+                      Time to check your bank information an...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between items-end">
+                <p class="text-sm text-gdgray">2:45 PM</p>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              data-component="mail-card"
+              data-prop-unread="false"
+              data-prop-starred="false"
+              class="flex gap-2 justify-between"
+            >
+              <div class="flex gap-4 items-center">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://s3-alpha-sig.figma.com/img/4119/0d9e/f2f5369ecdb96d5ef872c5dd0ce556ae?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cQ4jMqdSA8uZMF6XoUV1Jnt3~d8vdEKGvsW9j2jFfDc5FRM21~iQFzSwxIwXBbG3kWJX2EZzNKV-GX2lwAIr1r1zga5OwVzvX8G1IeS8AcDt-JA~NbKlB43Yo8obcnLU2ftrt-AmUuOEoNjPkILf5rvmx5Ngv1mYVU0RZdAv3nA506WKTPyZTFrof9Z4bjFaKdYKIKYctz6IlHz-V0BijJZWx2nEpaEYyAFZSpLitpYkv6a8XTJSg7BZbQs~7U-lzs5-OzveeOXdoS0AE5ihJEx~VWrlOZYO-gOqpwxE0D~JX7t6fCTFEubOAHPwcFMN-i5mLamcuL0ApfGYptRIcQ__"
+                  alt="img"
+                />
+                <div class="flex flex-col">
+                  <div>
+                    <h3 class="text-lg">Random Bank Online</h3>
+                    <h4 class="text-md">Random Bank Account Balance Update</h4>
+                  </div>
+                  <div>
+                    <p class="ggray text-sm captialise">
+                      Time to check your bank information an...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between items-end">
+                <p class="text-sm text-gdgray">2:45 PM</p>
+                <div class="flex gap-2">
+                  <i class="fa-regular fa-star text-black"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        data-component="tap-bar"
+        data-props-active="1"
+        class="absolute flex bottom-0 left-0 right-0 justify-around items-center bg-ggray py-3"
+      >
+        <div
+          class="relative px-2 py-1 bg-sky-200 rounded-2xl min-w-12 flex justify-center items-center"
+        >
+          <i class="fa-solid fa-inbox"></i>
+          <div
+            class="w-4 h-4 bg-red-800 text-white absolute rounded-full -top-1 -right-1 flex justify-center items-center"
+          >
+            <span class="text-xs font-semibold">12</span>
+          </div>
+        </div>
+        <div class="px-2 py-1">
+          <i class="fa-solid fa-video"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
