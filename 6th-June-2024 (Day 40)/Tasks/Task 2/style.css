@@ -16,12 +16,20 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   max-width: 1200px;
-  max-height: 80vh;
   margin: 0 auto;
   padding-top: 10vh;
   position: relative;
+  overflow-x: scroll;
+  border-radius: 10px;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }
 
 .data-table {
@@ -76,6 +84,14 @@ body {
     &::placeholder {
       color: #a1a9b8;
       font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tsearchbar {
+    input {
+      max-width: 100px;
     }
   }
 }
@@ -221,10 +237,16 @@ input[type="checkbox"] {
 
 .table-controls {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #f4f7fcbf;
   padding: 18px 16px;
+  min-width: max-content;
+  position: sticky;
+  left: 0;
+  right: 0;
+
   .control-group {
     display: flex;
     align-items: center;
