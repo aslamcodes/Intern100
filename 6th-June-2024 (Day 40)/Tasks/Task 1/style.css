@@ -9,7 +9,7 @@
 
 .main {
   background-color: #2148c0;
-  height:  100svh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,18 +19,18 @@
 }
 
 .main .art {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-15deg);
-    top:-15%;
-    left: 100%;
-    translate: -70% 0;
-    background-image: url("/images/stripe.svg");
-    background-repeat: no-repeat;
-    z-index: 0;
-    filter: blur(1px);
-    scale: 1.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-15deg);
+  top: -70%;
+  left: 100%;
+  translate: -70% 0;
+  background-image: url("/images/stripe.svg");
+  background-repeat: no-repeat;
+  z-index: 0;
+  filter: blur(1px);
+  scale: 2.5;
 }
 
 .loginform {
@@ -48,10 +48,10 @@
 .loginform .logo {
   width: 50px;
   height: 50px;
-    color: white;
-    align-self: center;
-    transform: rotate(-10deg);
-    margin: 1rem;
+  color: white;
+  align-self: center;
+  transform: rotate(-10deg);
+  margin: 1rem;
 }
 
 .loginform h1 {
@@ -84,13 +84,11 @@
   }
 }
 
-
 .form-action {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .form-action .form-action-cta {
@@ -111,9 +109,10 @@
 }
 
 @media (max-width: 767px) {
-    .main .art {
-        scale: 1;
-        left: 100%;
-        translate: -100% 0;
-    }
+  .main .art {
+    scale: 2;
+    left: 100%;
+    top: -15%;
+    translate: -100% 0;
   }
+}

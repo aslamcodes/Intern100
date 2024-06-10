@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="table-controls">
+      <div class="table-controls header-controls">
         <div class="control-group">
           <div class="icon-button">
             <i class="fa-solid fa-filter"></i>
@@ -30,194 +30,290 @@
             <i class="fa-solid fa-plus"></i>Add customer
           </button>
         </div>
-      </th>
-    </div>
-  <table style="width: 100%" class="data-table">
-    <thead>
-     
-      <tr class="entry entry-header">
-        <th class="cell cell-header">
-          <input type="checkbox" class="cell-checkbox" />
-        </th>
-        <th class="cell cell-header sort">
-          <p class="title">#</p>
-        </th>
-        <th class="cell cell-header sort sort-asc">
-          <p class="title">Name</p>
-        </th>
-        <th class="cell cell-header">
-          <p class="title">Description</p>
-        </th>
-        <th class="cell cell-header sort">
-          <p class="title">Status</p>
-        </th>
-        <th class="cell cell-header">
-          <p class="title">Rate</p>
-        </th>
-        <th class="cell cell-header">
-          <p class="title">Balance</p>
-        </th>
-        <th class="cell cell-header">
-          <p class="title">Deposit</p>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="entry entry-body">
-        <td class="cell">
-          <input type="checkbox" class="cell-checkbox"/>
-        </td>
-        <td class="cell">
-          <div class="cell-title strong">1</div>
-        </td>
-        <td class="cell">
-          <div class="cell-title strong">John Doe</div>
-          <div class="cell-body">6123123123</div>
-        </td>
-        <td class="cell">
-          <p class="cell-body">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
-            debitis iusto omnis quise.
-          </p>
-        </td>
-        <td class="cell">
-          <div class="status-chips yellow">Open</div>
-        </td>
-        <td class="cell">
-          <p class="cell-title">$70.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-        <td class="cell">
-          <p class="cell-title">$270.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-        <td class="cell">
-          <p class="cell-title">$570.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-      </tr>
-      <tr class="entry entry-body">
-        <td class="cell">
-          <input type="checkbox" class="cell-checkbox"/>
-        </td>
-        <td class="cell">
-          <div class="cell-title strong">2</div>
-        </td>
-        <td class="cell">
-          <div class="cell-title strong">John Doe</div>
-          <div class="cell-body">6123123123</div>
-        </td>
-        <td class="cell">
-          <p class="cell-body">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
-            debitis iusto omnis quise.
-          </p>
-        </td>
-        <td class="cell">
-          <div class="status-chips green">Success</div>
-        </td>
-        <td class="cell">
-          <p class="cell-title">$70.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-        <td class="cell">
-          <p class="cell-title red">$270.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-        <td class="cell">
-          <p class="cell-title green">$570.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-      </tr>
-      <tr class="entry entry-body">
-        <td class="cell">
-          <input type="checkbox" class="cell-checkbox"/>
-        </td>
-        <td class="cell">
-          <div class="cell-title strong">3</div>
-        </td>
-        <td class="cell">
-          <div class="cell-title strong">John Doe</div>
-          <div class="cell-body">6123123123</div>
-        </td>
-        <td class="cell">
-          <p class="cell-body">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
-            debitis iusto omnis quise.
-          </p>
-        </td>
-        <td class="cell">
-          <div class="status-chips red">Due</div>
-        </td>
-        <td class="cell">
-          <p class="cell-title">$70.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-        <td class="cell">
-          <p class="cell-title green">$270.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-        <td class="cell">
-          <p class="cell-title red">$570.00</p>
-          <p class="cell-sub">CAD</p>
-        </td>
-      </tr>
-    </tbody>
-    
-  </table>
-  <div class="table-controls">
-    <div class="control-group">
-      <p>
-        Active customers: 479/706
-      </p>
-    </div>
-    <div class="control-group">
-      <div>
-        <p>Rows per page: 10</p><i class="fa-solid fa-chevron-down"></i>
       </div>
-      <div>
-        <p>1-10 of 706</p>
+      <table style="width: 100%" class="data-table">
+        <thead>
+          <tr class="entry entry-header">
+            <th class="cell cell-header">
+              <input type="checkbox" class="cell-checkbox" />
+            </th>
+            <th class="cell cell-header sort">
+              <p class="title">#</p>
+            </th>
+            <th class="cell cell-header sort sort-asc">
+              <p class="title">Name</p>
+            </th>
+            <th class="cell cell-header">
+              <p class="title">Description</p>
+            </th>
+            <th class="cell cell-header sort">
+              <p class="title">Status</p>
+            </th>
+            <th class="cell cell-header">
+              <p class="title">Rate</p>
+            </th>
+            <th class="cell cell-header">
+              <p class="title">Balance</p>
+            </th>
+            <th class="cell cell-header">
+              <p class="title">Deposit</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="entry entry-body">
+            <td class="cell">
+              <input type="checkbox" class="cell-checkbox" />
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">1</div>
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">John Doe</div>
+              <div class="cell-body">6123123123</div>
+            </td>
+            <td class="cell">
+              <p class="cell-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi debitis iusto omnis quise.
+              </p>
+            </td>
+            <td class="cell">
+              <div class="status-chips yellow">Open</div>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$70.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$570.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+          </tr>
+          <tr class="entry entry-body">
+            <td class="cell">
+              <input type="checkbox" class="cell-checkbox" />
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">2</div>
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">John Doe</div>
+              <div class="cell-body">6123123123</div>
+            </td>
+            <td class="cell">
+              <p class="cell-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi debitis iusto omnis quise.
+              </p>
+            </td>
+            <td class="cell">
+              <div class="status-chips green">Success</div>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$70.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title red">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title green">$570.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+          </tr>
+          <tr class="entry entry-body">
+            <td class="cell">
+              <input type="checkbox" class="cell-checkbox" />
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">3</div>
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">John Doe</div>
+              <div class="cell-body">6123123123</div>
+            </td>
+            <td class="cell">
+              <p class="cell-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi debitis iusto omnis quise.
+              </p>
+            </td>
+            <td class="cell">
+              <div class="status-chips red">Due</div>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$70.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title green">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title red">$570.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+          </tr>
+          <tr class="entry entry-body">
+            <td class="cell">
+              <input type="checkbox" class="cell-checkbox" />
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">2</div>
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">John Doe</div>
+              <div class="cell-body">6123123123</div>
+            </td>
+            <td class="cell">
+              <p class="cell-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi debitis iusto omnis quise.
+              </p>
+            </td>
+            <td class="cell">
+              <div class="status-chips green">Success</div>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$70.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title red">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title green">$570.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+          </tr>
+          <tr class="entry entry-body">
+            <td class="cell">
+              <input type="checkbox" class="cell-checkbox" />
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">3</div>
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">John Doe</div>
+              <div class="cell-body">6123123123</div>
+            </td>
+            <td class="cell">
+              <p class="cell-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi debitis iusto omnis quise.
+              </p>
+            </td>
+            <td class="cell">
+              <div class="status-chips red">Due</div>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$70.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title green">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title green">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+          </tr>
+
+          <tr class="entry entry-body">
+            <td class="cell">
+              <input type="checkbox" class="cell-checkbox" />
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">3</div>
+            </td>
+            <td class="cell">
+              <div class="cell-title strong">John Doe</div>
+              <div class="cell-body">6123123123</div>
+            </td>
+            <td class="cell">
+              <p class="cell-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi debitis iusto omnis quise.
+              </p>
+            </td>
+            <td class="cell">
+              <div class="status-chips red">Due</div>
+            </td>
+            <td class="cell">
+              <p class="cell-title">$70.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title green">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+            <td class="cell">
+              <p class="cell-title green">$270.00</p>
+              <p class="cell-sub">CAD</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-controls footer-controls blurred">
+        <div class="control-group row-details">
+          <p>1 - 10 of 97</p>
+        </div>
+        <div class="control-group">
+          <div class="pagination-control">
+            <span>Rows per page: 10</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="pagination">
+            <i class="fa-solid fa-chevron-left"></i>
+            <p class="page"><span>1</span>/10</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
       </div>
-      <div>
-        <i class="fa-solid fa-chevron-left"></i>   
-        <i class="fa-solid fa-chevron-right"></i>   
-         </div>
-    </div>
-  </th>
-</div>
     </div>
   </body>
   <script>
-    const headerCheckbox = document.querySelector(' .entry-header .cell-checkbox');
-    const bodyCheckboxes = document.querySelectorAll(' .entry-body .cell-checkbox'); 
-    
-    headerCheckbox.addEventListener('click', (e) => {
+    const headerCheckbox = document.querySelector(
+      " .entry-header .cell-checkbox"
+    );
+    const bodyCheckboxes = document.querySelectorAll(
+      " .entry-body .cell-checkbox"
+    );
+
+    headerCheckbox.addEventListener("click", (e) => {
       bodyCheckboxes.forEach((checkbox) => {
         checkbox.checked = headerCheckbox.checked;
-        if(checkbox.checked) {
-          checkbox.parentElement.parentElement.classList.add('active');
+        if (checkbox.checked) {
+          checkbox.parentElement.parentElement.classList.add("active");
         } else {
-          checkbox.parentElement.parentElement.classList.remove('active');
+          checkbox.parentElement.parentElement.classList.remove("active");
         }
       });
     });
     bodyCheckboxes.forEach((checkbox) => {
-      checkbox.addEventListener('click', (e) => {
-        checkbox.parentElement.parentElement.classList.toggle('active');
+      checkbox.addEventListener("click", (e) => {
+        checkbox.parentElement.parentElement.classList.toggle("active");
       });
     });
-    
   </script>
   <script>
-    const sortButtons = document.querySelectorAll('.sort');
+    const sortButtons = document.querySelectorAll(".sort");
     sortButtons.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        if(button.classList.contains('sort-asc')) {
-          button.classList.remove('sort-asc');
-          button.classList.add('sort-desc');
+      button.addEventListener("click", (e) => {
+        if (button.classList.contains("sort-asc")) {
+          button.classList.remove("sort-asc");
+          button.classList.add("sort-desc");
         } else {
-          button.classList.remove('sort-desc');
-          button.classList.add('sort-asc');
+          button.classList.remove("sort-desc");
+          button.classList.add("sort-asc");
         }
       });
     });

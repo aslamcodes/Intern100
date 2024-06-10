@@ -12,14 +12,16 @@ table {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: grey;
+  background-color: #868fa0;
 }
 
 .container {
   width: 70%;
   max-width: 1200px;
+  max-height: 80vh;
   margin: 0 auto;
   padding-top: 10vh;
+  position: relative;
 }
 
 .data-table {
@@ -75,7 +77,6 @@ body {
       color: #a1a9b8;
       font-size: 1rem;
     }
-
   }
 }
 
@@ -143,9 +144,15 @@ body {
 
 .entry-body.active {
   background: #ebf0fa;
-  &::before {
+  position: relative;
+  td:nth-child(1)::before {
     content: "";
     position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #2264e5ed;
   }
 }
 
@@ -191,7 +198,7 @@ body {
 }
 
 .cell.cell-header {
-   color: #585e68;
+  color: #585e68;
   .title {
     color: inherit;
     text-transform: uppercase;
@@ -200,9 +207,8 @@ body {
   }
 
   &:hover {
-    color: #2264E5;
+    color: #2264e5;
   }
-
 }
 
 input[type="checkbox"] {
@@ -218,9 +224,50 @@ input[type="checkbox"] {
   justify-content: space-between;
   align-items: center;
   background-color: #f4f7fcbf;
-  padding: 20px 16px;
+  padding: 18px 16px;
   .control-group {
     display: flex;
-    gap: 6px;
+    align-items: center;
+    gap: 12px;
   }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+
+  i {
+    padding: 6px;
+    border-radius: 6px;
+    background-color: white;
+    color: #585e68;
+  }
+  .page {
+    color: #585e68;
+    span {
+      color: black;
+    }
+  }
+}
+
+.pagination-control,
+.row-details {
+  color: #585e68;
+  font-size: 12px;
+}
+
+.blurred {
+  backdrop-filter: blur(8px);
+}
+
+.header-controls {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.footer-controls {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
