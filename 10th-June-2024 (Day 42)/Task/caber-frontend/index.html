@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="scss/main.scss" />
+  </head>
+  <body>
+    <nav class="cb-c-navbar">
+      <p class="cb-c-navbar__logo">Caber</p>
+      <div>
+        <ul class="cb-c-navbar__menu">
+          <li class="cb-c-navbar__menu__item">Home</li>
+          <li class="cb-c-navbar__menu__item">About</li>
+          <li class="cb-c-navbar__menu__item">Services</li>
+          <li class="cb-c-navbar__menu__item">Contact</li>
+        </ul>
+        <!-- <button class="cb-c-button--secondary">
+          <span class="cb-c-button__title">Sign Up</span>
+        </button> -->
+      </div>
+    </nav>
+    <section class="cb-l-hero">
+      <div class="cb-l-hero__intro">
+        <div class="cb-l-hero__intro__content">
+          <div>
+            <h1>
+              Ours <span class="cb-ut-text-primary">Cabs</span> Your Wish..
+            </h1>
+            <p>Book a cab instantly, and see for yourself!</p>
+          </div>
+        </div>
+        <img class="cb-l-hero__intro__image" src="./assets/taxi1.png" alt="" />
+      </div>
+      <form class="cb-l-hero__form">
+        <div>
+          <h1>Plan your</h1>
+          <h1 class="cb-ut-text-secondary">Journey</h1>
+        </div>
+        <div class="cb-l-hero__form__control-group">
+          <label for="">From</label>
+          <input type="text" placeholder="ex: Delhi" />
+        </div>
+        <div class="cb-l-hero__form__control-group">
+          <label for="">To</label>
+          <input type="text" placeholder="ex: Noida" />
+        </div>
+        <div class="cb-l-hero__form__control-group">
+          <label for="">Seating</label>
+          <input type="text" placeholder="ex: 4" />
+        </div>
+        <button type="submit" class="cb-c-button--large">
+          Search for Cabs
+        </button>
+      </form>
+    </section>
+    <section class="cb-l-join-driver"></section>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.cb-c-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba($color: #fff, $alpha: 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: $primary-color;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 2rem;
+
+    &__item {
+      list-style: none;
+      font-size: 1rem;
+      font-weight: bold;
+      color: $secondary-color;
+      text-decoration: none;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+  }
+}

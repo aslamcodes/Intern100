@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.cb-ut-text-primary {
+  color: $primary-color;
+}
+
+.cb-ut-text-secondary {
+  color: $secondary-color;
+}
+
+.cb-ut-min-h-screen {
+  min-height: 100svh;
+}
+
+.cb-ut-flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

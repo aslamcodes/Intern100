@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script>
+      function greet() {}
+    </script> -->
+    <script>
+      let num1;
+      var greet = () => alert("Hello");
+      var understandingVariables = () => {
+        let num2 = 200;
+        document.num2 = 300;
+        console.log("The value of num1 in UnderstandingValriables " + num2);
+      };
+      var anotherMethod = () => {
+        console.log(num1);
+        understandingVariables();
+      };
+
+      function iteration() {
+        arr = [1, 2, 3, 4, 5];
+        for (let i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+        }
+        console.log(arr[5]);
+      }
+
+      var understandingObject = () => {
+        var employee = {
+          name: "Ramu",
+          age: 21,
+          phone: "9876543210",
+        };
+        employee.price = 10987;
+        console.log(employee["price"]);
+      };
+
+      var understandingBoolean = () => {
+        var name = null;
+        var age;
+        var result = false;
+        var num = 0;
+        if (!name) console.log("No name given");
+        if (!age) console.log("No age given");
+        if (!result) console.log("No result given");
+        if (!num) console.log("The number is false");
+        if (name == result) console.log("Name and result are same");
+        else console.log("not same");
+      };
+
+      var understandingMutidimenstionArry = () => {
+        const scores = [
+          [90, 89, 76],
+          [67, 92, 64],
+        ];
+        for (let index = 0; index < scores.length; index++) {
+          console.log(scores[index]);
+          for (let i = 0; i < scores[index].length; i++)
+            console.log(scores[index][i]);
+        }
+        var changedArray = scores.flat();
+        console.log(changedArray);
+      };
+      var understandingFilter = () => {
+        const scores = [100, 90, 89, 67, 70];
+        var topScores = scores.filter((n) => n > 75);
+        console.log(topScores);
+      };
+
+      var understandingMap = () => {
+        const scores = [100, 90, 89, 67, 70];
+        var ranks = scores.map((n) => Math.round(n / 10, 0));
+        console.log(ranks);
+      };
+
+      function nullvals() {
+        var name = null;
+        var age;
+        var b = 0.1 + 0.2 === 0.3;
+        alert(b);
+        alert(typeof age);
+        age = 1;
+        alert(typeof age);
+        if (age == name) alert("yes");
+        else alert("no");
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="understandingMap()">Click to call</button>
+
+    <!-- <button onclick="greet()">Click Me</button> -->
+  </body>
+</html>
