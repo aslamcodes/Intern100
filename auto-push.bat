@@ -8,6 +8,7 @@ set commit_message=%DATE% updates pushed at %TIME%
 echo %commit_message% >> %LOG_FILE%
 
 git add . >> %LOG_FILE%
+git add .
 
 git commit -m "%commit_message%" >> %LOG_FILE%
 
