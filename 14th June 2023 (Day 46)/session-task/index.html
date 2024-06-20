@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 
+    
+    
+    -->
+    <div class="form-wrapper">
+      <form class="form" id="js-register-form" novalidate>
+        <h1>Registration</h1>
+        <div class="form-control">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane D" />
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="xyz@email.com"
+          />
+        </div>
+        <div class="form-control">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" placeholder="1234567890" />
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="********"
+          />
+        </div>
+        <div class="form-control">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" placeholder="YYYY-MM-DD" />
+        </div>
+        <div class="form-control">
+          <label for="age">Age</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            readonly
+            placeholder="ex. 25"
+          />
+        </div>
+        <div class="form-control">
+          <label for="gender">Gender</label>
+          <div>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+          </div>
+          <div>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="qualification">Qualification</label>
+          <div>
+            <input type="checkbox" id="ssc" name="qualification" value="ssc" />
+            <label for="ssc">SSC</label>
+          </div>
+          <div>
+            <input type="checkbox" id="hsc" name="qualification" value="hsc" />
+            <label for="hsc">HSC</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="bachelors"
+              name="qualification"
+              value="bachelors"
+            />
+            <label for="bachelors">Bachelors</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="masters"
+              name="qualification"
+              value="masters"
+            />
+            <label for="masters">Masters</label>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="profession">Profession</label>
+          <input
+            list="professions"
+            id="profession"
+            name="profession"
+            placeholder="Select a profession"
+          />
+          <datalist id="professions">
+            <option value="Engineer"></option>
+            <option value="Doctor"></option>
+            <option value="Teacher"></option>
+            <option value="Designer"></option>
+          </datalist>
+        </div>
+        <p id="validation-container" class="error"></p>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

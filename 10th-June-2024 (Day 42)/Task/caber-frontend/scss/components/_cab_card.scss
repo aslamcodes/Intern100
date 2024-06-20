@@ -1,0 +1,31 @@
+@use "abstracts" as *;
+
+.cb-c-cab_card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid rgb(128, 128, 128);
+  padding: 2em 1em;
+  box-shadow: 1px 1px 5px 0 rgb(128, 128, 128);
+  width: fit-content;
+  min-width: 250px;
+
+  &__img {
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+    width: 200px;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__book {
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}

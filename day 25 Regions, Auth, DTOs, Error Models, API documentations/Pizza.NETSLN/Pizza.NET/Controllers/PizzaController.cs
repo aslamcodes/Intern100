@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Pizza.NET.Exceptions;
 using Pizza.NET.Models;
@@ -7,6 +8,7 @@ using Pizza.NET.Services.Interfaces;
 
 namespace Pizza.NET.Controllers
 {
+    [EnableCors]
     [Route("api/[controller]")]
     [ApiController]
     public class PizzaController(IPizzaService pizzaService, ILogger<PizzaController> logger) : ControllerBase

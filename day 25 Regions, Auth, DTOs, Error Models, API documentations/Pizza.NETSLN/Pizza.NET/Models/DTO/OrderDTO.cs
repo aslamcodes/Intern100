@@ -8,7 +8,7 @@
 
         public string UserAddress { get; set; }
 
-        public PizzaDto Pizza { get; set; }
+        public int PizzaId { get; set; }
 
         public decimal TotalPrice { get; set; }
 

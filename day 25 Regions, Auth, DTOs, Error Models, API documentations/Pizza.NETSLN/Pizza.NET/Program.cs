@@ -66,6 +66,8 @@ namespace Pizza.NET
                 };
             });
 
+            builder.Services.AddCors(services => services.AddDefaultPolicy(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()));
+
             #region Context
             builder.Services.AddDbContext<PizzaChainContext>(options =>
             {
@@ -94,6 +96,8 @@ namespace Pizza.NET
             #endregion
 
             var app = builder.Build();
+
+            app.UseCors();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

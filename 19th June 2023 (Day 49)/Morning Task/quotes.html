@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav
+      class="fixed z-10 left-2 right-2 top-2 flex justify-between items-center p-4 border border-1 shadow-md rounded-2xl lg:rounded-3xl bg-white"
+    >
+      <h1 class="cursor-pointer font-bold text-2xl text-amber-700">
+        QuotesAAS
+      </h1>
+      <ul class="flex gap-4">
+        <a href="./index.html" class="text-amber-700">Home</a>
+        <a class="text-amber-700" href="#">Quotes</a>
+        <!-- <li>Authors</li> -->
+        <!-- <li>Categories</li> -->
+        <!-- <li>Search</li> -->
+      </ul>
+    </nav>
+
+    <main class="mt-20 mx-4">
+      <section>
+        <div class="flex flex-col items-center justify-center">
+          <input
+            placeholder="Search by Author"
+            class="p-2 my-2 border border-1 shadow-md rounded-2xl lg:rounded-3xl w-full lg:w-1/2"
+            type="text"
+            id="js-search-by-author"
+            onchange="filterByAuthorFromInput()"
+          />
+          <div class="flex items-center justify-end my-2 gap-2">
+            <button id="js-sort-button">
+              <span class="text-amber-700 font-bold">Sort by Author</span>
+              <i id="js-sort-icon" class="text-amber-700 fa-solid fa-sort"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="js-page-quotes"
+          class="flex flex-col gap-2 mb-40 items-center"
+        ></div>
+      </section>
+    </main>
+
+    <div
+      class="fixed bottom-0 lg:bottom-2 left-0 lg:left-2 right-0 lg:right-2 lg:border lg:shadow lg:rounded-full bg-white"
+    >
+      <div class="flex items-center justify-between p-4">
+        <button
+          onclick="onPrevPage()"
+          class="px-3 py-2 bg-amber-700 text-white font-bold rounded-2xl flex items-center justify-center"
+        >
+          Prev
+        </button>
+        <div class="flex items-center justify-center font-bold gap-1">
+          <label for="js-page-val" class="">Page</label>
+          <input
+            class="max-w-8"
+            type="number"
+            value="1"
+            id="js-page-val"
+            min="1"
+          />
+        </div>
+        <button
+          onclick="onNextPage()"
+          class="px-3 py-2 bg-amber-700 text-white font-bold rounded-2xl flex items-center justify-center"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+    <script>
+      const url = "https://dummyjson.com/quotes";
+
+      let page = 1;
+      let limit = 5;
+      let skip = page * limit - limit;
+
+      let sortBy = "none";
+
+      function filterByAuthor(author) {
+        getQuotes(0, skip, function (data) {
+          const quotes = data.quotes.filter((quote) =>
+            quote.author.toLowerCase().includes(author.toLowerCase())
+          );
+
+          loadQuotes(quotes);
+        });
+      }
+
+      function filterByAuthorFromInput() {
+        const author = $("#js-search-by-author").val();
+        getQuotes(0, skip, function (data) {
+          const quotes = data.quotes.filter((quote) =>
+            quote.author.toLowerCase().includes(author.toLowerCase())
+          );
+
+          loadQuotes(quotes);
+        });
+      }
+
+      function updatePageValue() {
+        $("#js-page-val").val(page);
+      }
+
+      function loadQuotes(quotes) {
+        $("#js-page-quotes").empty();
+
+        if (quotes.length === 0) {
+          $("#js-page-quotes").append(
+            `<div class="p-4 border border-1 shadow-md rounded-2xl lg:rounded-3xl bg-white w-full lg:w-1/2  hover:bg-orange-600 hover:text-white transition-all duration-300 ease-in-out">
+                <p class="font-medium text-lg lg:text-xl">No quotes found</p>
+                </div>`
+          );
+          return;
+        }
+
+        quotes.sort((a, b) => {
+          if (sortBy === "asc") {
+            return a.author.localeCompare(b.author);
+          } else if (sortBy === "desc") {
+            return b.author.localeCompare(a.author);
+          } else {
+            return 0;
+          }
+        });
+
+        quotes.forEach((quote) => {
+          $("#js-page-quotes").append(
+            `<div class="p-4 border border-1 shadow-md rounded-2xl lg:rounded-3xl bg-white w-full lg:w-1/2  hover:bg-orange-600 hover:text-white transition-all duration-300 ease-in-out">
+                <p class="font-medium text-lg lg:text-xl"><span class="text-2xl text-amber-700 font-bold">"</span>${quote.quote}<span class="text-2xl text-amber-700 font-bold">"</span></p>
+                <p class="text-right font-light italic cursor-pointer hover:underline" id="js-author-hook">- ${quote.author}</p>
+                </div>`
+          );
+        });
+      }
+
+      function getQuotes(limit, skip, cb) {
+        $.get(url, { limit, skip }, function (data) {
+          cb(data);
+        });
+      }
+
+      function onNextPage() {
+        page++;
+        skip = page * limit - limit;
+        getQuotes(limit, skip, function (data) {
+          loadQuotes(data.quotes);
+        });
+
+        if (page < 1) {
+          page = 1;
+        }
+
+        updatePageValue();
+      }
+
+      function onPrevPage() {
+        page--;
+        skip = page * limit - limit;
+        getQuotes(limit, skip, function (data) {
+          loadQuotes(data.quotes);
+        });
+
+        if (page < 1) {
+          page = 1;
+        }
+
+        updatePageValue();
+      }
+
+      $(document).ready(function () {
+        getQuotes(limit, skip, function (data) {
+          loadQuotes(data.quotes);
+        });
+
+        $("#js-sort-button").click("click", function () {
+          if (sortBy === "none") {
+            sortBy = "asc";
+            $("#js-sort-icon").removeClass("fa-sort").addClass("fa-sort-up");
+          } else if (sortBy === "asc") {
+            sortBy = "desc";
+            $("#js-sort-icon")
+              .removeClass("fa-sort-up")
+              .addClass("fa-sort-down");
+          } else {
+            sortBy = "none";
+            $("#js-sort-icon").removeClass("fa-sort-down").addClass("fa-sort");
+          }
+
+          getQuotes(limit, skip, function (data) {
+            loadQuotes(data.quotes);
+          });
+        });
+
+        $("#js-author-hook").click("click", function () {
+          var author = $(this).text();
+          alert(author);
+        });
+
+        $("#js-page-val").on("change", function () {
+          page = $(this).val();
+          if (page < 1) {
+            page = 1;
+          }
+          skip = page * limit - limit;
+          getQuotes(limit, skip, function (data) {
+            loadQuotes(data.quotes);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

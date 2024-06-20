@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../scss/main.scss" />
+    <style>
+      body {
+        background-color: #e5e5f7;
+        opacity: 1;
+        background-image: radial-gradient(#006989 2px, #e5e5f7 2px);
+        background-size: 40px 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cb-pg-auth_page">
+      <form class="cb-c-form">
+        <h1 class="cb-c-form__title">Sign in!</h1>
+        <div class="cb-c-form__group">
+          <label for="from">Email</label>
+          <input type="text" id="from" />
+          <p id="fromError" class="error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="to">Password</label>
+          <input type="text" id="to" />
+          <p id="toError" class="error"></p>
+        </div>
+        <div class="cb-c-form__action">
+          <button class="cb-c-button" type="submit">Sign In</button>
+          <a href="regiter.html">New to Caber? <em>Sign up</em></a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

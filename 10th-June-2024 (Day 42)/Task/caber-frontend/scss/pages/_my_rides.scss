@@ -1,0 +1,27 @@
+.cb-pg-myrides_page {
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  & .ride-card-group {
+  }
+}
+
+.cb-pg-myrides_rides {
+  grid-column: 2;
+}
+
+.cb-pg-myrides_bookcard {
+  justify-self: center;
+  align-self: start;
+  grid-column: 3;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}

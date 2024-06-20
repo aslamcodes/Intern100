@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 38.md",
+                "file": "What could have been better.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "438766c04ab12454",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Day 38.md",
+                "file": "What could have been better.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Day 38.md",
+                "file": "What could have been better.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Day 38.md"
+                "file": "What could have been better.md"
               }
             }
           }
@@ -151,13 +150,14 @@
   },
   "active": "55444d2e405a2cd5",
   "lastOpenFiles": [
+    "Mini Project Notes/Project Board.md",
+    "Day 38.md",
     "Day 35.md",
     "Day 34.md",
     "Day 33.md",
     "Day 32.md",
     "Day 31.md",
     "What could have been better.md",
-    "Mini Project Notes/Project Board.md",
     "Project User flow.md",
     "Day 25.md",
     "Day 44.md",
@@ -187,7 +187,6 @@
     "Resources/Pasted image 20240516104358.png",
     "Day 18 - Database Design & ERD.md",
     "Day 19.md",
-    "Day 20 - ADO.Net as DAL.md",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",

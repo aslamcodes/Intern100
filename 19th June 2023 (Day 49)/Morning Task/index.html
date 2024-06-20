@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav
+      class="fixed z-10 left-2 right-2 top-2 flex justify-between items-center p-4 border border-1 shadow-md rounded-2xl lg:rounded-3xl bg-white"
+    >
+      <h1 class="cursor-pointer font-bold text-2xl text-amber-700">
+        QuotesAAS
+      </h1>
+      <ul class="flex gap-4">
+        <a href="#" class="text-amber-700">Home</a>
+        <a class="text-amber-700" href="./quotes.html">Quotes</a>
+      </ul>
+    </nav>
+    <main class="mt-20 mx-4">
+      <section
+        class="min-h-screen flex flex-col gap-4 items-center justify-center text-center"
+      >
+        <h1 class="text-3xl font-bold text-amber-700">Welcome to QuotesAAS</h1>
+        <p class="text-lg text-gray-700 text-semibold">
+          Embark on new direction of Ideas with Quotes!
+        </p>
+        <p id="js-quote" class=""></p>
+        <button class="px-4 py-2 bg-orange-600 text-white rounded-2xl">
+          <a href="./quotes.html">Get Started</a>
+        </button>
+      </section>
+    </main>
+    <script>
+      $(document).ready(function () {
+        let url = "https://dummyjson.com/quotes/random";
+        $.get(url, function (data) {
+          let quotes = JSON.parse(data);
+          let quote = quotes[0];
+          $("#js-quote").text(quote.quote);
+          $("#js-quote").fadeIn(2000);
+        });
+      });
+    </script>
+  </body>
+</html>

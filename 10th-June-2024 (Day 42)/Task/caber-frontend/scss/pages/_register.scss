@@ -1,0 +1,36 @@
+@use "abstracts" as *;
+.cb-pg-register {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    width: 50%;
+  }
+
+  &__choice_col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 1rem;
+
+    &__choice {
+      text-align: center;
+      padding: 4rem 1rem;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      min-width: 500px;
+      font-size: 1.2rem;
+      &:hover {
+        background-color: $secondary-color;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Data</title>
+
+    <style>
+      body,
+      h1,
+      form,
+      label,
+      input,
+      table,
+      th,
+      td,
+      button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      /* Body styling */
+      body {
+        background: #121212;
+        color: #e0e0e0;
+        padding: 20px;
+        font-family: "Arial", sans-serif;
+      }
+
+      /* Header styling */
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #bb86fc;
+        text-align: center;
+      }
+
+      /* Form styling */
+      form {
+        background: #1f1b24;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        margin: 0 auto 40px;
+      }
+
+      label {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #bb86fc;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #bb86fc;
+        border-radius: 4px;
+        background: #2a2a2a;
+        color: #e0e0e0;
+        font-size: 1rem;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #03dac6;
+      }
+
+      button {
+        background: #bb86fc;
+        color: #121212;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #3700b3;
+      }
+
+      /* Table styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      th {
+        background: #333;
+        color: #bb86fc;
+      }
+
+      td {
+        color: #e0e0e0;
+      }
+
+      tr:nth-child(even) {
+        background: #2a2a2a;
+      }
+
+      tr:hover {
+        background: #3c3c3c;
+      }
+
+      input:required:valid {
+        border-color: #bb86fc;
+      }
+
+      input:required {
+        border-color: #cf6679;
+      }
+
+      input:focus:invalid {
+        background: #cf6679;
+        background-size: 25px;
+        color: #e0e0e0;
+      }
+
+      .toast-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+
+      .toast {
+        background: #1f1b24;
+        color: #e0e0e0;
+        padding: 15px 20px;
+        margin: 5px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+      }
+
+      .toast-success {
+        border-left: 5px solid #03dac6;
+      }
+
+      .toast-error {
+        border-left: 5px solid #cf6679;
+      }
+
+      .toast-info {
+        border-left: 5px solid #bb86fc;
+      }
+
+      .error {
+        color: #cf6679;
+        margin-bottom: 20px;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toast-container" id="toast-container"></div>
+
+    <div class="flex-between-center">
+      <div class="">
+        <h1>Add a Product</h1>
+        <div>
+          <form action="" onsubmit="submitForm(event)" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <p class="error" id="nameerror"></p>
+
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" required step="any" />
+            <p class="error" id="priceerror"></p>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" required />
+            <p class="error" id="quantityerror"></p>
+
+            <button type="submit">Add Product</button>
+          </form>
+        </div>
+      </div>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Product 1</td>
+          <td>$10.00</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Product 2</td>
+          <td>$15.00</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Product 3</td>
+          <td>$20.00</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function showToast(message, type) {
+        const container = document.getElementById("toast-container");
+
+        const toast = document.createElement("div");
+        toast.className = `toast toast-${type}`;
+        toast.textContent = message;
+
+        container.appendChild(toast);
+
+        setTimeout(() => {
+          toast.classList.add("fadeout");
+          toast.addEventListener("animationend", () => {
+            toast.remove();
+          });
+        }, 3000);
+      }
+
+      function addTableRow(data) {
+        var table = document.querySelector("table");
+
+        var row = table.insertRow(-1);
+
+        var idCell = row.insertCell(0);
+        var nameCell = row.insertCell(1);
+        var priceCell = row.insertCell(2);
+        var quantityCell = row.insertCell(3);
+
+        idCell.textContent = table.rows.length - 1;
+        nameCell.textContent = data.name;
+        priceCell.textContent = "$" + parseFloat(data.price).toFixed(2);
+        quantityCell.textContent = data.quantity;
+
+        // showToast("Product added successfully", "success");
+      }
+
+      function validateForm(data) {
+        var nameErr = document.getElementById("nameerror");
+        var priceErr = document.getElementById("priceerror");
+        var quantityErr = document.getElementById("quantityerror");
+
+        if (data.name === "" || data.name.length < 3 || data.name.length > 50) {
+          nameErr.textContent =
+            "Name is required and must be between 3 and 50 characters long";
+          return false;
+        } else {
+          nameErr.textContent = "";
+        }
+
+        if (data.price === "" || data.price < 0 || isNaN(data.price)) {
+          priceErr.textContent =
+            "Price is required and must be a positive number";
+          return false;
+        } else {
+          priceErr.textContent = "";
+        }
+
+        if (
+          data.quantity === "" ||
+          data.quantity < 0 ||
+          !Number.isInteger(+data.quantity)
+        ) {
+          quantityErr.textContent =
+            "Quantity is required and must be a positive number";
+          return false;
+        } else {
+          quantityErr.textContent = "";
+        }
+
+        return true;
+      }
+
+      function submitForm(e) {
+        e.preventDefault();
+
+        var form = e.target;
+
+        var formData = {};
+
+        for (var i = 0; i < form.elements.length; i++) {
+          var element = form.elements[i];
+
+          if (element.type !== "submit") {
+            formData[element.name] = element.value;
+          }
+        }
+
+        if (!validateForm(formData)) {
+          return;
+        }
+
+        addTableRow(formData);
+      }
+    </script>
+  </body>
+</html>

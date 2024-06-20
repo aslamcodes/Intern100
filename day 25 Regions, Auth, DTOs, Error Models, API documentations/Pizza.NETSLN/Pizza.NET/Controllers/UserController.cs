@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Pizza.NET.Exceptions;
 using Pizza.NET.Models;
 using Pizza.NET.Models.DTO;
@@ -8,6 +9,7 @@ namespace Pizza.NET.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors]
     public class UserController(IUserAuthService userAuthService, ILogger<UserController> logger) : ControllerBase
     {
         [HttpPost("login")]

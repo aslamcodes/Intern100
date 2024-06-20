@@ -17,11 +17,10 @@
             {
                 Id = order.Id,
                 UserId = order.UserId,
-                Pizza = order.Pizza.ToPizzaDTO(),
                 OrderDate = order.OrderedDate,
+                PizzaId = order.PizzaId,
                 TotalPrice = order.Quantity * order.Pizza.Price,
                 UserAddress = order.DeliveryAddress,
-
             };
         }
 
