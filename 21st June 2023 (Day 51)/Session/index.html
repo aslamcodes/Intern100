@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      function employeeDetails(employeeName, employeeSalary) {
+        this.employeeName = employeeName;
+        this.employeeSalary = employeeSalary;
+
+        this.displayDetails = () => {
+          return (
+            "Employee name is " +
+            this.employeeName +
+            " and salary is " +
+            this.employeeSalary
+          );
+        };
+      }
+
+      const firstEmployee = new employeeDetails("John", 20000);
+      const secondEmployee = new employeeDetails("Mary", 30000);
+
+      console.log(firstEmployee.employeeName);
+      console.log(secondEmployee.employeeName);
+    </script> -->
+    <!-- <script>
+      class Vehicle {
+        constructor(vehicleType, modelName) {
+          this.vehicleType = vehicleType;
+          this.modelName = modelName;
+        }
+        displayDetails() {
+          console.log(
+            `The type of Vehicle is ${this.vehicleType} and the model is ${this.modelName}`
+          );
+        }
+      }
+      let vehicleOne = new Vehicle("Car", "Audi");
+      vehicleOne.displayDetails();
+    </script> -->
+    <!-- <script>
+      class Employee {
+        constructor(name, designation, salary) {
+          this.name = name;
+          this.designation = designation;
+          this.salary = salary;
+        }
+        greet() {
+          console.log("Hello welcome iam communicationg through parent class");
+        }
+      }
+
+      class Manager extends Employee {
+        constructor(name, salary, designation, empId) {
+          super(name, designation, salary);
+          this.empId = empId;
+        }
+        displayInformation() {
+          console.log(`The name of employee is ${this.name} salary is ${this.salary}
+            Designation is ${this.designation} and Employee ID is ${this.empId}`);
+        }
+      }
+
+      let manager = new Manager("John", "HR Manager", 50000, 100);
+      manager.greet();
+      manager.displayInformation();
+    </script> -->
+    <!-- <script>
+      //Polymorphism
+
+      class Animal {
+        walking() {
+          console.log("Animal is walking");
+        }
+      }
+
+      class Tiger extends Animal {
+        walking() {
+          console.log("Tiger is walking with four legs");
+        }
+      }
+
+      class Bear extends Animal {
+        walking() {
+          console.log("Bear is walking with two legs");
+        }
+      }
+
+      const animals = [new Tiger(), new Bear()];
+      animals.forEach((animal) => animal.walking());
+
+      class Shape {
+        area(valueOne, valueTwo) {
+          console.log(valueOne * valueTwo);
+        }
+      }
+
+      class Rectangle extends Shape {
+        area(valueOne, valueTwo) {
+          super.area(valueOne, valueTwo);
+        }
+      }
+
+      let rectangle = new Rectangle();
+      rectangle.area(6, 8);
+    </script> -->
+    <script>
+      //   class Person {
+      //     startWalking() {
+      //       console.log("Person starts walking from his home");
+      //     }
+      //     reachedGroceryShop() {
+      //       console.log(this);
+      //     }
+      //   }
+
+      //   let ram = new Person();
+      //   ram.reachedGroceryShop();
+    </script>
+
+    <script>
+      // Prototype Inheritance
+
+      const parent = {
+        greet: function () {
+          console.log(`Hello from the parent`);
+        },
+      };
+
+      const child = {
+        name: "Child Object",
+      };
+
+      child.__proto__ = parent;
+
+      // child.greet();
+    </script>
+
+    <script>
+      // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
+      // 1. Encapsulation
+      // 2. Abstraction
+      // 3. Inheritance
+      // 4. Polymorphism
+      // New apply all the oops concept on student class
+
+      // Abstract class
+      class Person {
+        constructor(name, age) {
+          if (this.constructor === Person) {
+            throw new Error(`Cannot instantiate abstract class Person`);
+          }
+          this._name = name;
+          this._age = age;
+        }
+
+        introduceSelf() {
+          throw new Error(`Cannot call abstract 
+          method introDuce from Person`);
+        }
+      }
+
+      // Inherited
+      class Student extends Person {
+        constructor(name, age, rollNumber, year) {
+          super(name, age);
+          this._rollNumber = rollNumber;
+          this._year = year;
+        }
+
+        // Polymorphism
+        introduceSelf() {
+          console.log(
+            `The name of student is ${this._name} age is ${this._age} and roll number is ${this._rollNumber} and I'm from ${this._year} batch`
+          );
+        }
+
+        // Encapsulation
+        isAdult() {
+          if (this._age > 18) {
+            console.log("Student is adult");
+          } else {
+            console.log("Student is not adult");
+          }
+        }
+      }
+
+      // Inherited
+      class Professor extends Person {
+        constructor(name, age, subject) {
+          super(name, age);
+          this._subject = subject;
+        }
+
+        introduceSelf() {
+          console.log(
+            `The name of professor is ${this._name} age is ${this._age} and subject is ${this._subject}`
+          );
+        }
+      }
+
+      let student = new Student("John", 20, 100, 2021);
+      let professor = new Professor("Dr. Smith", 45, "Computer Science");
+
+      student.introduceSelf();
+      student.isAdult();
+      professor.introduceSelf();
+    </script>
+  </body>
+</html>
