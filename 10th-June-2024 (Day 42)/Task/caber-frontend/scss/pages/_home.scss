@@ -122,6 +122,11 @@
     gap: 1rem;
     max-width: 300px;
     text-align: right;
+
+    @include respond(small) {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__title {

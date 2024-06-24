@@ -9,14 +9,21 @@
 
   img {
     width: 50%;
+
+    @include respond(small) {
+      width: 100vw;
+    }
   }
 
   &__choice_col {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
     gap: 1rem;
+
+    @include respond(small) {
+      flex-direction: column;
+    }
 
     &__choice {
       text-align: center;
@@ -25,8 +32,14 @@
       background-color: #fff;
       border-radius: 0.5rem;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      min-width: 500px;
+      min-width: min(80vw, 500px);
       font-size: 1.2rem;
+
+      @include respond(small) {
+        padding: 2rem 0.5rem;
+        font-size: 1rem;
+      }
+
       &:hover {
         background-color: $secondary-color;
         color: #fff;
