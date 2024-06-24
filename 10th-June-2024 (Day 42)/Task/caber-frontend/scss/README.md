@@ -6,14 +6,24 @@ _Note: when using [Eyeglass](https://github.com/sass-eyeglass/eyeglass) for dist
 
 Reference: [Sass Guidelines](https://sass-guidelin.es/) > [Architecture](https://sass-guidelin.es/#architecture) > [Main file](https://sass-guidelin.es/#main-file)
 
-1. Differentiate logged in vs not logged in content (JWT)
-2. No unnessecary info on console, (clean before presentign)
-3. Page not found error
-4. Menu are required, Handle as yourre the user
-5. Search and filters
-6. My Orders
+1. Differentiate logged in vs not logged in content (JWT) (Setup Done)
+
+2. No unnessecary info on console, (clean before presenting)
+
+3. Page not found error(not mandatory) 
+
+4. Menu are required and appropriate UX 
+
+5. Search and filters when required and functioning properly
+
+6. My Orders/Rides page
+
 7. Logout is needed
-8. Responsiveness is not required
-9. Validations are on essential, not on creativity, although encouraged
+
+8. Responsiveness is required (IN PROGRESS)
+
+9. Validations are only on essentials, not on creativity, although encouraged
+
 10. Deadline at 26th June
+
 11. Hit the essentials first, the crictical.

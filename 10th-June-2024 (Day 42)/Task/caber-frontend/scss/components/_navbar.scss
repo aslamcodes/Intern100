@@ -24,6 +24,10 @@
     display: flex;
     gap: 2rem;
 
+    @include respond(small) {
+      display: none;
+    }
+
     &__item {
       list-style: none;
       font-size: 1rem;
