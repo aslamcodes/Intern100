@@ -20,7 +20,7 @@ Reference: [Sass Guidelines](https://sass-guidelin.es/) > [Architecture](https:/
 
 7. Logout is needed
 
-8. Responsiveness is required (SETUP DONE) (IN PROGRESS)
+8. Responsiveness is required (SETUP DONE)
 
 9. Validations are only on essentials, not on creativity, although encouraged
 
