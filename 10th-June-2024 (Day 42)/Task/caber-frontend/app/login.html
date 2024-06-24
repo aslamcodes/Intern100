@@ -13,20 +13,25 @@
         background-size: 40px 40px;
       }
     </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="cb-pg-auth_page">
       <form class="cb-c-form">
         <h1 class="cb-c-form__title">Sign in!</h1>
         <div class="cb-c-form__group">
-          <label for="from">Email</label>
-          <input type="text" id="from" />
-          <p id="fromError" class="error"></p>
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+          <p id="emailError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Password</label>
-          <input type="text" id="to" />
-          <p id="toError" class="error"></p>
+          <label for="password">Password</label>
+          <input type="text" id="password" />
+          <p id="passwordError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__action">
           <button class="cb-c-button" type="submit">Sign In</button>
@@ -34,5 +39,56 @@
         </div>
       </form>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".cb-c-form").submit(function (e) {
+          e.preventDefault();
+          let isFormValid = true;
+          let email = $("#email").val();
+          let password = $("#password").val();
+          let emailError = $("#emailError");
+          let passwordError = $("#passwordError");
+
+          if (email === "") {
+            emailError.text("Email is required");
+            isFormValid = false;
+          } else {
+            emailError.text("");
+            isFormValid = true;
+          }
+
+          if (password === "") {
+            passwordError.text("Password is required");
+            isFormValid = false;
+          } else {
+            passwordError.text("");
+            isFormValid = true;
+          }
+
+          if (isFormValid) {
+            fetch("http://localhost:8000/api/Auth/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                id: email,
+                password: password,
+              }),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.status === 400 || data.statusCode === 401) {
+                  return;
+                } else {
+                  localStorage.setItem("token", data.token);
+                }
+              })
+              .catch((err) => {});
+          }
+        });
+      });
+    </script>
   </body>
 </html>

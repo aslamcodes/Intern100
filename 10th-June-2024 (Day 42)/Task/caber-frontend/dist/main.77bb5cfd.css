@@ -93,6 +93,39 @@ body {
   align-items: center;
 }
 
+.cb-ut-main_wrapper {
+  margin-top: 4.5rem;
+}
+
+.cb-ut-heading_1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cb-ut-heading_2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cb-ut-heading_3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.cb-ut-heading_4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.cb-ut-form-error {
+  color: #ff0000;
+  font-size: 0.875rem;
+}
+
 .cb-c-button, .cb-c-button--large, .cb-c-button--secondary {
   outline: none;
   border: none;
@@ -156,6 +189,7 @@ body {
   box-shadow: 1px 1px 5px 0 rgb(128, 128, 128);
   width: 100%;
   max-width: 350px;
+  gap: 1rem;
 }
 .cb-c-form__group {
   width: 100%;
@@ -571,6 +605,17 @@ body {
 .cb-pg-register__choice_col__choice:hover {
   background-color: #006989;
   color: #fff;
+}
+
+.cb-pg-mycabs {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 2.5rem;
+}
+.cb-pg-mycabs__cabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
