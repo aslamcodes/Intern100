@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../scss/main.scss" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <style>
       body {
         background-color: #e5e5f7;
@@ -19,29 +24,34 @@
       <form class="cb-c-form">
         <h1 class="cb-c-form__title">Sign up!</h1>
         <div class="cb-c-form__group">
-          <label for="from">Email</label>
-          <input type="text" id="from" />
-          <p id="fromError" class="error"></p>
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+          <p id="emailError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="from">First Name</label>
-          <input type="text" id="from" />
-          <p id="fromError" class="error"></p>
+          <label for="password">Password</label>
+          <input type="text" id="password" />
+          <p id="passwordError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Last Name</label>
-          <input type="text" id="to" />
-          <p id="toError" class="error"></p>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" />
+          <p id="fnameError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Phone</label>
-          <input type="text" id="to" />
-          <p id="toError" class="error"></p>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" />
+          <p id="lnameError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Address</label>
-          <input type="text" id="to" />
-          <p id="toError" class="error"></p>
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" />
+          <p id="phoneError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="address">Address</label>
+          <input type="text" id="address" />
+          <p id="addressError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__action">
           <button class="cb-c-button" type="submit">Submit</button>
@@ -49,5 +59,101 @@
         </div>
       </form>
     </div>
+    <script>
+      $(document).ready(function () {
+        $(".cb-c-form").submit(function (e) {
+          e.preventDefault();
+          let isFormValid = true;
+          let email = $("#email").val();
+          let fname = $("#fname").val();
+          let lname = $("#lname").val();
+          let phone = $("#phone").val();
+          let address = $("#address").val();
+          let password = $("#password").val();
+
+          let emailError = $("#emailError");
+          let fnameError = $("#fnameError");
+          let lnameError = $("#lnameError");
+          let phoneError = $("#phoneError");
+          let addressError = $("#addressError");
+          let passwordError = $("#passwordError");
+
+          if (email === "") {
+            emailError.text("Email is required");
+            isFormValid = false;
+          } else {
+            emailError.text("");
+            isFormValid = true;
+          }
+
+          if (password === "") {
+            passwordError.text("Password is required");
+            isFormValid = false;
+          } else {
+            passwordError.text("");
+            isFormValid = true;
+          }
+
+          if (fname === "") {
+            fnameError.text("First Name is required");
+            isFormValid = false;
+          } else {
+            fnameError.text("");
+            isFormValid = true;
+          }
+
+          if (lname === "") {
+            lnameError.text("Last Name is required");
+            isFormValid = false;
+          } else {
+            lnameError.text("");
+            isFormValid = true;
+          }
+
+          if (phone === "") {
+            phoneError.text("Phone is required");
+            isFormValid = false;
+          } else {
+            phoneError.text("");
+            isFormValid = true;
+          }
+
+          if (address === "") {
+            addressError.text("Address is required");
+            isFormValid = false;
+          } else {
+            addressError.text("");
+            isFormValid = true;
+          }
+
+          if (isFormValid) {
+            fetch("http://localhost:8000/api/Auth/register-passenger", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                email: email,
+                firstName: fname,
+                lastName: lname,
+                phone: phone,
+                password: password,
+                address: address,
+              }),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.status === 400 || data.statusCode === 401) {
+                  return;
+                } else {
+                  localStorage.setItem("token", data.token);
+                  window.location.href = "bookcab.html";
+                }
+              })
+              .catch((err) => {});
+          }
+        });
+      });
+    </script>
   </body>
 </html>

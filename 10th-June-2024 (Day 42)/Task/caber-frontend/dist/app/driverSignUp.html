@@ -12,51 +12,164 @@
         background-image: radial-gradient(#006989 2px, #e5e5f7 2px);
         background-size: 40px 40px;
       }</style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="cb-pg-auth_page">
       <form class="cb-c-form">
         <h1 class="cb-c-form__title">Sign up!</h1>
         <div class="cb-c-form__group">
-          <label for="from">Email</label>
-          <input type="text" id="from">
-          <p id="fromError" class="error"></p>
+          <label for="email">Email</label>
+          <input type="text" id="email">
+          <p id="emailError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="from">First Name</label>
-          <input type="text" id="from">
-          <p id="fromError" class="error"></p>
+          <label for="password">Password</label>
+          <input type="text" id="password">
+          <p id="passwordError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Last Name</label>
-          <input type="text" id="to">
-          <p id="toError" class="error"></p>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname">
+          <p id="fnameError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Phone</label>
-          <input type="text" id="to">
-          <p id="toError" class="error"></p>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname">
+          <p id="lnameError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Address</label>
-          <input type="text" id="to">
-          <p id="toError" class="error"></p>
+          <label for="phone">Phone</label>
+          <input type="text" id="phone">
+          <p id="phoneError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">License</label>
-          <input type="text" id="to">
-          <p id="toError" class="error"></p>
+          <label for="address">Address</label>
+          <input type="text" id="address">
+          <p id="addressError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
-          <label for="to">Licence Expiry</label>
-          <input type="date" id="to">
-          <p id="toError" class="error"></p>
+          <label for="license">License</label>
+          <input type="text" id="license">
+          <p id="licenseError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="licenseExpiry">Licence Expiry</label>
+          <input type="date" id="licenseExpiry">
+          <p id="licenseExpiryError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__action">
-          <a class="cb-c-button" href="/app\driver\driverCabs.html">Submit</a>
+          <button class="cb-c-button" type="submit" href="driver/driverCabs.html">
+            Submit
+          </button>
           <a href="/app\login.html">Already have an account? <em>Sign in</em></a>
         </div>
       </form>
     </div>
+    <script>$(document).ready(function () {
+  $(".cb-c-form").submit(function (e) {
+    e.preventDefault();
+    var isFormValid = true;
+    var email = $("#email").val();
+    var fname = $("#fname").val();
+    var lname = $("#lname").val();
+    var phone = $("#phone").val();
+    var address = $("#address").val();
+    var license = $("#license").val();
+    var licenseExpiry = $("#licenseExpiry").val();
+    var password = $("#password").val();
+    var emailError = $("#emailError");
+    var fnameError = $("#fnameError");
+    var lnameError = $("#lnameError");
+    var phoneError = $("#phoneError");
+    var addressError = $("#addressError");
+    var licenseError = $("#licenseError");
+    var licenseExpiryError = $("#licenseExpiryError");
+    var passwordError = $("#passwordError");
+    if (email === "") {
+      emailError.text("Email is required");
+      isFormValid = false;
+    } else {
+      emailError.text("");
+      isFormValid = true;
+    }
+    if (password === "") {
+      passwordError.text("Password is required");
+      isFormValid = false;
+    } else {
+      passwordError.text("");
+      isFormValid = true;
+    }
+    if (fname === "") {
+      fnameError.text("First Name is required");
+      isFormValid = false;
+    } else {
+      fnameError.text("");
+      isFormValid = true;
+    }
+    if (lname === "") {
+      lnameError.text("Last Name is required");
+      isFormValid = false;
+    } else {
+      lnameError.text("");
+      isFormValid = true;
+    }
+    if (phone === "") {
+      phoneError.text("Phone is required");
+      isFormValid = false;
+    } else {
+      phoneError.text("");
+      isFormValid = true;
+    }
+    if (address === "") {
+      addressError.text("Address is required");
+      isFormValid = false;
+    } else {
+      addressError.text("");
+      isFormValid = true;
+    }
+    if (license === "") {
+      licenseError.text("License is required");
+      isFormValid = false;
+    } else {
+      licenseError.text("");
+      isFormValid = true;
+    }
+    if (licenseExpiry === "") {
+      licenseExpiryError.text("License Expiry is required");
+      isFormValid = false;
+    } else {
+      licenseExpiryError.text("");
+      isFormValid = true;
+    }
+    if (isFormValid) {
+      fetch("http://localhost:8000/api/Auth/register-driver", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: email,
+          firstName: fname,
+          lastName: lname,
+          password: password,
+          phone: phone,
+          address: address,
+          license: license,
+          licenseExpiry: licenseExpiry
+        })
+      }).then(function (res) {
+        return res.json();
+      }).then(function (data) {
+        if (data.status === 400 || data.statusCode === 401) {
+          return;
+        } else {
+          localStorage.setItem("token", data.token);
+          window.location.href = "driver/driverCabs.html";
+        }
+      }).catch(function (err) {});
+    }
+  });
+});</script>
   </body>
 </html>
