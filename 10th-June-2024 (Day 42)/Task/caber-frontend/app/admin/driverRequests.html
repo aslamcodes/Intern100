@@ -4,6 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+
+  <body>
+    <nav class="cb-c-navbar">
+      <h1 class="cb-c-navbar__logo">Caber</h1>
+      <ul class="cb-c-navbar__menu">
+        <li class="cb-c-navbar__menu__item">Book a ride</li>
+        <li class="cb-c-navbar__menu__item">My Rides</li>
+        <li class="cb-c-navbar__menu__item">Profile</li>
+      </ul>
+    </nav>
+
+    <div id="js-driver-list"></div>
+
+    <script>
+      $(document).ready(() => {
+        let token = localStorage.getItem("token");
+
+        if (!token) {
+          window.location.href = "/app/login.html";
+        }
+
+        fetch("http://localhost:8000/api/Admin/get-drivers", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            data.forEach((element) => {
+              $("#js-driver-list").append(`<div>
+              <h1> ${element.user.firstName}</h1>
+              <p>User: ${element.user.email}</p>
+              <p>Phone: ${element.user.phone}</p>
+              <p>Phone: ${element.user.phone}</p>
+              <p>License number ${element.licenseNumber} Expires at ${element.licenseExpiryDate}</p>
+              <button id="js-${element.driverId}">Verify</button>
+            </div>`);
+            });
+          });
+      });
+
+      $(document).on("click", "button", function (e) {
+        let driverId = e.target.id.split("-")[1];
+        let token = localStorage.getItem("token");
+        alert(driverId);
+        fetch(`http://localhost:8000/api/Admin/verify-driver`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ driverId: driverId }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert(data.message);
+          });
+      });
+    </script>
+  </body>
 </html>

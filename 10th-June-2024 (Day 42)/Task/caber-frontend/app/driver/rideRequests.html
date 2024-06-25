@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/scss/main.scss" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="cb-c-navbar">
+      <h1 class="cb-c-navbar__logo">Caber</h1>
+      <ul class="cb-c-navbar__menu">
+        <li class="cb-c-navbar__menu__item">My Cabs</li>
+        <li class="cb-c-navbar__menu__item">Ride Requests</li>
+        <li class="cb-c-navbar__menu__item">Profile</li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <main>
+      <section id="requested-rides"></section>
+    </main>
+    <script>
+      let url = "http://localhost:8000/api/Driver/driver-rides";
+
+      $(document).ready(() => {
+        fetch(url, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            data.forEach((ride) => {
+              $("#requested-rides").append(`
+                      <div class="cb-c-cab_card">
+                        <img
+                          src="${ride.image}"
+                          alt=""
+                          class="cb-c-cab_card__img"
+                        />
+                        <div class="cb-c-cab_card__details">
+                          <h2 class="cb-l-cab_grid__cab__name">${ride.make} ${ride.model}</h2>
+                          <p class="cb-l-cab_grid__cab__rating">Rating: ${ride.rating}</p>
+                        </div>
+                        <p class="cb-c-cab_card__price">Location: ${ride.location}</p>
+                        <p class="cb-c-cab_card__seating">Max: ${ride.seatingCapacity}</p>
+                        <button class="cb-c-cab_card__book" id="js-cab-accept-ride" data-id="${ride.rideId}">Accept</button>
+                        <button class="cb-c-cab_card__book" id="js-cab-decline-ride" data-id="${ride.rideId}">Decline</button>
+                      </div>
+                    `);
+            });
+          });
+      });
+
+      // Accecpt and reject
+      $(document).on("click", "button", function (e) {
+        if (e.target.id === "js-cab-accept-ride") {
+          let rideId = $(e.target).data("id");
+          let token = localStorage.getItem("token");
+
+          fetch(`http://localhost:8000/api/Driver/accept-ride`, {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              driverId: 1,
+              rideId: rideId,
+              accept: true,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+            });
+        }
+
+        if (e.target.id === "js-cab-decline-ride") {
+          let rideId = $(e.target).data("id");
+          let token = localStorage.getItem("token");
+          fetch(`http://localhost:8000/api/Driver/accept-ride`, {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              driverId: 1,
+              rideId: rideId,
+              accept: false,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+            });
+        }
+      });
+    </script>
+  </body>
+</html>

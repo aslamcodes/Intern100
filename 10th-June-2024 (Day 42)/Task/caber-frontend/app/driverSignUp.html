@@ -186,7 +186,9 @@
                   return;
                 } else {
                   localStorage.setItem("token", data.token);
-                  window.location.href = "driver/driverCabs.html";
+                  localStorage.setItem("id", data.id);
+                  localStorage.setItem("role", data.role);
+                  window.location.replace("driver/driverCabs.html");
                 }
               })
               .catch((err) => {});

@@ -1,3 +1,5 @@
+@use "abstracts" as *;
+
 .cb-c-ride-card {
   background-color: #fff;
   display: flex;
@@ -6,7 +8,7 @@
   padding: 1rem 0.5rem;
   border: 1px solid #e5e5e5;
   border-radius: 0.5rem;
-  min-width: 500px;
+  min-width: min(500px, 90vw);
 
   &__cab {
     font-size: 1rem;
@@ -16,6 +18,11 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
+
+    @include respond(small) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__ride_details {

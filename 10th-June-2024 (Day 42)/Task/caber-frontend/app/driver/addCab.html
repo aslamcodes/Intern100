@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/scss/main.scss" />
+  </head>
+  <body>
+    <form class="cb-c-form">
+      <h1 class="cb-c-form__title">Register a Cab</h1>
+      <div class="cb-c-form__group">
+        <label for="registrationNumber">Registration Number</label>
+        <input type="text" id="registrationNumber" />
+        <p id="registrationNumberError" class="cb-ut-form-error"></p>
+      </div>
+      <div class="cb-c-form__group">
+        <label for="model">Model</label>
+        <input type="text" id="model" />
+        <p id="modelError" class="cb-ut-form-error"></p>
+      </div>
+      <div class="cb-c-form__group">
+        <label for="make">Make</label>
+        <input type="text" id="make" />
+        <p id="makeError" class="cb-ut-form-error"></p>
+      </div>
+      <div class="cb-c-form__group">
+        <label for="color">Color</label>
+        <input type="text" id="color" />
+        <p id="colorError" class="cb-ut-form-error"></p>
+      </div>
+      <div class="cb-c-form__group">
+        <label for="seatingCapacity">Seating Capacity</label>
+        <input type="text" id="seatingCapacity" />
+        <p id="seatingCapacityError" class="cb-ut-form-error"></p>
+      </div>
+
+      <div class="cb-c-form__action">
+        <button class="cb-c-button" type="submit">Add Cab</button>
+      </div>
+    </form>
+    <script>
+      $(document).ready(() => {
+        $(".cb-c-form").submit((e) => {
+          e.preventDefault();
+          let isFormValid = true;
+          let registrationNumber = $("#registrationNumber").val();
+          let model = $("#model").val();
+          let make = $("#make").val();
+          let color = $("#color").val();
+          let seatingCapacity = $("#seatingCapacity").val();
+          let registrationNumberError = $("#registrationNumberError");
+          let modelError = $("#modelError");
+          let makeError = $("#makeError");
+          let colorError = $("#colorError");
+          let seatingCapacityError = $("#seatingCapacityError");
+
+          if (registrationNumber === "") {
+            registrationNumberError.text("Registration Number is required");
+            isFormValid = false;
+          } else {
+            registrationNumberError.text("");
+            isFormValid = true;
+          }
+
+          if (model === "") {
+            modelError.text("Model is required");
+            isFormValid = false;
+          } else {
+            modelError.text("");
+            isFormValid = true;
+          }
+
+          if (make === "") {
+            makeError.text("Make is required");
+            isFormValid = false;
+          } else {
+            makeError.text("");
+            isFormValid = true;
+          }
+
+          if (color === "") {
+            colorError.text("Color is required");
+            isFormValid = false;
+          } else {
+            colorError.text("");
+            isFormValid = true;
+          }
+
+          if (seatingCapacity === "") {
+            seatingCapacityError.text("Seating Capacity is required");
+            isFormValid = false;
+          } else {
+            seatingCapacityError.text("");
+            isFormValid = true;
+          }
+
+          if (isFormValid) {
+            fetch("http://localhost:8000/api/Driver/register-cab", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+              body: JSON.stringify({
+                registrationNumber,
+                model,
+                make,
+                color,
+                seatingCapacity,
+                driverdId: localStorage.getItem("id"),
+              }),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.status === 400 || data.statusCode === 401) {
+                  return;
+                } else {
+                  alert("Cab added successfully" + JSON.stringify(data));
+                  //   window.location.href = "/app/driver/driverCabs.html";
+                }
+              })
+              .catch((err) => {});
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

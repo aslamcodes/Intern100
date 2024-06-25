@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../scss/main.scss" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav class="cb-c-navbar">
@@ -20,51 +25,11 @@
       <div class="cb-pg-myrides_rides">
         <section>
           <h1>Current</h1>
-          <div class="ride-card-group">
-            <div class="cb-c-ride-card">
-              <img
-                class="cb-c-ride-card__image"
-                src="/assets/ride_cab.png"
-                alt=""
-              />
-              <div class="cb-c-ride-card__ride_details">
-                <h2 class="cb-c-ride-card__cab">Maruti Suzuki Ertiga</h2>
-                <p class="cb-c-ride-card__ride-date">13 July 2024</p>
-                <p class="cb-c-ride-card__status">Initaited</p>
-                <div class="cb-c-ride-card__actions">
-                  <button>Contact Driver</button>
-                  <button>Cancel</button>
-                </div>
-              </div>
-              <div class="cb-c-ride-card__price_container">
-                <p class="cb-c-ride-card__price">₹ 200</p>
-              </div>
-            </div>
-          </div>
+          <div class="ride-card-group" id="cb-js-current-ride-group"></div>
         </section>
         <section>
           <h1>Ride History</h1>
-          <div class="ride-card-group">
-            <div class="cb-c-ride-card">
-              <img
-                class="cb-c-ride-card__image"
-                src="/assets/ride_cab.png"
-                alt=""
-              />
-              <div class="cb-c-ride-card__ride_details">
-                <h2 class="cb-c-ride-card__cab">Maruti Suzuki Ertiga</h2>
-                <p class="cb-c-ride-card__ride-date">13 July 2024</p>
-                <p class="cb-c-ride-card__status">Initaited</p>
-                <div class="cb-c-ride-card__actions">
-                  <button>Contact Driver</button>
-                  <button>Cancel</button>
-                </div>
-              </div>
-              <div class="cb-c-ride-card__price_container">
-                <p class="cb-c-ride-card__price">₹ 200</p>
-              </div>
-            </div>
-          </div>
+          <div class="ride-card-group" id="cb-js-ride-history-group"></div>
         </section>
       </div>
       <div class="cb-pg-myrides_bookcard">
@@ -75,5 +40,117 @@
         <button class="cb-c-button">Request a Ride</button>
       </div>
     </main>
+    <script>
+      if (!localStorage.getItem("token")) {
+        window.location.href = "/login.html";
+      }
+
+      function loadRides(current, history) {
+        const rideHistoryGroup = $("#cb-js-ride-history-group");
+        const currentRideGroup = $("#cb-js-current-ride-group");
+        rideHistoryGroup.empty();
+        currentRideGroup.empty();
+
+        if (current.length === 0) {
+          currentRideGroup.append("<p>No current rides</p>");
+        } else {
+          current.forEach((ride) => {
+            const currentRideCard = `
+              <div class="cb-c-ride-card">
+                <img
+                  class="cb-c-ride-card__image"
+                  src="/assets/ride_cab.png"
+                  alt=""
+                />
+                <div class="cb-c-ride-card__ride_details">
+                  <h2 class="cb-c-ride-card__cab">${ride.cab}</h2>
+                  <p class="cb-c-ride-card__ride-date">${new Date(
+                    ride.startTime
+                  ).toLocaleDateString("en-IN", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  })}</p>
+                  <p class="cb-c-ride-card__status">${ride.status}</p>
+                  <div class="cb-c-ride-card__actions">
+                  ${
+                    ride.status === "Accepted" &&
+                    `
+                      <button>Initiate Ride</button>
+                    `
+                  }
+                  </div>
+                </div>
+
+                <div class="cb-c-ride-card__price_container">
+                  <p class="cb-c-ride-card__price">${
+                    ride.status === "Completed" ? ride.fare : "$___"
+                  }</p>
+                </div>
+
+              </div>
+              `;
+            currentRideGroup.append(currentRideCard);
+          });
+        }
+
+        if (history.length === 0) {
+          rideHistoryGroup.append("<p>No ride history</p>");
+        } else {
+          history.forEach((ride) => {
+            const historyRideCard = `
+              <div class="cb-c-ride-card">
+                <img
+                  class="cb-c-ride-card__image"
+                  src="/assets/ride_cab.png"
+                  alt=""
+                />
+                <div class="cb-c-ride-card__ride_details">
+                  <h2 class="cb-c-ride-card__cab">${ride.cab}</h2>
+                  <p class="cb-c-ride-card__ride-date">${new Date(
+                    ride.startTime
+                  ).toLocaleDateString("en-IN", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  })}</p>
+                  <p class="cb-c-ride-card__status">${ride.status}</p>
+                </div>
+                <div class="cb-c-ride-card__price_container">
+                  <p class="cb-c-ride-card__price">₹${ride.price}</p>
+                </div>
+              </div>
+              `;
+            rideHistoryGroup.append(historyRideCard);
+          });
+        }
+      }
+
+      $(document).ready(() => {
+        fetch("http://localhost:8000/api/Passenger/ride-history", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            let currentRides = [];
+            let rideHistory = [];
+
+            data.forEach((ride) => {
+              if (
+                ["InProgress", "Accepted", "Requested"].includes(ride.status)
+              ) {
+                currentRides.push(ride);
+              } else {
+                rideHistory.push(ride);
+              }
+            });
+
+            loadRides(currentRides, rideHistory);
+          });
+      });
+    </script>
   </body>
 </html>

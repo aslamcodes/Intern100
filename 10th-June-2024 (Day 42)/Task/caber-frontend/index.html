@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Caber</title>
     <link rel="stylesheet" href="scss/main.scss" />
     <link
       rel="stylesheet"
@@ -12,6 +12,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -88,7 +93,9 @@
           <p class="cb-l-join-driver__description">
             Register as a cab driver and earn at your own time!
           </p>
-          <button class="cb-c-button--large">Join now</button>
+          <button class="cb-c-button--large" id="js-driver-sign-up">
+            Join now
+          </button>
         </div>
       </section>
       <section class="cb-l-features">
@@ -193,5 +200,13 @@
         &copy; 2024 Caber. All rights reserved.
       </p>
     </footer>
+
+    <script>
+      $(document).ready(function () {
+        $("#js-driver-sign-up").click(function () {
+          window.location.href = "app/driverSignUp.html";
+        });
+      });
+    </script>
   </body>
 </html>

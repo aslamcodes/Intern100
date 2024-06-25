@@ -5,62 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../../scss/main.scss" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav class="cb-c-navbar">
       <h1 class="cb-c-navbar__logo">Caber</h1>
       <ul class="cb-c-navbar__menu">
         <a class="cb-c-navbar__menu__item" href="#">My Cabs</a>
-        <a href="#" class="cb-c-navbar__menu__item">Ride Requests</a>
+        <a href="rideRequests.html" class="cb-c-navbar__menu__item"
+          >Ride Requests</a
+        >
         <li class="cb-c-navbar__menu__item">Profile</li>
       </ul>
     </nav>
     <main class="cb-ut-main_wrapper cb-pg-mycabs">
-      <h1 class="cb-ut-heading_1">My Cabs</h1>
-      <div class="cb-pg-mycabs__cabs">
-        <div class="cb-c-cab_card">
-          <img
-            src="https://i.pinimg.com/736x/e4/2a/77/e42a772f947fadb287486d2743655538.jpg"
-            alt=""
-            class="cb-c-cab_card__img"
-          />
-          <div class="cb-c-cab_card__details">
-            <h2 class="cb-l-cab_grid__cab__name">Cab 1</h2>
-            <p class="cb-l-cab_grid__cab__rating">Rating: 4</p>
-          </div>
-          <p class="cb-c-cab_card__price">Location: Anna Park</p>
-          <p class="cb-c-cab_card__seating">Max: 8</p>
-          <a class="cb-c-cab_card__book">Update Cab</a>
-        </div>
-        <div class="cb-c-cab_card">
-          <img
-            src="https://i.pinimg.com/736x/e4/2a/77/e42a772f947fadb287486d2743655538.jpg"
-            alt=""
-            class="cb-c-cab_card__img"
-          />
-          <div class="cb-c-cab_card__details">
-            <h2 class="cb-l-cab_grid__cab__name">Cab 1</h2>
-            <p class="cb-l-cab_grid__cab__rating">Rating: 4</p>
-          </div>
-          <p class="cb-c-cab_card__price">Location: Anna Park</p>
-          <p class="cb-c-cab_card__seating">Max: 8</p>
-          <a class="cb-c-cab_card__book">Update Cab</a>
-        </div>
-        <div class="cb-c-cab_card">
-          <img
-            src="https://i.pinimg.com/736x/e4/2a/77/e42a772f947fadb287486d2743655538.jpg"
-            alt=""
-            class="cb-c-cab_card__img"
-          />
-          <div class="cb-c-cab_card__details">
-            <h2 class="cb-l-cab_grid__cab__name">Cab 1</h2>
-            <p class="cb-l-cab_grid__cab__rating">Rating: 4</p>
-          </div>
-          <p class="cb-c-cab_card__price">Location: Anna Park</p>
-          <p class="cb-c-cab_card__seating">Max: 8</p>
-          <a class="cb-c-cab_card__book">Update Cab</a>
-        </div>
+      <div class="cb-pg-mycabs__header">
+        <h1 class="cb-ut-heading_1">My Cabs</h1>
+        <a class="cb-c-button" href="./addCab.html">Add Cab</a>
       </div>
+      <div class="cb-pg-mycabs__cabs"></div>
     </main>
+    <script>
+      function loadCabs(cabs) {
+        $(".cb-pg-mycabs__cabs").empty();
+        cabs.forEach((cab) => {
+          $(".cb-pg-mycabs__cabs").append(`
+            <div class="cb-c-cab_card">
+              <a class="">Edit</a>
+              <img
+                src="${cab.image}"
+                alt=""
+                class="cb-c-cab_card__img"
+              />
+              <div class="cb-c-cab_card__details">
+                <h2 class="cb-l-cab_grid__cab__name">${cab.make} ${cab.model}</h2>
+                <p class="cb-l-cab_grid__cab__rating">Rating: ${cab.rating}</p>
+              </div>
+              <p class="cb-c-cab_card__price">Location: ${cab.location}</p>
+              <p class="cb-c-cab_card__seating">Max: ${cab.seatingCapacity}</p>
+              <button class="cb-c-cab_card__book" id="js-cab-update_location" data-id="${cab.id}">Update Location</button>
+            </div>
+          `);
+        });
+      }
+
+      $(document).on("click", "button", function (e) {
+        if ($(e.target).has("id", "#js-cab-update_location")) {
+          let cabId = $(e.target).data("id");
+          let token = localStorage.getItem("token");
+
+          const location = prompt("Enter new location");
+
+          if (!location) {
+            return;
+          }
+
+          fetch(`http://localhost:8000/api/Cab/update-location`, {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              cabId,
+              location,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              alert("Location updated");
+            });
+        }
+      });
+
+      $(document).ready(() => {
+        let token = localStorage.getItem("token");
+
+        if (!token) {
+          window.location.href = "/app/login.html";
+        }
+
+        $("#js-cab-update_location").click((e) => {
+          console.log("triggers");
+          let cabId = $(e.target).data("id");
+
+          alert(cabId);
+
+          // fetch(
+          //   `http://localhost:8000/api/Driver/update-cab-location/${cabId}`,
+          //   {
+          //     method: "PUT",
+          //     headers: {
+          //       Authorization: `Bearer ${token}`,
+          //     },
+          //   }
+          // )
+          //   .then((res) => res.json())
+          //   .then((data) => {
+          //     alert("Location updated");
+          //   });
+        });
+
+        fetch("http://localhost:8000/api/Driver/driver-cabs", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            loadCabs(data);
+          });
+      });
+    </script>
   </body>
 </html>

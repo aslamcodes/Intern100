@@ -73,8 +73,8 @@
                 "Content-Type": "application/json",
               },
               body: JSON.stringify({
-                id: email,
-                password: password,
+                email,
+                password,
               }),
             })
               .then((res) => res.json())
@@ -83,6 +83,8 @@
                   return;
                 } else {
                   localStorage.setItem("token", data.token);
+                  localStorage.setItem("id", data.id);
+                  localStorage.setItem("role", data.role);
                 }
               })
               .catch((err) => {});
