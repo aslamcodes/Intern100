@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ebe4c00a814cfbbf",
+            "id": "17df321af46ad5f5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Task Planning.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -82,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Task Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Task Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Task Planning.md"
+              }
             }
           }
         ],
@@ -141,10 +149,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ebe4c00a814cfbbf",
+  "active": "17df321af46ad5f5",
   "lastOpenFiles": [
-    "What could have been better.md",
     "Mini Project Notes/Project Board.md",
+    "Task Planning.md",
+    "What could have been better.md",
     "Day 38.md",
     "Day 35.md",
     "Day 34.md",
@@ -179,7 +188,6 @@
     "Resources/Pasted image 20240516104720.png",
     "Resources/Pasted image 20240516104358.png",
     "Day 18 - Database Design & ERD.md",
-    "Day 19.md",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",
