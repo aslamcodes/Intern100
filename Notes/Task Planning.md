@@ -1,18 +1,18 @@
 # June 25
 ## Before Lunch
 - [x] Booking page, fetch call
-- [ ] Driver's My Ride Page with Accept ride and reject rides
+- [x] Driver's My Ride Page with Accept ride and reject rides
 	- [x] Need to have cabs
 		- [x] Need to update cab's location
 		- [x] Need to be verified by Admin
 		- [ ] *Admin Verification needs css*
 - [x] Passenger My Rides page with current rides that are 
 	- [x] `InProgress` with
-	- [ ] `Cancel Ride`
+	- [x] `Cancel Ride`
 	- [x] Need to book a ride first
-- [ ] Fetch data for Rides
+- [x] Fetch data for Rides
 ## Before Afternoon
-- [ ] Some kind of functionality for passenger to `initiate` and `finish` ride
+- [x] Some kind of functionality for passenger to `initiate` and `finish` ride
 - [ ] Profile Page (Update Profile)
 - [x] Admin Page to Approve
 	- [x] drivers and

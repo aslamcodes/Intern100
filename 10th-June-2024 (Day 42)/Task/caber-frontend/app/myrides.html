@@ -45,6 +45,81 @@
         window.location.href = "/login.html";
       }
 
+      $(document).on("click", function (e) {
+        if (e.target.id !== "js-ride-initiate-button") return;
+
+        const rideId = $(e.target).data("id");
+        fetch("http://localhost:8000/api/Passenger/initiate-ride", {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ rideId }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.error) {
+              alert(data.error);
+            } else {
+              alert("Ride initiated");
+              location.reload();
+            }
+          });
+      });
+
+      $(document).on("click", "button", function (e) {
+        if (e.target.id !== "js-ride-cancel-button") return;
+
+        const rideId = $(e.target).data("id");
+
+        fetch("http://localhost:8000/api/Passenger/cancel-ride", {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ rideId }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.error) {
+              alert(data.error);
+            } else {
+              alert("Ride cancelled");
+              location.reload();
+            }
+          });
+      });
+
+      $(document).on("click", "button", function (e) {
+        if (e.target.id !== "js-ride-complete-button") return;
+
+        var rating = prompt("Please enter your rating out of 5");
+        var comment = prompt("How was the ride?");
+        var distance = 10;
+
+        const rideId = $(e.target).data("id");
+
+        fetch("http://localhost:8000/api/Passenger/complete-ride", {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ rideId, rating, comment, distance }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.error) {
+              alert(data.error);
+            } else {
+              alert("Ride completed");
+              location.reload();
+            }
+          });
+      });
+
       function loadRides(current, history) {
         const rideHistoryGroup = $("#cb-js-ride-history-group");
         const currentRideGroup = $("#cb-js-current-ride-group");
@@ -74,11 +149,20 @@
                   <p class="cb-c-ride-card__status">${ride.status}</p>
                   <div class="cb-c-ride-card__actions">
                   ${
-                    ride.status === "Accepted" &&
+                    ride.status === "Accepted"
+                      ? `
+                      <button id="js-ride-initiate-button" data-id="${ride.id}">Initiate Ride</button>
+                      <button id="js-ride-cancel-button" data-id="${ride.id}">Cancel Ride</button>
                     `
-                      <button>Initiate Ride</button>
-                    `
+                      : ""
                   }
+                    ${
+                      ride.status === "InProgress"
+                        ? `
+                      <button id="js-ride-complete-button" data-id="${ride.id}">Complete Ride</button>
+                    `
+                        : ""
+                    }
                   </div>
                 </div>
 
