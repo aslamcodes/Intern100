@@ -85,6 +85,11 @@
                   localStorage.setItem("token", data.token);
                   localStorage.setItem("id", data.id);
                   localStorage.setItem("role", data.role);
+                  if (data.role === "Driver") {
+                    window.location.href = "/app/driver/driverCabs.html";
+                  } else {
+                    window.location.href = "/app/bookcab.html";
+                  }
                 }
               })
               .catch((err) => {});

@@ -25,3 +25,22 @@
 - $fixed w - npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/admin/*.html
 	- Parcel not hot reloading some of the pages, I build individual page of focus, hit on productivity
 	- Navigation with js doesnt worked as expected
+### Conclusion
+- I have covered about 80% ~ 75tasks I listed yesterday, that was great
+# June 26 - The End
+## Migrated Tasks
+- [ ] *Admin Verification needs css*
+- [ ] Way to display validation errors & failures from backend calls 
+- [ ] Fix github issues
+- [ ] Admin Page to Approve cabs
+- [ ] Profile Page (Update Profile)
+- [ ] *Admin Verification needs css*
+## Before Lunch
+- [ ] Fix UI flow
+- [ ] Show content related to current user
+- [ ] Profile Page
+## Before Evening
+- [ ] UI Improvements
+- [ ] Work on wiring up 
+## Before Sleep
+- [ ] Test the frontend
