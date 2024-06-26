@@ -49,11 +49,9 @@
                           class="cb-c-cab_card__img"
                         />
                         <div class="cb-c-cab_card__details">
-                          <h2 class="cb-l-cab_grid__cab__name">${ride.make} ${ride.model}</h2>
-                          <p class="cb-l-cab_grid__cab__rating">Rating: ${ride.rating}</p>
+                          <h2 class="cb-l-cab_grid__cab__name">${ride.cab.make} ${ride.cab.model}</h2>
                         </div>
-                        <p class="cb-c-cab_card__price">Location: ${ride.location}</p>
-                        <p class="cb-c-cab_card__seating">Max: ${ride.seatingCapacity}</p>
+                        <p class="cb-c-cab_card__price">Location: ${ride.endLocation}</p>
                         <button class="cb-c-cab_card__book" id="js-cab-accept-ride" data-id="${ride.rideId}">Accept</button>
                         <button class="cb-c-cab_card__book" id="js-cab-decline-ride" data-id="${ride.rideId}">Decline</button>
                       </div>

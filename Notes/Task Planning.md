@@ -41,15 +41,14 @@
 - [x] Show content related to current user
 	- [ ] Show error messages on inappropriate pages
 - [ ] Profile Page
-- [ ] Fix those undefined-s
+- [x] Fix those undefined-s
 	- [ ] ![[Pasted image 20240626105217.png]]
-	- [ ] 
 ## Before Evening
-- [ ] UI Improvements
-- [ ] Work on wiring up 
-- [ ] Navbar flows
+- [ ] UI Fix
+- [x] Navbar flows
 - [ ] Navbar responsive
 ## Before Sleep
 - [ ] Test the frontend
 - [ ] Setup a Image system
 - [ ] Setup Icons
+- [ ] Cab Rating
