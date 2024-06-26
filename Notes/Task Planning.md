@@ -49,3 +49,4 @@
 ## Before Sleep
 - [ ] Test the frontend
 - [ ] Setup a Image system
+- [ ] Setup Icons
