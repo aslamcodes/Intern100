@@ -36,9 +36,10 @@
 - [ ] Profile Page (Update Profile)
 - [ ] *Admin Verification needs css*
 ## Before Lunch
-- [ ] Fix UI flow
+- [ ] Fix [[UI flows]]
 - [ ] Show content related to current user
 - [ ] Profile Page
+- [ ] Fix those undefined-s
 ## Before Evening
 - [ ] UI Improvements
 - [ ] Work on wiring up 

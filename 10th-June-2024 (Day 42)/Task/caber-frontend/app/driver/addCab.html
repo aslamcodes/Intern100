@@ -36,7 +36,7 @@
       </div>
       <div class="cb-c-form__group">
         <label for="seatingCapacity">Seating Capacity</label>
-        <input type="text" id="seatingCapacity" />
+        <input type="number" id="seatingCapacity" />
         <p id="seatingCapacityError" class="cb-ut-form-error"></p>
       </div>
 
@@ -116,13 +116,25 @@
                 driverdId: localStorage.getItem("id"),
               }),
             })
-              .then((res) => res.json())
+              .then(async (res) => ({
+                res: await res.json(),
+                status: res.status,
+              }))
               .then((data) => {
-                if (data.status === 400 || data.statusCode === 401) {
-                  return;
+                if (data.status !== "200") {
+                  window.x = data;
+                  if (data.res.errors) {
+                    for (const key in data.res.errors) {
+                      const element = data.res.errors[key];
+                      alert(element);
+                    }
+                  }
+                  if (data.res.message) {
+                    alert(data.res.message);
+                  }
                 } else {
                   alert("Cab added successfully" + JSON.stringify(data));
-                  //   window.location.href = "/app/driver/driverCabs.html";
+                  window.location.href = "/app/driver/driverCabs.html";
                 }
               })
               .catch((err) => {});
