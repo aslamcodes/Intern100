@@ -236,6 +236,19 @@
             navMenu.append(
               '<a class="cb-c-navbar__menu__item" href="/app/user/profile.html">Profile</a>'
             );
+          } else if (auth.role === "Admin") {
+            // navMenu.append(
+            //   '<a class="cb-c-navbar__menu__item" href="/app/admin/manageCabs.html">Manage Cabs</a>'
+            // );
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/admin/driverRequests.html">Manage Drivers</a>'
+            );
+            // navMenu.append(
+            //   '<a class="cb-c-navbar__menu__item" href="/app/admin/manageRides.html">Manage Rides</a>'
+            // );
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/user/profile.html">Profile</a>'
+            );
           } else {
             navMenu.append(
               '<a class="cb-c-navbar__menu__item" href="/app/bookcab.html">Book a ride</a>'

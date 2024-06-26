@@ -52,7 +52,8 @@
 ## Before Sleep
 - [ ] Fix Main flow's UI
 - [ ] Cab Rating
-- [ ] Upload user avatars, cab Images
+- [x] Upload user avatars, cab Images
+	- [ ] Not everywhere
 - [ ] Make every navbar sidebar-able
 - [ ] Setup Icons
 - [ ] Test the frontend

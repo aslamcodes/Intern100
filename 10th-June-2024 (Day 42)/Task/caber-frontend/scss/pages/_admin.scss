@@ -1,0 +1,12 @@
+@use "abstracts" as *;
+
+.cb-l-admin_drivers {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  @include respond(medium) {
+    grid-template-columns: 1fr;
+  }
+}

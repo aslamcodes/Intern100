@@ -9,19 +9,24 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/scss/main.scss" />
   </head>
 
   <body>
     <nav class="cb-c-navbar">
       <h1 class="cb-c-navbar__logo">Caber</h1>
       <ul class="cb-c-navbar__menu">
-        <li class="cb-c-navbar__menu__item">Book a ride</li>
-        <li class="cb-c-navbar__menu__item">My Rides</li>
-        <li class="cb-c-navbar__menu__item">Profile</li>
+        <li class="cb-c-navbar__menu__item">Manage Drivers</li>
+        <a class="cb-c-navbar__menu__item" href="/app/user/profile.html"
+          >Profile</a
+        >
       </ul>
     </nav>
 
-    <div id="js-driver-list"></div>
+    <main
+      id="js-driver-list"
+      class="cb-l-admin_drivers cb-ut-main_wrapper"
+    ></main>
 
     <script>
       $(document).ready(() => {
@@ -39,14 +44,24 @@
           .then((res) => res.json())
           .then((data) => {
             data.forEach((element) => {
-              $("#js-driver-list").append(`<div>
-              <h1> ${element.user.firstName}</h1>
-              <p>User: ${element.user.email}</p>
-              <p>Phone: ${element.user.phone}</p>
-              <p>Phone: ${element.user.phone}</p>
-              <p>License number ${element.licenseNumber} Expires at ${element.licenseExpiryDate}</p>
-              <button id="js-${element.driverId}">Verify</button>
-            </div>`);
+              $("#js-driver-list").append(`<div class="driver-card">
+        <h1 class="driver-card__name">${element.user.firstName}</h1>
+        <p class="driver-card__email">User: ${element.user.email}</p>
+        <p class="driver-card__phone">Phone: ${element.user.phone}</p>
+        <p class="driver-card__phone">Phone: ${element.user.phone}</p>
+        <p class="driver-card__license">
+          License number ${element.licenseNumber} Expires at ${
+                element.licenseExpiryDate
+              }
+        </p>
+        ${
+          element.isVerified
+            ? "<p class='driver-card__verified'>Driver is Verified</p>"
+            : ' <button class="driver-card__verify-button" id="js-${element.driverId}">Verify</button>'
+        }
+       
+      </div>
+      `);
             });
           });
       });
@@ -62,12 +77,15 @@
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ driverId: driverId }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            alert(data.message);
-          });
+        }).then((res) => {
+          if (res.ok) {
+            window.showToast("Driver verified", "success", 1500, function () {
+              location.reload();
+            });
+          }
+        });
       });
     </script>
+    <script src="/js/toastscript.js"></script>
   </body>
 </html>
