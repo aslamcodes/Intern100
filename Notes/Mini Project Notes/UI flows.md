@@ -9,9 +9,9 @@ Dependency - [[UI flows#Request a Ride | Passenger Ride Request]]
 - [x] Sign in
 	- [x] View my rides
 		- [x] Accept 
-			- [ ] Response
+			- [x] Response
 		- [x] Reject
-			- [ ] Response
+			- [x] Response
 # Passenger
 ## Request a Ride
 - [x] Sign in
@@ -19,3 +19,4 @@ Dependency - [[UI flows#Request a Ride | Passenger Ride Request]]
 	- [x] Request specific cab for a ride
 		- [ ] Not show cabs that are not free
 	- [x] View my rides
+## 

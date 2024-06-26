@@ -43,5 +43,6 @@
 ## Before Evening
 - [ ] UI Improvements
 - [ ] Work on wiring up 
+- [ ] Navbar flows
 ## Before Sleep
 - [ ] Test the frontend

@@ -66,7 +66,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -133,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mini Project Notes/UI flows.md",
+                "file": "Task Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mini Project Notes/UI flows.md",
+                "file": "Task Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mini Project Notes/UI flows.md"
+                "file": "Task Planning.md"
               }
             }
           }
@@ -196,10 +195,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "077563c617c54cca",
+  "active": "17df321af46ad5f5",
   "lastOpenFiles": [
-    "Task Planning.md",
     "Mini Project Notes/UI flows.md",
+    "Task Planning.md",
     "Mini Project Notes/Project Board.md",
     "Logins.md",
     "What could have been better.md",
