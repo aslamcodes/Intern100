@@ -17,6 +17,17 @@
     max-width: 90vw;
     margin-top: 8rem;
   }
+
+  &__edit_button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    align-self: flex-end;
+    @include respond(medium) {
+      align-self: center;
+    }
+  }
+
   &__card {
     display: flex;
     flex-direction: column;

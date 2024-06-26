@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/scss/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -49,6 +56,9 @@
         </button>
       </div>
       <div class="cb-l-user_profile__sections">
+        <button class="cb-l-user_profile__edit_button">
+          <span><i class="fa-solid fa-pencil"></i> Edit</span>
+        </button>
         <section class="cb-l-user_profile__section">
           <p class="cb-l-user_profile__section__title">General</p>
           <div class="cb-l-user_profile__section__entries">
@@ -83,6 +93,32 @@
           }
         });
 
+        $(".cb-l-user_profile__edit_button").click(() => {
+          window.toggleModal({
+            title: "Edit Profile",
+            content: `
+              <form class="cb-c-form">
+                <h1 class="cb-c-form__title">Edit Profile</h1>
+                <div class="cb-c-form__group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" />
+                </div>
+                <div class="cb-c-form__group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" />
+                </div>
+                <div class="cb-c-form__group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" />
+                </div>
+                <div class="cb-c-form__action">
+                  <button class="cb-c-button">Save</button>
+                </div>
+              </form>
+            `,
+          });
+        });
+
         $(document).on("click", function (e) {
           if (e.target.id !== "js-logout") return;
 
@@ -91,6 +127,7 @@
           window.location.href = "/app/login.html";
         });
       </script>
+
       <script>
         function loadRides(history) {
           const rideHistoryGroup = $("#cb-js-ride-history-group");
@@ -162,6 +199,8 @@
             });
         });
       </script>
+      <script src="/js/modalscript.js"></script>
+      <script src="/js/toastscript.js"></script>
     </main>
   </body>
 </html>
