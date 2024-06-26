@@ -24,14 +24,9 @@
       <form class="cb-c-form">
         <h1 class="cb-c-form__title">Sign up!</h1>
         <div class="cb-c-form__group">
-          <label for="email">Email</label>
-          <input type="text" id="email" />
-          <p id="emailError" class="cb-ut-form-error"></p>
-        </div>
-        <div class="cb-c-form__group">
-          <label for="password">Password</label>
-          <input type="text" id="password" />
-          <p id="passwordError" class="cb-ut-form-error"></p>
+          <label for="profile">First Name</label>
+          <input type="file" id="profile" />
+          <p id="profileError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
           <label for="fname">First Name</label>
@@ -42,6 +37,16 @@
           <label for="lname">Last Name</label>
           <input type="text" id="lname" />
           <p id="lnameError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+          <p id="emailError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="password">Password</label>
+          <input type="text" id="password" />
+          <p id="passwordError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__group">
           <label for="phone">Phone</label>
@@ -70,6 +75,7 @@
           let phone = $("#phone").val();
           let address = $("#address").val();
           let password = $("#password").val();
+          let userProfileImage = $("#profile")[0].files[0];
 
           let emailError = $("#emailError");
           let fnameError = $("#fnameError");
@@ -77,6 +83,7 @@
           let phoneError = $("#phoneError");
           let addressError = $("#addressError");
           let passwordError = $("#passwordError");
+          let profileError = $("#profileError");
 
           if (email === "") {
             emailError.text("Email is required");
@@ -126,33 +133,54 @@
             isFormValid = true;
           }
 
+          if (userProfileImage === "") {
+            profileError.text("Profile Image is required");
+            isFormValid = false;
+          } else {
+            profileError.text("");
+            isFormValid = true;
+          }
+
+          let formData = new FormData();
+
+          formData.append("file", userProfileImage);
+
           if (isFormValid) {
-            fetch("http://localhost:8000/api/Auth/register-passenger", {
+            fetch("http://localhost:8000/api/Image", {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email: email,
-                firstName: fname,
-                lastName: lname,
-                phone: phone,
-                password: password,
-                address: address,
-              }),
-            })
-              .then((res) => res.json())
-              .then((data) => {
-                if (data.status === 400 || data.statusCode === 401) {
-                  return;
-                } else {
-                  localStorage.setItem("token", data.token);
-                  localStorage.setItem("id", data.id);
-                  localStorage.setItem("role", data.role);
-                  window.location.href = "bookcab.html";
-                }
-              })
-              .catch((err) => {});
+              body: formData,
+            }).then(async (res) => {
+              if (res.status === 200) {
+                const data = await res.json();
+                fetch("http://localhost:8000/api/Auth/register-passenger", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    email: email,
+                    firstName: fname,
+                    lastName: lname,
+                    phone: phone,
+                    password: password,
+                    address: address,
+                    userImageId: data.imageId,
+                  }),
+                })
+                  .then((res) => res.json())
+                  .then((data) => {
+                    if (data.status === 400 || data.statusCode === 401) {
+                      return;
+                    } else {
+                      localStorage.setItem("token", data.token);
+                      localStorage.setItem("id", data.id);
+                      localStorage.setItem("role", data.role);
+                      window.location.href = "bookcab.html";
+                    }
+                  })
+                  .catch((err) => {});
+              }
+            });
           }
         });
       });
