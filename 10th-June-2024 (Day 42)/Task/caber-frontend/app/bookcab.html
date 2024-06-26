@@ -52,6 +52,7 @@
         </div>
       </div>
     </main>
+    <script src="/js/toastscript.js"></script>
     <script>
       function loadCabs(cabs) {
         const cabGrid = $(".cb-l-cab_grid");
@@ -112,8 +113,11 @@
             }),
           }).then((res) => {
             if (res.status === 200) {
-              alert("Cab booked");
-              location.href = "/app/myrides.html";
+              window.showToast("Cab booked", "success", 1500, function () {
+                location.href = "/app/myrides.html";
+              });
+            } else {
+              window.showToast("Cab not booked", "error", 3000);
             }
           });
         }

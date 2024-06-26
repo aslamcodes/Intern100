@@ -30,7 +30,7 @@
 # June 26 - The End
 ## Migrated Tasks
 - [ ] *Admin Verification needs css*
-- [ ] Way to display validation errors & failures from backend calls 
+- [x] Way to display validation errors & failures from backend calls 
 - [ ] Fix github issues
 - [ ] Admin Page to Approve cabs
 - [ ] Profile Page (Update Profile)
@@ -39,7 +39,7 @@
 - [x] Fix [[UI flows]]
 - [x] Show content related to current user and fix nav flows
 - [x] Show content related to current user
-	- [ ] Show error messages on inappropriate pages
+	- [ ] Way Show error messages on inappropriate pages
 - [ ] Profile Page
 - [x] Fix those undefined-s
 	- [ ] ![[Pasted image 20240626105217.png]]

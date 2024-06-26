@@ -86,9 +86,17 @@
 
       $(document).ready(() => {
         let token = localStorage.getItem("token");
-
+        let role = localStorage.getItem("role");
         if (!token) {
           window.location.href = "/app/login.html";
+        }
+        if (role === "Passenger") {
+          $("main").children().remove();
+          $("main").append(`
+            <div class="cb-c-alert danger cb-ut-main_wrapper">
+              This feature is only available for drivers.
+            </div>
+          `);
         }
 
         $("#js-cab-update_location").click((e) => {
