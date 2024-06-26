@@ -142,7 +142,9 @@
                   alt=""
                 />
                 <div class="cb-c-ride-card__ride_details">
-                  <h2 class="cb-c-ride-card__cab">${ride.cab}</h2>
+                  <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
+              ride.cab.model
+            }</h2>
                   <p class="cb-c-ride-card__ride-date">${new Date(
                     ride.startTime
                   ).toLocaleDateString("en-IN", {
@@ -172,7 +174,7 @@
 
                 <div class="cb-c-ride-card__price_container">
                   <p class="cb-c-ride-card__price">${
-                    ride.status === "Completed" ? ride.fare : "$___"
+                    ride.status === "Completed" ? ride.fare : "---$"
                   }</p>
                 </div>
 
@@ -194,7 +196,9 @@
                   alt=""
                 />
                 <div class="cb-c-ride-card__ride_details">
-                  <h2 class="cb-c-ride-card__cab">${ride.cab}</h2>
+                  <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
+              ride.cab.model
+            }</h2>
                   <p class="cb-c-ride-card__ride-date">${new Date(
                     ride.startTime
                   ).toLocaleDateString("en-IN", {
@@ -205,7 +209,9 @@
                   <p class="cb-c-ride-card__status">${ride.status}</p>
                 </div>
                 <div class="cb-c-ride-card__price_container">
-                  <p class="cb-c-ride-card__price">₹${ride.price}</p>
+                 <p class="cb-c-ride-card__price">${
+                   ride.status === "Completed" ? ride.fare : "---$"
+                 }</p>
                 </div>
               </div>
               `;

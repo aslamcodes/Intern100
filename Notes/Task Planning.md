@@ -38,9 +38,12 @@
 ## Before Lunch
 - [x] Fix [[UI flows]]
 - [x] Show content related to current user and fix nav flows
-- [ ] Show content related to current user
+- [x] Show content related to current user
+	- [ ] Show error messages on inappropriate pages
 - [ ] Profile Page
 - [ ] Fix those undefined-s
+	- [ ] ![[Pasted image 20240626105217.png]]
+	- [ ] 
 ## Before Evening
 - [ ] UI Improvements
 - [ ] Work on wiring up 
