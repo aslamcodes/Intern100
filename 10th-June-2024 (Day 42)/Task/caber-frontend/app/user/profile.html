@@ -48,9 +48,6 @@
         </ul>
       </nav>
       <div class="cb-l-user_profile__card">
-        <img src="" alt="" />
-        <p>Zain Kadar</p>
-        <p>Joined</p>
         <button class="cb-c-button cb-c-button--secondary" id="js-logout">
           Logout
         </button>
@@ -61,24 +58,51 @@
         </button>
         <section class="cb-l-user_profile__section">
           <p class="cb-l-user_profile__section__title">General</p>
-          <div class="cb-l-user_profile__section__entries">
-            <div class="cb-l-user_profile__section__entry">
-              <i></i>
-              <p>Zain Kadar</p>
-            </div>
-            <div class="cb-l-user_profile__section__entry">
-              <i></i>
-              <p>somone@gmail.com</p>
-            </div>
-            <div class="cb-l-user_profile__section__entry">
-              <i></i>
-              <p>+01 12132 21321</p>
-            </div>
-          </div>
+          <div class="cb-l-user_profile__section__entries"></div>
         </section>
         <section id="cb-js-ride-history-group"></section>
       </div>
       <script>
+        // This script will Load user profile
+        fetch("http://localhost:8000/api/User/profile", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((user) => {
+            const profileCard = $(".cb-l-user_profile__card");
+            const generalSection = $(".cb-l-user_profile__section__entries");
+            profileCard.prepend(`
+                <img
+                  class="cb-l-user_profile__card__image"
+                  src="/assets/user.png"
+                  alt=""
+                />
+                <h1 class="cb-l-user_profile__card__name">${user.firstName}</h1>
+                <p>${user.email}</p>
+             
+              `);
+
+            generalSection.append(`
+                <div class="cb-l-user_profile__section__entry">
+                  <i></i>
+                  <p>${user.firstName}</p>
+                </div>
+                <div class="cb-l-user_profile__section__entry">
+                  <i></i>
+                  <p>${user.email}</p>
+                </div>
+                <div class="cb-l-user_profile__section__entry">
+                  <i></i>
+                  <p>${user.phone}</p>
+                </div>
+              `);
+          });
+      </script>
+      <script>
+        // This script will handle the logout functionality and role based rendering
         if (!localStorage.getItem("token")) {
           window.location.href = "/app/login.html";
         }
@@ -93,32 +117,6 @@
           }
         });
 
-        $(".cb-l-user_profile__edit_button").click(() => {
-          window.toggleModal({
-            title: "Edit Profile",
-            content: `
-              <form class="cb-c-form">
-                <h1 class="cb-c-form__title">Edit Profile</h1>
-                <div class="cb-c-form__group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" />
-                </div>
-                <div class="cb-c-form__group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" />
-                </div>
-                <div class="cb-c-form__group">
-                  <label for="phone">Phone</label>
-                  <input type="tel" id="phone" />
-                </div>
-                <div class="cb-c-form__action">
-                  <button class="cb-c-button">Save</button>
-                </div>
-              </form>
-            `,
-          });
-        });
-
         $(document).on("click", function (e) {
           if (e.target.id !== "js-logout") return;
 
@@ -127,8 +125,100 @@
           window.location.href = "/app/login.html";
         });
       </script>
-
       <script>
+        // This script will handle the edit profile modal
+        $(".cb-l-user_profile__edit_button").click(() => {
+          window.toggleModal({
+            title: "Edit Profile",
+            content: `
+                <form class="cb-c-form" id="update-profile">
+                  <h1 class="cb-c-form__title">Edit Profile</h1>
+                  <div class="cb-c-form__group">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" />
+                    <p id="fnameError" class="cb-ut-form-error"></p>
+                  </div>
+                  <div class="cb-c-form__group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" />
+                    <p id="lnameError" class="cb-ut-form-error"></p>
+                  </div>
+                  <div class="cb-c-form__group">
+                    <label for="addr">Address</label>
+                    <input type="text" id="addr" />
+                    <p id="lnameError" class="cb-ut-form-error"></p>
+                  </div>
+                  <div class="cb-c-form__group">
+                    <label for="phone">Phone</label>
+                    <input type="number" id="phone" />
+                    <p id="phoneError" class="cb-ut-form-error"></p>
+                  </div>
+                  <div class="cb-c-form__action">
+                    <button class="cb-c-button">Save</button>
+                  </div>
+                </form>
+              `,
+          });
+        });
+
+        $(document).on("submit", "#update-profile", function (e) {
+          e.preventDefault();
+          const fname = $("#fname").val();
+          const lname = $("#lname").val();
+          const addr = $("#addr").val();
+          const phone = $("#phone").val();
+
+          let isFormUpdated = false;
+
+          // construct request object only if entered values are valid
+          const requestObj = {
+            id: localStorage.getItem("id"),
+          };
+
+          if (fname) {
+            requestObj.firstName = fname;
+            isFormUpdated = true;
+          }
+
+          if (lname) {
+            requestObj.lastName = lname;
+            isFormUpdated = true;
+          }
+
+          if (addr) {
+            requestObj.address = addr;
+            isFormUpdated = true;
+          }
+
+          if (phone) {
+            requestObj.phone = phone;
+            isFormUpdated = true;
+          }
+
+          fetch("http://localhost:8000/api/User/update-profile", {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify(requestObj),
+          }).then((res) => {
+            if (res.status === 200) {
+              window.toggleModal({ content: "" });
+              if (isFormUpdated) {
+                window.showToast("Updated", "success", 3000);
+              } else {
+                window.showToast("No changes made", "info", 3000);
+              }
+            } else {
+              window.showToast("Failed to update", "error", 3000);
+              window.toggleModal({ content: "" });
+            }
+          });
+        });
+      </script>
+      <script>
+        // load user rides
         function loadRides(history) {
           const rideHistoryGroup = $("#cb-js-ride-history-group");
           rideHistoryGroup.empty();
@@ -138,39 +228,39 @@
           );
           if (history.length === 0) {
             rideHistoryGroup.append(`
-              <div class="cb-c-alert cb-c-alert--info">
-                <p>No ride history</p>
-              </div>
-            `);
+                <div class="cb-c-alert cb-c-alert--info">
+                  <p>No ride history</p>
+                </div>
+              `);
           } else {
             history.forEach((ride) => {
               const historyRideCard = `
-              <div class="cb-c-ride-card">
-                <img
-                  class="cb-c-ride-card__image"
-                  src="/assets/ride_cab.png"
-                  alt=""
-                />
-                <div class="cb-c-ride-card__ride_details">
-                  <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
+                <div class="cb-c-ride-card">
+                  <img
+                    class="cb-c-ride-card__image"
+                    src="/assets/ride_cab.png"
+                    alt=""
+                  />
+                  <div class="cb-c-ride-card__ride_details">
+                    <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
                 ride.cab.model
               }</h2>
-                  <p class="cb-c-ride-card__ride-date">${new Date(
-                    ride.startTime
-                  ).toLocaleDateString("en-IN", {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
-                  })}</p>
-                  <p class="cb-c-ride-card__status">${ride.status}</p>
+                    <p class="cb-c-ride-card__ride-date">${new Date(
+                      ride.startTime
+                    ).toLocaleDateString("en-IN", {
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })}</p>
+                    <p class="cb-c-ride-card__status">${ride.status}</p>
+                  </div>
+                  <div class="cb-c-ride-card__price_container">
+                   <p class="cb-c-ride-card__price">${
+                     ride.status === "Completed" ? ride.fare : "---$"
+                   }</p>
+                  </div>
                 </div>
-                <div class="cb-c-ride-card__price_container">
-                 <p class="cb-c-ride-card__price">${
-                   ride.status === "Completed" ? ride.fare : "---$"
-                 }</p>
-                </div>
-              </div>
-              `;
+                `;
               rideHistoryGroup.append(historyRideCard);
             });
           }

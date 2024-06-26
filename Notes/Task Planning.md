@@ -40,20 +40,19 @@
 - [x] Fix [[UI flows]]
 - [x] Show content related to current user and fix nav flows
 - [x] Show content related to current user
-	- [ ] Way Show error messages on inappropriate pages
+	- [x] Way Show error messages on inappropriate pages
 - [x] Profile Page
 - [x] Fix those undefined-s
 	- [ ] ![[Pasted image 20240626105217.png]]
 ## Before Evening
-- [ ] UI Fix (responsiveness, correctness)
 - [x] Navbar flows
 - [x] Navbar responsive
-- [ ] Edit Profile
+- [x] Edit Profile
 - [x] Setup a Image system
 ## Before Sleep
-- [ ] Test the frontend
-- [ ] Setup Icons
+	- [ ] Fix Main flow's UI
 - [ ] Cab Rating
-- [ ] Prepare Date
 - [ ] Upload user avatars, cab Images
 - [ ] Make every navbar sidebar-able
+- [ ] Setup Icons
+- [ ] Test the frontend

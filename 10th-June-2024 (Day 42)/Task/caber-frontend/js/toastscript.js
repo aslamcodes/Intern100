@@ -30,6 +30,10 @@
             background-color: #4CAF50;
             color: #fff;
         }
+        .toast.info {
+            background-color: #2196F3;
+            color: #fff;
+        }
         .toast.error {
             background-color: #f44336;
             color: #fff;
