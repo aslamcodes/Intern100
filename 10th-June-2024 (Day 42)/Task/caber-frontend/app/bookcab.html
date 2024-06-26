@@ -39,16 +39,22 @@
           <p id="seatingError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__action">
-          <button class="cb-c-button" type="submit">Book Any</button>
+          <button class="cb-c-button" id="js-book-any" type="submit">
+            Book Any
+          </button>
           <p>or</p>
-          <button class="cb-c-button--secondary" type="submit">
+          <button
+            class="cb-c-button--secondary"
+            type="submit"
+            id="js-search-cabs"
+          >
             Search for Cabs
           </button>
         </div>
       </form>
       <div class="cb-l-cab_grid">
         <div class="cb-c-cab_card">
-          <p>Search For Cabs</p>
+          <p style="text-align: center">Search For Cabs</p>
         </div>
       </div>
     </main>
@@ -124,6 +130,54 @@
 
       $(document).ready(function () {
         $(".cb-c-form").submit(function (e) {
+          e.preventDefault();
+        });
+
+        $("#js-book-any").click(function (e) {
+          e.preventDefault();
+
+          const token = localStorage.getItem("token");
+
+          const from = $("#from").val();
+          const to = $("#to").val();
+          const seating = $("#seating").val();
+
+          if (!token) {
+            window.location.href = "login.html";
+          }
+
+          //           {
+          //   "cabId": 1,
+          //   "pickupLocation": "Temple Road",
+          //   "dropoffLocation": "Chennai International Airport",
+          //   "passengerId": 1,
+          //    "seatingCapacity": 3
+          // }
+          fetch("http://localhost:8000/api/Passenger/book-any-cab", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify({
+              cabId: 9999999,
+              pickupLocation: from,
+              dropoffLocation: to,
+              // filler
+              passengerId: 999999,
+              seatingCapacity: seating,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        });
+
+        $("#js-search-cabs").click(function (e) {
           e.preventDefault();
 
           const token = localStorage.getItem("token");

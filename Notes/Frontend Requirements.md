@@ -1,6 +1,6 @@
 - [x] Differentiate logged in vs not logged in content (JWT) (Setup Done)
-- [ ] No unnecessary info on console, (clean before presenting)
-- [ ] Page not found error (not mandatory)
+- [x] No unnecessary info on console, (clean before presenting)
+- [x] Page not found error (not mandatory)
 - [ ] Menu are required and appropriate UX, Search and filters when required and functioning properly
 - [x] My Orders/Rides page
 - [x] Logout is needed

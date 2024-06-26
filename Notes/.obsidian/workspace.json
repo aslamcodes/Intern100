@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mini Project Notes/Project Board.md",
+                "file": "Task Planning.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,16 +68,6 @@
             }
           },
           {
-            "id": "4f566710d8c9002e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
-          },
-          {
             "id": "1a87fb969a7c0000",
             "type": "leaf",
             "state": {
@@ -90,7 +80,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -157,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UI Fixes.md",
+                "file": "Task Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UI Fixes.md",
+                "file": "Task Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -197,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UI Fixes.md"
+                "file": "Task Planning.md"
               }
             }
           }
@@ -220,15 +209,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "cea49f1ebcf843a0",
+  "active": "17df321af46ad5f5",
   "lastOpenFiles": [
+    "Mini Project Notes/Project Board.md",
+    "UI Fixes.md",
+    "Frontend Requirements.md",
     "Resources/Pasted image 20240626211937.png",
     "Resources/Pasted image 20240626211924.png",
     "Resources/Pasted image 20240626211907.png",
     "Resources/Pasted image 20240626211732.png",
-    "Frontend Requirements.md",
-    "UI Fixes.md",
-    "Mini Project Notes/Project Board.md",
     "Task Planning.md",
     "What could have been better.md",
     "User Stories.md",
@@ -258,7 +247,6 @@
     "Resources/Pasted image 20240516110106.png",
     "Resources/Pasted image 20240516105934.png",
     "Resources/Pasted image 20240516105847.png",
-    "Resources/Pasted image 20240516105525.png",
     "Day 8.md - Shortcut.lnk",
     "Resources",
     "Case Studies",

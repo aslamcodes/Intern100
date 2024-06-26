@@ -18,7 +18,7 @@
 	- [x] drivers and
 	- [ ] cabs
 ## Before Sleep
-- [ ] Way to display validation errors & failures from backend calls 
+- [x] Way to display validation errors & failures from backend calls 
 - [ ] Fix issues
 
 ## What went wrong
@@ -50,7 +50,7 @@
 - [x] Edit Profile
 - [x] Setup a Image system
 ## Before Sleep
-	- [ ] Fix Main flow's UI
+- [ ] Fix Main flow's UI
 - [ ] Cab Rating
 - [ ] Upload user avatars, cab Images
 - [ ] Make every navbar sidebar-able
