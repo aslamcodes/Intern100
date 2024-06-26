@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/scss/main.scss" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main class="cb-l-user_profile">
+      <nav class="cb-c-navbar">
+        <a class="cb-c-navbar__logo" href="/index.html">Caber</a>
+        <ul class="cb-c-navbar__menu">
+          <a
+            class="cb-c-navbar__menu__item js-passenger-role"
+            href="/app/bookcab.html"
+            >Book a ride</a
+          >
+
+          <a
+            class="cb-c-navbar__menu__item js-driver-role"
+            href="/app/driver/driverCabs.html"
+            >My Cabs</a
+          >
+          <a
+            class="cb-c-navbar__menu__item js-passenger-role"
+            href="/app/myrides.html"
+            >My Rides</a
+          >
+          <a
+            class="cb-c-navbar__menu__item js-driver-role"
+            href="/app/driver/rideRequests.html"
+            >Ride Requests</a
+          >
+          <a class="cb-c-navbar__menu__item" href="#">Profile</a>
+        </ul>
+      </nav>
       <div class="cb-c-user_profile_card">
         <img src="" alt="" />
         <p>Zain Kadar</p>
@@ -29,8 +62,32 @@
               <p>+01 12132 21321</p>
             </div>
           </div>
+          <button id="js-logout">Logout</button>
         </section>
       </div>
+      <script>
+        if (!localStorage.getItem("token")) {
+          window.location.href = "/app/login.html";
+        }
+
+        $(document).ready(() => {
+          const role = localStorage.getItem("role");
+
+          if (role === "Driver") {
+            $(".js-passenger-role").remove();
+          } else {
+            $(".js-driver-role").remove();
+          }
+        });
+
+        $(document).on("click", function (e) {
+          if (e.target.id !== "js-logout") return;
+
+          localStorage.removeItem("token");
+          localStorage.removeItem("role");
+          window.location.href = "/app/login.html";
+        });
+      </script>
     </main>
   </body>
 </html>

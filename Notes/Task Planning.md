@@ -36,7 +36,8 @@
 - [ ] Profile Page (Update Profile)
 - [ ] *Admin Verification needs css*
 ## Before Lunch
-- [ ] Fix [[UI flows]]
+- [x] Fix [[UI flows]]
+- [x] Show content related to current user and fix nav flows
 - [ ] Show content related to current user
 - [ ] Profile Page
 - [ ] Fix those undefined-s
@@ -44,5 +45,7 @@
 - [ ] UI Improvements
 - [ ] Work on wiring up 
 - [ ] Navbar flows
+- [ ] Navbar responsive
 ## Before Sleep
 - [ ] Test the frontend
+- [ ] Setup a Image system

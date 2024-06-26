@@ -25,8 +25,15 @@
         <div>
           <ul class="cb-c-navbar__menu">
             <li class="cb-c-navbar__menu__item">Home</li>
-            <a class="cb-c-navbar__menu__item" href="app/login.html">Sign in</a>
-            <a class="cb-c-navbar__menu__item" href="app/regiter.html"
+            <a
+              class="cb-c-navbar__menu__item js-auth-routes"
+              id="js-auth-routes"
+              href="app/login.html"
+              >Sign in</a
+            >
+            <a
+              class="cb-c-navbar__menu__item js-auth-routes"
+              href="app/regiter.html"
               >Sign up</a
             >
           </ul>
@@ -203,6 +210,38 @@
 
     <script>
       $(document).ready(function () {
+        const auth = {
+          token: localStorage.getItem("token"),
+          role: localStorage.getItem("role"),
+        };
+
+        if (auth.token) {
+          $(".js-auth-routes").remove();
+
+          let navMenu = $(".cb-c-navbar__menu");
+          if (auth.role === "Driver") {
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/driver/driverCabs.html">My Cabs</a>'
+            );
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/driver/rideRequests.html">Ride Requests</a>'
+            );
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/user/profile.html">Profile</a>'
+            );
+          } else {
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/bookcab.html">Book a ride</a>'
+            );
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/myrides.html">My Rides</a>'
+            );
+            navMenu.append(
+              '<a class="cb-c-navbar__menu__item" href="/app/user/profile.html">Profile</a>'
+            );
+          }
+        }
+
         $("#js-driver-sign-up").click(function () {
           window.location.href = "app/driverSignUp.html";
         });
