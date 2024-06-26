@@ -44,6 +44,9 @@
         <img src="" alt="" />
         <p>Zain Kadar</p>
         <p>Joined</p>
+        <button class="cb-c-button cb-c-button--secondary" id="js-logout">
+          Logout
+        </button>
       </div>
       <div class="cb-l-user_profile__sections">
         <section class="cb-l-user_profile__section">
@@ -63,10 +66,7 @@
             </div>
           </div>
         </section>
-        <section class="">
-          <!-- <p class="cb-l-user_profile__section__title">Rides</p> -->
-        </section>
-        <button id="js-logout">Logout</button>
+        <section id="cb-js-ride-history-group"></section>
       </div>
       <script>
         if (!localStorage.getItem("token")) {
@@ -89,6 +89,77 @@
           localStorage.removeItem("token");
           localStorage.removeItem("role");
           window.location.href = "/app/login.html";
+        });
+      </script>
+      <script>
+        function loadRides(history) {
+          const rideHistoryGroup = $("#cb-js-ride-history-group");
+          rideHistoryGroup.empty();
+
+          rideHistoryGroup.append(
+            '<p class="cb-l-user_profile__section__title">Ride History</p>'
+          );
+          if (history.length === 0) {
+            rideHistoryGroup.append(`
+              <div class="cb-c-alert cb-c-alert--info">
+                <p>No ride history</p>
+              </div>
+            `);
+          } else {
+            history.forEach((ride) => {
+              const historyRideCard = `
+              <div class="cb-c-ride-card">
+                <img
+                  class="cb-c-ride-card__image"
+                  src="/assets/ride_cab.png"
+                  alt=""
+                />
+                <div class="cb-c-ride-card__ride_details">
+                  <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
+                ride.cab.model
+              }</h2>
+                  <p class="cb-c-ride-card__ride-date">${new Date(
+                    ride.startTime
+                  ).toLocaleDateString("en-IN", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  })}</p>
+                  <p class="cb-c-ride-card__status">${ride.status}</p>
+                </div>
+                <div class="cb-c-ride-card__price_container">
+                 <p class="cb-c-ride-card__price">${
+                   ride.status === "Completed" ? ride.fare : "---$"
+                 }</p>
+                </div>
+              </div>
+              `;
+              rideHistoryGroup.append(historyRideCard);
+            });
+          }
+        }
+
+        $(document).ready(() => {
+          fetch("http://localhost:8000/api/Passenger/ride-history", {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              let rideHistory = [];
+
+              data.forEach((ride) => {
+                if (
+                  !["InProgress", "Accepted", "Requested"].includes(ride.status)
+                ) {
+                  rideHistory.push(ride);
+                }
+              });
+
+              loadRides(rideHistory);
+            });
         });
       </script>
     </main>

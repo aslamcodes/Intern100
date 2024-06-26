@@ -24,7 +24,7 @@
         <p class="cb-c-navbar__logo">Caber</p>
         <div>
           <ul class="cb-c-navbar__menu">
-            <li class="cb-c-navbar__menu__item">Home</li>
+            <a class="cb-c-navbar__menu__item" href="#">Home</a>
             <a
               class="cb-c-navbar__menu__item js-auth-routes"
               id="js-auth-routes"
@@ -41,6 +41,13 @@
             <span class="cb-c-button__title">Sign Up</span>
           </button> -->
         </div>
+        <div class="cb-c-navbar__mobile_menu" id="js-mobile_menu">
+          <img src="/assets/Icons/bars-3-bottom-right.svg" />
+        </div>
+      </nav>
+
+      <nav class="cb-c-sidebar" id="js-sidebar">
+        <i class="fa fa-close" id="js-sidebar-close"></i>
       </nav>
     </header>
 
@@ -247,5 +254,7 @@
         });
       });
     </script>
+
+    <script src="js/navbarscript.js"></script>
   </body>
 </html>

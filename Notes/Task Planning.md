@@ -33,22 +33,27 @@
 - [x] Way to display validation errors & failures from backend calls 
 - [ ] Fix github issues
 - [ ] Admin Page to Approve cabs
-- [ ] Profile Page (Update Profile)
+- [x] Profile Page
+	- [ ] (Update Profile)
 - [ ] *Admin Verification needs css*
 ## Before Lunch
 - [x] Fix [[UI flows]]
 - [x] Show content related to current user and fix nav flows
 - [x] Show content related to current user
 	- [ ] Way Show error messages on inappropriate pages
-- [ ] Profile Page
+- [x] Profile Page
 - [x] Fix those undefined-s
 	- [ ] ![[Pasted image 20240626105217.png]]
 ## Before Evening
-- [ ] UI Fix
+- [ ] UI Fix (responsiveness, correctness)
 - [x] Navbar flows
-- [ ] Navbar responsive
+- [x] Navbar responsive
+- [ ] Edit Profile
+- [x] Setup a Image system
 ## Before Sleep
 - [ ] Test the frontend
-- [ ] Setup a Image system
 - [ ] Setup Icons
 - [ ] Cab Rating
+- [ ] Prepare Date
+- [ ] Upload user avatars, cab Images
+- [ ] Make every navbar sidebar-able

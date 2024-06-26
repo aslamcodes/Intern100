@@ -38,4 +38,12 @@
       cursor: pointer;
     }
   }
+
+  &__mobile_menu {
+    display: none;
+
+    @include respond(small) {
+      display: block;
+    }
+  }
 }
