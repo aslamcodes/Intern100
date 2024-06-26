@@ -6,13 +6,16 @@
 		- [x] error alert if failure
 ## Accept Cab
 Dependency - [[UI flows#Request a Ride | Passenger Ride Request]]
-- [ ] Sign in
-	- [ ] View my rides
-		- [ ] Accept 
-		- [ ] Reject
+- [x] Sign in
+	- [x] View my rides
+		- [x] Accept 
+			- [ ] Response
+		- [x] Reject
+			- [ ] Response
 # Passenger
 ## Request a Ride
-- [ ] Sign in
-	- [ ] View Cabs
-	- [ ] Request specific cab for a ride
-	- [ ] View my rides
+- [x] Sign in
+	- [x] View Cabs
+	- [x] Request specific cab for a ride
+		- [ ] Not show cabs that are not free
+	- [x] View my rides

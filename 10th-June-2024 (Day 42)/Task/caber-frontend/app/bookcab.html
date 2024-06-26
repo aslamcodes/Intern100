@@ -110,11 +110,12 @@
               seatingCapacity: rideReqObj.seating,
               passengerId: 1,
             }),
-          })
-            .then((res) => res.json())
-            .then((data) => {
+          }).then((res) => {
+            if (res.status === 200) {
               alert("Cab booked");
-            });
+              location.href = "/app/myrides.html";
+            }
+          });
         }
       });
 
