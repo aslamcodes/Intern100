@@ -26,16 +26,16 @@
 	- Parcel not hot reloading some of the pages, I build individual page of focus, hit on productivity
 	- Navigation with js doesnt worked as expected
 ### Conclusion
-- I have covered about 80% ~ 75tasks I listed yesterday, that was great
-# June 26 - The End
+- I have covered about 80% ~ 75tasks I listed yesterday, that was great, the problems the project grows in tasks
+# June 26 - (Not) The End
 ## Migrated Tasks
-- [ ] *Admin Verification needs css*
+- [x] *Admin Verification needs css*
 - [x] Way to display validation errors & failures from backend calls 
 - [ ] Fix github issues
 - [ ] Admin Page to Approve cabs
 - [x] Profile Page
-	- [ ] (Update Profile)
-- [ ] *Admin Verification needs css*
+	- [x] (Update Profile)
+- [x] *Admin Verification needs css*
 ## Before Lunch
 - [x] Fix [[UI flows]]
 - [x] Show content related to current user and fix nav flows
@@ -54,14 +54,23 @@
 - [x] Cab Rating
 - [x] Upload user avatars, cab Images
 	- [ ] Not everywhere
-- [ ] Make every navbar sidebar-able
+- [x] Make every navbar sidebar-able
 - [ ] Setup Icons
 - [ ] Test the frontend
 
 
+
+# June 27
 ## Critical 
 - Only One cab active per driver
+	- [ ] Driver Cab page
+	- [ ] Fetch only `Active` cabs
+	- [ ] Set cabs in ride to be `InRide`
 - Book any cab not working properly
 - No way to verify a cab
 
-> Atleast one day needed for me
+## Before Evening
+- [ ] Everything in the Crictical
+
+## Before Sleep
+

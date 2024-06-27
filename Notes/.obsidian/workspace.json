@@ -92,7 +92,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -159,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "June 27.md",
+                "file": "Task Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "June 27.md",
+                "file": "Task Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "June 27.md"
+                "file": "Task Planning.md"
               }
             }
           }
@@ -222,10 +221,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c7fba8a2c0295c27",
+  "active": "17df321af46ad5f5",
   "lastOpenFiles": [
-    "Task Planning.md",
     "June 27.md",
+    "Task Planning.md",
     "Mini Project Notes/Project Board.md",
     "UI Fixes.md",
     "Frontend Requirements.md",

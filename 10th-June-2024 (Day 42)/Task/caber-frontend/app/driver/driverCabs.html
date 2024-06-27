@@ -63,14 +63,16 @@
               </div>
               <p class="cb-c-cab_card__price">Location: ${cab.location}</p>
               <p class="cb-c-cab_card__seating">Max: ${cab.seatingCapacity}</p>
+              <p class="cb-c-cab_card__seating">Status: ${cab.status}</p>
               <button class="cb-c-cab_card__book" id="js-cab-update_location" data-id="${cab.id}">Update Location</button>
+              <button class="cb-c-cab_card__book" id="js-cab-activate_cab" data-id="${cab.id}">Set as Active</button>
             </div>
           `);
         });
       }
 
       $(document).on("click", "button", function (e) {
-        if ($(e.target).has("id", "#js-cab-update_location")) {
+        if (e.target.id === "js-cab-update_location") {
           let cabId = $(e.target).data("id");
           let token = localStorage.getItem("token");
 
@@ -95,6 +97,29 @@
             .then((data) => {
               alert("Location updated");
             });
+        }
+
+        if (e.target.id === "js-cab-activate_cab") {
+          let cabId = $(e.target).data("id");
+          let token = localStorage.getItem("token");
+
+          fetch(`http://localhost:8000/api/Cab/activate-cab?cabId=${cabId}`, {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              cabId,
+              location,
+            }),
+          }).then((res) => {
+            if (res.ok) {
+              window.showToast("Cab is currently active", "success");
+            } else {
+              window.showToast("Failed to activate cab", 0, "danger");
+            }
+          });
         }
       });
 
@@ -145,6 +170,7 @@
           });
       });
     </script>
+    <script src="/js/toastscript.js"></script>
     <script src="/js/navbarscript.js"></script>
   </body>
 </html>
