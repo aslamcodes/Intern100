@@ -1,0 +1,11 @@
+  
+1) [[Question No. 1- Print hello world  | Print hello world]]
+2) [[Question No. 2 Take a name and print greet | Take a name and print greet]]
+3) [[Question No. 3 Take name and gender & greet | Take name and gender print greet with salutation]]
+4) [[Question No. 4 Take name, age, date of birth and phone print details in proper format | Take name, age, date of birth and phone print details in proper format]]
+5) [[Question No. 5 Add validation the entered  name, age, date of birth and phone print details in proper format | Add validation the entered  name, age, date of birth and phone print details in proper format]]
+6) [[Question No. 6 Find if the given number is prime | Find if the given number is prime]]
+7) [[Question No. 7 Take 10 numbers and find the average of all the prime numbers in the collection | Take 10 numbers and find the average of all the prime numbers in the collection]]
+8) [[Question No. 8 Length of a given input string | Length of a given input string ]]
+9) [[Question No. 9 Find All Permutations of a given string | Find All Permutations of a given string]]
+10) [[Question No. 10 Print a pyramid of stars for the number of rows specified| Print a pyramid of starts for the number of rows specified]]
