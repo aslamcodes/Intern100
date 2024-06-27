@@ -10,10 +10,11 @@
   left: 0;
   bottom: 0;
   backdrop-filter: blur(10px);
-  z-index: 100;
+  z-index: 20000;
   width: 0;
-  transform: translate(-200%);
+  transform: translate(-100vw);
   transition: all 0.3s ease-in-out;
+
   &.open {
     width: 100%;
     transform: translate(0);

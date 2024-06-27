@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../scss/main.scss" />
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -12,14 +19,24 @@
     ></script>
   </head>
   <body>
-    <nav class="cb-c-navbar">
-      <h1 class="cb-c-navbar__logo">Caber</h1>
-      <ul class="cb-c-navbar__menu">
-        <li class="cb-c-navbar__menu__item">Book a ride</li>
-        <a href="myrides.html" class="cb-c-navbar__menu__item">My Rides</a>
-        <a href="user/profile.html" class="cb-c-navbar__menu__item">Profile</a>
-      </ul>
-    </nav>
+    <header>
+      <nav class="cb-c-navbar">
+        <h1 class="cb-c-navbar__logo">Caber</h1>
+        <ul class="cb-c-navbar__menu">
+          <li class="cb-c-navbar__menu__item">Book a ride</li>
+          <a href="myrides.html" class="cb-c-navbar__menu__item">My Rides</a>
+          <a href="user/profile.html" class="cb-c-navbar__menu__item"
+            >Profile</a
+          >
+        </ul>
+        <div class="cb-c-navbar__mobile_menu" id="js-mobile_menu">
+          <img src="/assets/Icons/bars-3-bottom-right.svg" />
+        </div>
+      </nav>
+      <nav class="cb-c-sidebar" id="js-sidebar">
+        <i class="fa fa-close" id="js-sidebar-close"></i>
+      </nav>
+    </header>
     <main class="cb-l-book_cab_page">
       <form class="cb-c-form">
         <h1 class="cb-c-form__title">Book a Ride</h1>
@@ -249,5 +266,6 @@
         });
       });
     </script>
+    <script src="/js/navbarscript.js"></script>
   </body>
 </html>

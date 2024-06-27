@@ -10,20 +10,35 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <nav class="cb-c-navbar">
-      <h1 class="cb-c-navbar__logo">Caber</h1>
-      <ul class="cb-c-navbar__menu">
-        <a class="cb-c-navbar__menu__item" href="#">My Cabs</a>
-        <a href="rideRequests.html" class="cb-c-navbar__menu__item"
-          >Ride Requests</a
-        >
-        <a class="cb-c-navbar__menu__item" href="/app/user/profile.html"
-          >Profile</a
-        >
-      </ul>
-    </nav>
+    <header>
+      <nav class="cb-c-navbar">
+        <h1 class="cb-c-navbar__logo">Caber</h1>
+        <ul class="cb-c-navbar__menu">
+          <a class="cb-c-navbar__menu__item" href="#">My Cabs</a>
+          <a href="rideRequests.html" class="cb-c-navbar__menu__item"
+            >Ride Requests</a
+          >
+          <a class="cb-c-navbar__menu__item" href="/app/user/profile.html"
+            >Profile</a
+          >
+        </ul>
+        <div class="cb-c-navbar__mobile_menu" id="js-mobile_menu">
+          <img src="/assets/Icons/bars-3-bottom-right.svg" />
+        </div>
+      </nav>
+      <nav class="cb-c-sidebar" id="js-sidebar">
+        <i class="fa fa-close" id="js-sidebar-close"></i>
+      </nav>
+    </header>
     <main class="cb-ut-main_wrapper cb-pg-mycabs">
       <div class="cb-pg-mycabs__header">
         <h1 class="cb-ut-heading_1">My Cabs</h1>
@@ -131,5 +146,6 @@
           });
       });
     </script>
+    <script src="/js/navbarscript.js"></script>
   </body>
 </html>
