@@ -51,9 +51,17 @@
 - [x] Setup a Image system
 ## Before Sleep
 - [ ] Fix Main flow's UI
-- [ ] Cab Rating
+- [x] Cab Rating
 - [x] Upload user avatars, cab Images
 	- [ ] Not everywhere
 - [ ] Make every navbar sidebar-able
 - [ ] Setup Icons
 - [ ] Test the frontend
+
+
+## Critical 
+- Only One cab active per driver
+- Book any cab not working properly
+- No way to verify a cab
+
+> Atleast one day needed for me
