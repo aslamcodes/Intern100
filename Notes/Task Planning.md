@@ -62,12 +62,13 @@
 
 # June 27
 ## Critical 
-- Only One cab active per driver
-	- [ ] Driver Cab page
-	- [ ] Fetch only `Active` cabs
-	- [ ] Set cabs in ride to be `InRide`
-- Book any cab not working properly
-- No way to verify a cab
+- [x] Only One cab active per driver
+	- [x] Driver Cab page
+	- [x] Fetch only `Active` cabs
+	- [x] Set cabs in ride to be `InRide`
+- [ ] Book any cab not working properly (FEBE)
+-  [ ] No way to verify a cab (FEBE)
+- [x] Passenger cannot book, if he's invloved in a ride (should have a onRide)
 
 ## Before Evening
 - [ ] Everything in the Crictical
