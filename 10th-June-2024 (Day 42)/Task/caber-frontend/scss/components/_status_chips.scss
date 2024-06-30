@@ -1,0 +1,27 @@
+.cb-c-status_chip {
+  gap: 0.5rem;
+  border-radius: 1rem;
+  max-width: fit-content;
+  padding: 4px 8px;
+  font-size: small;
+
+  &--green {
+    background-color: #4caf50;
+    color: #fff;
+  }
+
+  &--grey {
+    background-color: #7b7b7b;
+    color: #fff;
+  }
+
+  &--red {
+    background-color: #f44336;
+    color: #fff;
+  }
+
+  &--yellow {
+    background-color: #ffeb3b;
+    color: #000;
+  }
+}
