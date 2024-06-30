@@ -70,9 +70,7 @@
         </div>
       </form>
       <div class="cb-l-cab_grid">
-        <div class="cb-c-cab_card">
-          <p style="text-align: center">Search For Cabs</p>
-        </div>
+        <img class="cb-l-cab_grid__hero_img" src="/assets/hero_img.jfif" />
       </div>
     </main>
     <script src="/js/toastscript.js"></script>
@@ -83,7 +81,10 @@
         cabGrid.empty();
 
         if (cabs.length === 0) {
-          cabGrid.append("<p>No cabs found</p>");
+          cabGrid.append(`<div class="no_cabs">
+                <img src="/assets/nocabsfound.png">
+                <p>No Cabs Found ;)</p>
+            </div>`);
         }
 
         cabs.forEach((cab) => {
@@ -163,13 +164,6 @@
             window.location.href = "login.html";
           }
 
-          //           {
-          //   "cabId": 1,
-          //   "pickupLocation": "Temple Road",
-          //   "dropoffLocation": "Chennai International Airport",
-          //   "passengerId": 1,
-          //    "seatingCapacity": 3
-          // }
           fetch("http://localhost:8000/api/Passenger/book-any-cab", {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -185,7 +179,15 @@
               seatingCapacity: seating,
             }),
           })
-            .then((res) => res.json())
+            .then((res) => {
+              if (res.ok) {
+                window.showToast("Cab booked", "success", 1500, function () {
+                  location.href = "/app/myrides.html";
+                });
+              } else {
+                window.showToast("Cab not booked", "error", 3000);
+              }
+            })
             .then((data) => {
               console.log(data);
             })

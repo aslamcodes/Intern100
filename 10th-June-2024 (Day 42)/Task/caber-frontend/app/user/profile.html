@@ -145,6 +145,11 @@
               <form class="cb-c-form" id="update-profile">
                 <h1 class="cb-c-form__title">Edit Profile</h1>
                 <div class="cb-c-form__group">
+                  <label for="profile">New Profile Photo</label>
+                  <input type="file" id="profile" />
+                  <p id="profileError" class="cb-ut-form-error"></p>
+                </div>
+                <div class="cb-c-form__group">
                   <label for="fname">First Name</label>
                   <input type="text" id="fname" />
                   <p id="fnameError" class="cb-ut-form-error"></p>
@@ -178,13 +183,22 @@
         const lname = $("#lname").val();
         const addr = $("#addr").val();
         const phone = $("#phone").val();
+        let profileImage = $("#profile")[0].files[0];
+
+        var profileFormData = new FormData();
 
         let isFormUpdated = false;
+        let isProfileUpdated = false;
 
         // construct request object only if entered values are valid
         const requestObj = {
           id: localStorage.getItem("id"),
         };
+
+        if (profileImage) {
+          profileFormData.append("file", profileImage);
+          isProfileUpdated = true;
+        }
 
         if (fname) {
           requestObj.firstName = fname;
@@ -206,26 +220,63 @@
           isFormUpdated = true;
         }
 
-        fetch("http://localhost:8000/api/User/update-profile", {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-          body: JSON.stringify(requestObj),
-        }).then((res) => {
-          if (res.status === 200) {
-            window.toggleModal({ content: "" });
-            if (isFormUpdated) {
+        if (isProfileUpdated) {
+          fetch("http://localhost:8000/api/Image", {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: profileFormData,
+          })
+            .then((res) => {
+              if (res.ok) {
+                return res.json();
+              } else {
+                throw new Error("Failed to update profile image");
+              }
+            })
+            .then((data) => {
+              requestObj.userProfileImageId = data.imageId;
+              fetch("http://localhost:8000/api/User/update-profile", {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+                body: JSON.stringify(requestObj),
+              }).then((res) => {
+                if (res.status === 200) {
+                  window.toggleModal({ content: "" });
+                  window.showToast("Updated", "success", 3000);
+                } else {
+                  window.showToast("Failed to update", "error", 3000);
+                  window.toggleModal({ content: "" });
+                }
+              });
+            })
+            .catch((err) => {
+              window.showToast(err, "error", 3000);
+            });
+        }
+
+        if (isFormUpdated) {
+          fetch("http://localhost:8000/api/User/update-profile", {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify(requestObj),
+          }).then((res) => {
+            if (res.status === 200) {
+              window.toggleModal({ content: "" });
               window.showToast("Updated", "success", 3000);
             } else {
-              window.showToast("No changes made", "info", 3000);
+              window.showToast("Failed to update", "error", 3000);
+              window.toggleModal({ content: "" });
             }
-          } else {
-            window.showToast("Failed to update", "error", 3000);
-            window.toggleModal({ content: "" });
-          }
-        });
+          });
+        }
       });
     </script>
     <script>

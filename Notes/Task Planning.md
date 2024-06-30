@@ -22,7 +22,12 @@
 - [ ] Fix issues
 
 ## What went wrong
-- $fixed w - npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/admin/*.html
+- $fixed w - 
+
+```bash
+npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/admin/*.html
+```
+
 	- Parcel not hot reloading some of the pages, I build individual page of focus, hit on productivity
 	- Navigation with js doesnt worked as expected
 ### Conclusion
