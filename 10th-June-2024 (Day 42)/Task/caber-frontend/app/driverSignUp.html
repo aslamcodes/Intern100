@@ -25,6 +25,11 @@
       <form class="cb-c-form">
         <h1 class="cb-c-form__title">Sign up!</h1>
         <div class="cb-c-form__group">
+          <label for="profile">Profile</label>
+          <input type="file" id="profile" />
+          <p id="profileError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
           <label for="email">Email</label>
           <input type="text" id="email" type="email" />
           <p id="emailError" class="cb-ut-form-error"></p>
@@ -76,6 +81,7 @@
         </div>
       </form>
     </div>
+    <script src="/js/toastscript.js"></script>
     <script>
       $(document).ready(function () {
         $(".cb-c-form").submit(function (e) {
@@ -89,6 +95,7 @@
           let license = $("#license").val();
           let licenseExpiry = $("#licenseExpiry").val();
           let password = $("#password").val();
+          let userProfileImage = $("#profile")[0].files[0];
 
           let emailError = $("#emailError");
           let fnameError = $("#fnameError");
@@ -98,6 +105,7 @@
           let licenseError = $("#licenseError");
           let licenseExpiryError = $("#licenseExpiryError");
           let passwordError = $("#passwordError");
+          let profileError = $("#profileError");
 
           if (email === "") {
             emailError.text("Email is required");
@@ -163,35 +171,60 @@
             isFormValid = true;
           }
 
+          if (userProfileImage === "") {
+            profileError.text("Profile Image is required");
+            isFormValid = false;
+          } else {
+            profileError.text("");
+            isFormValid = true;
+          }
+
+          let formData = new FormData();
+
+          formData.append("file", userProfileImage);
+
+          if (!isFormValid) {
+            window.showToast("Please fill all the fields", "error", 2000);
+          }
+
           if (isFormValid) {
-            fetch("http://localhost:8000/api/Auth/register-driver", {
+            fetch("http://localhost:8000/api/Image", {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                email: email,
-                firstName: fname,
-                lastName: lname,
-                password: password,
-                phone: phone,
-                address: address,
-                licenseNumber: license,
-                licenseExpiry: licenseExpiry,
-              }),
-            })
-              .then((res) => res.json())
-              .then((data) => {
-                if (data.status === 400 || data.statusCode === 401) {
-                  return;
-                } else {
-                  localStorage.setItem("token", data.token);
-                  localStorage.setItem("id", data.id);
-                  localStorage.setItem("role", data.role);
-                  window.location.replace("driver/driverCabs.html");
-                }
-              })
-              .catch((err) => {});
+              body: formData,
+            }).then(async (res) => {
+              if (res.status === 200) {
+                const data = await res.json();
+                fetch("http://localhost:8000/api/Auth/register-driver", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    email: email,
+                    firstName: fname,
+                    lastName: lname,
+                    password: password,
+                    phone: phone,
+                    address: address,
+                    licenseNumber: license,
+                    userImageId: data.imageId,
+                    licenseExpiry: licenseExpiry,
+                  }),
+                })
+                  .then((res) => res.json())
+                  .then((data) => {
+                    if (data.status === 400 || data.statusCode === 401) {
+                      return;
+                    } else {
+                      localStorage.setItem("token", data.token);
+                      localStorage.setItem("id", data.id);
+                      localStorage.setItem("role", data.role);
+                      window.location.replace("driver/driverCabs.html");
+                    }
+                  })
+                  .catch((err) => {});
+              }
+            });
           }
         });
       });
