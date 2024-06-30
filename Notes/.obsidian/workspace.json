@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mini Project Notes/Project Board.md",
+                "file": "Task Planning.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -135,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Presentation.md",
+                "file": "Task Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Presentation.md",
+                "file": "Task Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Presentation.md"
+                "file": "Task Planning.md"
               }
             }
           }
@@ -198,7 +197,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9f4186572b073f47",
+  "active": "17df321af46ad5f5",
   "lastOpenFiles": [
     "Mini Project Notes/Project Board.md",
     "Presentation.md",

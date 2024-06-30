@@ -98,9 +98,12 @@
             </div>
 
             <div class="cb-c-cab_card__actions">
-              <button class="cb-c-cab_card__book">${
-                cab.IsVerified ? "Verified" : "Verfiy Cab"
-              }</button>
+            ${
+              cab.isVerified
+                ? ""
+                : `<button class="cb-c-cab_card__book" id="js-cab-verify" data-id="${cab.id}">Verify</button>`
+            }
+             
               </div>
            
              
@@ -126,5 +129,36 @@
         }
       }
     </script>
+    <script>
+      // Verification
+      $(document).ready(() => {
+        $(document).on("click", "button", function (e) {
+          if (e.target.id === "js-cab-verify") {
+            let token = localStorage.getItem("token");
+            let cabId = $(e.target).data("id");
+
+            fetch("http://localhost:8000/api/Admin/verify-cab", {
+              method: "PUT",
+              headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                cabID: cabId,
+              }),
+            })
+              .then((res) => {
+                if (res.ok) {
+                  window.showToast("Cab verified", "success", 2000);
+                } else {
+                  window.showToast("Could not verify cab", "error", 2000);
+                }
+              })
+              .then((data) => {});
+          }
+        });
+      });
+    </script>
+    <script src="/js/toastscript.js"></script>
   </body>
 </html>
