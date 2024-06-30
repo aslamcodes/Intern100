@@ -37,7 +37,6 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [x] *Admin Verification needs css*
 - [x] Way to display validation errors & failures from backend calls 
 - [ ] Fix github issues
-- [ ] Admin Page to Approve cabs
 - [x] Profile Page
 	- [x] (Update Profile)
 - [x] *Admin Verification needs css*
@@ -71,12 +70,28 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 	- [x] Driver Cab page
 	- [x] Fetch only `Active` cabs
 	- [x] Set cabs in ride to be `InRide`
-- [ ] Book any cab not working properly (FEBE)
+- [x] Book any cab not working properly (FEBE)
 -  [ ] No way to verify a cab (FEBE)
 - [x] Passenger cannot book, if he's invloved in a ride (should have a onRide)
 
 ## Before Evening
 - [ ] Everything in the Crictical
 
-## Before Sleep
 
+
+# 30th June
+- [ ] Sidebar not working fine
+## Driver
+- [ ] My Cabs Page and Ride Request page `!!`
+	- [ ] Data richness 
+	- [ ] Sort, Filter, Search
+- [ ] Driver Profile Page needs improvement `!!`
+- [ ] Cab Image upload and retrieval `!`
+## Admin
+- [ ] Cab Verification Page and Endpoint `!!!`
+	- [ ] Data richness (profile)
+	- [ ] Search, sort, filtering
+- [x] navigation flow fix for admin `!!!` 
+- [ ] Manage driver page `!!` 
+	- [ ] Data richness (profile)
+	- [ ] Search, sort, filtering

@@ -44,6 +44,17 @@
             href="/app/driver/rideRequests.html"
             >Ride Requests</a
           >
+          <a
+            class="cb-c-navbar__menu__item js-admin-role"
+            href="/app/admin/manageCabs.html"
+            >Manage Cabs</a
+          >
+          <a
+            class="cb-c-navbar__menu__item js-admin-role"
+            href="/app/admin/driverRequests.html"
+            >Manage Drivers</a
+          >
+
           <a class="cb-c-navbar__menu__item" href="#">Profile</a>
         </ul>
         <div class="cb-c-navbar__mobile_menu" id="js-mobile_menu">
@@ -121,11 +132,17 @@
       $(document).ready(() => {
         const role = localStorage.getItem("role");
 
-        if (role === "Driver") {
-          $(".js-passenger-role").remove();
-        } else {
-          $(".js-driver-role").remove();
-        }
+        const roleMap = new Map([
+          ["Passenger", ".js-passenger-role"],
+          ["Driver", ".js-driver-role"],
+          ["Admin", ".js-admin-role"],
+        ]);
+
+        roleMap.keys().forEach((role) => {
+          $(roleMap.get(role)).hide();
+        });
+
+        $(roleMap.get(role)).show(100);
       });
 
       $(document).on("click", function (e) {
