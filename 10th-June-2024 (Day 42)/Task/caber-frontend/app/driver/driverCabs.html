@@ -52,11 +52,31 @@
 
           <input class="cb-c-search__input" placeholder="Search Cab" />
         </div>
-        <div class="cb-c-icon_button">
+        <button class="cb-c-icon_button" id="js-filter-cab">
           <i class="cb-c-icon_button__icon fa fa-filter"></i>
-        </div>
-        <div class="cb-c-icon_button">
+        </button>
+        <button class="cb-c-icon_button" id="js-sort-cab">
           <i class="cb-c-icon_button__icon fa fa-sort"></i>
+        </button>
+      </div>
+      <div class="cb-c-floating_menu hidden" id="filter_menu">
+        <div class="cb-c-floating_menu__option">
+          <i class="fa fa-search"></i>
+          <p>Search</p>
+        </div>
+        <div class="cb-c-floating_menu__option">
+          <i class="fa fa-search"></i>
+          <p>Search</p>
+        </div>
+      </div>
+      <div class="cb-c-floating_menu hidden" id="sort_menu">
+        <div class="cb-c-floating_menu__option">
+          <i class="fa fa-search"></i>
+          <p>Search</p>
+        </div>
+        <div class="cb-c-floating_menu__option">
+          <i class="fa fa-search"></i>
+          <p>Search</p>
         </div>
       </div>
       <div class="cb-pg-mycabs__cabs"></div>
@@ -91,12 +111,12 @@
             </div>
 
             <div class="cb-c-cab_card__entry">
-              <i class="fa-solid fa-id-card"></i>          
+              <i class="fa-solid fa-id-card"></i>
               <p class="cb-c-cab_card__location">Owned by ${cab.driverId}</p>
             </div>
 
             <div class="cb-c-cab_card__actions">
-            
+
               <button class="cb-c-cab_card__book" id="js-cab-update_location" data-id="${
                 cab.id
               }">Update Location</button>
@@ -104,15 +124,25 @@
                 cab.id
               }">Set as Active</button>
 
-             
+
               </div>
-           
-             
+
+
 
           </div>
               `);
         });
       }
+
+      $(window).click(function (e) {
+        if (!$(e.target).is("#js-sort-cab")) {
+          $("#sort_menu").addClass("hidden");
+        }
+
+        if (!$(e.target).is("#js-filter-cab")) {
+          $("#filter_menu").addClass("hidden");
+        }
+      });
 
       $(document).on("click", "button", function (e) {
         if (e.target.id === "js-cab-update_location") {
@@ -162,6 +192,27 @@
             } else {
               window.showToast("Failed to activate cab", 0, "danger");
             }
+          });
+        }
+
+        if (e.target.id === "js-sort-cab") {
+          $("#sort_menu").toggleClass("hidden");
+
+          let position = $("#js-sort-cab").position();
+          $("#sort_menu").css({
+            top: position.top + 40,
+            left: position.left - 130,
+          });
+        }
+
+        if (e.target.id === "js-filter-cab") {
+          $("#filter_menu").toggleClass("hidden");
+
+          let position = $("#js-filter-cab").position();
+
+          $("#filter_menu").css({
+            top: position.top + 40,
+            left: position.left - 130,
           });
         }
       });
