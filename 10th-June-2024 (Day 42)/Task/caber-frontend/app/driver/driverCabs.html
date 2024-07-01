@@ -51,26 +51,51 @@
         $(".cb-pg-mycabs__cabs").empty();
         cabs.forEach((cab) => {
           $(".cb-pg-mycabs__cabs").append(`
-            <div class="cb-c-cab_card">
-              <a class="">Edit</a>
-              <img
-                src="${cab.image}"
-                alt=""
-                class="cb-c-cab_card__img"
-              />
-              <div class="cb-c-cab_card__details">
-                <h2 class="cb-l-cab_grid__cab__name">${cab.make} ${cab.model}</h2>
-              </div>
-              <p class="cb-c-cab_card__price">Location: ${cab.location}</p>
-              <p class="cb-c-cab_card__seating">Max: ${cab.seatingCapacity}</p>
-              <p class="cb-c-cab_card__seating">Status: ${cab.status}</p>
-              <div class="cb-c-cab_card__actions">
-<button class="cb-c-cab_card__book" id="js-cab-update_location" data-id="${cab.id}">Update Location</button>
-              <button class="cb-c-cab_card__book" id="js-cab-activate_cab" data-id="${cab.id}">Set as Active</button>
-              </div>
-              
+               <div class="cb-c-cab_card">
+                  <img
+              src="https://i.pinimg.com/736x/e4/2a/77/e42a772f947fadb287486d2743655538.jpg"
+              alt=""
+              class="cb-c-cab_card__img"
+            />
+             <div class="cb-c-cab_card__entry">
+              <p class="cb-c-status_chip cb-c-status_chip--${window.getChipColorForStatus(
+                cab.status
+              )}">${cab.status}</p>
             </div>
-          `);
+            <div class="cb-c-cab_card__details">
+              <h2 class="cb-l-cab_grid__cab__name">${cab.make} ${
+            cab.model
+          } </h3>
+            </div>
+            <div class="cb-c-cab_card__details">
+              <p class="cb-c-cab_card__cab_number">${cab.registrationNumber}</p>
+            </div>
+            <div class="cb-c-cab_card__entry">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="cb-c-cab_card__location">${cab.location}</p>
+            </div>
+
+            <div class="cb-c-cab_card__entry">
+              <i class="fa-solid fa-id-card"></i>          
+              <p class="cb-c-cab_card__location">Owned by ${cab.driverId}</p>
+            </div>
+
+            <div class="cb-c-cab_card__actions">
+            
+              <button class="cb-c-cab_card__book" id="js-cab-update_location" data-id="${
+                cab.id
+              }">Update Location</button>
+              <button class="cb-c-cab_card__book" id="js-cab-activate_cab" data-id="${
+                cab.id
+              }">Set as Active</button>
+
+             
+              </div>
+           
+             
+
+          </div>
+              `);
         });
       }
 
@@ -175,5 +200,6 @@
     </script>
     <script src="/js/toastscript.js"></script>
     <script src="/js/navbarscript.js"></script>
+    <script src="/js/utils.js"></script>
   </body>
 </html>

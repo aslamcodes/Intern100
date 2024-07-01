@@ -77,10 +77,8 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 ## Before Evening
 - [ ] Everything in the Crictical
 
-
-
 # 30th June
-- [ ] Sidebar not working fine
+- [ ] Sidebar not working fine???
 ## Driver
 - [ ] My Cabs Page and Ride Request page `!!`
 	- [ ] Data richness 
@@ -92,6 +90,11 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 	- [ ] Data richness (profile)
 	- [ ] Search, sort, filtering
 - [x] navigation flow fix for admin `!!!` 
-- [ ] Manage driver page `!!` 
-	- [ ] Data richness (profile)
+- [x] Manage driver page `!!` 
+	- [ ] Data richness 
 	- [ ] Search, sort, filtering
+## Profile Page
+- [ ] Data Richeness
+
+
+- [ ] Add Cab Page

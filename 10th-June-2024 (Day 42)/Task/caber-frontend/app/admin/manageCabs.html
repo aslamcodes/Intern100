@@ -75,7 +75,7 @@
               class="cb-c-cab_card__img"
             />
              <div class="cb-c-cab_card__entry">
-              <p class="cb-c-status_chip cb-c-status_chip--${getChipColorForStatus(
+              <p class="cb-c-status_chip cb-c-status_chip--${window.getChipColorForStatus(
                 cab.status
               )}">${cab.status}</p>
             </div>
@@ -115,19 +115,6 @@
             });
           });
       });
-
-      function getChipColorForStatus(status) {
-        switch (status.toLowerCase()) {
-          case "active":
-            return "green";
-          case "offline":
-            return "grey";
-          case "pending":
-            return "yellow";
-          default:
-            return "green";
-        }
-      }
     </script>
     <script>
       // Verification
@@ -160,5 +147,6 @@
       });
     </script>
     <script src="/js/toastscript.js"></script>
+    <script src="/js/utils.js"></script>
   </body>
 </html>

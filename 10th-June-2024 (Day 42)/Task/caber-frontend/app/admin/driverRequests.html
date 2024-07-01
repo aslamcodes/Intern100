@@ -64,18 +64,19 @@
             data.forEach((element) => {
               $("#js-driver-list").append(`<div class="driver-card">
         <h1 class="driver-card__name">${element.user.firstName}</h1>
-        <p class="driver-card__email">User: ${element.user.email}</p>
-        <p class="driver-card__phone">Phone: ${element.user.phone}</p>
+        <p class="driver-card__email">Email: ${element.user.email}</p>
         <p class="driver-card__phone">Phone: ${element.user.phone}</p>
         <p class="driver-card__license">
-          License number ${element.licenseNumber} Expires at ${
-                element.licenseExpiryDate
-              }
+          License number ${element.licenseNumber} 
         </p>
+        <p>
+           Expires at ${element.licenseExpiryDate}
+        </p>
+       
         ${
           element.isVerified
             ? "<p class='driver-card__verified'>Driver is Verified</p>"
-            : ' <button class="driver-card__verify-button" id="js-${element.driverId}">Verify</button>'
+            : `<button class="cb-c-button" id="js-${element.driverId}">Verify</button>`
         }
        
       </div>
