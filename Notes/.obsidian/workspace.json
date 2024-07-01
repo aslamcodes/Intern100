@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "438766c04ab12454",
@@ -150,15 +149,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "76b86c241b6dbb37",
+  "active": "17df321af46ad5f5",
   "lastOpenFiles": [
     "Mini Project Notes/Project Board.md",
+    "Frontend Requirements.md",
+    "Task Planning.md",
     "Presentation.md",
     "Mini Project Notes/UI flows.md",
-    "Task Planning.md",
     "June 27.md",
     "UI Fixes.md",
-    "Frontend Requirements.md",
     "Resources/Pasted image 20240626211937.png",
     "Resources/Pasted image 20240626211924.png",
     "Resources/Pasted image 20240626211907.png",

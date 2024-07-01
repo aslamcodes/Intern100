@@ -1,0 +1,15 @@
+@use "abstracts/variables" as *;
+
+.cb-c-icon_button {
+  padding: 1rem;
+  border: 1px solid #bababa;
+  border-radius: 0.5rem;
+  min-width: 45px;
+  color: #bababa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: #000;
+  }
+}

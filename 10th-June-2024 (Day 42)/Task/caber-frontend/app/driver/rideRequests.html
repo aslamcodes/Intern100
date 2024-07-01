@@ -40,11 +40,69 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="cb-ut-main_wrapper">
+      <section id="current-ride" class="cb-l-ride_requests"></section>
+
       <section id="requested-rides" class="cb-l-ride_requests"></section>
+      \
+
+      <section id="previous-rides" class="cb-l-ride_requests"></section>
     </main>
     <script>
       let url = "http://localhost:8000/api/Driver/driver-rides";
+
+      function rideToCard(ride) {
+        return `
+              <div class="cb-c-ride-card">
+                <img
+                  class="cb-c-ride-card__image"
+                  src="/assets/ride_cab.png"
+                  alt=""
+                />
+                <div class="cb-c-ride-card__ride_details">
+                  <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
+          ride.cab.model
+        }</h2>
+                  <p class="cb-c-ride-card__ride-date">${new Date(
+                    ride.rideDate
+                  ).toLocaleDateString("en-IN", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  })}</p>
+                  <p class="cb-c-ride-card__status">${ride.status}</p>
+                  <div class="cb-c-ride-card__actions">
+                  ${
+                    ride.status === "Accepted"
+                      ? `
+                      <button id="js-ride-initiate-button" data-id="${ride.id}">Initiate Ride</button>
+                      <button id="js-ride-cancel-button" data-id="${ride.id}">Cancel Ride</button>
+                    `
+                      : ""
+                  }
+                    ${
+                      ride.status === "InProgress"
+                        ? `
+                      <button id="js-ride-complete-button" data-id="${ride.id}">Complete Ride</button>
+                    `
+                        : ""
+                    }
+                  </div>
+                </div>
+
+                <div class="cb-c-ride-card__driver_actions">
+                ${
+                  ride.status === "Requested"
+                    ? ` <button class="cb-c-cab_card__book cb-c-cab_card__book--grey " id="js-cab-decline-ride" data-id="${ride.id}">Decline</button>
+                 <button class="cb-c-cab_card__book " id="js-cab-accept-ride" data-id="${ride.id}">Accept</button>`
+                    : ""
+                }
+                  
+                </div>
+
+              </div>
+              `;
+      }
 
       $(document).ready(() => {
         fetch(url, {
@@ -55,25 +113,55 @@
         })
           .then((res) => res.json())
           .then((data) => {
-            data.forEach((ride) => {
-              $("#requested-rides").append(`
-                      <div class="cb-c-cab_card">
-                        <img
-                          src="${ride.image}"
-                          alt=""
-                          class="cb-c-cab_card__img"
-                        />
-                        <div class="cb-c-cab_card__details">
-                          <h2 class="cb-l-cab_grid__cab__name">${ride.cab.make} ${ride.cab.model}</h2>
-                        </div>
-                        <p class="cb-c-cab_card__price">Location: ${ride.endLocation}</p>
-                        <div class="cb-c-cab_card__actions--bottom_left"> 
-                          <button class="cb-c-cab_card__book cb-c-cab_card__book--grey " id="js-cab-decline-ride" data-id="${ride.id}">Decline</button>
-                        <button class="cb-c-cab_card__book " id="js-cab-accept-ride" data-id="${ride.id}">Accept</button>
-                      </div>
-                      </div>
-                    `);
-            });
+            var requestedRides = data.filter(
+              (ride) => ride.status === "Requested"
+            );
+
+            var currentRide = data.filter(
+              (ride) =>
+                ride.status === "Accepted" || ride.status === "InProgress"
+            );
+
+            $("#requested-rides").append("<h1>Requested Rides</h1>");
+
+            if (requestedRides.length === 0) {
+              $("#requested-rides").append(
+                "<p class='cb-c-alert info'>No requested rides</p>"
+              );
+            } else {
+              requestedRides.forEach((ride) => {
+                $("#requested-rides").append(rideToCard(ride));
+              });
+            }
+
+            $("#current-ride").append("<h1>Current Rides</h1>");
+
+            if (currentRide.length === 0) {
+              $("#current-ride").append(
+                "<p class='cb-c-alert info'>No current rides</p>"
+              );
+            } else {
+              currentRide.forEach((ride) => {
+                $("#current-ride").append(rideToCard(ride));
+              });
+            }
+
+            var previousRides = data.filter(
+              (ride) =>
+                !["InProgress", "Accepted", "Requested"].includes(ride.status)
+            );
+
+            $("#previous-rides").append("<h1>Previous Rides</h1>");
+
+            if (previousRides.length === 0) {
+              $("#previous-rides").append(
+                "<p class='cb-c-alert info'>No previous rides</p>"
+              );
+            } else {
+              previousRides.forEach((ride) => {
+                $("#previous-rides").append(rideToCard(ride));
+              });
+            }
           });
       });
 

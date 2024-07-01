@@ -21,6 +21,10 @@
 
 .cb-pg-myrides_rides {
   grid-column: 2;
+
+  & > section {
+    margin: 1rem;
+  }
 }
 
 .cb-pg-myrides_bookcard {

@@ -1,0 +1,30 @@
+.cb-c-search {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  border: 1px solid #bababa;
+  max-width: fit-content;
+  border-radius: 0.5rem;
+
+  color: #bababa;
+  &:hover {
+    color: #000;
+  }
+  &__input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.cb-c-controls {
+  margin: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}

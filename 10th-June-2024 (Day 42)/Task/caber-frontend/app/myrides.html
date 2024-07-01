@@ -62,6 +62,7 @@
         <button class="cb-c-button">Request a Ride</button>
       </div>
     </main>
+
     <script>
       if (!localStorage.getItem("token")) {
         window.location.href = "/login.html";
@@ -149,7 +150,9 @@
         currentRideGroup.empty();
 
         if (current.length === 0) {
-          currentRideGroup.append("<p>No current rides</p>");
+          currentRideGroup.append(
+            "<p class='cb-c-alert info'>No current rides</p>"
+          );
         } else {
           current.forEach((ride) => {
             const currentRideCard = `
