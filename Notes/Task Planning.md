@@ -88,7 +88,7 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [ ] Driver Profile Page needs improvement `!!`
 - [ ] Cab Image upload and retrieval `!`
 ## Admin
-- [ ] Cab Verification Page and Endpoint `!!!`
+- [x] Cab Verification Page and Endpoint `!!!`
 	- [ ] Data richness (profile)
 	- [ ] Search, sort, filtering
 - [x] navigation flow fix for admin `!!!` 
