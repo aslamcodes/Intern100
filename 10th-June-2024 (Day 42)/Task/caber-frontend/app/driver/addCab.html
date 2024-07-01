@@ -9,41 +9,50 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <style>
+      body {
+        background-color: #e5e5f7;
+        opacity: 1;
+        background-image: radial-gradient(#006989 2px, #e5e5f7 2px);
+        background-size: 40px 40px;
+      }
+    </style>
     <link rel="stylesheet" href="/scss/main.scss" />
   </head>
   <body>
-    <form class="cb-c-form">
-      <h1 class="cb-c-form__title">Register a Cab</h1>
-      <div class="cb-c-form__group">
-        <label for="registrationNumber">Registration Number</label>
-        <input type="text" id="registrationNumber" />
-        <p id="registrationNumberError" class="cb-ut-form-error"></p>
-      </div>
-      <div class="cb-c-form__group">
-        <label for="model">Model</label>
-        <input type="text" id="model" />
-        <p id="modelError" class="cb-ut-form-error"></p>
-      </div>
-      <div class="cb-c-form__group">
-        <label for="make">Make</label>
-        <input type="text" id="make" />
-        <p id="makeError" class="cb-ut-form-error"></p>
-      </div>
-      <div class="cb-c-form__group">
-        <label for="color">Color</label>
-        <input type="text" id="color" />
-        <p id="colorError" class="cb-ut-form-error"></p>
-      </div>
-      <div class="cb-c-form__group">
-        <label for="seatingCapacity">Seating Capacity</label>
-        <input type="number" id="seatingCapacity" />
-        <p id="seatingCapacityError" class="cb-ut-form-error"></p>
-      </div>
-
-      <div class="cb-c-form__action">
-        <button class="cb-c-button" type="submit">Add Cab</button>
-      </div>
-    </form>
+    <main class="cb-pg-add_cab">
+      <form class="cb-c-form">
+        <h1 class="cb-c-form__title">Add a Cab</h1>
+        <div class="cb-c-form__group">
+          <label for="registrationNumber">Registration Number</label>
+          <input type="text" id="registrationNumber" />
+          <p id="registrationNumberError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="model">Model</label>
+          <input type="text" id="model" />
+          <p id="modelError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="make">Make</label>
+          <input type="text" id="make" />
+          <p id="makeError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="color">Color</label>
+          <input type="text" id="color" />
+          <p id="colorError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
+          <label for="seatingCapacity">Seating Capacity</label>
+          <input type="number" id="seatingCapacity" />
+          <p id="seatingCapacityError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__action">
+          <button class="cb-c-button" type="submit">Add Cab</button>
+        </div>
+      </form>
+    </main>
     <script>
       $(document).ready(() => {
         $(".cb-c-form").submit((e) => {

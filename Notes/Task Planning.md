@@ -80,20 +80,21 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 # 30th June
 - [ ] Sidebar not working fine???
 ## Driver
-- [ ] My Cabs Page and Ride Request page `!!`
+- [x] My Cabs Page and Ride Request page `!!`
 	- [x] Data richness 
-	- [ ] Sort, Filter, Search
+	- [x] Sort, Filter, Search
 - [ ] Driver Profile Page needs improvement `!!`
 - [ ] Cab Image upload and retrieval `!`
 ## Admin
 - [x] Cab Verification Page and Endpoint `!!!`
 	- [ ] Data richness (profile)
-	- [ ] Search, sort, filtering
+	- [x] Search, sort, filtering
 - [x] navigation flow fix for admin `!!!` 
 - [x] Manage driver page `!!` 
 	- [ ] Data richness `!`
-	- [ ] Search, sort, filtering `!!`
+	- [x] Search, sort, filtering `!!`
 ## Profile Page
 - [ ] Data Richeness
-- [ ] Add Cab Page
+- [x] Add Cab Page
 - [ ] Proper error handling 
+- [ ] Search, sort, filter functions `!!!`

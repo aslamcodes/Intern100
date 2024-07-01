@@ -63,6 +63,9 @@
           .then((data) => {
             data.forEach((element) => {
               $("#js-driver-list").append(`<div class="driver-card">
+        <img src="http://localhost:8000/api/Image/${
+          element.user.userImageId
+        }" alt="" class="driver-card__image" />
         <h1 class="driver-card__name">${element.user.firstName}</h1>
         <p class="driver-card__email">Email: ${element.user.email}</p>
         <p class="driver-card__phone">Phone: ${element.user.phone}</p>
