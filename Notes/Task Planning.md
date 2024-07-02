@@ -101,3 +101,4 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [ ] Proper error handling `!!`
 - [ ] Search, sort, filter functions `!!!`
 - [ ] Sidebar not working fine `!!`
+- [x] Ride Price not working as expected (Remove distance factor) `!!!`

@@ -71,21 +71,7 @@
                   })}</p>
                   <p class="cb-c-ride-card__status">${ride.status}</p>
                   <div class="cb-c-ride-card__actions">
-                  ${
-                    ride.status === "Accepted"
-                      ? `
-                      <button id="js-ride-initiate-button" data-id="${ride.id}">Initiate Ride</button>
-                      <button id="js-ride-cancel-button" data-id="${ride.id}">Cancel Ride</button>
-                    `
-                      : ""
-                  }
-                    ${
-                      ride.status === "InProgress"
-                        ? `
-                      <button id="js-ride-complete-button" data-id="${ride.id}">Complete Ride</button>
-                    `
-                        : ""
-                    }
+                  
                   </div>
                 </div>
 

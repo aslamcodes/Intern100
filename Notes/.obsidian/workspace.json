@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mini Project Notes/Project Board.md",
+                "file": "Task Planning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "76b3a6bb0ca16e32",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Frontend Requirements.md",
                 "mode": "source",
                 "source": false
               }
@@ -70,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 301.5,
+    "collapsed": true
   },
   "right": {
     "id": "438766c04ab12454",
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mini Project Notes/Project Board.md",
+                "file": "Task Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mini Project Notes/Project Board.md",
+                "file": "Task Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mini Project Notes/Project Board.md"
+                "file": "Task Planning.md"
               }
             }
           }
@@ -151,10 +164,10 @@
   },
   "active": "17df321af46ad5f5",
   "lastOpenFiles": [
-    "Mini Project Notes/UI flows.md",
+    "Frontend Requirements.md",
     "Task Planning.md",
     "Mini Project Notes/Project Board.md",
-    "Frontend Requirements.md",
+    "Mini Project Notes/UI flows.md",
     "Presentation.md",
     "June 27.md",
     "UI Fixes.md",
