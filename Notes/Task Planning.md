@@ -47,19 +47,19 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 	- [x] Way Show error messages on inappropriate pages
 - [x] Profile Page
 - [x] Fix those undefined-s
-	- [ ] ![[Pasted image 20240626105217.png]]
+
 ## Before Evening
 - [x] Navbar flows
 - [x] Navbar responsive
 - [x] Edit Profile
 - [x] Setup a Image system
 ## Before Sleep
-- [ ] Fix Main flow's UI
+- [x] Fix Main flow's UI
 - [x] Cab Rating
 - [x] Upload user avatars, cab Images
 	- [ ] Not everywhere
 - [x] Make every navbar sidebar-able
-- [ ] Setup Icons
+- [x] Setup Icons
 - [ ] Test the frontend
 
 
@@ -71,20 +71,20 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 	- [x] Fetch only `Active` cabs
 	- [x] Set cabs in ride to be `InRide`
 - [x] Book any cab not working properly (FEBE)
--  [ ] No way to verify a cab (FEBE)
+- [x] No way to verify a cab (FEBE)
 - [x] Passenger cannot book, if he's invloved in a ride (should have a onRide)
 
 ## Before Evening
-- [ ] Everything in the Crictical
+- [x] Everything in the Crictical
 
 # 30th June
-- [ ] Sidebar not working fine???
+- [ ] Sidebar not working fine `!!`
 ## Driver
 - [x] My Cabs Page and Ride Request page `!!`
 	- [x] Data richness 
 	- [x] Sort, Filter, Search
 - [ ] Driver Profile Page needs improvement `!!`
-- [ ] Cab Image upload and retrieval `!`
+- [ ] Cab Image upload and retrieval `!!`
 ## Admin
 - [x] Cab Verification Page and Endpoint `!!!`
 	- [ ] Data richness (profile)
@@ -94,7 +94,10 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 	- [ ] Data richness `!`
 	- [x] Search, sort, filtering `!!`
 ## Profile Page
-- [ ] Data Richeness
-- [x] Add Cab Page
-- [ ] Proper error handling 
+- [ ] Data Richeness `!`
+- [x] Add Cab Page 
+
+# Common
+- [ ] Proper error handling `!!`
 - [ ] Search, sort, filter functions `!!!`
+- [ ] Sidebar not working fine `!!`

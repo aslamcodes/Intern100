@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Task Planning.md",
+                "file": "Mini Project Notes/Project Board.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Task Planning.md",
+                "file": "Mini Project Notes/Project Board.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Task Planning.md",
+                "file": "Mini Project Notes/Project Board.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Task Planning.md"
+                "file": "Mini Project Notes/Project Board.md"
               }
             }
           }
@@ -151,11 +151,11 @@
   },
   "active": "17df321af46ad5f5",
   "lastOpenFiles": [
+    "Mini Project Notes/UI flows.md",
+    "Task Planning.md",
     "Mini Project Notes/Project Board.md",
     "Frontend Requirements.md",
-    "Task Planning.md",
     "Presentation.md",
-    "Mini Project Notes/UI flows.md",
     "June 27.md",
     "UI Fixes.md",
     "Resources/Pasted image 20240626211937.png",
