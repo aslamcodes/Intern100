@@ -45,7 +45,7 @@
         <a class="cb-c-button" href="./addCab.html">Add Cab</a>
       </div>
       <div class="cb-c-controls">
-        <div class="cb-c-search">
+        <div class="cb-c-search" id="js-seach-cabs">
           <div class="cb-c-search__icon">
             <i class="fa fa-search"></i>
           </div>
@@ -81,8 +81,9 @@
       </div>
       <div class="cb-pg-mycabs__cabs"></div>
     </main>
+
     <script>
-      function loadCabs(cabs) {
+      window.loadCabs = function (cabs) {
         $(".cb-pg-mycabs__cabs").empty();
         cabs.forEach((cab) => {
           $(".cb-pg-mycabs__cabs").append(`
@@ -132,7 +133,7 @@
           </div>
               `);
         });
-      }
+      };
 
       $(window).click(function (e) {
         if (!$(e.target).is("#js-sort-cab")) {
@@ -233,24 +234,9 @@
         }
 
         $("#js-cab-update_location").click((e) => {
-          console.log("triggers");
           let cabId = $(e.target).data("id");
 
           alert(cabId);
-
-          // fetch(
-          //   `http://localhost:8000/api/Driver/update-cab-location/${cabId}`,
-          //   {
-          //     method: "PUT",
-          //     headers: {
-          //       Authorization: `Bearer ${token}`,
-          //     },
-          //   }
-          // )
-          //   .then((res) => res.json())
-          //   .then((data) => {
-          //     alert("Location updated");
-          //   });
         });
 
         fetch("http://localhost:8000/api/Driver/driver-cabs", {
@@ -260,10 +246,42 @@
         })
           .then((res) => res.json())
           .then((data) => {
-            loadCabs(data);
+            window.loadCabs(data);
           });
       });
     </script>
+
+    <script>
+      let timer;
+      let token = localStorage.getItem("token");
+      function debounce(func, ms) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func();
+        }, ms);
+      }
+
+      $("#js-seach-cabs").on("keyup", function () {
+        debounce(function () {
+          fetch("http://localhost:8000/api/Driver/driver-cabs", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              const cabs = data.filter((cab) =>
+                JSON.stringify(cab)
+                  .toLowerCase()
+                  .includes($("#js-seach-cabs input").val().toLowerCase())
+              );
+              console.log("cabs");
+              window.loadCabs(cabs);
+            });
+        }, 1000);
+      });
+    </script>
+
     <script src="/js/toastscript.js"></script>
     <script src="/js/navbarscript.js"></script>
     <script src="/js/utils.js"></script>

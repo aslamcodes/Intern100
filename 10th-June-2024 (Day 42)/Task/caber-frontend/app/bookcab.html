@@ -188,11 +188,8 @@
                 window.showToast("Cab not booked", "error", 3000);
               }
             })
-            .then((data) => {
-              console.log(data);
-            })
             .catch((err) => {
-              console.log(err);
+              window.showToast("Something went wrong", "error", 3000);
             });
         });
 
@@ -261,9 +258,7 @@
               .then((data) => {
                 loadCabs(data);
               })
-              .catch((err) => {
-                console.log(err);
-              });
+              .catch((err) => {});
           }
         });
       });
