@@ -246,6 +246,7 @@
         })
           .then((res) => res.json())
           .then((data) => {
+            window.cabs = data;
             window.loadCabs(data);
           });
       });
@@ -263,21 +264,12 @@
 
       $("#js-seach-cabs").on("keyup", function () {
         debounce(function () {
-          fetch("http://localhost:8000/api/Driver/driver-cabs", {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
-            .then((res) => res.json())
-            .then((data) => {
-              const cabs = data.filter((cab) =>
-                JSON.stringify(cab)
-                  .toLowerCase()
-                  .includes($("#js-seach-cabs input").val().toLowerCase())
-              );
-              console.log("cabs");
-              window.loadCabs(cabs);
-            });
+          const cabs = window.cabs.filter((cab) =>
+            JSON.stringify(cab)
+              .toLowerCase()
+              .includes($("#js-seach-cabs input").val().toLowerCase())
+          );
+          window.loadCabs(cabs);
         }, 1000);
       });
     </script>
