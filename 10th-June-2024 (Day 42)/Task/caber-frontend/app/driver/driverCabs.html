@@ -60,23 +60,27 @@
         </button>
       </div>
       <div class="cb-c-floating_menu hidden" id="filter_menu">
-        <div class="cb-c-floating_menu__option">
-          <i class="fa fa-search"></i>
-          <p>Search</p>
+        <div class="cb-c-floating_menu__option" id="js-filter-by-active">
+          <i class="fa-solid fa-circle"></i>
+          <p>Active Cabs</p>
         </div>
-        <div class="cb-c-floating_menu__option">
-          <i class="fa fa-search"></i>
-          <p>Search</p>
+        <div class="cb-c-floating_menu__option" id="js-filter-by-offline">
+          <i class="fa-regular fa-circle"></i>
+          <p>Offline Cabs</p>
+        </div>
+        <div class="cb-c-floating_menu__option" id="js-clear-filters">
+          <i class="fa-regular fa-circle-xmark"></i>
+          <p>Clear Filters</p>
         </div>
       </div>
       <div class="cb-c-floating_menu hidden" id="sort_menu">
-        <div class="cb-c-floating_menu__option">
-          <i class="fa fa-search"></i>
-          <p>Search</p>
+        <div class="cb-c-floating_menu__option" id="js-sort-by-cab">
+          <i class="fa-solid fa-car"></i>
+          <p>Sort by Cab</p>
         </div>
-        <div class="cb-c-floating_menu__option">
-          <i class="fa fa-search"></i>
-          <p>Search</p>
+        <div class="cb-c-floating_menu__option" id="js-sort-by-state">
+          <i class="fa-solid fa-circle"></i>
+          <p>Sort by State</p>
         </div>
       </div>
       <div class="cb-pg-mycabs__cabs"></div>
@@ -169,7 +173,7 @@
           })
             .then((res) => res.json())
             .then((data) => {
-              alert("Location updated");
+              window.showToast("Location updated successfully", "success");
             });
         }
 
@@ -233,11 +237,11 @@
           `);
         }
 
-        $("#js-cab-update_location").click((e) => {
-          let cabId = $(e.target).data("id");
+        // $("#js-cab-update_location").click((e) => {
+        //   let cabId = $(e.target).data("id");
 
-          alert(cabId);
-        });
+        //   alert(cabId);
+        // });
 
         fetch("http://localhost:8000/api/Driver/driver-cabs", {
           headers: {
@@ -253,6 +257,36 @@
     </script>
 
     <script>
+      // filters
+      $(document).on("click", ".cb-c-floating_menu__option", function (e) {
+        if (e.target.id === "js-sort-by-cab") {
+          window.sortByCab = true;
+          window.sortByState = false;
+        }
+
+        if (e.target.id === "js-sort-by-state") {
+          window.sortByCab = false;
+          window.sortByState = true;
+        }
+
+        if (e.target.id == "js-filter-by-active") {
+          window.filterBys["status"] = "Active";
+        }
+
+        if (e.target.id == "js-filter-by-offline") {
+          window.filterBys["status"] = "Offline";
+        }
+
+        if (e.target.id == "js-clear-filters") {
+          window.filterBys = {};
+        }
+
+        window.updateCabs();
+      });
+    </script>
+
+    <script>
+      // Search handling
       let timer;
       let token = localStorage.getItem("token");
       function debounce(func, ms) {
@@ -269,9 +303,44 @@
               .toLowerCase()
               .includes($("#js-seach-cabs input").val().toLowerCase())
           );
-          window.loadCabs(cabs);
+          window.searchQuery = $("#js-seach-cabs input").val();
+          window.updateCabs();
         }, 1000);
       });
+    </script>
+
+    <script>
+      let searchQuery = window.searchQuery || "";
+      let cabs = window.cabs || [];
+      let sortByCab = window.sortByCab || false;
+      let sortByState = window.sortByState || false;
+      let filterBys = window.filterBys || {};
+
+      window.updateCabs = function () {
+        let cabs = window.cabs;
+
+        if (searchQuery) {
+          cabs = cabs.filter((cab) =>
+            JSON.stringify(cab)
+              .toLowerCase()
+              .includes(searchQuery.toLowerCase())
+          );
+        }
+
+        if (sortByCab) {
+          cabs = cabs.sort((a, b) => a.make.localeCompare(b.make));
+        }
+
+        if (sortByState) {
+          cabs = cabs.sort((a, b) => a.status.localeCompare(b.status));
+        }
+
+        if (filterBys.status) {
+          cabs = cabs.filter((cab) => cab.status === filterBys.status);
+        }
+
+        window.loadCabs(cabs);
+      };
     </script>
 
     <script src="/js/toastscript.js"></script>

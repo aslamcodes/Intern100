@@ -99,7 +99,7 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 
 # Common
 - [ ] Proper error handling `!!`
-- [ ] Search, sort, filter functions `!!!`
+- [x] Search, sort, filter functions on my cabs page`!!!`
 - [ ] Sidebar not working fine `!!`
 - [ ] Cab's image for ride card and cab cards `!!`
 - [x] Ride Price not working as expected (Remove distance factor) `!!!`
