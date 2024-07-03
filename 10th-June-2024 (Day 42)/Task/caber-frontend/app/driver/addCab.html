@@ -24,6 +24,11 @@
       <form class="cb-c-form">
         <h1 class="cb-c-form__title">Add a Cab</h1>
         <div class="cb-c-form__group">
+          <label for="profile">Cab Profile</label>
+          <input type="file" id="profile" />
+          <p id="profileError" class="cb-ut-form-error"></p>
+        </div>
+        <div class="cb-c-form__group">
           <label for="registrationNumber">Registration Number</label>
           <input type="text" id="registrationNumber" />
           <p id="registrationNumberError" class="cb-ut-form-error"></p>
@@ -55,7 +60,7 @@
     </main>
     <script>
       $(document).ready(() => {
-        $(".cb-c-form").submit((e) => {
+        $(".cb-c-form").submit(async (e) => {
           e.preventDefault();
           let isFormValid = true;
           let registrationNumber = $("#registrationNumber").val();
@@ -63,11 +68,14 @@
           let make = $("#make").val();
           let color = $("#color").val();
           let seatingCapacity = $("#seatingCapacity").val();
+          let cabProfileImage = $("#profile")[0].files[0];
+
           let registrationNumberError = $("#registrationNumberError");
           let modelError = $("#modelError");
           let makeError = $("#makeError");
           let colorError = $("#colorError");
           let seatingCapacityError = $("#seatingCapacityError");
+          let profileError = $("#profileError");
 
           if (registrationNumber === "") {
             registrationNumberError.text("Registration Number is required");
@@ -109,7 +117,34 @@
             isFormValid = true;
           }
 
-          if (isFormValid) {
+          if (cabProfileImage === "") {
+            profileError.text("Profile Image is required");
+            isFormValid = false;
+          } else {
+            profileError.text("");
+            isFormValid = true;
+          }
+
+          let formData = new FormData();
+
+          formData.append("file", cabProfileImage);
+
+          if (!isFormValid) {
+            window.showToast("Please fill all the fields", "error", 2000);
+            return;
+          }
+
+          fetch("http://localhost:8000/api/Image", {
+            method: "POST",
+            body: formData,
+          }).then(async (res) => {
+            if (!res.ok) {
+              alert("Error uploading image");
+              return;
+            }
+
+            const { imageId } = await res.json();
+
             fetch("http://localhost:8000/api/Driver/register-cab", {
               method: "POST",
               headers: {
@@ -123,6 +158,7 @@
                 color,
                 seatingCapacity,
                 driverdId: localStorage.getItem("id"),
+                cabImageId: imageId,
               }),
             })
               .then(async (res) => ({
@@ -147,7 +183,7 @@
                 }
               })
               .catch((err) => {});
-          }
+          });
         });
       });
     </script>

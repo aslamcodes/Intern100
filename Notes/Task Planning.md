@@ -5,7 +5,7 @@
 	- [x] Need to have cabs
 		- [x] Need to update cab's location
 		- [x] Need to be verified by Admin
-		- [ ] *Admin Verification needs css*
+		- [x] *Admin Verification needs css*
 - [x] Passenger My Rides page with current rides that are 
 	- [x] `InProgress` with
 	- [x] `Cancel Ride`
@@ -13,13 +13,13 @@
 - [x] Fetch data for Rides
 ## Before Afternoon
 - [x] Some kind of functionality for passenger to `initiate` and `finish` ride
-- [ ] Profile Page (Update Profile)
+- [x] Profile Page (Update Profile)
 - [x] Admin Page to Approve
 	- [x] drivers and
-	- [ ] cabs
+	- [x] cabs
 ## Before Sleep
 - [x] Way to display validation errors & failures from backend calls 
-- [ ] Fix issues
+- [x] Fix issues
 
 ## What went wrong
 - $fixed w - 
@@ -94,17 +94,27 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [x] Add Cab Page 
 
 # Common
-- [ ] Proper error handling `!!` 
-- [ ] Search, sort, filter functions on `!!!`
+# Work
+- [ ] Proper error handling `!!!` 
+	- [ ] 500 Errors
+	- [ ] Response Handling
+- [x] Search, sort, filter functions on `!!!`
 	- [x] my cabs page
 	- [x] Admin Manage Drivers
-	- [ ] Admin Manage Cabs
 - [ ] Sidebar not working fine `!!`
-- [ ] Cab's image for ride card and cab cards `!!`
-- [ ] Driver Profile Page needs improvement `!!`
-- [ ] Cab Image upload and retrieval `!!`
+- [x] Cab's image for ride card and cab cards `!!`
+- [x] Cab Image upload and retrieval `!!`
 - [ ] Test the frontend
 - [ ] Fix github issues
+- [x] Password fields
 - [x] Ride Price not working as expected (Remove distance factor) `!!!`
 
+## Good to Have
+- [ ] Driver Profile Page needs improvement `!!`
+- [ ] Search, sort, filter functions on `!!!`
+	- [ ] Admin Manage Cabs
+
 This Completes Project
+
+# Add On
+- [ ] Seperate js files 😰

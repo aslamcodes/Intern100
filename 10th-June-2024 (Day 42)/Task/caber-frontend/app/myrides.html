@@ -157,9 +157,11 @@
           current.forEach((ride) => {
             const currentRideCard = `
               <div class="cb-c-ride-card">
-                <img
+               <img
                   class="cb-c-ride-card__image"
-                  src="/assets/ride_cab.png"
+                  src="http://localhost:8000/api/Image?id=${
+                    ride.cab.cabImageId
+                  }"
                   alt=""
                 />
                 <div class="cb-c-ride-card__ride_details">
