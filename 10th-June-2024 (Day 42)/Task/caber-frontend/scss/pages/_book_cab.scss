@@ -32,6 +32,10 @@
     max-height: 500px;
     justify-self: right;
     background-color: red;
+
+    @include respond(small) {
+      display: none;
+    }
   }
 
   & .no_cabs {

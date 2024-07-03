@@ -23,9 +23,17 @@
       <nav class="cb-c-navbar">
         <h1 class="cb-c-navbar__logo">Caber</h1>
         <ul class="cb-c-navbar__menu">
-          <li class="cb-c-navbar__menu__item">Book a ride</li>
-          <a href="myrides.html" class="cb-c-navbar__menu__item">My Rides</a>
-          <a href="user/profile.html" class="cb-c-navbar__menu__item"
+          <a class="cb-c-navbar__menu__item js-passenger-role" href="#"
+            >Book a ride</a
+          >
+          <a
+            href="myrides.html"
+            class="cb-c-navbar__menu__item js-passenger-role"
+            >My Rides</a
+          >
+          <a
+            href="user/profile.html"
+            class="cb-c-navbar__menu__item js-passenger-role"
             >Profile</a
           >
         </ul>
@@ -134,13 +142,19 @@
               seatingCapacity: rideReqObj.seating,
               passengerId: 1,
             }),
-          }).then((res) => {
-            if (res.status === 200) {
+          }).then(async (res) => {
+            if (res.ok) {
               window.showToast("Cab booked", "success", 1500, function () {
                 location.href = "/app/myrides.html";
               });
             } else {
-              window.showToast("Cab not booked", "error", 3000);
+              let error = await res.json();
+
+              window.showToast(
+                error.message || "Cab not booked",
+                "error",
+                3000
+              );
             }
           });
         }

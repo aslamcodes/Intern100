@@ -101,20 +101,27 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [x] Search, sort, filter functions on `!!!`
 	- [x] my cabs page
 	- [x] Admin Manage Drivers
-- [ ] Sidebar not working fine `!!`
+- [x] Sidebar not working fine `!!`
 - [x] Cab's image for ride card and cab cards `!!`
 - [x] Cab Image upload and retrieval `!!`
 - [ ] Test the frontend
+	- [x] Responsiveness
+	- [ ] Proper Navigation after actions
+	- [ ] What if rating is more than 5 after completion
+	- [ ] Sign in fails
 - [ ] Fix github issues
 - [x] Password fields
 - [x] Ride Price not working as expected (Remove distance factor) `!!!`
 
+This Completes Project (No more addition) with 
+- [ ] Reseeding for presentation
+
 ## Good to Have
 - [ ] Driver Profile Page needs improvement `!!`
+	- [ ] Driver Earnings
 - [ ] Search, sort, filter functions on `!!!`
 	- [ ] Admin Manage Cabs
 
-This Completes Project
 
 # Add On
 - [ ] Seperate js files 😰

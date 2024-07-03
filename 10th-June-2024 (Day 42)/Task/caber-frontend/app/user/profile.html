@@ -124,7 +124,7 @@
         });
     </script>
     <script>
-      // This script will handle the logout functionality and role based rendering
+      // This script will handle the logout functionality and role based rendering of navbar items
       if (!localStorage.getItem("token")) {
         window.location.href = "/app/login.html";
       }
@@ -141,8 +141,7 @@
         roleMap.keys().forEach((role) => {
           $(roleMap.get(role)).hide();
         });
-
-        $(roleMap.get(role)).show(100);
+        $(roleMap.get(role)).show();
       });
 
       $(document).on("click", function (e) {

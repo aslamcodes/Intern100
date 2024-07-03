@@ -24,13 +24,19 @@
       <nav class="cb-c-navbar">
         <h1 class="cb-c-navbar__logo">Caber</h1>
         <ul class="cb-c-navbar__menu">
-          <a class="cb-c-navbar__menu__item" href="/app/bookcab.html"
+          <a
+            class="cb-c-navbar__menu__item js-passenger-role"
+            href="/app/bookcab.html"
             >Book a ride</a
           >
-          <a class="cb-c-navbar__menu__item" href="/app/myrides.html"
+          <a
+            class="cb-c-navbar__menu__item js-passenger-role"
+            href="/app/myrides.html"
             >My Rides</a
           >
-          <a class="cb-c-navbar__menu__item" href="/app/user/profile.html"
+          <a
+            class="cb-c-navbar__menu__item js-passenger-role"
+            href="/app/user/profile.html"
             >Profile</a
           >
         </ul>
@@ -59,7 +65,7 @@
           <h3>Get a ride in minutes</h3>
           <p>Book a cab from the web browser, no app necessary</p>
         </div>
-        <button class="cb-c-button">Request a Ride</button>
+        <a class="cb-c-button" href="bookcab.html">Request a Ride</a>
       </div>
     </main>
 
@@ -132,7 +138,14 @@
           },
           body: JSON.stringify({ rideId, rating, comment, distance }),
         })
-          .then((res) => res.json())
+          .then(async (res) => {
+            if (res.ok) {
+              window.showToast("Ride completed", "success", 2000);
+            } else {
+              const data = await res.json();
+              console.log(data);
+            }
+          })
           .then((data) => {
             if (data.error) {
               alert(data.error);
@@ -215,7 +228,9 @@
               <div class="cb-c-ride-card">
                 <img
                   class="cb-c-ride-card__image"
-                  src="/assets/ride_cab.png"
+                  src="http://localhost:8000/api/Image?id=${
+                    ride.cab.cabImageId
+                  }"
                   alt=""
                 />
                 <div class="cb-c-ride-card__ride_details">
@@ -269,5 +284,6 @@
           });
       });
     </script>
+    <script src="/js/toastscript.js"></script>
   </body>
 </html>

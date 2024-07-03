@@ -23,13 +23,17 @@
       <nav class="cb-c-navbar">
         <h1 class="cb-c-navbar__logo">Caber</h1>
         <ul class="cb-c-navbar__menu">
-          <a class="cb-c-navbar__menu__item" href="#">Manage Cabs</a>
+          <a class="cb-c-navbar__menu__item js-admin-role" href="#"
+            >Manage Cabs</a
+          >
           <a
-            class="cb-c-navbar__menu__item"
+            class="cb-c-navbar__menu__item js-admin-role"
             href="/app/admin/driverRequests.html"
             >Manage Drivers</a
           >
-          <a class="cb-c-navbar__menu__item" href="/app/user/profile.html"
+          <a
+            class="cb-c-navbar__menu__item js-admin-role"
+            href="/app/user/profile.html"
             >Profile</a
           >
         </ul>
@@ -143,6 +147,7 @@
         });
       });
     </script>
+    <script src="/js/navbarscript.js"></script>
     <script src="/js/toastscript.js"></script>
     <script src="/js/utils.js"></script>
   </body>

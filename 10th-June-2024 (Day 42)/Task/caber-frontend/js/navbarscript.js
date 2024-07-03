@@ -33,6 +33,11 @@
     //   ) {
     //     menus[menu.textContent] = menu.getAttribute("href");
     //   } else if (
+    //     menu.classList.contains("js-admin-role") &&
+    //     currentRole === "Admin"
+    //   ) {
+    //     menus[menu.textContent] = menu.getAttribute("href");
+    //   } else if (
     //     !menu.classList.contains("js-driver-role") &&
     //     !menu.classList.contains("js-passenger-role")
     //   ) {

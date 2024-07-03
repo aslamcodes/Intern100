@@ -36,10 +36,9 @@
 .cb-c-controls {
   background-color: white;
   display: flex;
-  position: sticky;
-  top: 70px;
   gap: 1rem;
   justify-content: flex-end;
+  max-width: 95vw;
 
   &--start {
     justify-content: flex-start;
