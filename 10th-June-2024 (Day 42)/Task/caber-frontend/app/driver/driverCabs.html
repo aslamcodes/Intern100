@@ -40,47 +40,48 @@
       </nav>
     </header>
     <main class="cb-ut-main_wrapper cb-pg-mycabs">
-      <div class="cb-pg-mycabs__header">
-        <h2>My Cabs</h2>
-        <a class="cb-c-button" href="./addCab.html">Add Cab</a>
-      </div>
-      <div class="cb-c-controls">
-        <div class="cb-c-search" id="js-seach-cabs">
-          <div class="cb-c-search__icon">
-            <i class="fa fa-search"></i>
+      <div>
+        <div class="cb-pg-mycabs__header">
+          <h2>My Cabs</h2>
+          <a class="cb-c-button" href="./addCab.html">Add Cab</a>
+        </div>
+        <div class="cb-c-controls cb-c-controls--start">
+          <div class="cb-c-search" id="js-seach-cabs">
+            <div class="cb-c-search__icon">
+              <i class="fa fa-search"></i>
+            </div>
+            <input class="cb-c-search__input" placeholder="Search Cab" />
           </div>
-
-          <input class="cb-c-search__input" placeholder="Search Cab" />
+          <button class="cb-c-icon_button" id="js-filter-cab">
+            <i class="cb-c-icon_button__icon fa fa-filter"></i>
+          </button>
+          <button class="cb-c-icon_button" id="js-sort-cab">
+            <i class="cb-c-icon_button__icon fa fa-sort"></i>
+          </button>
         </div>
-        <button class="cb-c-icon_button" id="js-filter-cab">
-          <i class="cb-c-icon_button__icon fa fa-filter"></i>
-        </button>
-        <button class="cb-c-icon_button" id="js-sort-cab">
-          <i class="cb-c-icon_button__icon fa fa-sort"></i>
-        </button>
-      </div>
-      <div class="cb-c-floating_menu hidden" id="filter_menu">
-        <div class="cb-c-floating_menu__option" id="js-filter-by-active">
-          <i class="fa-solid fa-circle"></i>
-          <p>Active Cabs</p>
+        <div class="cb-c-floating_menu hidden" id="filter_menu">
+          <div class="cb-c-floating_menu__option" id="js-filter-by-active">
+            <i class="fa-solid fa-circle"></i>
+            <p>Active Cabs</p>
+          </div>
+          <div class="cb-c-floating_menu__option" id="js-filter-by-offline">
+            <i class="fa-regular fa-circle"></i>
+            <p>Offline Cabs</p>
+          </div>
+          <div class="cb-c-floating_menu__option" id="js-clear-filters">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <p>Clear Filters</p>
+          </div>
         </div>
-        <div class="cb-c-floating_menu__option" id="js-filter-by-offline">
-          <i class="fa-regular fa-circle"></i>
-          <p>Offline Cabs</p>
-        </div>
-        <div class="cb-c-floating_menu__option" id="js-clear-filters">
-          <i class="fa-regular fa-circle-xmark"></i>
-          <p>Clear Filters</p>
-        </div>
-      </div>
-      <div class="cb-c-floating_menu hidden" id="sort_menu">
-        <div class="cb-c-floating_menu__option" id="js-sort-by-cab">
-          <i class="fa-solid fa-car"></i>
-          <p>Sort by Cab</p>
-        </div>
-        <div class="cb-c-floating_menu__option" id="js-sort-by-state">
-          <i class="fa-solid fa-circle"></i>
-          <p>Sort by State</p>
+        <div class="cb-c-floating_menu hidden" id="sort_menu">
+          <div class="cb-c-floating_menu__option" id="js-sort-by-cab">
+            <i class="fa-solid fa-car"></i>
+            <p>Sort by Cab</p>
+          </div>
+          <div class="cb-c-floating_menu__option" id="js-sort-by-state">
+            <i class="fa-solid fa-circle"></i>
+            <p>Sort by State</p>
+          </div>
         </div>
       </div>
       <div class="cb-pg-mycabs__cabs"></div>
@@ -205,8 +206,8 @@
 
           let position = $("#js-sort-cab").position();
           $("#sort_menu").css({
-            top: position.top + 40,
-            left: position.left - 130,
+            top: position.top + 180,
+            left: position.left - 100,
           });
         }
 
@@ -216,8 +217,8 @@
           let position = $("#js-filter-cab").position();
 
           $("#filter_menu").css({
-            top: position.top + 40,
-            left: position.left - 130,
+            top: position.top + 180,
+            left: position.left - 100,
           });
         }
       });

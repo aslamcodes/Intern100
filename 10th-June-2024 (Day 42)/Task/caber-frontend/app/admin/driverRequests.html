@@ -41,12 +41,108 @@
       </nav>
     </header>
 
-    <main
-      id="js-driver-list"
-      class="cb-l-admin_drivers cb-ut-main_wrapper"
-    ></main>
+    <main class="cb-ut-main_wrapper">
+      <h1 style="margin-left: 20px">Drivers</h1>
+      <div
+        class="cb-c-controls cb-c-controls--start"
+        style="padding-left: 1.1rem"
+      >
+        <div class="cb-c-search" id="js-search-drivers">
+          <div class="cb-c-search__icon">
+            <i class="fa fa-search"></i>
+          </div>
+
+          <input class="cb-c-search__input" placeholder="Search in Drivers" />
+        </div>
+        <button class="cb-c-icon_button" id="js-filter-driver">
+          <i class="cb-c-icon_button__icon fa fa-filter"></i>
+        </button>
+        <button class="cb-c-icon_button" id="js-sort-driver">
+          <i class="cb-c-icon_button__icon fa fa-sort"></i>
+        </button>
+      </div>
+      <div class="cb-c-floating_menu hidden" id="filter_menu">
+        <!-- <div class="cb-c-floating_menu__option" id="js-filter-by-active">
+          <i class="fa-solid fa-circle"></i>
+          <p>Active Cabs</p>
+        </div>
+        <div class="cb-c-floating_menu__option" id="js-filter-by-offline">
+          <i class="fa-regular fa-circle"></i>
+          <p>Offline Cabs</p>
+        </div>
+        <div class="cb-c-floating_menu__option" id="js-clear-filters">
+          <i class="fa-regular fa-circle-xmark"></i>
+          <p>Clear Filters</p>
+        </div> -->
+        <!-- 1. Filter by verification
+         -->
+        <div class="cb-c-floating_menu__option" id="js-filter-by-verified">
+          <i class="fa-solid fa-check"></i>
+          <p>Verified Drivers</p>
+        </div>
+        <div class="cb-c-floating_menu__option" id="js-filter-by-non-verified">
+          <i class="fa-regular fa-circle"></i>
+          <p>Non-Verified Drivers</p>
+        </div>
+        <div class="cb-c-floating_menu__option" id="js-clear-filters">
+          <i class="fa-regular fa-circle-xmark"></i>
+          <p>Clear Filters</p>
+        </div>
+      </div>
+      <div class="cb-c-floating_menu hidden" id="sort_menu">
+        <div class="cb-c-floating_menu__option" id="js-sort-by-name">
+          <i class="fa-solid fa-sort-alpha-up"></i>
+          <p>Sort by Name</p>
+        </div>
+        <div class="cb-c-floating_menu__option" id="js-sort-by-name-desc">
+          <i class="fa-solid fa-sort-alpha-down"></i>
+          <p>Sort by Name Desc</p>
+        </div>
+        <div class="cb-c-floating_menu__option" id="js-clear-sort">
+          <i class="fa-regular fa-circle-xmark"></i>
+          <p>Clear Sort</p>
+        </div>
+      </div>
+      <section class="cb-l-admin_drivers" id="js-driver-list"></section>
+    </main>
 
     <script>
+      window.loadDrivers = function (drivers) {
+        $("#js-driver-list").empty();
+        drivers.forEach((element) => {
+          $("#js-driver-list").append(`<div class="driver-card">
+                                              <img src="http://localhost:8000/api/Image/${
+                                                element.user.userImageId
+                                              }" alt="" class="driver-card__image" />
+                                              <h1 class="driver-card__name">${
+                                                element.user.firstName
+                                              }</h1>
+                                              <p class="driver-card__email">Email: ${
+                                                element.user.email
+                                              }</p>
+                                              <p class="driver-card__phone">Phone: ${
+                                                element.user.phone
+                                              }</p>
+                                              <p class="driver-card__license">
+                                                License number ${
+                                                  element.licenseNumber
+                                                }
+                                              </p>
+                                              <p>
+                                                Expires at ${
+                                                  element.licenseExpiryDate
+                                                }
+                                              </p>
+
+                                                ${
+                                                  element.isVerified
+                                                    ? "<p class='driver-card__verified'>Driver is Verified</p>"
+                                                    : `<button class="cb-c-button" id="js-${element.driverId}">Verify</button>`
+                                                }
+                                             </div>`);
+        });
+      };
+
       $(document).ready(() => {
         let token = localStorage.getItem("token");
 
@@ -61,34 +157,16 @@
         })
           .then((res) => res.json())
           .then((data) => {
-            data.forEach((element) => {
-              $("#js-driver-list").append(`<div class="driver-card">
-        <img src="http://localhost:8000/api/Image/${
-          element.user.userImageId
-        }" alt="" class="driver-card__image" />
-        <h1 class="driver-card__name">${element.user.firstName}</h1>
-        <p class="driver-card__email">Email: ${element.user.email}</p>
-        <p class="driver-card__phone">Phone: ${element.user.phone}</p>
-        <p class="driver-card__license">
-          License number ${element.licenseNumber} 
-        </p>
-        <p>
-           Expires at ${element.licenseExpiryDate}
-        </p>
-       
-        ${
-          element.isVerified
-            ? "<p class='driver-card__verified'>Driver is Verified</p>"
-            : `<button class="cb-c-button" id="js-${element.driverId}">Verify</button>`
-        }
-       
-      </div>
-      `);
-            });
+            window.drivers = data;
+            window.loadDrivers(data);
           });
       });
 
       $(document).on("click", "button", function (e) {
+        let pattern = new RegExp("^js-[0-9]+$");
+
+        if (!pattern.test(e.target.id)) return;
+
         let driverId = e.target.id.split("-")[1];
         let token = localStorage.getItem("token");
         alert(driverId);
@@ -108,6 +186,100 @@
         });
       });
     </script>
+
+    <script>
+      $("#js-filter-driver").on("click", function () {
+        $("#filter_menu").toggleClass("hidden");
+
+        let position = $("#js-filter-driver").position();
+
+        $("#filter_menu").css({
+          top: position.top + 180,
+          left: position.left - 180,
+        });
+      });
+
+      $("#js-sort-driver").on("click", function () {
+        $("#sort_menu").toggleClass("hidden");
+
+        let position = $("#js-sort-driver").position();
+
+        $("#sort_menu").css({
+          top: position.top + 180,
+          left: position.left - 180,
+        });
+      });
+
+      $(window).click(function (e) {
+        if (!$(e.target).is("#js-sort-driver")) {
+          $("#sort_menu").addClass("hidden");
+        }
+
+        if (!$(e.target).is("#js-filter-driver")) {
+          $("#filter_menu").addClass("hidden");
+        }
+      });
+
+      $("#js-search-drivers input").on("keyup", function () {
+        window.searchQuery = $(this).val();
+        updateDrivers();
+      });
+    </script>
+
+    <script>
+      // filters and sorting
+      $(document).on("click", ".cb-c-floating_menu__option", function (e) {
+        let id = e.target.id;
+
+        if (id === "js-filter-by-verified") {
+          window.filters = { isVerified: true };
+        } else if (id === "js-filter-by-non-verified") {
+          window.filters = { isVerified: false };
+        } else if (id === "js-clear-filters") {
+          window.filters = {};
+        } else if (id === "js-sort-by-name") {
+          window.drivers.sort((a, b) => {
+            return a.user.firstName.localeCompare(b.user.firstName);
+          });
+        } else if (id === "js-sort-by-name-desc") {
+          window.drivers.sort((a, b) => {
+            return b.user.firstName.localeCompare(a.user.firstName);
+          });
+        } else if (id === "js-clear-sort") {
+          window.drivers = window.drivers.sort((a, b) => {
+            return a.driverId - b.driverId;
+          });
+        }
+
+        window.updateDrivers();
+      });
+    </script>
+
+    <script>
+      function updateDrivers() {
+        let search = window.searchQuery || "";
+        let filter = window.filters || {};
+
+        if (search) {
+          window.loadDrivers(
+            window.drivers.filter((driver) => {
+              return JSON.stringify(driver).includes(search);
+            })
+          );
+        }
+
+        if (filter) {
+          window.loadDrivers(
+            window.drivers.filter((driver) => {
+              return Object.keys(filter).every((key) => {
+                return driver[key] === filter[key];
+              });
+            })
+          );
+        }
+      }
+    </script>
+    <script src="/js/utils.js"></script>
     <script src="/js/navbarscript.js"></script>
     <script src="/js/toastscript.js"></script>
   </body>

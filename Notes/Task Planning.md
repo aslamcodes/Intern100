@@ -36,7 +36,6 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 ## Migrated Tasks
 - [x] *Admin Verification needs css*
 - [x] Way to display validation errors & failures from backend calls 
-- [ ] Fix github issues
 - [x] Profile Page
 	- [x] (Update Profile)
 - [x] *Admin Verification needs css*
@@ -57,10 +56,8 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [x] Fix Main flow's UI
 - [x] Cab Rating
 - [x] Upload user avatars, cab Images
-	- [ ] Not everywhere
 - [x] Make every navbar sidebar-able
 - [x] Setup Icons
-- [ ] Test the frontend
 
 
 
@@ -78,28 +75,36 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [x] Everything in the Crictical
 
 # 30th June
-- [ ] Sidebar not working fine `!!`
+- [x] Sidebar not working fine `!!`
 ## Driver
 - [x] My Cabs Page and Ride Request page `!!`
 	- [x] Data richness 
 	- [x] Sort, Filter, Search
-- [ ] Driver Profile Page needs improvement `!!`
-- [ ] Cab Image upload and retrieval `!!`
+
 ## Admin
 - [x] Cab Verification Page and Endpoint `!!!`
-	- [ ] Data richness (profile)
+	- [x] Data richness (profile)
 	- [x] Search, sort, filtering
 - [x] navigation flow fix for admin `!!!` 
 - [x] Manage driver page `!!` 
-	- [ ] Data richness `!`
+	- [x] Data richness `!`
 	- [x] Search, sort, filtering `!!`
 ## Profile Page
-- [ ] Data Richeness `!`
+- [x] Data Richeness `!`
 - [x] Add Cab Page 
 
 # Common
-- [ ] Proper error handling `!!`
-- [x] Search, sort, filter functions on my cabs page`!!!`
+- [ ] Proper error handling `!!` 
+- [ ] Search, sort, filter functions on `!!!`
+	- [x] my cabs page
+	- [x] Admin Manage Drivers
+	- [ ] Admin Manage Cabs
 - [ ] Sidebar not working fine `!!`
 - [ ] Cab's image for ride card and cab cards `!!`
+- [ ] Driver Profile Page needs improvement `!!`
+- [ ] Cab Image upload and retrieval `!!`
+- [ ] Test the frontend
+- [ ] Fix github issues
 - [x] Ride Price not working as expected (Remove distance factor) `!!!`
+
+This Completes Project
