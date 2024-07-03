@@ -1,4 +1,4 @@
-@use "abstracts/variables" as *;
+@use "abstracts" as *;
 
 .cb-c-icon_button {
   padding: 1rem;
@@ -10,6 +10,12 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
+
+  @include respond(small) {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    min-width: 35px;
+  }
   &:hover {
     color: #000;
   }
