@@ -105,7 +105,13 @@
             "Content-Type": "application/json",
           },
         })
-          .then((res) => res.json())
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              return Promise.reject("Cannot fetch rides");
+            }
+          })
           .then((data) => {
             var requestedRides = data.filter(
               (ride) => ride.status === "Requested"
@@ -178,9 +184,9 @@
             }),
           }).then((res) => {
             if (res.status === 200) {
-              alert("Ride accepted");
+              window.showToast("Ride accepted", "success", 2000);
             } else {
-              alert("Ride not accepted");
+              window.showToast("Could not accept ride", "error", 2000);
             }
           });
         }
@@ -201,14 +207,15 @@
             }),
           }).then((res) => {
             if (res.status === 200) {
-              alert("Ride Cancelled");
+              window.showToast("Ride declined", "success", 2000);
             } else {
-              alert("Could not cancel ride");
+              window.showToast("Could not decline ride", "error", 2000);
             }
           });
         }
       });
     </script>
     <script src="/js/navbarscript.js"></script>
+    <script src="/js/toastscript.js"></script>
   </body>
 </html>

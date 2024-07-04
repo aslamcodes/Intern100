@@ -176,9 +176,18 @@
               location,
             }),
           })
-            .then((res) => res.json())
+            .then((res) => {
+              if (res.ok) {
+                return res.json();
+              } else {
+                return Promise.reject("Failed to update location");
+              }
+            })
             .then((data) => {
               window.showToast("Location updated successfully", "success");
+            })
+            .catch((err) => {
+              window.showToast(err, "error", 2000);
             });
         }
 
@@ -196,13 +205,17 @@
               cabId,
               location,
             }),
-          }).then((res) => {
-            if (res.ok) {
-              window.showToast("Cab is currently active", "success");
-            } else {
-              window.showToast("Failed to activate cab", 0, "danger");
-            }
-          });
+          })
+            .then((res) => {
+              if (res.ok) {
+                window.showToast("Cab is currently active", "success");
+              } else {
+                return Promise.reject("Failed to activate cab");
+              }
+            })
+            .catch((err) => {
+              window.showToast(err, "error", 2000);
+            });
         }
 
         if (e.target.id === "js-sort-cab") {
@@ -253,10 +266,18 @@
             Authorization: `Bearer ${token}`,
           },
         })
-          .then((res) => res.json())
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            }
+            return Promise.reject("Failed to fetch cabs");
+          })
           .then((data) => {
             window.cabs = data;
             window.loadCabs(data);
+          })
+          .catch((err) => {
+            window.showToast(err, "error", 2000);
           });
       });
     </script>

@@ -66,7 +66,13 @@
             Authorization: `Bearer ${token}`,
           },
         })
-          .then((res) => res.json())
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              return Promise.reject("Could not fetch cabs");
+            }
+          })
           .then((data) => {
             let cabGrid = $(".cb-pg-admin_cabs__cab_grid");
 
@@ -97,7 +103,7 @@
             </div>
 
             <div class="cb-c-cab_card__entry">
-              <i class="fa-solid fa-id-card"></i>          
+              <i class="fa-solid fa-id-card"></i>
               <p class="cb-c-cab_card__location">Owned by ${cab.driverId}</p>
             </div>
 
@@ -107,13 +113,16 @@
                 ? ""
                 : `<button class="cb-c-cab_card__book" id="js-cab-verify" data-id="${cab.id}">Verify</button>`
             }
-             
+
               </div>
           </div>
               `;
 
               cabGrid.append(cabCard);
             });
+          })
+          .catch((err) => {
+            window.showToast(err, "error", 2000);
           });
       });
     </script>
@@ -139,10 +148,12 @@
                 if (res.ok) {
                   window.showToast("Cab verified", "success", 2000);
                 } else {
-                  window.showToast("Could not verify cab", "error", 2000);
+                  return Promise.reject("Could not verify cab");
                 }
               })
-              .then((data) => {});
+              .catch((err) => {
+                window.showToast(err, "error", 2000);
+              });
           }
         });
       });

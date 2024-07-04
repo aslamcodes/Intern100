@@ -60,7 +60,7 @@
         </div>
         <div class="cb-c-form__group">
           <label for="seating">Seating</label>
-          <input type="number" id="seating" />
+          <input type="number" id="seating" placeholder="1" />
           <p id="seatingError" class="cb-ut-form-error"></p>
         </div>
         <div class="cb-c-form__action">
@@ -83,6 +83,43 @@
     </main>
     <script src="/js/toastscript.js"></script>
     <script>
+      function validateForm() {
+        let isFormValid = true;
+
+        let from = $("#from").val();
+        let to = $("#to").val();
+        let seating = $("#seating").val();
+
+        let fromError = $("#fromError");
+        let toError = $("#toError");
+        let seatingError = $("#seatingError");
+
+        if (from === "") {
+          fromError.text("From is required");
+          isFormValid = false;
+        } else {
+          fromError.text("");
+          isFormValid = true;
+        }
+
+        if (to === "") {
+          toError.text("To is required");
+          isFormValid = false;
+        } else {
+          toError.text("");
+          isFormValid = true;
+        }
+
+        if (seating === "") {
+          seatingError.text("Seating is required");
+          isFormValid = false;
+        } else {
+          seatingError.text("");
+          isFormValid = true;
+        }
+
+        return isFormValid;
+      }
       function loadCabs(cabs) {
         const cabGrid = $(".cb-l-cab_grid");
 
@@ -178,6 +215,11 @@
             window.location.href = "login.html";
           }
 
+          if (!validateForm()) {
+            window.showToast("Please fill all the fields", "error", 2000);
+            return;
+          }
+
           fetch("http://localhost:8000/api/Passenger/book-any-cab", {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -190,16 +232,17 @@
               dropoffLocation: to,
               // filler
               passengerId: 999999,
-              seatingCapacity: seating,
+              seatingCapacity: seating || 1,
             }),
           })
-            .then((res) => {
+            .then(async (res) => {
+              const data = await res.json();
               if (res.ok) {
                 window.showToast("Cab booked", "success", 1500, function () {
                   location.href = "/app/myrides.html";
                 });
               } else {
-                window.showToast("Cab not booked", "error", 3000);
+                window.showToast(data.message, "error", 3000);
               }
             })
             .catch((err) => {

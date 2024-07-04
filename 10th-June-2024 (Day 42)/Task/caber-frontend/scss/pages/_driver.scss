@@ -37,6 +37,11 @@
   gap: 2rem;
   max-width: 40vw;
   margin: 5vw auto;
+
+  @include respond(medium) {
+    max-width: 90vw;
+    margin: auto;
+  }
 }
 
 .cb-l-ride_requests {
@@ -44,9 +49,4 @@
   width: 100%;
   gap: 0.5rem;
   flex-direction: column;
-
-  @include respond(medium) {
-    max-width: 90vw;
-    margin: auto;
-  }
 }

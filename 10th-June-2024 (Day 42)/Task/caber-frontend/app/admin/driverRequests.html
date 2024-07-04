@@ -161,10 +161,19 @@
             Authorization: `Bearer ${token}`,
           },
         })
-          .then((res) => res.json())
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              return Promise.reject("Problem loading drivers");
+            }
+          })
           .then((data) => {
             window.drivers = data;
             window.loadDrivers(data);
+          })
+          .catch((err) => {
+            window.showToast(err, "error", 2000);
           });
       });
 
@@ -188,6 +197,8 @@
             window.showToast("Driver verified", "success", 1500, function () {
               location.reload();
             });
+          } else {
+            window.showToast("Driver not verified", "error", 1500);
           }
         });
       });

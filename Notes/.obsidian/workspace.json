@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Task Planning.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 301.5,
+    "collapsed": true
   },
   "right": {
     "id": "438766c04ab12454",

@@ -248,7 +248,7 @@
               if (res.ok) {
                 return res.json();
               } else {
-                throw new Error("Failed to update profile image");
+                return Promise.reject("Failed to update profile image");
               }
             })
             .then((data) => {
@@ -283,15 +283,19 @@
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
             body: JSON.stringify(requestObj),
-          }).then((res) => {
-            if (res.status === 200) {
-              window.toggleModal({ content: "" });
-              window.showToast("Updated", "success", 3000);
-            } else {
-              window.showToast("Failed to update", "error", 3000);
-              window.toggleModal({ content: "" });
-            }
-          });
+          })
+            .then((res) => {
+              if (res.ok) {
+                window.toggleModal({ content: "" });
+                window.showToast("Updated", "success", 3000);
+              } else {
+                window.toggleModal({ content: "" });
+                return Promise.reject("Failed to update");
+              }
+            })
+            .catch((err) => {
+              window.showToast(err, "error", 3000);
+            });
         }
       });
     </script>
@@ -356,7 +360,12 @@
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
-          .then((res) => res.json())
+          .then((res) => {
+            if (res.ok) {
+              res.json();
+            }
+            return Promise.reject("Failed to fetch ride history");
+          })
           .then((data) => {
             let rideHistory = [];
 
@@ -369,6 +378,9 @@
             });
 
             loadRides(rideHistory);
+          })
+          .catch((err) => {
+            window.showToast(err, "error", 3000);
           });
       });
     </script>

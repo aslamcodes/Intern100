@@ -89,10 +89,11 @@
           .then((res) => res.json())
           .then((data) => {
             if (data.error) {
-              alert(data.error);
+              window.showToast(data.error);
             } else {
-              alert("Ride initiated");
-              location.reload();
+              window.showToast("Ride initiated", "success", 2000, () => {
+                location.reload();
+              });
             }
           });
       });
@@ -113,10 +114,11 @@
           .then((res) => res.json())
           .then((data) => {
             if (data.error) {
-              alert(data.error);
+              window.showToast(data.error, "error", 2000);
             } else {
-              alert("Ride cancelled");
-              location.reload();
+              window.showToast("Ride cancelled", "info", 2000, () => {
+                location.reload();
+              });
             }
           });
       });
