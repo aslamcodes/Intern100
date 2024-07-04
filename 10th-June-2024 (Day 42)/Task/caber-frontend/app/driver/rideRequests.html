@@ -48,11 +48,11 @@
       </nav>
     </header>
     <main class="cb-ut-main_wrapper">
-      <section id="current-ride" class="cb-l-ride_requests"></section>
-
-      <section id="requested-rides" class="cb-l-ride_requests"></section>
-
-      <section id="previous-rides" class="cb-l-ride_requests"></section>
+      <div class="cb-l-request_container">
+        <section id="current-ride" class="cb-l-ride_requests"></section>
+        <section id="requested-rides" class="cb-l-ride_requests"></section>
+        <section id="previous-rides" class="cb-l-ride_requests"></section>
+      </div>
     </main>
     <script>
       let url = "http://localhost:8000/api/Driver/driver-rides";

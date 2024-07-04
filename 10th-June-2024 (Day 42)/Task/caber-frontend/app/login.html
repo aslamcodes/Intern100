@@ -77,7 +77,10 @@
                 password,
               }),
             })
-              .then((res) => res.json())
+              .then((res) => {
+                if (res.ok) return res.json();
+                else throw new Error("Invalid email or password");
+              })
               .then((data) => {
                 if (data.status === 400 || data.statusCode === 401) {
                   return;
@@ -94,10 +97,13 @@
                   }
                 }
               })
-              .catch((err) => {});
+              .catch((err) => {
+                window.showToast("Invalid email or password", "error", 3000);
+              });
           }
         });
       });
     </script>
+    <script src="/js/toastscript.js"></script>
   </body>
 </html>

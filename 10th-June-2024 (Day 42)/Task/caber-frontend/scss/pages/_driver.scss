@@ -1,3 +1,5 @@
+@use "abstracts" as *;
+
 .cb-pg-mycabs {
   display: flex;
   flex-direction: column;
@@ -28,10 +30,23 @@
   }
 }
 
-.cb-l-ride_requests {
+.cb-l-request_container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  max-width: 40vw;
+  margin: 5vw auto;
+}
 
-  gap: 1rem;
-  margin: 5vw 5vw;
+.cb-l-ride_requests {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  flex-direction: column;
+
+  @include respond(medium) {
+    max-width: 90vw;
+    margin: auto;
+  }
 }
