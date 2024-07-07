@@ -72,6 +72,9 @@
     &__entry {
       border-bottom: 1px solid #ccc;
       padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
     &__entry:last-child {

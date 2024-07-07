@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "logging",
+                "query": "fixe",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,12 +66,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 301.5,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "438766c04ab12454",
@@ -150,7 +150,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "17df321af46ad5f5",
+  "active": "69bc7c6d8b5030fc",
   "lastOpenFiles": [
     "Frontend Requirements.md",
     "Task Planning.md",

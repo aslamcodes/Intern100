@@ -95,7 +95,7 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 
 # Common
 # Work
-- [ ] Proper error handling `!!!` 
+- [x] Proper error handling `!!!` 
 	- [x] Response Handling
 - [x] Search, sort, filter functions on `!!!`
 	- [x] my cabs page
@@ -113,13 +113,13 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 
 This Completes Project (No more addition) with 
 - [ ] Reseeding for presentation
-- [ ] Validation Error
-	- [ ] What if rating is more than 5 after completion
-	- [ ] Generic Error
+- [x] Validation Error
+	- [x] What if rating is more than 5 after completion
+	- [x] Generic Error
 
 ## Good to Have
-- [ ] Driver Profile Page needs improvement `!!`
-	- [ ] Driver Earnings
+- [x] Driver Profile Page needs improvement `!!`
+	- [x] Driver Earnings
 - [ ] Search, sort, filter functions on `!!!`
 	- [ ] Admin Manage Cabs
 

@@ -77,11 +77,144 @@
         </button>
         <section class="cb-l-user_profile__section">
           <p class="cb-l-user_profile__section__title">General</p>
-          <div class="cb-l-user_profile__section__entries"></div>
+          <div
+            class="cb-l-user_profile__section__entries"
+            id="js-general-section"
+          ></div>
         </section>
+        <section
+          class="cb-l-user_profile__section"
+          id="js-earning-section"
+        ></section>
         <section id="cb-js-ride-history-group"></section>
       </div>
     </main>
+    <script>
+      // load Driver's earning & rides
+      function loadDriverEarning() {
+        fetch("http://localhost:8000/api/Driver/driver-earnings", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            }
+            return Promise.reject("Failed to fetch earnings");
+          })
+          .then(({ earnings }) => {
+            const allSections = $("#js-earning-section");
+
+            const earningsSection = `
+              
+                <p class="cb-l-user_profile__section__title">Earnings</p>
+                <div
+                  class="cb-l-user_profile__section__entries"
+                  id="js-earning-section"
+                ></div>
+            `;
+
+            allSections.append(earningsSection);
+
+            if (!earnings) {
+              $("#js-earning-section").append(`
+              <div class="cb-c-alert
+              cb-c-alert--info">
+                <p>No earnings</p>
+              </div>
+            `);
+            } else {
+              const earningCard = `
+                <div class="cb-l-user_profile__section__entry">
+                  <i class="fa-solid fa-wallet"></i>
+                  <p>${earnings}</p>
+                </div>
+              `;
+              $("#js-earning-section").append(earningCard);
+            }
+          })
+          .catch((err) => {
+            window.showToast(err, "error", 3000);
+          });
+      }
+
+      function loadDriverRides() {
+        fetch("http://localhost:8000/api/Driver/driver-rides", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            }
+            return Promise.reject("Failed to fetch rides");
+          })
+          .then((rides) => {
+            const rideHistoryGroup = $("#cb-js-ride-history-group");
+            rideHistoryGroup.prepend(
+              '<div><p class="cb-l-user_profile__section__title">Ride History</p></div>'
+            );
+            if (rides.length === 0) {
+              rideHistoryGroup.prepend(`
+              <div class="cb-c-alert cb-c-alert--info">
+                <p>No ride history</p>
+              </div>
+            `);
+            } else {
+              rides
+                .filter((ride) =>
+                  ["Completed", "CancelledByDriver", "Cancelled"].includes(
+                    ride.status
+                  )
+                )
+                .forEach((ride) => {
+                  const historyRideCard = `
+                <div class="cb-c-ride-card">
+                  <img
+                    class="cb-c-ride-card__image"
+                    src="http://localhost:8000/api/Image?id=${
+                      ride.cab.cabImageId
+                    }"
+                    alt=""
+                  />
+                  <div class="cb-c-ride-card__ride_details">
+                    <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
+                    ride.cab.model
+                  }</h2>
+                    <p class="cb-c-ride-card__ride-date">${new Date(
+                      ride.startTime
+                    ).toLocaleDateString("en-IN", {
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })}</p>
+                    <p class="cb-c-ride-card__status">${ride.status}</p>
+                  </div>
+                  <div class="cb-c-ride-card__price_container">
+                    <p class="cb-c-ride-card__price">${
+                      ride.status === "Completed" ? ride.fare + "$" : "---$"
+                    }</p>
+                  </div>
+                </div>
+              `;
+                  rideHistoryGroup.append(historyRideCard);
+                });
+            }
+          })
+          .catch((err) => {
+            window.showToast(err, "error", 3000);
+          });
+      }
+
+      if (localStorage.getItem("role") === "Driver") {
+        loadDriverEarning();
+        loadDriverRides();
+      }
+    </script>
     <script>
       // This script will Load user profile
       fetch("http://localhost:8000/api/User/profile", {
@@ -93,7 +226,7 @@
         .then((res) => res.json())
         .then((user) => {
           const profileCard = $(".cb-l-user_profile__card");
-          const generalSection = $(".cb-l-user_profile__section__entries");
+          const generalSection = $("#js-general-section");
           profileCard.prepend(`
               <img
                 class="cb-l-user_profile__card__image"
@@ -362,7 +495,7 @@
         })
           .then((res) => {
             if (res.ok) {
-              res.json();
+              return res.json();
             }
             return Promise.reject("Failed to fetch ride history");
           })

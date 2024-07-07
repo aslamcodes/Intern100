@@ -211,8 +211,8 @@
         let position = $("#js-filter-driver").position();
 
         $("#filter_menu").css({
-          top: position.top + 180,
-          left: position.left - 180,
+          top: position.top,
+          left: position.left,
         });
       });
 
@@ -220,10 +220,12 @@
         $("#sort_menu").toggleClass("hidden");
 
         let position = $("#js-sort-driver").position();
+        let height = $("#js-sort-driver").height();
+        let width = $("#js-sort-driver").width();
 
         $("#sort_menu").css({
-          top: position.top + 180,
-          left: position.left - 180,
+          top: position.top,
+          left: position.left,
         });
       });
 

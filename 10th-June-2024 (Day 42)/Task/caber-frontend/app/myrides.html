@@ -141,20 +141,15 @@
           body: JSON.stringify({ rideId, rating, comment, distance }),
         })
           .then(async (res) => {
+            const { message } = await res.json();
             if (res.ok) {
               window.showToast("Ride completed", "success", 2000);
             } else {
-              const data = await res.json();
-              console.log(data);
+              return Promise.reject(message);
             }
           })
-          .then((data) => {
-            if (data.error) {
-              alert(data.error);
-            } else {
-              alert("Ride completed");
-              location.reload();
-            }
+          .catch((err) => {
+            window.showToast(err, "error", 2000);
           });
       });
 
