@@ -48,36 +48,84 @@
     <main class="cb-ut-main_wrapper">
       <section class="cb-pg-admin_cabs">
         <h1>Cabs</h1>
+        <div class="cb-c-controls cb-c-controls--start">
+          <div class="cb-c-search">
+            <div class="cb-c-search__icon">
+              <i class="fa fa-search"></i>
+            </div>
+
+            <input
+              class="cb-c-search__input"
+              id="js-search-cabs"
+              placeholder="Search in Cabs"
+            />
+          </div>
+          <button class="cb-c-icon_button" id="js-filter-cabs">
+            <i class="cb-c-icon_button__icon fa fa-filter"></i>
+          </button>
+          <button class="cb-c-icon_button" id="js-sort-cabs">
+            <i class="cb-c-icon_button__icon fa fa-sort"></i>
+          </button>
+        </div>
+        <div class="cb-c-floating_menu hidden" id="filter_menu">
+          <!-- <div class="cb-c-floating_menu__option" id="js-filter-by-active">
+        <i class="fa-solid fa-circle"></i>
+        <p>Active Cabs</p>
+      </div>
+      <div class="cb-c-floating_menu__option" id="js-filter-by-offline">
+        <i class="fa-regular fa-circle"></i>
+        <p>Offline Cabs</p>
+      </div>
+      <div class="cb-c-floating_menu__option" id="js-clear-filters">
+        <i class="fa-regular fa-circle-xmark"></i>
+        <p>Clear Filters</p>
+      </div> -->
+          <!-- 1. Filter by verification
+       -->
+          <div class="cb-c-floating_menu__option" id="js-filter-by-verified">
+            <i class="fa-solid fa-check"></i>
+            <p>Verified Cabs</p>
+          </div>
+          <div
+            class="cb-c-floating_menu__option"
+            id="js-filter-by-non-verified"
+          >
+            <i class="fa-regular fa-circle"></i>
+            <p>Non-Verified Cabs</p>
+          </div>
+          <div class="cb-c-floating_menu__option" id="js-clear-filters">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <p>Clear Filters</p>
+          </div>
+        </div>
+        <div class="cb-c-floating_menu hidden" id="sort_menu">
+          <div class="cb-c-floating_menu__option" id="js-sort-by-name">
+            <i class="fa-solid fa-sort-alpha-up"></i>
+            <p>Sort by Name</p>
+          </div>
+          <div class="cb-c-floating_menu__option" id="js-sort-by-name-desc">
+            <i class="fa-solid fa-sort-alpha-down"></i>
+            <p>Sort by Name Desc</p>
+          </div>
+          <div class="cb-c-floating_menu__option" id="js-clear-sort">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <p>Clear Sort</p>
+          </div>
+        </div>
         <div class="cb-pg-admin_cabs__cab_grid"></div>
       </section>
     </main>
     <footer></footer>
     <script>
       // Load Cabs
-      $(document).ready(() => {
-        let token = localStorage.getItem("token");
 
-        if (!token) {
-          window.location.href = "/app/login.html";
-        }
+      window.loadCabs = (cabs) => {
+        let cabGrid = $(".cb-pg-admin_cabs__cab_grid");
 
-        fetch("http://localhost:8000/api/Admin/get-cabs", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-          .then((res) => {
-            if (res.ok) {
-              return res.json();
-            } else {
-              return Promise.reject("Could not fetch cabs");
-            }
-          })
-          .then((data) => {
-            let cabGrid = $(".cb-pg-admin_cabs__cab_grid");
+        cabGrid.empty();
 
-            data.forEach((cab) => {
-              let cabCard = `
+        cabs.forEach((cab) => {
+          let cabCard = `
                <div class="cb-c-cab_card">
                  <img
               src="http://localhost:8000/api/Image?id=${cab.cabImageId}"
@@ -91,8 +139,8 @@
             </div>
             <div class="cb-c-cab_card__details">
               <h2 class="cb-l-cab_grid__cab__name">${cab.make} ${
-                cab.model
-              } </h3>
+            cab.model
+          } </h3>
             </div>
             <div class="cb-c-cab_card__details">
               <p class="cb-c-cab_card__cab_number">${cab.registrationNumber}</p>
@@ -116,8 +164,32 @@
           </div>
               `;
 
-              cabGrid.append(cabCard);
-            });
+          cabGrid.append(cabCard);
+        });
+      };
+
+      $(document).ready(() => {
+        let token = localStorage.getItem("token");
+
+        if (!token) {
+          window.location.href = "/app/login.html";
+        }
+
+        fetch("http://localhost:8000/api/Admin/get-cabs", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              return Promise.reject("Could not fetch cabs");
+            }
+          })
+          .then((data) => {
+            window.cabs = data;
+            window.loadCabs(data);
           })
           .catch((err) => {
             window.showToast(err, "error", 2000);
@@ -153,6 +225,84 @@
                 window.showToast(err, "error", 2000);
               });
           }
+        });
+      });
+    </script>
+    <script>
+      // Search, Sort, Filter
+      window.updateCabs = () => {
+        let search = window.searchQuery || "";
+
+        let filter = window.filters || {};
+
+        let cabs = structuredClone(window.cabs) || [];
+
+        let sort = window.sortBy || "";
+
+        if (search) {
+          cabs = cabs.filter((cab) => {
+            return JSON.stringify(cab).includes(searchQuery);
+          });
+        }
+
+        if (filter) {
+          cabs = cabs.filter((cab) => {
+            return Object.keys(filter).every((key) => {
+              return cab[key] === filter[key];
+            });
+          });
+        }
+
+        if (sort) {
+          cabs = cabs.sort((a, b) => {
+            if (sort === "name") {
+              return a.make.localeCompare(b.make);
+            } else if (sort === "name-desc") {
+              return b.make.localeCompare(a.make);
+            }
+          });
+        }
+
+        window.loadCabs(cabs);
+      };
+    </script>
+    <script>
+      // search, filter, sort events
+
+      $(document).ready(() => {
+        $("#js-search-cabs").on("keyup", (e) => {
+          window.searchQuery = e.target.value;
+          window.updateCabs();
+        });
+
+        $("#js-filter-cabs").on("click", () => {
+          $("#filter_menu").toggleClass("hidden");
+        });
+
+        $("#js-sort-cabs").on("click", () => {
+          $("#sort_menu").toggleClass("hidden");
+        });
+
+        $(document).on("click", ".cb-c-floating_menu__option", (e) => {
+          if (e.target.id === "js-filter-by-verified") {
+            window.filters = {
+              isVerified: true,
+            };
+          } else if (e.target.id === "js-filter-by-non-verified") {
+            window.filters = {
+              isVerified: false,
+            };
+          } else if (e.target.id === "js-clear-filters") {
+            window.filters = {};
+          } else if (e.target.id === "js-sort-by-name") {
+            window.sortBy = "name";
+          } else if (e.target.id === "js-sort-by-name-desc") {
+            window.sortBy = "name-desc";
+          } else if (e.target.id === "js-clear-sort") {
+            window.sortBy = "";
+          }
+
+          window.updateCabs();
         });
       });
     </script>

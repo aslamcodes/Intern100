@@ -121,10 +121,11 @@ This Completes Project (No more addition) with
 - [x] Driver Profile Page needs improvement `!!`
 	- [x] Driver Earnings
 - [ ] Admin CSS Grid
-- [ ] Search, sort, filter functions on `!!!`
-	- [ ] Admin Manage Cabs
+- [x] Search, sort, filter functions on `!!!`
+	- [x] Admin Manage Cabs
 	- [x] Admin Manage Drivers
-
+- [ ] From to To display
+- [ ] Max Height and Max Widths on Images
 
 # Add On
 - [ ] Seperate js files 😰
