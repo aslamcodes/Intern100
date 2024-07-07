@@ -178,6 +178,10 @@
                   <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
               ride.cab.model
             }</h2>
+                
+                  <p>${ride.startLocation} to ${ride.endLocation}</p> 
+              
+
                   <p class="cb-c-ride-card__ride-date">${new Date(
                     ride.rideDate
                   ).toLocaleDateString("en-IN", {
@@ -234,6 +238,8 @@
                   <h2 class="cb-c-ride-card__cab">${ride.cab.make} ${
               ride.cab.model
             }</h2>
+                  <p>${ride.startLocation} to ${ride.endLocation}</p> 
+
                   <p class="cb-c-ride-card__ride-date">${new Date(
                     ride.startTime
                   ).toLocaleDateString("en-IN", {

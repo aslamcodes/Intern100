@@ -124,8 +124,8 @@ This Completes Project (No more addition) with
 - [x] Search, sort, filter functions on `!!!`
 	- [x] Admin Manage Cabs
 	- [x] Admin Manage Drivers
-- [ ] From to To display
-- [x] Max Height and Max Widths on Images
+- [x] From to To display
+- [x] Max Height and Max Widths on Images 
 - [ ] Landing Page Fix
 # Add On
 - [ ] Seperate js files 😰

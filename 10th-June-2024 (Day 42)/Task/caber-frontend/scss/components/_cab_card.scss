@@ -21,10 +21,12 @@
     font-size: small;
   }
   &__img {
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 8px 8px 0 0;
-    width: 200px;
-    margin: 30px auto;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 30px;
+    border-radius: 0.4rem;
   }
 
   &__entry {
