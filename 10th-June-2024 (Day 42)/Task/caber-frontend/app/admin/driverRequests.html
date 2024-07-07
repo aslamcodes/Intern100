@@ -53,12 +53,16 @@
         class="cb-c-controls cb-c-controls--start"
         style="padding-left: 1.1rem"
       >
-        <div class="cb-c-search" id="js-search-drivers">
+        <div class="cb-c-search">
           <div class="cb-c-search__icon">
             <i class="fa fa-search"></i>
           </div>
 
-          <input class="cb-c-search__input" placeholder="Search in Drivers" />
+          <input
+            class="cb-c-search__input"
+            id="js-search-drivers"
+            placeholder="Search in Drivers"
+          />
         </div>
         <button class="cb-c-icon_button" id="js-filter-driver">
           <i class="cb-c-icon_button__icon fa fa-filter"></i>
@@ -239,8 +243,8 @@
         }
       });
 
-      $("#js-search-drivers input").on("keyup", function () {
-        window.searchQuery = $(this).val();
+      $("#js-search-drivers").on("keyup", function () {
+        window.searchQuery = $("#js-search-drivers").val();
         updateDrivers();
       });
     </script>
@@ -278,24 +282,23 @@
       function updateDrivers() {
         let search = window.searchQuery || "";
         let filter = window.filters || {};
+        let drivers = window.drivers;
 
         if (search) {
-          window.loadDrivers(
-            window.drivers.filter((driver) => {
-              return JSON.stringify(driver).includes(search);
-            })
-          );
+          drivers = drivers.filter((driver) => {
+            return JSON.stringify(driver).includes(search);
+          });
         }
 
         if (filter) {
-          window.loadDrivers(
-            window.drivers.filter((driver) => {
-              return Object.keys(filter).every((key) => {
-                return driver[key] === filter[key];
-              });
-            })
-          );
+          drivers = drivers.filter((driver) => {
+            return Object.keys(filter).every((key) => {
+              return driver[key] === filter[key];
+            });
+          });
         }
+
+        window.loadDrivers(drivers);
       }
     </script>
     <script src="/js/utils.js"></script>

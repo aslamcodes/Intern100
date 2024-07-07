@@ -50,11 +50,15 @@
           <a class="cb-c-button" href="./addCab.html">Add Cab</a>
         </div>
         <div class="cb-c-controls cb-c-controls--start">
-          <div class="cb-c-search" id="js-seach-cabs">
+          <div class="cb-c-search">
             <div class="cb-c-search__icon">
               <i class="fa fa-search"></i>
             </div>
-            <input class="cb-c-search__input" placeholder="Search Cab" />
+            <input
+              class="cb-c-search__input"
+              id="js-seach-cabs"
+              placeholder="Search Cab"
+            />
           </div>
           <button class="cb-c-icon_button" id="js-filter-cab">
             <i class="cb-c-icon_button__icon fa fa-filter"></i>
@@ -323,15 +327,8 @@
       }
 
       $("#js-seach-cabs").on("keyup", function () {
-        debounce(function () {
-          const cabs = window.cabs.filter((cab) =>
-            JSON.stringify(cab)
-              .toLowerCase()
-              .includes($("#js-seach-cabs input").val().toLowerCase())
-          );
-          window.searchQuery = $("#js-seach-cabs input").val();
-          window.updateCabs();
-        }, 1000);
+        window.searchQuery = $("#js-seach-cabs").val();
+        window.updateCabs();
       });
     </script>
 
