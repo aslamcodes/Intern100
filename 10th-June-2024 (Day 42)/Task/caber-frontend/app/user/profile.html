@@ -155,13 +155,13 @@
           })
           .then((rides) => {
             const rideHistoryGroup = $("#cb-js-ride-history-group");
-            rideHistoryGroup.prepend(
+            rideHistoryGroup.append(
               '<div><p class="cb-l-user_profile__section__title">Ride History</p></div>'
             );
             if (rides.length === 0) {
-              rideHistoryGroup.prepend(`
+              rideHistoryGroup.append(`
               <div class="cb-c-alert cb-c-alert--info">
-                <p>No ride history</p>
+                <p>No rides yet</p>
               </div>
             `);
             } else {
@@ -271,9 +271,14 @@
           ["Admin", ".js-admin-role"],
         ]);
 
-        roleMap.keys().forEach((role) => {
-          $(roleMap.get(role)).hide();
-        });
+        for (let [key, value] of roleMap) {
+          console.log(value);
+          $(value).hide();
+        }
+        // roleMap.keys().forEach((role) => {
+        //   $(roleMap.get(role)).hide();
+        // });
+
         $(roleMap.get(role)).show();
       });
 
@@ -444,7 +449,7 @@
         if (history.length === 0) {
           rideHistoryGroup.append(`
               <div class="cb-c-alert cb-c-alert--info">
-                <p>No ride history</p>
+                <p>No rides</p>
               </div>
             `);
         } else {

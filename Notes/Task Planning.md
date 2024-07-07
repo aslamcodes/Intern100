@@ -112,7 +112,7 @@ npx parcel serve index.html app/*.html app/driver/*.html app/user/*.html app/adm
 - [x] Ride Price not working as expected (Remove distance factor) `!!!`
 
 This Completes Project (No more addition) with 
-- [ ] Reseeding for presentation
+- [x] Reseeding for presentation
 - [x] Validation Error
 	- [x] What if rating is more than 5 after completion
 	- [x] Generic Error
@@ -120,8 +120,10 @@ This Completes Project (No more addition) with
 ## Good to Have
 - [x] Driver Profile Page needs improvement `!!`
 	- [x] Driver Earnings
+- [ ] Admin CSS Grid
 - [ ] Search, sort, filter functions on `!!!`
 	- [ ] Admin Manage Cabs
+	- [x] Admin Manage Drivers
 
 
 # Add On
