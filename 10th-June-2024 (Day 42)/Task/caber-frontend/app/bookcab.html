@@ -81,7 +81,7 @@
         <img class="cb-l-cab_grid__hero_img" src="/assets/hero_img.jfif" />
       </div>
     </main>
-    <script src="/js/toastscript.js"></script>
+
     <script>
       function validateForm() {
         let isFormValid = true;
@@ -320,6 +320,30 @@
         });
       });
     </script>
+    <script>
+      // get from url params
+      $(document).ready(function () {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const isSearched =
+          urlParams.has("from") &&
+          urlParams.has("to") &&
+          urlParams.has("seating");
+
+        if (isSearched) {
+          const from = urlParams.get("from");
+          const to = urlParams.get("to");
+          const seating = urlParams.get("seating");
+
+          $("#from").val(from);
+          $("#to").val(to);
+          $("#seating").val(seating);
+
+          $("#js-search-cabs").click();
+        }
+      });
+    </script>
     <script src="/js/navbarscript.js"></script>
+    <script src="/js/toastscript.js"></script>
   </body>
 </html>

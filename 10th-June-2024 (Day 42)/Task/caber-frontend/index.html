@@ -76,20 +76,20 @@
           <div class="cb-l-hero__form__controls">
             <div class="cb-l-hero__form__control-group">
               <label for="">From</label>
-              <input type="text" placeholder="ex: Delhi" />
+              <input type="text" placeholder="ex: Delhi" id="js-inp-from" />
             </div>
             <div class="cb-l-hero__form__control-group">
               <label for="">To</label>
-              <input type="text" placeholder="ex: Noida" />
+              <input type="text" placeholder="ex: Noida" id="js-inp-to" />
             </div>
             <div class="cb-l-hero__form__control-group">
               <label for="">Seating</label>
-              <input type="text" placeholder="ex: 4" />
+              <input type="text" placeholder="ex: 4" id="js-inp-seating" />
             </div>
           </div>
-          <a href="app/bookcab.html" class="cb-c-button--large">
+          <button class="cb-c-button--large" id="js-search-cabs">
             Search for Cabs
-          </a>
+          </button>
         </form>
       </section>
       <section class="cb-l-join-driver">
@@ -149,49 +149,47 @@
         <div class="cb-l-testimonials__slide">
           <div class="cb-l-testimonials__slide__card">
             <p class="cb-l-testimonials__slide__card__text">
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum,
-              dolor aut quos qui impedit, ullam"
+              "The cab arrived on time and the driver was very courteous. The
+              ride was smooth and comfortable. Highly recommend this service!"
             </p>
             <div class="cb-ut-divider"></div>
             <div class="cb-l-testimonials__slide__card__author">
-              <p>Jane Wade</p>
-              <p>Product Designer @ Presidio</p>
+              <p>Emily Carter</p>
+              <p>Frequent Traveler</p>
             </div>
           </div>
-
           <div class="cb-l-testimonials__slide__card">
             <p class="cb-l-testimonials__slide__card__text">
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum,
-              dolor aut quos qui impedit, ullam"
+              "Booking a cab has never been easier. The app is user-friendly and
+              the drivers are always professional. Great experience every time!"
             </p>
             <div class="cb-ut-divider"></div>
             <div class="cb-l-testimonials__slide__card__author">
-              <p>Jane Wade</p>
-              <p>Product Designer @ Presidio</p>
+              <p>Michael Brown</p>
+              <p>Business Commuter</p>
             </div>
           </div>
-
           <div class="cb-l-testimonials__slide__card">
             <p class="cb-l-testimonials__slide__card__text">
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum,
-              dolor aut quos qui impedit, ullam"
+              "Excellent service! The cab was clean and the driver knew the best
+              routes to avoid traffic. Will definitely use this service again."
             </p>
             <div class="cb-ut-divider"></div>
             <div class="cb-l-testimonials__slide__card__author">
-              <p>Jane Wade</p>
-              <p>Product Designer @ Presidio</p>
+              <p>Sarah Wilson</p>
+              <p>Tourist</p>
             </div>
           </div>
-
           <div class="cb-l-testimonials__slide__card">
             <p class="cb-l-testimonials__slide__card__text">
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum,
-              dolor aut quos qui impedit, ullam"
+              "Reliable and affordable. The driver was friendly and got me to my
+              destination quickly and safely. I highly recommend this cab
+              service."
             </p>
             <div class="cb-ut-divider"></div>
             <div class="cb-l-testimonials__slide__card__author">
-              <p>Jane Wade</p>
-              <p>Product Designer @ Presidio</p>
+              <p>James Thompson</p>
+              <p>Local Resident</p>
             </div>
           </div>
         </div>
@@ -270,9 +268,24 @@
         $("#js-driver-sign-up").click(function () {
           window.location.href = "app/driverSignUp.html";
         });
+
+        $("#js-search-cabs").click(function (e) {
+          e.preventDefault();
+          const from = $("#js-inp-from").val();
+          const to = $("#js-inp-to").val();
+          const seating = $("#js-inp-seating").val();
+
+          if (!from || !to || !seating) {
+            window.showToast("Please fill all the fields", "error", 2000);
+            return;
+          }
+
+          window.location.href = `app/bookcab.html?from=${from}&to=${to}&seating=${seating}`;
+        });
       });
     </script>
 
-    <script defer src="js/navbarscript.js"></script>
+    <script src="js/navbarscript.js"></script>
+    <script src="js/toastscript.js"></script>
   </body>
 </html>

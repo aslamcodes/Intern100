@@ -86,7 +86,10 @@
           class="cb-l-user_profile__section"
           id="js-earning-section"
         ></section>
-        <section id="cb-js-ride-history-group"></section>
+        <section
+          class="cb-ut-gap-items-col"
+          id="cb-js-ride-history-group"
+        ></section>
       </div>
     </main>
     <script>
@@ -173,7 +176,7 @@
                 )
                 .forEach((ride) => {
                   const historyRideCard = `
-                <div class="cb-c-ride-card">
+                <div class="cb-c-ride-card" style="padding: 0.5rem 2rem 0rem 2rem;">
                   <img
                     class="cb-c-ride-card__image"
                     src="http://localhost:8000/api/Image?id=${
@@ -237,7 +240,9 @@
                 }"
                 alt=""
               />
-              <h1 class="cb-l-user_profile__card__name">${user.firstName}</h1>
+              <h1 class="cb-l-user_profile__card__name">${user.firstName} ${
+            user.lastName
+          }</h1>
               <p>${user.email}</p>
            
             `);
@@ -245,7 +250,7 @@
           generalSection.append(`
               <div class="cb-l-user_profile__section__entry">
                 <i></i>
-                <p>${user.firstName}</p>
+                <p>${user.firstName} ${user.lastName}</p>
               </div>
               <div class="cb-l-user_profile__section__entry">
                 <i></i>
