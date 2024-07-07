@@ -121,7 +121,7 @@
         $("#js-driver-list").empty();
         drivers.forEach((element) => {
           $("#js-driver-list").append(`<div class="driver-card">
-                                              <img src="http://localhost:8000/api/Image/${
+                                              <img src="http://localhost:8000/api/Image?id=${
                                                 element.user.userImageId
                                               }" alt="" class="driver-card__image" />
                                               <h1 class="driver-card__name">${

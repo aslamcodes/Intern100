@@ -277,10 +277,28 @@
 
         $("#js-filter-cabs").on("click", () => {
           $("#filter_menu").toggleClass("hidden");
+          $("#filter_menu").css({
+            top: $("#js-filter-cabs").offset().top + 40,
+            left: $("#js-filter-cabs").offset().left,
+          });
         });
 
         $("#js-sort-cabs").on("click", () => {
           $("#sort_menu").toggleClass("hidden");
+          $("#sort_menu").css({
+            top: $("#js-sort-cabs").offset().top + 40,
+            left: $("#js-sort-cabs").offset().left,
+          });
+        });
+
+        $(window).click((e) => {
+          if (!e.target.id.includes("js-filter-cabs")) {
+            $("#filter_menu").addClass("hidden");
+          }
+
+          if (!e.target.id.includes("js-sort-cabs")) {
+            $("#sort_menu").addClass("hidden");
+          }
         });
 
         $(document).on("click", ".cb-c-floating_menu__option", (e) => {
