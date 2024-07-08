@@ -208,11 +208,12 @@
               location,
             }),
           })
-            .then((res) => {
+            .then(async (res) => {
+              const data = await res.json();
               if (res.ok) {
                 window.showToast("Cab is currently active", "success");
               } else {
-                return Promise.reject("Failed to activate cab");
+                return Promise.reject(data.message);
               }
             })
             .catch((err) => {

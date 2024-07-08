@@ -77,9 +77,9 @@
                 password,
               }),
             })
-              .then((res) => {
+              .then(async (res) => {
                 if (res.ok) return res.json();
-                else throw new Error("Invalid email or password");
+                else throw new Error((await res.json()).message);
               })
               .then((data) => {
                 if (data.status === 400 || data.statusCode === 401) {
@@ -98,7 +98,7 @@
                 }
               })
               .catch((err) => {
-                window.showToast("Invalid email or password", "error", 3000);
+                window.showToast(err, "error", 3000);
               });
           }
         });

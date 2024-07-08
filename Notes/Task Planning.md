@@ -126,6 +126,6 @@ This Completes Project (No more addition) with
 	- [x] Admin Manage Drivers
 - [x] From to To display
 - [x] Max Height and Max Widths on Images 
-- [ ] Landing Page Fix
-# Add On
-- [ ] Seperate js files 😰
+- [x] Landing Page Fix
+- [x] Passenger Cannot Request a new ride until the driver accepts previous `!!!!!!!!`
+- [x] Driver can chage the state (active) of cab even on a ride 

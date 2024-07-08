@@ -111,7 +111,15 @@
           },
           body: JSON.stringify({ rideId }),
         })
-          .then((res) => res.json())
+          .then((res) => {
+            if (!res.ok) {
+              return res.json().then((data) => {
+                return Promise.reject(data.message);
+              });
+            }
+
+            return res.json();
+          })
           .then((data) => {
             if (data.error) {
               window.showToast(data.error, "error", 2000);
@@ -191,14 +199,21 @@
                   })}</p>
                   <p class="cb-c-ride-card__status">${ride.status}</p>
                   <div class="cb-c-ride-card__actions">
+                        
                   ${
                     ride.status === "Accepted"
                       ? `
                       <button id="js-ride-initiate-button" data-id="${ride.id}">Initiate Ride</button>
-                      <button id="js-ride-cancel-button" data-id="${ride.id}">Cancel Ride</button>
                     `
                       : ""
                   }
+                       ${
+                         ride.status !== "InProgress"
+                           ? `
+                      <button id="js-ride-cancel-button" data-id="${ride.id}">Cancel Ride</button>
+                    `
+                           : ""
+                       }
                     ${
                       ride.status === "InProgress"
                         ? `
