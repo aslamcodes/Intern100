@@ -6,7 +6,7 @@ tags:
 - HTML tags and Html elements
 - Unpaired & paired tags
 - void elements
-- <Doctype!> tag
+- <Doctype!> 
 - Text formatting with paragraph tags, heading tags
 - HTML validation and debugging
 

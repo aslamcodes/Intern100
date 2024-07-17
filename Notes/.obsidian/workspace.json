@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Task Planning.md",
+                "file": "2024-07-17.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Task Planning.md",
+                "file": "2024-07-17.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Task Planning.md",
+                "file": "2024-07-17.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Task Planning.md"
+                "file": "2024-07-17.md"
               }
             }
           }
@@ -150,39 +149,39 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "69bc7c6d8b5030fc",
+  "active": "17df321af46ad5f5",
   "lastOpenFiles": [
-    "Frontend Requirements.md",
-    "Task Planning.md",
-    "Mini Project Notes/Project Board.md",
-    "Mini Project Notes/UI flows.md",
-    "Presentation.md",
-    "June 27.md",
-    "UI Fixes.md",
+    "2024-07-16.md",
+    "2024-07-17.md",
+    "Day 8 - Classes, Structs, Records and Abstract Classes.md",
+    "2024-07-15.md",
+    "Drawing.md",
+    "Untitled 1.md",
+    "Day 38.md",
+    "Day 39.md",
+    "Day 30.md",
+    "Day 42.md",
+    "Day 55.md",
+    "Day 64.md",
+    "Day 74.md",
+    "Day 79.md",
+    "Day 37.md",
+    "Day 36.md",
+    "Day 51.md",
+    "Day 50.md",
+    "Day 47.md",
+    "Day 48.md",
+    "Day 49.md",
+    "Day 46.md",
+    "Day 44.md",
+    "Day 40.md",
+    "Day 41.md",
+    "Day 45.md",
     "Resources/Pasted image 20240626211937.png",
     "Resources/Pasted image 20240626211924.png",
     "Resources/Pasted image 20240626211907.png",
     "Resources/Pasted image 20240626211732.png",
-    "What could have been better.md",
-    "User Stories.md",
-    "Project Standards.md",
     "Resources/Pasted image 20240626105217.png",
-    "Logins.md",
-    "Day 38.md",
-    "Day 35.md",
-    "Day 34.md",
-    "Day 33.md",
-    "Day 32.md",
-    "Day 31.md",
-    "Project User flow.md",
-    "Day 25.md",
-    "Day 44.md",
-    "Day 47.md",
-    "Day 29.md",
-    "Day 26.md",
-    "Day 23.md",
-    "Day 28.md",
-    "Day 27.md",
     "Mini Project Notes",
     "Resources/Pasted image 20240521113327.png",
     "Resources/Pasted image 20240516124750.png",
