@@ -3,3 +3,7 @@
 ################################################################################
 
 /day 22 - Teeny Tiny Assignment/RequestTrackerCFRelationsSLN/EmployeeTrackerDAL/IRepository.cs
+
+bin
+obj
+**/.vs/
