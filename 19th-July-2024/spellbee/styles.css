@@ -1,0 +1,169 @@
+body {
+  background-color: powderblue;
+}
+.heading {
+  color: cadetblue;
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 300px;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.letters > .letter {
+  font-size: 2rem;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 1000px;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.letters > .letter:active {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.letter--special {
+  background-color: lightblue;
+}
+
+#js-input {
+  outline: none;
+  border: none;
+  background-color: yellowgreen;
+  padding: 1.7rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
+#js-input.shake {
+  animation: shake 0.5s;
+}
+
+main {
+  text-align: center;
+}
+
+.game-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border-radius: 1000px;
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.controls button:active {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.controls button:nth-of-type(1) {
+  color: red;
+}
+
+.controls button:nth-of-type(2) {
+  font-size: large;
+}
+.controls button:nth-of-type(3) {
+  color: green;
+}
+
+.game-pad {
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  border-radius: 0.7rem;
+  padding: 2rem 1rem;
+  background-color: honeydew;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 445px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.guess-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.guess-container::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.guess-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: lightblue;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
