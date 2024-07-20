@@ -1,3 +1,5 @@
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 using AzureApi.Contexts;
 using AzureApi.Interfaces;
 using AzureApi.Models;
@@ -9,7 +11,7 @@ namespace AzureApi
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +24,15 @@ namespace AzureApi
 
 
             #region Contexts
-            builder.Services.AddDbContext<ProductsContext>(options => options.UseSqlServer(@"Server=C0RBBX3\SQLSERVERG3;Integrated Security=true;Initial Catalog=test1;TrustServerCertificate=True"));
+            const string secretName = "DefaultConnection";
+            var keyVaultName = "aslam-keys";
+            var kvUri = $"https://{keyVaultName}.vault.azure.net";
+            var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
+
+            var secret = await client.GetSecretAsync(secretName);
+            var connectionString = secret.Value.Value;
+
+            builder.Services.AddDbContext<ProductsContext>(options => options.UseSqlServer(connectionString));
             #endregion
 
             #region Services
